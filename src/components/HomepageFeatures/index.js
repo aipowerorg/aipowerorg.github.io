@@ -8,28 +8,25 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        AI Power is designed to be easily installed and used, enabling you to enhance your WordPress website with advanced AI capabilities quickly and effortlessly.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Focus on Your Content',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        AI Power allows you to concentrate on your content, while we handle the technical aspects. Simply install our plugin, and let it do the heavy lifting.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Powered by GPT-4',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        AI Power offers the ability to extend or customize your website's capabilities, all powered by the state-of-the-art GPT-4 model.
       </>
     ),
   },

@@ -1,0 +1,96 @@
+---
+sidebar_position: 2
+---
+
+# Features
+
+AI Power offers an extensive array of features and tools designed to augment your WordPress website with the most advanced AI technology. Here are some core features of AI Power:
+
+- **Latest GPT Models**
+    - GPT-3.5-Turbo
+    - GPT-4
+    - GPT-4-32K
+- **Content Writer**
+    - Express Mode
+    - Custom Mode
+    - Integration with DALL-E and Pexels images
+    - Integration with Yoast, Math Rank, and All in One SEO
+- **Auto Content Writer (AutoGPT)**
+    - Bulk Editor
+    - CSV Support
+    - Copy-Paste Feature
+    - RSS Support
+    - Google Sheets Compatibility
+    - Server-side Cron Job Integration
+    - Post Scheduling
+    - Auto Restart
+- **WooCommerce Product Writer**
+    - Product Title Generator
+    - Product Description Generator
+    - Product Meta Generator
+    - Product Tags Generator
+- **Image Generator**
+    - DALL-E Support
+    - Stable Diffusion
+    - Shortcodes
+- **Custom ChatGPT**
+    - Content-Aware
+    - User-Aware
+    - VoiceChat (Integration with ElevenLabs and Google)
+    - Logs
+    - Token Management
+    - Responsive Design
+    - Unlimited Bots 
+    - Moderation Features
+- **AI Training**
+    - Fine Tuner
+    - Option to Upload Your Own Dataset
+    - Manual Entry
+    - Data Converter
+    - Training Module
+- **Embeddings** 
+    - Content Builder
+    - Instant Embeddings
+    - Index Builder with Cron Job
+    - Pinecone Integration 
+- **AI Assistant**
+    - Integration with Gutenberg and Classic Editor
+    - Customizable Prompts
+    - Support for up to 20 prompts
+- **AI Forms**
+    - Create and design your own AI forms
+    - Use built-in AI forms
+    - Shortcodes for your frontend
+    - Token management
+- **PromptBase**
+    - Create and design your own prompts
+    - Use built-in prompts
+    - Shortcodes for your frontend
+    - Token management
+- **Audio Converter**
+    - Convert your speech to text with Whisper
+    - Translation tool
+    - Convert from computer, URL, and audio recording
+    - Multiple output formats
+- **Playground**
+    - More than 100 custom prompts
+- **Model Comparison Tool**
+    - Speed comparison
+    - Cost comparison
+- **Role Manager**
+    - Limit features based on user roles 
+- **SEO Optimizer**
+    - Generate high-quality meta descriptions
+    - WooCommerce integration
+    - Yoast, Math Rank, and All in One SEO integration
+- **Title Suggester**
+    - Generate titles for your posts, pages, and products 
+- **Comment Replier**
+    - Generate replies to your comments
+- **Personalized AI Account**
+    - Create an AI Account page for your users
+    - Log management
+- **Token Sale with WooCommerce**
+    - Sell your tokens via WooCommerce 
+- **More than 40 Language Support**
+    - Integrated with Express Mode
