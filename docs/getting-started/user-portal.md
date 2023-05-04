@@ -41,6 +41,9 @@ Go to the **Downloads** section and look for the Download text. Click on the arr
 
 Now, look for the **Beta** label and click on the required beta version to download it.
 
+### Updating your plugin
+Plugin updates will become available automatically through your WordPress admin dashboard. When one is available, simply click **Update**. As long as you have an active license, it will update to the latest version.
+
 ## License Management
 Manage your licenses, activate, deactivate, or check the status of your licenses from the following link: [Manage Licenses](https://users.freemius.com/licenses)
 
@@ -52,6 +55,12 @@ Track your payment history, view past invoices, or update your payment details a
 
 ### Obtaining a PDF invoice for your payments
 You can access all of your payments in the **Orders History** section. To get a PDF invoice of a payment, just click **Invoice** button of the payment’s record.
+
+### Adding a Tax/VAT ID and business details to your invoices
+
+If you didn't enter a Tax/VAT ID during checkout, then it's entirely possible to do it afterward. It is often important to have this identifier displayed on invoices you receive after a purchase.
+
+Go to **My Profile** and simply update the billing information. Now, if you go to the **Orders History**, the invoices will include your Tax/VAT ID.
 
 ### Updating your payment method, credit card, or PayPal
 Navigate to the subscriptions section by clicking on the **Renewals & Billing**  menu item. Locate the subscription that you'd like to update its payment method and select it by clicking on its row. This will open the subscription’s advanced panel. Then, click on the Update button next to the payment method, and checkout with your new payment method. The initial payment will be automatically prorated based on the next renewal date.
