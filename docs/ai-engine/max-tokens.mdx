@@ -1,0 +1,89 @@
+---
+sidebar_position: 5
+---
+
+import MaxTokens from '/img/ai-settings/max-tokens.png';
+
+# Max Tokens
+
+## What is Max Tokens?
+
+OpenAI language model processes text by dividing it into tokens, which can be individual words or groups of characters.
+
+For example, the word `fantastic` would be split into the tokens `fan`, `tas`, and `tic`, while a shorter word like `gold` would be considered a single token. Many tokens start with a space, such as ` hi` and ` greetings`.
+
+The number of tokens processed in a single API request depends on the length of the input and output text.
+
+As a general guideline, **one token is roughly equivalent to 4 characters** or 0.75 words for English text.
+
+- 1 token ~= 4 chars in English
+- 1 token ~= ¾ words
+- 100 tokens ~= 75 words
+
+Or
+
+- 1-2 sentence ~= 30 tokens
+- 1 paragraph ~= 100 tokens
+- 1,500 words ~= 2048 tokens
+
+It's important to note that the combined length of the text prompt and generated completion must not exceed the model's maximum context length, which is typically 4096 tokens or approximately 3000 words.
+
+Prices are based on a rate of 1,000 tokens. Tokens can be thought of as parts of words, and 1,000 tokens is approximately 750 words.
+
+## Comparing Token Limits
+
+When working with advanced language models like GPT-4, GPT-3.5, and GPT-3, it's essential to understand their token limits, as these constraints can impact the scope and quality of generated content.
+
+In the table below, we provide an easy-to-reference comparison of the maximum tokens for various models within each group. This information will help you make informed decisions when selecting the most suitable model for your specific needs and tasks, allowing you to optimize your language generation experience.
+
+| Model Group    | Model           | Max Tokens |
+| -------------- | --------------- | ---------- |
+| GPT-4 Models   | gpt-4           | 8,192      |
+|                | gpt-4-32k       | 32,768     |
+| GPT-3.5 Models | gpt-3.5-turbo   | 4,096      |
+|                | text-davinci-003| 4,000      |
+|                | text-davinci-002| 4,000      |
+| GPT-3 Models   | text-curie-001  | 2,048      |
+|                | text-babbage-001| 2,048      |
+|                | text-ada-001    | 2,048      |
+
+## Changing Max Tokens Value
+
+When our plugin is installed for the first time, it comes with **1500** as the default Max Tokens value.
+
+However you can change it from the **Max Tokens** field in the **AI Engine** tab.
+
+Here are the steps:
+
+- First, navigate to the plugin menu on your WordPress dashboard.
+- Click on the **Settings** page and look for the **AI Engine** tab.
+- Enter a new value in the **Max Tokens** field.
+
+<img src={MaxTokens} width="700" />
+
+- Click on the **Save** button to save your changes.
+
+The default value (0.7) typically works well for most use cases. However, if you wish to modify the temperature, you can do so. The minimum value is **0**, and the maximum value is **1**. If you attempt to input a value outside this range, you will receive the following message: *"Please enter a valid temperature value between 0 and 1."*
+
+Feel free to experiment with different values until you find the optimal setting.
+
+## Impact of Max Tokens Value on Generated Content
+
+Max Tokens parameter is a control for the maximum number of tokens that can be generated in a single call to the GPT model.
+
+A token is a discrete unit of meaning in natural language processing
+
+In GPT, each token is represented as a **unique integer**, and the set of all possible tokens is called the **vocabulary**.
+
+For example, in the case of GPT-3 the vocabulary size is **175000** tokens.
+
+When generating text with GPT, the model takes in a prompt (also called the *"seed text"*), which is a starting point for the generated text. The model then uses this prompt to generate a sequence of tokens, one at a time. 
+
+Max tokens parameter works as a **limit** for the output of the model, in case the model is generating very long text, by setting this parameter, you can control the size of the generated text.
+
+This parameter can be useful in different scenarios like:
+- When you want to generate a specific amount of text, regardless of how much context the model has.
+- When you want to constrain the generated text to a specific size to fit in a specific format or application
+- When you want to improve the performance of the model.
+
+However, keep in mind that setting the Max Tokens parameter too low can prevent the model from fully expressing its ideas or completing its thought. It could also lead to **incomplete sentences** or **grammatically incorrect**.

@@ -18,7 +18,7 @@ If you purchased a lifetime license you’ll only receive a single email combini
 
 Before downloading the plugin, if you are using Apple's Safari as your browser, disable its default ZIP auto extraction setting:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/CbKgEv47WVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/CbKgEv47WVA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 ## Upload the paid plugin to WordPress
 

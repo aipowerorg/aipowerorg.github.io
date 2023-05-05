@@ -1,0 +1,87 @@
+---
+sidebar_position: 4
+---
+
+import Temperature from '/img/ai-settings/temperature.png';
+
+# Temperature
+
+## What is Temperature?
+
+Temperature is an important setting in GPT that has a **significant impact** on the output of the system. It controls the amount of **randomness** in the output, and can be adjusted to achieve different results.
+
+At lower temperatures, GPT will tend to choose words with a higher probability of occurrence, which can be useful when you want the system to **complete a sentence** or phrase with a single correct answer.
+
+On the other hand, higher temperatures can be used to generate ideas or tell stories, as they will produce a greater **variety** of responses.
+
+It's important to note that while some people refer to temperature as a **creativity** setting, official documentation **does not recommend this label**. Creativity is a more complex concept than simply increasing the level of randomness in the output.
+
+OpenAI generally recommends altering this or **top_p** but not both.
+
+:::tip
+
+To get the most out of GPT, it's important to understand how temperature works and how to adjust it to achieve your desired results. So, it's worth spending some time understanding and adjusting the temperature setting to get the most out of GPT.
+
+:::
+
+## Changing Temperature Settings
+
+When our plugin is installed for the first time, it comes with **0.7** as the default Temperature value.
+
+However you can change it from the **Temperature** field in the **AI Engine** tab.
+
+Here are the steps:
+
+- First, navigate to the plugin menu on your WordPress dashboard.
+- Click on the **Settings** page and look for the **AI Engine** tab.
+- Enter a new value in the **Temperature** field.
+
+<img src={Temperature} width="700" />
+
+- Click on the **Save** button to save your changes.
+
+The default value (0.7) typically works well for most use cases. However, if you wish to modify the temperature, you can do so. The minimum value is **0**, and the maximum value is **1**. If you attempt to input a value outside this range, you will receive the following message: *"Please enter a valid temperature value between 0 and 1."*
+
+Feel free to experiment with different values until you find the optimal setting.
+
+## Balancing Predictability and Creativity
+
+It is difficult to assign specific temperature values to specific types of content, as the appropriate temperature setting will depend on a variety of factors, including the specific task and the desired output.
+
+In general, **lower temperature** values will tend to produce responses that are more **predictable** and **straightforward**, while **higher temperature** values will produce responses that are more **varied** and **creative**. 
+
+Here are a few general guidelines for how temperature values may be used in different contexts:
+
+- **Low temperature values (e.g., below 0.5):** These values may be appropriate for tasks where you want GPT to complete a sentence or phrase with a **single correct answer**, or for tasks where you want the output to be more predictable and straightforward.
+- **Medium temperature values (e.g., between 0.5 and 0.9):** These values may be suitable for tasks where you want GPT to generate ideas or content that is somewhat **varied** and **creative**, but still relatively grounded in reality.
+- **High temperature values (e.g., above 0.9):** These values may be appropriate for tasks where you want GPT to produce more creative and varied responses, or for tasks where you want the output to be more **unpredictable** and **open-ended**.
+
+## Examples
+
+Let's use the prompt *"Write an article about a healthy diet"* and generate three different responses with varying temperature values:
+
+### Example 1: Low Temperature (0.2)
+
+Title: "The Fundamentals of a Healthy Diet: A Comprehensive Guide"
+
+*"In a healthy diet, it's essential to consume a balanced mix of nutrients, including carbohydrates, proteins, and fats. Eating a variety of fruits and vegetables, whole grains, lean proteins, and healthy fats can help maintain your overall health and well-being. Drinking plenty of water and limiting sugary beverages is also crucial for staying hydrated and maintaining a healthy weight."*
+
+### Example 2: Medium Temperature (0.6)
+
+Title: "Unlocking the Secrets of a Wholesome Diet: A Fresh Perspective"
+
+*"A healthy diet is more than just counting calories; it's about nourishing your body with diverse, nutrient-dense foods. To unlock the full potential of a wholesome diet, consider integrating colorful fruits and vegetables, whole grains, and lean protein sources into your meals. Don't forget to stay hydrated and moderate your intake of processed foods and added sugars for a truly balanced approach to nutrition."*
+
+### Example 3: High Temperature (1.0)
+
+Title: "A Symphony of Flavors: The Art and Science of Crafting a Healthy Diet"
+
+*"Embarking on a healthy diet journey is like composing a symphony of flavors that harmonize with your body's needs. To create a masterpiece, fill your plate with a vivid array of fruits, vegetables, and whole grains that dance alongside lean proteins and heart-healthy fats. Experiment with new recipes, flavors, and textures to transform your relationship with food and embrace a lifestyle that is as nourishing as it is delicious."*
+
+### Comparison
+
+The low temperature example (0.2) provides a **straightforward** and **predictable** response, focusing on the basic aspects of a healthy diet.
+
+The medium temperature example (0.6) offers a more **varied** and **creative** approach, adding some flair to the content while remaining grounded in reality.
+
+The high temperature example (1.0) generates a more **imaginative** and **open-ended** response, using figurative language and a unique perspective to discuss a healthy diet.
