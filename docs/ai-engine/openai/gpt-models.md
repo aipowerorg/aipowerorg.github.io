@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# GPT Models
+# Models
 
 **AI Power** supports OpenAI **GPT-3**, **GPT-3.5** and **GPT-4** models.
 
