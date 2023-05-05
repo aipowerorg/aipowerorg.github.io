@@ -1,0 +1,45 @@
+---
+sidebar_position: 9
+---
+
+import BestOf from '/img/ai-settings/best-of.png';
+
+# Best Of
+
+## What is Best Of?
+
+Best Of generates multiple **candidate** completions on the OpenAI side and returns the "**best**" ones based on the **highest log probability per token**.
+
+You can adjust your **best of** value in settings page of our plugin as shown below.
+
+:::info
+
+In future versions of our plugin, we will be removing the Best Of parameter option. For the specific use case of our plugin, the Best Of value should always be set to 1 to ensure consistent and coherent text generation.
+
+:::
+
+## Adjusting the Best Of Setting
+
+When our plugin is installed for the first time, it comes with **1** as the default Best Of value.
+
+However you can change it from the **Best Of** field in the **AI Engine** tab.
+
+Here are the steps:
+
+- First, navigate to the plugin menu on your WordPress dashboard.
+- Click on the **Settings** page and look for the **AI Engine** tab.
+- Enter a new value in the **Best Of** field.
+
+<img src={BestOf} width="700" />
+
+- Click on the **Save** button to save your changes.
+
+## Getting Optimal Responses with Best Of
+
+The "Best Of" option in GPT allows users to **generate multiple responses** to a query and select the **most appropriate** one to display.
+
+The decision on which response is the "best" is made by the algorithm that powers GPT, which takes into account various factors such as the **relevance** of the response to the query, the **coherence and consistency of the language used**, and the overall **fluency** of the response.
+
+One potential use case for this option is when a user wants to generate multiple variations of a response and wants to see the one that is most relevant or well-written.
+
+However, it's also possible that users may not find a good use of this option, as it can be difficult to anticipate how the algorithm will select the best response, and the lack of real-time display may be seen as a limitation.
