@@ -1,6 +1,301 @@
 ---
-sidebar_position: 11
+sidebar_position: 5
 ---
+
+import AddImages from '/img/images/add-image.png';
+import FeaturedImage from '/img/images/featured-image.png';
+import AddDALLE from '/img/images/add-dall-e.png';
+import ImageSize from '/img/images/image-size.png';
+import ImageStyle from '/img/images/image-style.png';
+import MoreSettings from '/img/images/more-settings.png';
+import ImageSettings from '/img/images/image-settings.png';
+import SEOImage from '/img/images/seo-images.jpeg';
+import PixabayAPI from '/img/images/pixabay-api.png';
+import PixabayAPIfield from '/img/images/pixabay-api-field.png';
+import PexelsAPI from '/img/images/pexels-api.png';
+import Pexels from '/img/images/pexels.png';
+import DallESample from '/img/images/dalle-sample.png';
+import DallESample2 from '/img/images/dalle-sample2.png';
+import DallESample3 from '/img/images/dalle-sample3.png';
+import PixabaySample from '/img/images/pixabay-sample.jpeg';
+import PixabaySample2 from '/img/images/pixabay-sample2.jpeg';
+import PixabaySample3 from '/img/images/pixabay-sample3.jpeg';
+import PexelsSample from '/img/images/pexels-sample.jpeg';
+import PexelsSample2 from '/img/images/pexels-sample2.jpeg';
+import PexelsSample3 from '/img/images/pexels-sample3.jpeg';
 
 # Images
 
+You can add images to your content using OpenAI’s **DALL-E** model, **Pexels** or **Pixabay**.
+
+Here's an overview of the four available options for adding images to your content:
+
+- **DALL-E** (AI-generated images): Create unique and contextually relevant images using OpenAI's DALL-E model.
+- **Pexels**: Access a vast library of high-quality and royalty-free images from the Pexels platform.
+- **Pixabay**: Utilize the extensive collection of free-to-use images available on Pixabay.
+- **None**: Choose this option if you don't want to add any images to your content.
+
+## Adding an Image
+
+- Go to **Settings - Image** tab.
+- Select the **Image Source** you want to use. This will add an image to the content.
+
+<img src={AddImages} width="700" />
+
+Please note the distinction between the two image sources:
+
+- **Image Source**: This option determines which platform (DALL-E, Pexels, Pixabay, or None) will be used to insert images directly into your post. The selected images will be added to your content based on the configured settings.
+- **Featured Image Source**: This option determines the source of the featured image for your post. The featured image typically serves as a visual representation of the post's content and is displayed prominently on your website, such as in the blog index or social media previews.
+
+Understanding the difference between these two settings will help you better manage the visual elements of your content and create a more engaging user experience.
+
+:::tip
+
+You can select different providers for the Image Source and Featured Image Source options. By doing so, you will have **two different images** in your post, which can add variety and visual interest. If you choose the same provider for both options, our plugin will retrieve the first result, resulting in both the image in the post and the featured image being the same. To create a more engaging user experience, we recommend selecting different providers for these two options.
+
+:::
+
+## Setting Featured Image
+
+You can enable this by selecting the “Featured Image Source” option in the **Settings - Image** tab.
+
+<img src={FeaturedImage} width="700" />
+
+When enabled, the plugin will automatically set the generated image as the featured image for your content.
+
+## SEO-Friendly Images
+
+Once our plugin generates an image (whether it is from DALL-E, Pexels or Pixabay), it automatically saves the image to your WordPress media library.
+
+To optimize the image for SEO, our plugin ensures that the image's **alt text**, **title**, **description**, and **caption** are properly set.
+
+<img src={SEOImage} width="700" />
+
+This practice not only enhances the user experience but also improves your website's visibility in search engine results.
+
+## Using DALL-E
+
+*Note: Make sure you have already entered your OpenAI API key in the **Settings - AI Engine** tab API Key field, as the DALL-E image generation works with the API key.*
+
+- Go to the **Settings - Image** tab and select the DALL-E image source.
+
+<img src={AddDALLE} width="700" />
+
+- Now navigate to the **Express Mode**.
+- Enter the title of your content and the number of headings and other details.
+- Click the **Generate** button. The plugin will send a request to the Dall-E model and get an image based on your title. This process may take a few seconds, depending on the complexity of the prompt.
+- Review the generated image and decide whether to use it or not.
+
+The image will be automatically added to your content. You can resize or reposition it as needed using the image editing tools in the WordPress editor.
+
+:::caution Content Policy Alert
+
+Note that not all requests made to OpenAI will result in an image being returned.
+
+OpenAI filters both prompts and images in accordance with their [content policy](https://labs.openai.com/policies/content-policy), and if either is flagged, an error will be returned.
+
+This is the error message that will be displayed if the request is not in compliance with OpenAI's content policy:
+
+"*Your request was rejected as a result of our safety system. Your prompt may contain text that is not allowed by our safety system.*"
+
+If you don't see an image generated in your content, it's possible that the image or prompt doesn't adhere to OpenAI's content policy, and our plugin has skipped it.
+
+:::
+
+### Setting Image Size
+
+There are three image sizes to choose from:
+
+- Small (256 x 256)
+- Medium (512 x 512)
+- Large (1024 x 1024)
+
+<img src={ImageSize} width="700" />
+
+Please note that these size limitations are imposed by DALL-E, not our plugin.
+
+The available image sizes are determined by the DALL-E API service capabilities.
+
+### Setting Image Style
+
+There are several image styles to choose from, which can influence the visual appearance and quality of the generated image:
+
+- None
+- Abstract
+- Contemporary
+- Cubism
+- Fantasy
+- Graffiti
+- Impressionism
+- Modern
+- Pop Art
+- Surrealism
+
+<img src={ImageStyle} width="700" />
+
+By selecting a specific style, you can tailor the generated image to better match the theme or mood of your content.
+
+Different styles can add unique artistic elements, textures, or color schemes to the image, enhancing its overall appeal and visual impact.
+
+Keep in mind that the chosen style may affect the image quality and details, so it's essential to experiment with various options to find the best match for your needs.
+
+### More Settings
+
+With DALL-E, you have the option to further customize your images by adjusting various settings.
+
+To access these additional settings:
+
+- Click the [+ More Settings] link under the Image Style section in the Settings - Image tab.
+
+<img src={MoreSettings} width="700" />
+
+Here, you can choose from a wide range of settings, such as:
+
+- **Artist**: Select an artist from the drop-down list.
+- **Photography**: Adjust photography settings.
+- **Lighting**: Modify the lighting in the image.
+- **Subject**: Choose the subject of the image.
+- **Camera**: Change camera settings.
+- **Composition**: Adjust the composition of the image.
+- **Resolution**: Choose the resolution of the image.
+- **Color**: Modify the color settings.
+- **Special Effects**: Apply special effects to the image.
+
+<img src={ImageSettings} width="700" />
+
+:::tip
+
+To find the best settings for your needs, you can use the **Image Generator** feature to test different combinations of settings.
+
+Once you have found the optimal settings, return to the **Content - Image** tab and save the same settings.
+
+These settings will be applied to all your images from now on.
+
+Remember that experimenting with these settings can help you generate images that better suit your content and improve the overall visual appeal of your website.
+
+:::
+
+## Using Pixabay
+
+you can enhance your articles with high-quality images from Pixabay, a leading platform for sharing beautiful, royalty-free images, illustrations, and vector graphics.
+
+To start using this feature, follow these simple steps:
+
+- **Obtain a Pixabay API Key**: First, you’ll need to sign up for a free [Pixabay account](https://pixabay.com) (if you don’t already have one) and get your API key. Visit Pixabay’s API [documentation](https://pixabay.com/api/docs/) for more information on how to get your API key.
+
+<img src={PixabayAPI} width="700" />
+
+- Go to the **Settings - Image** tab and make sure to select Pixabay as both the image source and featured image source if you plan to use it for both purposes.
+- Paste your API key into the Pixabay API key field.
+- Click **Save** to apply your choice.
+
+<img src={PixabayAPIfield} width="700" />
+
+### Additional Options
+
+While in the "Image" section, you can further customize your image search with the following options:
+
+- **Language**: Select the language for your image search (default: English).
+- **Image Type**: Choose the type of images you'd like to search for (default: all). Options include "all," "photo," "illustration," and "vector."
+- **Order**: Set the sorting order for your search results (default: popular). Options include "popular" and "latest."
+
+After configuring Pixabay integration, navigate to the Express Mode and generate content as you usually would.
+
+The plugin will automatically search and include relevant images from Pixabay based on your preferences.
+
+:::info
+
+Our plugin uses the **title** as the search term for finding images. For example, if you're generating content with the title "Healthy Life," we'll use this title to search for images on Pixabay and retrieve the first result. If you don't see any images generated, it's likely that no matching image exists on Pixabay for the given title.
+
+:::
+
+## Using Pexels
+
+To begin using this feature, follow these simple steps:
+
+- **Obtain a Pexels API Key**: First, [sign up](https://www.pexels.com/) for a free Pexels account (if you don't already have one) and [get your API key](https://www.pexels.com/api/new).
+
+<img src={PexelsAPI} width="700" />
+
+- Go to the **Settings - Image** tab and ensure to select Pexels as both the image source and featured image source if you intend to use it for both purposes.
+- Paste your API key into the Pexels API key field.
+- Click **Save** to apply your choice.
+
+<img src={Pexels} width="700" />
+
+### Additional Options
+
+While in the "Image" section, you can further customize your image search with the following options:
+
+- **Image Size**: Choose from 4 image sizes: None (Original), Large, Medium, Small
+- **Image Orientation**: Select one of the 3 image orientations: Portrait, Landscape, Square
+
+After configuring Pexels integration, navigate to the Express Mode and generate content as you usually would.
+
+The plugin will automatically search and include relevant images from Pexels based on your preferences.
+
+## Comparing Image Providers
+
+In this section, we'll showcase and compare images generated by three different providers: DALL-E, Pixabay, and Pexels.
+
+By examining their unique features and image styles, you can better understand the visual impact each provider brings to your content and make an informed decision on which one suits your needs best.
+
+<h2>Red Flowers</h2>
+<table>
+  <tr>
+    <th>DALL-E</th>
+    <th>Pixabay</th>
+    <th>Pexels</th>
+  </tr>
+  <tr>
+    <td>
+      <img src={DallESample} width="300" />
+    </td>
+    <td>
+      <img src={PixabaySample} width="300" />
+    </td>
+    <td>
+      <img src={PexelsSample} width="300" />
+    </td>
+  </tr>
+</table>
+
+<h2>Healthy Diet</h2>
+<table>
+  <tr>
+    <th>DALL-E</th>
+    <th>Pixabay</th>
+    <th>Pexels</th>
+  </tr>
+  <tr>
+    <td>
+      <img src={DallESample2} width="300" />
+    </td>
+    <td>
+      <img src={PixabaySample2} width="300" />
+    </td>
+    <td>
+      <img src={PexelsSample2} width="300" />
+    </td>
+  </tr>
+</table>
+
+<h2>Penguins</h2>
+<table>
+  <tr>
+    <th>DALL-E</th>
+    <th>Pixabay</th>
+    <th>Pexels</th>
+  </tr>
+  <tr>
+    <td>
+      <img src={DallESample3} width="300" />
+    </td>
+    <td>
+      <img src={PixabaySample3} width="300" />
+    </td>
+    <td>
+      <img src={PexelsSample3} width="300" />
+    </td>
+  </tr>
+</table>
