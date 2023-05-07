@@ -6,6 +6,20 @@ sidebar_position: 4
 
 The AI Power Pro Plan offers several distinct benefits over the Free Plan. Here's why you should consider upgrading:
 
+| Feature                           | Free Plan | Pro Plan |
+|-----------------------------------|-----------|----------|
+| Priority Email Support            | ❌        | ✅       |
+| Early Access to New Features      | ❌        | ✅       |
+| RSS Module                        | ❌        | ✅       |
+| Google Sheets Compatibility       | ❌        | ✅       |
+| Post Scheduling                   | ❌        | ✅       |
+| Enhanced AutoGPT Capabilities     | ❌        | ✅       |
+| Keyword Management                | ❌        | ✅       |
+| Inclusion of FAQ Content          | ❌        | ✅       |
+| Chat Bot Moderation               | ❌        | ✅       |
+| Custom Post Types for Embeddings  | ❌        | ✅       |
+
+
 ## 1. Priority Email Support
 One of the most significant benefits of the Pro Plan is the priority email support. If you ever encounter any issues or have any questions about the AI Power plugin, you'll receive dedicated support from our expert team. Your queries will be given priority, ensuring that you receive quick and efficient help when you need it most.
 

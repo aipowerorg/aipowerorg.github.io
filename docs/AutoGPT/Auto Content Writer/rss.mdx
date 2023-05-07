@@ -1,52 +1,54 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
-import CopyPasteImport from '/img/autogpt/copy-paste/copy-paste.png';
-import CopyPasteImport2 from '/img/autogpt/copy-paste/copy-paste2.png';
+import RSSFeed from '/img/autogpt/rss/rss.png';
+import RSSFeed2 from '/img/autogpt/rss/rss2.png';
 import Restart from '/img/autogpt/restart.png';
 import CustomPrompt from '/img/autogpt/custom-prompt.png';
 import Queue from '/img/autogpt/queue.png';
 
-# Copy-Paste
+# RSS
 
-The Copy-Paste module in the AutoGPT plugin allows you to easily generate content for multiple titles by simply pasting the titles directly into the text box.
+The RSS feature in the AutoGPT plugin allows you to easily generate content for multiple titles by importing an RSS feed.
 
-This feature simplifies the content creation process and saves you time.
+This powerful feature simplifies the content creation process and saves you time.
 
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/VkYLOtD6Wps" title="Auto Content Writer - Cron Setup" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/GuWSS3PJcgo" title="Generating Content from RSS with GPT" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 ## How It Works?
 
-Once you enter your desired titles and hit the generate button in the Copy-Paste, our plugin takes those titles and uses default content settings from the **Settings - Content** tab to generate the content. The content generation process is triggered by the Cron Job that you have set up.
+Once you have saved your RSS feed, our GPT agent will constantly check that feed based on your defined Cron Job interval. If there is any new post in that feed, our agent will take their titles as a batch and send it to the queue.
 
-Please note that the time it takes to generate the content depends on the availability of the OpenAI API and the number of articles you have requested. Generating a single article can take around 3 to 5 minutes, which means that if you have entered five titles, it might take around 20-25 minutes to generate all of them.
+The structure of a standard RSS feed includes elements such as title, link, description, pubDate, and more.
 
-It's important to keep in mind that if your Cron Job is set to run every minute, it means that the generation process will be triggered every minute. However, if the previous job has not yet completed, the new job will be added to the queue and will be processed after the current job is completed.
+When our GPT agent checks an RSS feed, it retrieves the title of any new posts in that feed and uses them as the title for the generated content.
+
+For example, if the RSS feed for a website has a new article titled "How to Eat Healthy" our GPT agent will take that title and use it as the title for the generated content.
+
+:::note
+
+You can enter up to **100 RSS feeds** for content generation in the RSS module, providing a wide range of sources for your content creation needs.
+
+:::
+
+:::caution
+
+It’s important to note that this module is **not recommended for generating news-related content**. GPT models may not provide accurate information for recent events, and may even imagine details. Instead, this module works best for generating blog posts based on non-news sources.
+
+:::
 
 :::info
 
-The Copy-Paste module retrieves its default values from the **Settings - Content** tab. Before running a job, please ensure that you have adjusted your content settings in the Content tab to match your desired output and preferences.
+The RSS module retrieves its default values from the **Settings - Content** tab. Before running a job, please ensure that you have adjusted your content settings in the Content tab to match your desired output and preferences.
 
 Learn more about content settings [here](/docs/category/express-mode).
 
 :::
 
-Once you hit generate, that batch of titles will be added to the queue and wait to be processed.
-
-You don't need to wait until that batch is completed before adding more batches to the queue.
-
-Free plan users can add up to 5 titles per batch, while Pro plan users can add up to 100 titles per batch.
-
-You can continue to add batches to the queue until you reach the maximum limit allowed by your plan.
-
-If you have multiple batches in the queue, the content generation process may take some time. 
-
-However, you can monitor the progress of each batch in the Queue tab and cancel a batch if it's taking longer than expected or if you no longer need the content.
-
 ## Requirements
 
-For the Copy-Paste module, you need to set up only one cron job for processing the queue.
+For the RSS module, you need to set up two cron jobs: one for retrieving the RSS feeds and another for processing the queue.
 
 **Queue Processor**:
 
@@ -54,42 +56,30 @@ For the Copy-Paste module, you need to set up only one cron job for processing t
 * * * * * php /var/www/html/index.php -- wpaicg_cron=yes 
 ```
 
+**RSS**:
+
+```bash
+* * * * * php /var/www/html/index.php -- wpaicg_rss=yes 
+```
+
 Learn how to setup a cron job [here](/docs/AutoGPT/gpt-agents#cron-job-setup).
 
 ## Setup
 
-To take advantage of the Copy-Paste module, follow these steps:
+To take advantage of the RSS feature, follow these steps:
 
-- Navigate to the **AutoGPT - Copy-Paste** tab, and ensure that you have completed the [Cron Job setup](/docs/AutoGPT/gpt-agents#cron-job-setup), which is essential for the Copy-Paste module to operate efficiently.
+- Navigate to the **AutoGPT - RSS** tab, and ensure that you have completed the [Cron Job setup](/docs/AutoGPT/gpt-agents#cron-job-setup), which is essential for the RSS module to operate efficiently.
 
-<img src={CopyPasteImport} />
+<img src={RSSFeed2} />
 
-- Paste the desired titles into the text box, with one title per line, and choose whether to save the content as a draft or publish it immediately, select the post category, author and click the **Generate** button. Learn more about content settings [here](/docs/category/express-mode).
+- Enter the RSS feed of your choice in the text fields provided. Learn more about content settings [here](/docs/category/express-mode).
 
-<img src={CopyPasteImport2} width="500" />
+<img src={RSSFeed} />
 
+- Set the Cron Job interval to define how often the RSS feed should be checked for new posts.
+- Choose the category where the generated content will be posted.
+- Finally, click the **Save** button to save the feed.
 - You can monitor the progress of your content creation in the **Queue** tab.
-
-:::info
-
-Free plan users are limited to generating only 5 pieces of content per batch. In contrast, Pro plan users have the advantage of generating up to 100 pieces of content per batch. Additionally, Pro plan users can schedule their posts and have the ability to add keywords, avoid keywords, and include FAQ sections in their generated content. This offers a more flexible and enhanced experience for Pro plan users.
-
-:::
-
-
-| Feature                  | Free Plan | Pro Plan |
-|--------------------------|-----------|----------|
-| Content Generation Limit per Batch | 5         | 100      |
-| Scheduled Posts          | ❌        | ✅       |
-| Keywords                 | ❌        | ✅       |
-| Avoid Keywords           | ❌        | ✅       |
-| FAQ Sections             | ❌        | ✅       |
-
-:::note
-
-Unlike the Bulk Editor, the Copy-Paste module does not provide options for scheduling, tags, keywords, and links. It is designed to work with titles only and offers a more streamlined content generation process.
-
-:::
 
 ## Using Custom Prompt
 

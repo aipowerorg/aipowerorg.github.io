@@ -200,6 +200,52 @@ If you find that the command provided by the Auto Content Writer plugin doesn't 
 
 :::
 
+:::tip
+
+You have the option to execute a cronjob **directly from your browser**.
+
+Simply enter the following URL in your browser’s address bar:
+
+```https://your_url.com/index.php?wpaicg_cron=yes```
+
+Make sure to replace "your_url" with your actual website URL.
+
+Keep in mind that this will only initiate the cronjob once. To run it in the background, you'll need to set up an appropriate cronjob.
+
+:::
+
+### Custom Workarounds
+
+Some hosting providers (like Cloudways) do not permit running cron jobs with arguments.
+
+In such situations, you can create a separate PHP file and invoke that PHP file from the cron job.
+
+You can utilize the provided sample. Ensure that you place it in your root folder.
+
+**cron_trigger.php**
+```jsx
+
+<?php
+require __DIR__.'/wp-load.php';
+
+$wpaicg_cron = \WPAICG\WPAICG_Cron::get_instance();
+$_GET['wpaicg_cron'] = 'yes';
+$wpaicg_cron->wpaicg_cron_job();
+
+$wpaicg_builder = \WPAICG\WPAICG_Embeddings::get_instance();
+$_GET['wpaicg_builder'] = 'yes';
+$wpaicg_builder->wpaicg_cron_job();
+
+$wpaicg_rss = \WPAICG\WPAICG_RSS::get_instance();
+$_GET['wpaicg_rss'] = 'yes';
+$wpaicg_rss->wpaicg_cron_job();
+
+$wpaicg_sheets = \WPAICG\WPAICG_Google_Sheets::get_instance();
+$_GET['wpaicg_sheets'] = 'yes';
+$wpaicg_sheets->wpaicg_cron_job();
+
+```
+
 ## Monitoring GPT Agents
 
 To ensure that your GPT Agents are functioning correctly, it's essential to monitor their performance. The AutoGPT Dashboard provides an overview of the GPT Agents' status and activity. Follow these steps to monitor your GPT Agents:

@@ -79,11 +79,16 @@ const config = {
             label: 'Docs',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
-          // {
-          //   href: 'https://github.com/sensahin/sensahin.github.io',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
+          {to: 'https://aipower.org/features/', label: 'Features', position: 'left'},
+          {to: 'https://aipower.org/pricing/', label: 'Pricing', position: 'left'},
+          {to: 'https://aipower.org/support/', label: 'Support', position: 'left'},
+          {to: 'https://aipower.org/contact/', label: 'Contact', position: 'right'},
+          {to: 'https://users.freemius.com', label: 'Sign In', position: 'right'},
+          {
+            href: 'https://github.com/aipowerorg/aipowerorg.github.io',
+            label: 'GitHub',
+            position: 'right',
+          },
         ],
       },
       footer: {

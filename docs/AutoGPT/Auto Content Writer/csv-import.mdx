@@ -1,24 +1,25 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-import CopyPasteImport from '/img/autogpt/copy-paste/copy-paste.png';
-import CopyPasteImport2 from '/img/autogpt/copy-paste/copy-paste2.png';
+import CSVImport from '/img/autogpt/csv/csv.png';
+import CSVImport2 from '/img/autogpt/csv/csv2.png';
+import CSVSample from '/img/autogpt/csv/sample-csv.png';
 import Restart from '/img/autogpt/restart.png';
 import CustomPrompt from '/img/autogpt/custom-prompt.png';
 import Queue from '/img/autogpt/queue.png';
 
-# Copy-Paste
+# CSV Import
 
-The Copy-Paste module in the AutoGPT plugin allows you to easily generate content for multiple titles by simply pasting the titles directly into the text box.
+The CSV feature in the AutoGPT plugin allows you to easily generate content for multiple titles by simply uploading a CSV file.
 
-This feature simplifies the content creation process and saves you time.
+This powerful feature simplifies the content creation process and saves you time.
 
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/VkYLOtD6Wps" title="Auto Content Writer - Cron Setup" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 ## How It Works?
 
-Once you enter your desired titles and hit the generate button in the Copy-Paste, our plugin takes those titles and uses default content settings from the **Settings - Content** tab to generate the content. The content generation process is triggered by the Cron Job that you have set up.
+Once you upload your titles in a csv and hit the generate button in the CSV module, our plugin takes those titles and uses default content settings from the **Settings - Content** tab to generate the content. The content generation process is triggered by the Cron Job that you have set up.
 
 Please note that the time it takes to generate the content depends on the availability of the OpenAI API and the number of articles you have requested. Generating a single article can take around 3 to 5 minutes, which means that if you have entered five titles, it might take around 20-25 minutes to generate all of them.
 
@@ -26,7 +27,7 @@ It's important to keep in mind that if your Cron Job is set to run every minute,
 
 :::info
 
-The Copy-Paste module retrieves its default values from the **Settings - Content** tab. Before running a job, please ensure that you have adjusted your content settings in the Content tab to match your desired output and preferences.
+The CSV module retrieves its default values from the **Settings - Content** tab. Before running a job, please ensure that you have adjusted your content settings in the Content tab to match your desired output and preferences.
 
 Learn more about content settings [here](/docs/category/express-mode).
 
@@ -46,7 +47,7 @@ However, you can monitor the progress of each batch in the Queue tab and cancel 
 
 ## Requirements
 
-For the Copy-Paste module, you need to set up only one cron job for processing the queue.
+For the CSV Import module, you need to set up only one cron job for processing the queue.
 
 **Queue Processor**:
 
@@ -58,17 +59,25 @@ Learn how to setup a cron job [here](/docs/AutoGPT/gpt-agents#cron-job-setup).
 
 ## Setup
 
-To take advantage of the Copy-Paste module, follow these steps:
+To take advantage of the CSV feature, follow these steps:
 
-- Navigate to the **AutoGPT - Copy-Paste** tab, and ensure that you have completed the [Cron Job setup](/docs/AutoGPT/gpt-agents#cron-job-setup), which is essential for the Copy-Paste module to operate efficiently.
+- Navigate to the **AutoGPT - CSV** tab, and ensure that you have completed the [Cron Job setup](/docs/AutoGPT/gpt-agents#cron-job-setup), which is essential for the CSV module to operate efficiently.
 
-<img src={CopyPasteImport} />
+<img src={CSVImport} width="400" />
 
-- Paste the desired titles into the text box, with one title per line, and choose whether to save the content as a draft or publish it immediately, select the post category, author and click the **Generate** button. Learn more about content settings [here](/docs/category/express-mode).
+- Upload a CSV file containing the title value for each line in the CSV tab and choose whether to save the content as a draft or publish it immediately, select the post category, author and click the **Generate** button. Learn more about content settings [here](/docs/category/express-mode).
 
-<img src={CopyPasteImport2} width="500" />
+<img src={CSVImport2} width="400" />
 
 - You can monitor the progress of your content creation in the **Queue** tab.
+
+Since the CSV module works with only one title per line, there isn't a need for a sample file.
+
+However, the structure of the CSV file should look like this:
+
+<img src={CSVSample} width="400" />
+
+Please make sure your **CSV delimiter** is comma.
 
 :::info
 
@@ -87,7 +96,7 @@ Free plan users are limited to generating only 5 pieces of content per batch. In
 
 :::note
 
-Unlike the Bulk Editor, the Copy-Paste module does not provide options for scheduling, tags, keywords, and links. It is designed to work with titles only and offers a more streamlined content generation process.
+Unlike the Bulk Editor, the CSV module does not provide options for scheduling, tags, keywords, and links. It is designed to work with titles only and offers a more streamlined content generation process.
 
 :::
 
