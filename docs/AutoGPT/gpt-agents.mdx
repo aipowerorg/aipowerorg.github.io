@@ -11,6 +11,9 @@ import Great from '/img/autogpt/great.png';
 import Plesk from '/img/autogpt/plesk.png';
 import Cpanel from '/img/autogpt/cpanel.png';
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # GPT Agents
 
 GPT Agents are the **key components** of the AutoGPT module.
@@ -222,28 +225,84 @@ In such situations, you can create a separate PHP file and invoke that PHP file 
 
 You can utilize the provided sample. Ensure that you place it in your root folder.
 
-**cron_trigger.php**
+**queue_trigger_for_single_site.php**
 ```jsx
-
 <?php
 require __DIR__.'/wp-load.php';
-
 $wpaicg_cron = \WPAICG\WPAICG_Cron::get_instance();
 $_GET['wpaicg_cron'] = 'yes';
 $wpaicg_cron->wpaicg_cron_job();
+```
 
+**queue_trigger_for_multi_site.php**
+```jsx
+<?php
+$_SERVER['HTTP_HOST'] = 'CHANGE_WITH_YOUR_DOMAIN';
+$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+require __DIR__.'/wp-load.php';
+$wpaicg_cron = \WPAICG\WPAICG_Cron::get_instance();
+$_GET['wpaicg_cron'] = 'yes';
+$wpaicg_cron->wpaicg_cron_job();
+```
+
+**embeddings_trigger_for_single_site.php**
+```jsx
+<?php
+require __DIR__.'/wp-load.php';
 $wpaicg_builder = \WPAICG\WPAICG_Embeddings::get_instance();
 $_GET['wpaicg_builder'] = 'yes';
 $wpaicg_builder->wpaicg_cron_job();
+```
 
+**embeddings_trigger_for_multi_site.php**
+```jsx
+<?php
+$_SERVER['HTTP_HOST'] = 'CHANGE_WITH_YOUR_DOMAIN';
+$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+require __DIR__.'/wp-load.php';
+$wpaicg_builder = \WPAICG\WPAICG_Embeddings::get_instance();
+$_GET['wpaicg_builder'] = 'yes';
+$wpaicg_builder->wpaicg_cron_job();
+```
+
+**rss_trigger_for_single_site.php**
+```jsx
+<?php
+require __DIR__.'/wp-load.php';
 $wpaicg_rss = \WPAICG\WPAICG_RSS::get_instance();
 $_GET['wpaicg_rss'] = 'yes';
 $wpaicg_rss->wpaicg_cron_job();
+```
 
+**rss_trigger_for_multi_site.php**
+```jsx
+<?php
+$_SERVER['HTTP_HOST'] = 'CHANGE_WITH_YOUR_DOMAIN';
+$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+require __DIR__.'/wp-load.php';
+$wpaicg_rss = \WPAICG\WPAICG_RSS::get_instance();
+$_GET['wpaicg_rss'] = 'yes';
+$wpaicg_rss->wpaicg_cron_job();
+```
+
+**sheets_trigger_for_single_site.php**
+```jsx
+<?php
+require __DIR__.'/wp-load.php';
 $wpaicg_sheets = \WPAICG\WPAICG_Google_Sheets::get_instance();
 $_GET['wpaicg_sheets'] = 'yes';
 $wpaicg_sheets->wpaicg_cron_job();
+```
 
+**sheets_trigger_for_multi_site.php**
+```jsx
+<?php
+$_SERVER['HTTP_HOST'] = 'CHANGE_WITH_YOUR_DOMAIN';
+$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+require __DIR__.'/wp-load.php';
+$wpaicg_sheets = \WPAICG\WPAICG_Google_Sheets::get_instance();
+$_GET['wpaicg_sheets'] = 'yes';
+$wpaicg_sheets->wpaicg_cron_job();
 ```
 
 ## Monitoring GPT Agents
