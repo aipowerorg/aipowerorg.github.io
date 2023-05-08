@@ -13,7 +13,7 @@ AI Power offers an extensive array of features and tools designed to augment you
 - **Content Writer**
     - Express Mode
     - Custom Mode
-    - Integration with DALL-E and Pexels images
+    - Integration with DALL-E, Pexels and Pixabay images
     - Integration with Yoast, Math Rank, and All in One SEO
 - **Auto Content Writer (AutoGPT)**
     - Bulk Editor
