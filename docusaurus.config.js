@@ -56,6 +56,11 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        // Add your Google Analytics configuration here:
+        gtag: {
+          trackingID: 'G-D4CDTL01MK', // Replace 'G-XXXXXXXXXX' with your Google Analytics tracking ID.
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
