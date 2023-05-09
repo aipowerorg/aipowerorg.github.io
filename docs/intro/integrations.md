@@ -10,7 +10,7 @@ AI Power integrates with a multitude of services and platforms to provide a comp
 
 - **Yoast SEO, All In One SEO, and Rank Math**: These integrations allow AI Power to generate SEO-optimized content, helping your website to rank better in search engine results.
 
-- **Pexels**: AI Power integrates with Pexels for high-quality, royalty-free image sourcing, enhancing the visual appeal of your content.
+- **Pexels, Pixabay**: AI Power integrates with Pexels and Pixabay for high-quality, royalty-free image sourcing, enhancing the visual appeal of your content.
 
 - **DALL-E and Stable Diffusion**: These integrations enable AI Power to generate unique and compelling images, enriching your content with creative visuals.
 

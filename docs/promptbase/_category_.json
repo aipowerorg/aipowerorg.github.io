@@ -1,6 +1,6 @@
 {
-  "label": "AutoGPT",
-  "position": 5,
+  "label": "PromptBase",
+  "position": 9,
   "link": {
     "type": "generated-index",
     "description": "Learn the most important concepts."
