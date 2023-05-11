@@ -6,6 +6,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Style from '/img/chatgpt/style.png';
 import StyleWidget from '/img/chatgpt/style-widget.png';
+import CustomText from '/img/chatgpt/custom-text.png';
+import CustomTextWidget from '/img/chatgpt/custom-text-widget.png';
 
 # Styling the Chatbot
 
@@ -40,6 +42,8 @@ However, the widget has three additional options:
 | Icon       | Specifies the widget's icon, displayed on the side of your website.             |
 | Position   | Sets the position of the widget on your website, either left or right.          |
 | Delay Time | Determines the time (in seconds) before the widget appears on the screen.       |
+
+## Customizing the Appearance
 
 Here are the steps to adjust the style of your chatbot:
 
@@ -99,6 +103,61 @@ Here are the steps to adjust the style of your chatbot:
                 <li><b>Border Radius - Text Field</b>: Input a number to adjust the curvature of the text input field corners. The default value is 20px.</li>
                 <li><b>Icons Color</b>: Use the color picker or enter a hex code to set the color of the icons in the download bar. The default color is blue.</li>
                 <li><b>AI Thinking Text Color</b>: Use the color picker or enter a hex code to set the color of the text displayed when the AI is processing a response.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+  </TabItem>
+</Tabs>
+
+## Customization the Text
+
+For a more personalized user experience, you can customize the chatbot's text settings.
+
+Here are some of the text parameters you can adjust:
+
+| Option | Description | Default |
+| --- | --- | --- |
+| AI Name | Change the name of the AI | "AI" |
+| You | Change the name of the user | "You" |
+| AI Thinking | Change the text while the AI is thinking | "AI Thinking" |
+| Placeholder | Change the placeholder text of the input field | "Type a message" |
+| Welcome Message | Change the welcome message of the chatbot | "Hello human, I am a GPT powered AI chat bot. Ask me anything!" |
+| No Answer Message | Change the displayed message when the chatbot can't generate a response | Empty |
+| Footer Note | Set a note that appears in the chatbot's footer | Empty |
+
+<Tabs>
+  <TabItem value="shortcode" label="Shortcode" default>
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Click on the <b>Custom Text</b> tab located on the right side of your screen.</li>
+        <img src={CustomText} />
+        <li>Adjust the settings as necessary:</li>
+            <ul>
+                <li><b>AI Name</b>: Input a name to personalize the AI. The default is "AI".</li>
+                <li><b>You</b>: Input a name to represent the user. The default is "You".</li>
+                <li><b>AI Thinking</b>: Input custom text to be displayed while the AI is generating a response. The default is "AI Thinking".</li>
+                <li><b>Placeholder</b>: Input custom placeholder text for the input field. The default is "Type a message".</li>
+                <li><b>Welcome Message</b>: Input a custom welcome message for the chatbot. The default is "Hello human, I am a GPT powered AI chat bot. Ask me anything!"</li>
+                <li><b>No Answer Message</b>: In case the chatbot cannot generate a response, input a custom message to be displayed. The default is empty.</li>
+                <li><b>Footer Note</b>: Input a custom note to be displayed in the chatbot's footer.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+  </TabItem>
+  <TabItem value="widget" label="Widget">
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Click on the <b>Custom Text</b> tab located on the right side of your screen.</li>
+        <img src={CustomTextWidget} />
+        <li>Adjust the settings as necessary:</li>
+            <ul>
+                <li><b>AI Name</b>: Input a name to personalize the AI. The default is "AI".</li>
+                <li><b>You</b>: Input a name to represent the user. The default is "You".</li>
+                <li><b>AI Thinking</b>: Input custom text to be displayed while the AI is generating a response. The default is "AI Thinking".</li>
+                <li><b>Placeholder</b>: Input custom placeholder text for the input field. The default is "Type a message".</li>
+                <li><b>Welcome Message</b>: Input a custom welcome message for the chatbot. The default is "Hello human, I am a GPT powered AI chat bot. Ask me anything!"</li>
+                <li><b>No Answer Message</b>: In case the chatbot cannot generate a response, input a custom message to be displayed. The default is empty.</li>
+                <li><b>Footer Note</b>: Input a custom note to be displayed in the chatbot's footer.</li>
             </ul>
         <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
