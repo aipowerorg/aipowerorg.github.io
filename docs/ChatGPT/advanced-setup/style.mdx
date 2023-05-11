@@ -2,6 +2,101 @@
 sidebar_position: 2
 ---
 
-# Style
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Style from '/img/chatgpt/style.png';
+import StyleWidget from '/img/chatgpt/style-widget.png';
 
-In progres..
+# Styling the Chatbot
+
+You can easily customize the appearance of your chatbot by adjusting its font size, font color, background color, button color, text field background and border colors, user and AI message background colors, width and height, and even the avatars.
+
+- **Font Size**: You can set the font size of the chatbot. Default is 13. It can be set to a value between 10 and 30.
+- **Font Color**: You can set the font color of the chatbot. Default is #000000.
+- **Background Color**: You can set the background color of the chatbot.
+- **Button Color**: You can set the color of the buttons.
+- **Text Field Background**: You can set the background color of the text field. Default is #ffffff.
+- **Text Field Border**: You can set the border color of the text field. Default is #ffffff.
+- **User Background Color**: You can set the background color of the user messages. Default is #444654.
+- **AI Background Color**: You can set the background color of the user messages. Default is #343541.
+- **Width**: You can set the width of the chatbot. Default is 300. It can be set to a value between 200 and 800. You can also specify the width in percentage.
+- **Height**: You can set the height of the chatbot. Default is 400. It can be set to a value between 200 and 800. You can also specify the height in percentage.
+- **Use Avatars**: You can enable or disable the avatars. If you enable this option, the chatbot will display the avatars of the user and the chatbot. If user is logged in then it will display the avatar of the user.
+- **AI Avatar**: You can set the avatar of the chatbot. You can use the default one or you can upload your own avatar. Size must be 40x40.
+- **Border Radius - Window**: This attribute allows you to adjust the curvature of the chatbot window corners. The default value is set to 20px.
+- **Text Field Height**: This determines the height of the message text input field. By default, it's set to 60px.
+- **Border Radius - Text Field**: You can alter the curvature of the corners of the message text input field. The default value is 20px.
+- **Icons Color**: This attribute allows you to modify the color of the icons in the download bar. Default color is blue.
+- **AI Thinking Text Color**: This allows you to set the color of the text displayed when the AI is processing a response.
+
+All the style settings mentioned above apply both to the shortcode and the widget.
+
+However, the widget has three additional options:
+
+- **Icon**: This is your widget's icon, which is located on the right or left side of your website. The default size is 75x75. You can either use the default icon or upload a custom one.
+- **Position**: This allows you to set the position of the widget on your website. You have two options: **left** or **right**.
+- **Delay Time**: This is the time in seconds before your widget automatically appears on the screen. For example, if you set the delay time to 5, the widget will appear after 5 seconds. If you don't want to use this feature, simply leave the field empty.
+
+Here are the steps to adjust the style of your chatbot:
+
+<Tabs>
+  <TabItem value="shortcode" label="Shortcode" default>
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Click on the <b>Style</b> tab located on the right side of your screen.</li>
+        <img src={Style} />
+        <li>Adjust the settings as necessary:</li>
+            <ul>
+                <li><b>Font Size</b>: Enter a number between 10 and 30 to adjust the chatbot's font size. The default is 13.</li>
+                <li><b>Font Color</b>: Click on the color picker or input a hex code to set the font color of the chatbot. The default color is #000000.</li>
+                <li><b>Background Color</b>: Use the color picker or enter a hex code to set the chatbot's background color.</li>
+                <li><b>Button Color</b>: Use the color picker or enter a hex code to set the color of the chatbot's buttons.</li>
+                <li><b>Text Field Background</b>: Use the color picker or enter a hex code to set the background color of the text input field. The default color is #ffffff.</li>
+                <li><b>Text Field Border</b>: Use the color picker or enter a hex code to set the border color of the text input field. The default color is #ffffff.</li>
+                <li><b>User Background Color</b>: Use the color picker or enter a hex code to set the background color of the user's messages. The default color is #444654.</li>
+                <li><b>AI Background Color</b>: Use the color picker or enter a hex code to set the background color of the AI's messages. The default color is #343541.</li>
+                <li><b>Width</b>: Input a number (in pixels or percentage) to set the width of the chatbot. The default is 300px, and it can be set between 200 and 800px or as a percentage.</li>
+                <li><b>Height</b>: Input a number (in pixels or percentage) to set the height of the chatbot. The default is 400px, and it can be set between 200 and 800px or as a percentage.</li>
+                <li><b>Use Avatars</b>: Toggle this option to enable or disable the display of avatars. If enabled, the chatbot will display the avatars of the user and the AI. If the user is logged in, their avatar will be displayed.</li>
+                <li><b>AI Avatar</b>: Choose the avatar of the chatbot. You can use the default avatar or upload your own. The size must be 40x40px.</li>
+                <li><b>Border Radius - Window</b>: Input a number to adjust the curvature of the chatbot window corners. The default value is 20px.</li>
+                <li><b>Text Field Height</b>: Input a number to set the height of the text input field. The default height is 60px.</li>
+                <li><b>Border Radius - Text Field</b>: Input a number to adjust the curvature of the text input field corners. The default value is 20px.</li>
+                <li><b>Icons Color</b>: Use the color picker or enter a hex code to set the color of the icons in the download bar. The default color is blue.</li>
+                <li><b>AI Thinking Text Color</b>: Use the color picker or enter a hex code to set the color of the text displayed when the AI is processing a response.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+  </TabItem>
+  <TabItem value="widget" label="Widget">
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Click on the <b>Style</b> tab located on the right side of your screen.</li>
+        <img src={StyleWidget} />
+        <li>Adjust the settings as necessary:</li>
+            <ul>
+                <li><b>Widget Icon</b>: This is the icon that will appear on the side of your website to represent the chatbot widget. You can use the default icon or upload a custom icon. The icon should be 75x75px in size.</li>
+                <li><b>Position</b>: This allows you to determine the position of the chatbot widget on your website. You can choose either the left or right side of your website for the widget's position.</li>
+                <li><b>Delay Time</b>: You can input a number into this field to set a delay for the widget's appearance. For instance, if you enter 5, the widget will appear after a 5-second delay. If you want the widget to appear immediately, leave this field empty.</li>
+                <li><b>Font Size</b>: Enter a number between 10 and 30 to adjust the chatbot's font size. The default is 13.</li>
+                <li><b>Font Color</b>: Click on the color picker or input a hex code to set the font color of the chatbot. The default color is #000000.</li>
+                <li><b>Background Color</b>: Use the color picker or enter a hex code to set the chatbot's background color.</li>
+                <li><b>Button Color</b>: Use the color picker or enter a hex code to set the color of the chatbot's buttons.</li>
+                <li><b>Text Field Background</b>: Use the color picker or enter a hex code to set the background color of the text input field. The default color is #ffffff.</li>
+                <li><b>Text Field Border</b>: Use the color picker or enter a hex code to set the border color of the text input field. The default color is #ffffff.</li>
+                <li><b>User Background Color</b>: Use the color picker or enter a hex code to set the background color of the user's messages. The default color is #444654.</li>
+                <li><b>AI Background Color</b>: Use the color picker or enter a hex code to set the background color of the AI's messages. The default color is #343541.</li>
+                <li><b>Width</b>: Input a number (in pixels or percentage) to set the width of the chatbot. The default is 300px, and it can be set between 200 and 800px or as a percentage.</li>
+                <li><b>Height</b>: Input a number (in pixels or percentage) to set the height of the chatbot. The default is 400px, and it can be set between 200 and 800px or as a percentage.</li>
+                <li><b>Use Avatars</b>: Toggle this option to enable or disable the display of avatars. If enabled, the chatbot will display the avatars of the user and the AI. If the user is logged in, their avatar will be displayed.</li>
+                <li><b>AI Avatar</b>: Choose the avatar of the chatbot. You can use the default avatar or upload your own. The size must be 40x40px.</li>
+                <li><b>Border Radius - Window</b>: Input a number to adjust the curvature of the chatbot window corners. The default value is 20px.</li>
+                <li><b>Text Field Height</b>: Input a number to set the height of the text input field. The default height is 60px.</li>
+                <li><b>Border Radius - Text Field</b>: Input a number to adjust the curvature of the text input field corners. The default value is 20px.</li>
+                <li><b>Icons Color</b>: Use the color picker or enter a hex code to set the color of the icons in the download bar. The default color is blue.</li>
+                <li><b>AI Thinking Text Color</b>: Use the color picker or enter a hex code to set the color of the text displayed when the AI is processing a response.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+  </TabItem>
+</Tabs>
