@@ -10,6 +10,8 @@ import UserAware from '/img/chatgpt/user-aware.png';
 import ContentAware from '/img/chatgpt/content-aware.png';
 import ContentAwareWidget from '/img/chatgpt/content-aware-widget.png';
 import AdditionalContext from '/img/chatgpt/additional-context.png';
+import SelectIndex from '/img/chatgpt/select-index.png';
+import IndexSync from '/img/chatgpt/index-sync.png';
 
 # Context
 
@@ -179,6 +181,26 @@ For Embeddings, we offer two different methods:
 
 - **Embeddings + Completions**: This method uses the Embeddings to find the most relevant page and then uses completions to generate a response. This is the **recommended** option for chat bots and widgets.
 - **Embeddings Only**: This method uses the Embeddings to find the most relevant page and then uses the content of the page to generate a response. It does not use Davinci or any other GPT model for generating a response. For the "Embeddings Only" method, you can set the number of nearest answers that the chatbot will return. The default is 5, but it can be set to a value between 1 and 5.
+
+#### Index Selection
+
+Upon enabling the Embeddings feature, a dropdown menu labeled **Pinecone Index** becomes active.
+
+<img src={SelectIndex} width="300" />
+
+This feature allows you to choose different indices for different bots.
+
+The indices are the embeddings of your website content stored in the Pinecone vector database.
+
+:::tip
+
+Choosing different indices for different chatbots can be immensely beneficial, especially when managing multiple chatbots across various pages or websites with distinct content or purposes.
+
+:::
+
+You can manage and sync your indices via the **Embeddings - Settings** tab.
+
+<img src={IndexSync} width="700" />
 
 ### Configuring Content Awareness
 
