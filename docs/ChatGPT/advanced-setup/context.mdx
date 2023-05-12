@@ -7,6 +7,7 @@ import TabItem from '@theme/TabItem';
 import MemoryShortcode from '/img/chatgpt/memory-shortcode.png';
 import MemoryWidget from '/img/chatgpt/memory-widget.png';
 import UserAware from '/img/chatgpt/user-aware.png';
+import UserAwareSample from '/img/chatgpt/user-aware-sample.png';
 import ContentAware from '/img/chatgpt/content-aware.png';
 import ContentAwareWidget from '/img/chatgpt/content-aware-widget.png';
 import AdditionalContext from '/img/chatgpt/additional-context.png';
@@ -88,45 +89,6 @@ This guide will walk you through the steps to configure the **Remember Conversat
                 <li><b>Remember Conversation Up To</b>: Set the number of messages that the chatbot will remember from the conversation history. The default value is 10, but you can set it to any value between 3 and 20 based on your requirements.</li>
             </ul>
         <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
-    </ul>
-</TabItem>
-</Tabs>
-
-## User Aware
-
-Enabling this option makes the chatbot aware of the user's **Display Name** on their WordPress profile page.
-
-If the display name is empty, the chatbot will use the user's **username** to personalize the interaction.
-
-This feature only works if the user is logged in.
-
-:::tip
-
-"User Awareness" is only functional when the user is logged in.
-
-If the majority of your chatbot users are non-registered or anonymous visitors, turning on this feature might not bring much benefit.
-
-:::
-
-here's how to adjust the User Aware settings of your chatbot:
-
-<Tabs>
-  <TabItem value="shortcode" label="Shortcode" default>
-    <ul>
-        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
-        <img src={UserAware} width="300" />
-        <li>Enable or disable the User Aware option as necessary:</li>
-        <li>After adjusting the setting, click on the <b>Save</b> button to apply the changes.</li>
-    </ul>
-    </TabItem>
-<TabItem value="widget" label="Widget">
-    <ul>
-        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
-        <img src={UserAware} width="300" />
-        <li>Enable or disable the User Aware option as necessary:</li>
-        <li>After adjusting the setting, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
 </TabItem>
 </Tabs>
@@ -235,7 +197,6 @@ This guide will assist you in setting up the **Content Awareness** feature in yo
 </TabItem>
 </Tabs>
 
-
 ## Additional Context
 
 You can add additional context to the chatbot which can be used alongside the Excerpt or Embeddings options.
@@ -301,6 +262,47 @@ This guide will assist you in setting up the **Additional Context** feature in y
                 <li>You can add dynamic variables into the context using shortcodes: [sitename], [siteurl], [domain], and [date].</li>
             </ul>
         <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+</TabItem>
+</Tabs>
+
+## User Aware
+
+Enabling this option makes the chatbot aware of the user's **Display Name** on their WordPress profile page.
+
+If the display name is empty, the chatbot will use the user's **username** to personalize the interaction.
+
+<img src={UserAwareSample} width="700" />
+
+This feature only works if the user is logged in.
+
+:::tip
+
+"User Awareness" is only functional when the user is logged in.
+
+If the majority of your chatbot users are non-registered or anonymous visitors, turning on this feature might not bring much benefit.
+
+:::
+
+here's how to adjust the User Aware settings of your chatbot:
+
+<Tabs>
+  <TabItem value="shortcode" label="Shortcode" default>
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
+        <img src={UserAware} width="300" />
+        <li>Enable or disable the User Aware option as necessary:</li>
+        <li>After adjusting the setting, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+    </TabItem>
+<TabItem value="widget" label="Widget">
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
+        <img src={UserAware} width="300" />
+        <li>Enable or disable the User Aware option as necessary:</li>
+        <li>After adjusting the setting, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
 </TabItem>
 </Tabs>
