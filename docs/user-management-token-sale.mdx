@@ -2,6 +2,118 @@
 sidebar_position: 10
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import TokenSale from '/img/token-sale/token-sale-ai-forms.png';
+import TokenSalePB from '/img/token-sale/token-sale-promptbase.png';
+import TokenSaleChat from '/img/token-sale/token-sale-chatgpt.png';
+import TokenSaleImg from '/img/token-sale/token-sale-img.png';
+import WooCommerce from '/img/token-sale/woocommerce.png';
+import CreateProduct from '/img/token-sale/create-product.png';
+import SetPrice from '/img/token-sale/set-price.png';
+import Price from '/img/token-sale/price.png';
+import Promo from '/img/token-sale/promo.png';
+import AIAccount from '/img/token-sale/ai-account.png';
+import RoleManager from '/img/token-sale/role-manager.png';
+import Shortcode from '/img/token-sale/shortcode.png';
+
 # User Management & Token Sale
 
-In progress...
+With version 1.6.47 of the AI Power WordPress plugin, two new features have been introduced:
+
+- **Token Sale**: This feature enables the sale of AI forms, prompts, image generators, and chatbots through WooCommerce integration.
+- **AI Account**: This allows users to view their token usage and statistics.
+
+To use these features, you must have **WooCommerce** installed.
+
+## Token Sale
+
+To enable the Token Sale feature for various services, follow these steps:
+
+<Tabs>
+    <TabItem value="aiforms" label="AI Forms" default>
+        <ul>
+            <li>Navigate to <b>AI Forms > Settings</b> tab and enable the <b>Token Sale</b> feature.</li>
+            <img src={TokenSale} width="500" />
+            <li>Click on the <b>Save</b> button to apply the changes.</li>
+        </ul>
+    </TabItem>
+    <TabItem value="promptbase" label="PromptBase" default>
+        <ul>
+            <li>Navigate to <b>PromptBase > Settings</b> tab and enable the <b>Token Sale</b> feature.</li>
+            <img src={TokenSalePB} width="500" />
+            <li>Click on the <b>Save</b> button to apply the changes.</li>
+        </ul>
+    </TabItem>
+    <TabItem value="chatgpt" label="ChatGPT" default>
+        <ul>
+            <li>Navigate to <b>ChatGPT > Settings</b> tab and enable the <b>Token Sale</b> feature.</li>
+            <img src={TokenSaleChat} width="700" />
+            <li>Click on the <b>Save</b> button to apply the changes.</li>
+        </ul>
+    </TabItem>
+    <TabItem value="image" label="Image Generator" default>
+        <ul>
+            <li>Navigate to <b>Image Generator > Settings</b> tab and enable the <b>Token Sale</b> feature.</li>
+            <img src={TokenSaleImg} width="500" />
+            <li>Click on the <b>Save</b> button to apply the changes.</li>
+        </ul>
+    </TabItem>
+</Tabs>
+
+### WooCommerce Integration
+
+Go to **Settings > WooCommerce** tab and choose your preferred method for adding tokens to user accounts.
+
+Under the **Add tokens to user account if order status is**: option, you can choose between **Processing** and **Completed**.
+
+<img src={WooCommerce} width="700" />
+
+Selecting **Processing** will add tokens to the user account once they place their order, without requiring a manual status update.
+
+Choosing **Completed** will add tokens to the user account only when their order status is marked as completed.
+
+### Create a Product
+
+Go to **Products > Add New**.
+
+Create your product, for example, selling 1k tokens for your AI forms. Provide a name, description, images, etc..
+
+<img src={CreateProduct} width="700" />
+
+Set price for your tokens.
+
+<img src={SetPrice} width="700" />
+
+Scroll down to the **AI Power Token Sale** metabox. This box contains two options: **Sell token for** and **Token amount**.
+
+Select the appropriate service and specify the number of tokens you wish to sell.
+
+<img src={Price} width="700" />
+
+Save your product.
+
+Now, when users purchase the product, the corresponding tokens will be added to their balance, based on your chosen processing or completed status.
+
+<img src={Promo} width="700" />
+
+That's it!
+
+## AI Account
+
+Users can view their token usage in the **AI Account** menu of the plugin.
+
+<img src={AIAccount} width="700" />
+
+To grant users access to this menu, use the **Role Manager** feature.
+
+<img src={RoleManager} width="700" />
+
+A new page called **My AI Account** will be automatically created for subscribers.
+
+<img src={Shortcode} width="700" />
+
+You can customize this page and add the `wpaicg_my_account` shortcode to display user statistics.
+
+You can add **Buy Token** buttons and links as you wish.
