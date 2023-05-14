@@ -51,6 +51,8 @@ If you don't have GPT-4 API access and if you select GPT-4 or GPT-4K-32K as your
 | Babbage | Moderate classification, semantic search classification |
 | Ada | Parsing text, simple classification, address correction, keywords |
 
+You can use our [Comparison Tool](comparison-tool) to compare different models.
+
 ### Best Practices and Recommendations
 
 For different tasks and requirements, different GPT models may be more suitable. Here are some recommendations based on common use cases:
