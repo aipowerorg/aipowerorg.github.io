@@ -90,11 +90,6 @@ const config = {
           {to: 'https://aipower.org/contact/', label: 'Contact', position: 'left'},
           {to: 'https://users.freemius.com', label: 'Sign In', position: 'right'},
           {to: 'https://discord.gg/3GWp77JEM7', label: 'Discord', position: 'right'},
-          {
-            href: 'https://github.com/aipowerorg/aipowerorg.github.io',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
       footer: {

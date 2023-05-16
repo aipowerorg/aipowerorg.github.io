@@ -2,6 +2,241 @@
 sidebar_position: 9
 ---
 
+import PineconeIndex from '/img/embeddings/pinecone.png';
+import PineconeIndex1 from '/img/embeddings/pinecone1.png';
+import PineconeIndex2 from '/img/embeddings/pinecone2.png';
+import PineconeAPI from '/img/embeddings/pinecone-api.png';
+import PineconeAPISave from '/img/embeddings/api-save.png';
+import ContentBuilder from '/img/embeddings/content-builder.png';
+import Cron from '/img/embeddings/embeddings-cron.png';
+import CronSample from '/img/embeddings/sample.jpeg';
+import CronIndex from '/img/embeddings/cron-index.png';
+import IndexBuilder from '/img/embeddings/index-builder.png';
+import CustomPost from '/img/embeddings/custom-post.png';
+import CustomPostFields from '/img/embeddings/fields.png';
+import InstantEmbeddings from '/img/embeddings/instant-embeddings.png';
+import Instant from '/img/embeddings/instant.png';
+
 # Embeddings
 
-In progress..
+OpenAI’s text embeddings measure the relatedness of text strings.
+
+We use this technology to create a semantic search engine, KnowledgeBase and a chat bot.
+
+<iframe width="100%" height="535" src="https://www.youtube.com/embed/t3UQQ5-oNso" title="Create Fully Customized ChatGPT in WordPress with Embeddings and Pinecone" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+To use this feature, you must first create a Pinecone account.
+
+You can think of Pinecone as a long-term external memory for your bot.
+
+:::info
+OpenAI charges a cost of $0.0004 per 1,000 tokens for embeddings.
+
+Assuming that 750 words are approximately equal to 1,000 tokens, let's consider a scenario where you have a website with 1,000 pages, and each page has 750 words.
+
+In this case, the website would have a total of 750,000 words, which translates to 1,000,000 tokens. Therefore, the cost of embeddings for the entire website would be $0.40.
+
+Please note that this is only an approximation. For the precise cost, please refer to OpenAI usage.
+
+:::
+
+You can use embeddings for:
+
+- **Chat Bot** - You can use the embeddings feature to create a chat widget that will respond to your visitors’ questions related to your website.
+- **Semantic Search** - We have a feature called SearchGPT where you can create your own search engine. You can use the embeddings feature to create a semantic search engine. For example, if you search for “dog”, you will get results for “puppy”, “pooch”, “canine”, “hound”, etc. This is because the embeddings feature will find the most similar text strings to “dog”.
+
+Now let's take a look at all the features in detail.
+
+## Pinecone Setup
+
+To use the Embeddings feature in AI Power, you need to first create an account with Pinecone and obtain your API key.
+
+Here's how:
+
+- Visit [Pinecone](https://www.pinecone.io) to sign up for a new account. 
+
+:::tip
+
+Pinecone is currently experiencing high demand. As a result, new users who wish to sign up for the Starter (free) plan may find themselves placed on a waitlist.
+
+By providing your credit card information for a trial, you can start using Pinecone immediately. Don't worry, if you only wish to use the free plan, you can cancel the subscription after the trial period ends. This way, you can start using the free plan without having to wait.
+
+:::
+
+- Once your account is created, go to the [Pinecone dashboard](https://app.pinecone.io).
+
+<img src={PineconeIndex1} />
+
+- To create an index, click on the **Create Index** button.
+- Provide a unique name for your index, set the dimension to **1536**, and choose **cosine** for the metric.
+
+<img src={PineconeIndex} width="500" />
+
+- Click **Create Index**. Your index is now created!
+- Your new index will be associated with a specific environment, something like *us-east1-gcp*. Please take note of this environment as it will be needed in the AI Power settings.
+
+<img src={PineconeIndex2} />
+
+- Click on the **API Keys** option in the left side menu to generate your API key. Make sure to copy this key as you will need it later.
+
+<img src={PineconeAPI} />
+
+- Paste your Pinecone API Key in the corresponding field and select your Pinecone environment from the dropdown list under the **Embeddings - Settings** tab in AI Power. Be sure to save the changes after you've input the necessary information.
+
+<img src={PineconeAPISave} />
+
+With these steps, you have successfully created an account with Pinecone, created an index, and configured AI Power to use this index.
+
+Now you're ready to use the Embeddings feature!
+
+:::info
+
+If you have more than one index on Pinecone, you can specify your default index in AI Power. Navigate to the Embeddings - Settings tab and use the "Select Index" dropdown menu to choose your default index. Remember to save your changes!
+
+:::
+
+## Instant Embeddings
+
+AI Power plugin features a robust tool called **Instant Embeddings**.
+
+This feature allows you to generate embeddings for individual posts, pages, or products without the necessity of setting up a Cron Job or waiting for the Index Builder to run.
+
+This makes for a quicker and more flexible approach to generating embeddings.
+
+To use Instant Embeddings, follow the steps below:
+
+- Navigate to the post, page, or product for which you wish to create an embedding.
+- Locate and select the checkbox next to the **Instant Embedding** option.
+
+<img src={Instant} width="700" />
+
+- The plugin will then generate an embedding for the selected content.
+
+### Custom Post Types
+
+Pro plan users have the additional advantage of being able to create instant embeddings for custom post types.
+
+Once you've upgraded to the Pro plan, you can easily generate embeddings for your custom post types.
+
+- Navigate to any of your custom post type pages.
+- Select your content.
+- Click the **Instant Embedding** button.
+
+<img src={InstantEmbeddings} width="700" />
+
+This action will create an instant embedding for your selected custom post type content.
+
+This enhanced feature of the Pro plan empowers you to create embeddings for a wider range of content types, further enhancing the capabilities of your AI-powered chatbot.
+
+## Content Builder
+
+The Content Builder allows you to create embeddings for all your website content.
+
+You can enter free text strings, FAQs, knowledge base topics, product details, URLs, and company profiles that you want to embed.
+
+To use the Content Builder, follow these steps:
+
+- Navigate to **Embeddings - Content Builder**.
+- Select the content type that you want to use.
+- Enter all the required information.
+- Click on the **Save** button.
+
+<img src={ContentBuilder} width="700" />
+
+You can view your entries under the **Embeddings - Entries** tab.
+
+## Index Builder
+
+To be able to use Index Builder you need to setup a cron job.
+
+### Configuring Cron Jobs
+
+- Follow the steps outlined in this guide to [set up a Cron Job](/docs/AutoGPT/gpt-agents#cron-job-setup).
+- Ensure that you include the specific PHP command for the Embeddings job in your Cron Job configuration to make it functional.
+- You can find your php command under **Embeddings - Settings** tab.
+
+<img src={Cron} />
+
+Your PHP command may vary depending on your server setup.
+
+For the Embeddings module, you need to set up only one cron job.
+
+**Embeddings**:
+
+```bash
+* * * * * php /var/www/html/index.php -- wpaicg_builder=yes 
+```
+
+Learn how to setup a cron job [here](/docs/AutoGPT/gpt-agents#cron-job-setup).
+
+This is how my Cron setup looks like.
+
+<img src={CronSample} />
+
+Once the Cron Job setup is complete, you should see a message stating, “Great! It looks like your Cron Job is running properly. You should now be able to use the Index Builder."
+
+### Configuring the Index Builder
+
+Once you have set up the Cron Job, you can start using the Index Builder. Here's how:
+
+- Navigate to the **Embeddings - Index Builder** tab in AI Power.
+- Toggle the **Cron Indexing** option to **Yes**. Please note that enabling this option will start indexing your website content. Moreover, every time you create a new post, page, or product, it will be indexed automatically.
+- Check the box for **Posts, Pages, and Products**.
+
+<img src={CronIndex} width="500" />
+
+- Click on the **Save** button.
+- Wait for the indexing process to finish.
+- You can track the progress of the indexing in the Index Builder tab.
+
+### Indexing Custom Post Types
+
+The Pro plan of AI Power offers the ability to index custom post types.
+
+Once you have upgraded to the Pro plan, you can navigate to the **Embeddings - Settings** tab.
+
+Here, you will find the option **Build Index for:**. If you have any custom post types, they will be listed here.
+
+<img src={CustomPost} width="500" />
+
+For each custom post type, you will find a button labeled **Select Fields** next to it.
+
+Clicking on this button will open a modal window where you can select fields and assign them labels.
+
+<img src={CustomPostFields} width="500" />
+
+These metadata will be added into the embeddings to deliver better search results.
+
+### Using the Index Builder
+
+The Index Builder is a powerful tool that allows you to manage and monitor the indexing of your website's content. Once your Cron job is set up and running, all your content will be indexed and appear under the **Embeddings - Index Builder** tab in the AI Power.
+
+The Index Builder is divided into three tabs:
+
+- **Indexed**: This tab displays a list of pages that have been successfully indexed.
+- **Failed**: This tab lists the pages that failed to index. There can be several reasons why a page may not index, but the most common issue is related to encoding. If your pages have encoding problems, they may fail to index. To resolve this, you need to clean them up.
+- **Skipped**: This tab shows a list of pages that have been skipped. The Index Builder does not index pages if their content is **less than 50 characters**. Therefore, if you have **shortcodes** or other content that is less than 50 characters, they will likely not be indexed.
+
+<img src={IndexBuilder} />
+
+#### Understanding the Index List
+
+The index list displays several columns:
+
+- **Title**: This is the title of the page, post, product, or custom post type. It is clickable, and once clicked, it will show the embedded content.
+- **Token**: Estimated token usage.
+- **Estimated**: Estimated cost. OpenAI charges for embeddings based on the number of tokens, with the rate being **$0.0004 per 1K tokens**.
+- **Source**: This shows the type of content that has been indexed (page, post, product, or custom post type).
+- **Status**: This shows the status of the indexing process.
+- **Start**: This shows the time when the indexing process started.
+- **Completed**: This shows the time when the indexing process completed.
+
+#### Managing Your Indexes
+
+Under the **Action** column, there are two buttons:
+
+- **Reindex**: This button allows you to reindex the content. This is particularly useful when you have updated a post, page, or product and you want the index to reflect the latest changes.
+- **Delete**: This button allows you to delete an index.
+
+Through the Index Builder, you have full control over the indexing process, ensuring your website's content is properly embedded for optimal use by the AI Power plugin.
+
