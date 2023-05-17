@@ -6,6 +6,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import PDFSettings from '/img/chatgpt/pdf.png';
 import PDFchat from '/img/chatgpt/pdfchat.png';
+import uploadedpdfs from '/img/chatgpt/uploaded-pdfs.png';
 
 # PDF Chat
 
@@ -75,3 +76,31 @@ Once these steps are completed, go to your chatbot.
 <img src={PDFchat} width="700" />
 
 You will notice a PDF icon appearing next to the microphone button. This allows users to upload PDF files directly in the chat interface.
+
+## Viewing Uploaded PDFs
+
+As an admin, you have the ability to access and manage the PDFs uploaded by your users.
+
+All user-uploaded PDFs can be found under the **ChatGPT - Uploaded PDFs** tab in your dashboard.
+
+<img src={uploadedpdfs} width="700" />
+
+From this tab, you can view all the PDFs that have been uploaded and embedded by users.
+
+This is a convenient way to keep track of the documents being interacted with on your platform.
+
+Moreover, you have the option to delete any of these PDFs if you no longer want to keep them in your index.
+
+This gives you control over the content that remains accessible to your users through the chat interface.
+
+:::tip
+
+To maintain a clear distinction between your website content and user-uploaded PDFs, you can create separate bots for each type of content and assign each bot a different index.
+
+By doing this, you can ensure that your chatbot accurately retrieves and delivers the appropriate information to your users.
+
+This is particularly helpful if you do not want your website content to mix with the content from user-uploaded PDFs.
+
+:::
+
+By managing your user-uploaded content effectively, you can ensure that your chatbot continues to provide accurate and relevant responses, while maintaining the integrity and security of your platform.
