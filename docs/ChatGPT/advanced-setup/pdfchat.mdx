@@ -7,6 +7,8 @@ import TabItem from '@theme/TabItem';
 import PDFSettings from '/img/chatgpt/pdf.png';
 import PDFchat from '/img/chatgpt/pdfchat.png';
 import uploadedpdfs from '/img/chatgpt/uploaded-pdfs.png';
+import pdfclear1 from '/img/chatgpt/pdf-clear1.png';
+import pdfclear2 from '/img/chatgpt/pdf-clear2.png';
 
 # PDF Chat
 
@@ -104,3 +106,35 @@ This is particularly helpful if you do not want your website content to mix with
 :::
 
 By managing your user-uploaded content effectively, you can ensure that your chatbot continues to provide accurate and relevant responses, while maintaining the integrity and security of your platform.
+
+## Clearing the PDF Session
+
+Once a user uploads a PDF, the upload PDF icon will disappear and be replaced with a clear session button, represented by an "X" symbol.
+
+This option is designed to allow users to clear their current PDF session and return to chatting with the website's native content.
+
+<img src={pdfclear1} width="700" />
+
+Let's walk through how this process works:
+
+After a user has uploaded a PDF, they will interact with the content of the document in the chat interface. During this time, the upload PDF icon will not be visible.
+
+If a user decides to clear the PDF session, they can simply click on the "X" button. This action will clear the current PDF session, removing any uploaded PDFs from the chat interaction. This step is important to ensure that the chatbot returns to addressing inquiries related to the website's native content.
+
+<img src={pdfclear2} width="700" />
+
+:::note
+Clearing a PDF session does not delete the uploaded PDF from the system. It only removes it from the current chat interaction. The PDFs can still be accessed by the admin under the **ChatGPT - Uploaded PDFs** tab in the dashboard.
+:::
+
+Once the PDF session is cleared, the upload PDF icon will reappear, allowing users to upload a new PDF if they wish.
+
+By providing users with the option to clear their PDF session, you can ensure that the chatbot interaction remains flexible and adaptable to the users' needs. Whether they're interacting with an uploaded PDF or chatting about the website's content, the user remains in control of the chatbot interaction.
+
+:::tip
+
+Additionally, a user can also clear the current PDF session by simply refreshing the page.
+
+:::
+
+Remember, managing your PDF sessions effectively is crucial for maintaining an efficient and user-friendly chatbot interface. It helps ensure that your chatbot provides accurate and relevant responses, while keeping the user experience smooth and intuitive.
