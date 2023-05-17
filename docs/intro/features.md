@@ -36,6 +36,7 @@ AI Power offers an extensive array of features and tools designed to augment you
 - **Custom ChatGPT**
     - Content-Aware
     - User-Aware
+    - PDF Chat
     - VoiceChat (Integration with ElevenLabs and Google)
     - Logs
     - Token Management

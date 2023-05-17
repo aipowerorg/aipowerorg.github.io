@@ -16,6 +16,7 @@ The AI Power Pro Plan offers several distinct benefits over the Free Plan. Here'
 | Enhanced AutoGPT Capabilities     | ❌        | ✅       |
 | Keyword Management                | ❌        | ✅       |
 | Inclusion of FAQ Content          | ❌        | ✅       |
+| PDF Chat                          | ❌        | ✅       |
 | Chat Bot Moderation               | ❌        | ✅       |
 | Custom Post Types for Embeddings  | ❌        | ✅       |
 
@@ -50,9 +51,14 @@ The Pro Plan opens up a suite of advanced keyword management tools that provide 
 ## 8. Inclusion of FAQ Content
 Under the Pro Plan, you have the ability to integrate Frequently Asked Questions (FAQs) directly into your content. This feature allows you to address common queries and provide relevant information to your audience within the context of your posts. By including FAQs, you enhance your content's value, improve user engagement, and potentially boost your SEO performance by answering search queries directly in your content.
 
+## 9. PDF Chat
 
-## 9. Chat Bot Moderation
+With the PDF Chat, users can now chat with any PDF document. By simply uploading a PDF in the chat, the chatbot can generate relevant questions and conversations based on the content within the document. This not only makes information access more interactive but also opens up a whole new level of user engagement.
+
+The PDF Chat feature allows you to set the number of pages to be considered from the uploaded PDF and to create a custom success message once the PDF is uploaded and processed. This feature is user-friendly and simple to use, making any PDF document a new avenue for conversation.
+
+## 10. Chat Bot Moderation
 With the Pro Plan, you gain access to advanced moderation features for the chat bot. This means you can better manage user interactions, maintaining a positive and constructive environment on your website.
 
-## 10. Custom Post Types for Embeddings
+## 11. Custom Post Types for Embeddings
 With the Pro Plan, you gain the capability to embed your custom post types. This unique feature means that you can feed any custom content directly into the bot. As a result, your chatbot becomes more personalized and context-aware, being able to reference your own custom content during interactions.

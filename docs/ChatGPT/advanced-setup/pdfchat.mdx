@@ -1,0 +1,77 @@
+---
+sidebar_position: 4
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import PDFSettings from '/img/chatgpt/pdf.png';
+import PDFchat from '/img/chatgpt/pdfchat.png';
+
+# PDF Chat
+
+You can chat with any PDF!
+
+The PDF Chat feature, allows your users to upload PDF files and interact with them directly in the chat interface.
+
+This feature introduces an innovative way to interact with documents, providing users with quick and easy access to information within their PDF files.
+
+<iframe width="100%" height="535" src="https://www.youtube.com/embed/dWA8sThANHE" title="PDF Chat" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+:::info
+
+PDF Chat feature is available only in the Pro plan.
+
+:::
+
+The PDF Chat feature provides the following functionalities:
+
+- **PDF Upload**: Users can upload a PDF file of up to 120 pages directly in the chat interface.
+- **Page Limit Control**: Set a page limit for the uploaded PDFs, ranging from 1 to 120 pages.
+- **Customizable Success Message**: Customize the message displayed to users upon successful upload of a PDF.
+- **Automated Question Suggestion**: Upon a successful upload, the plugin will automatically generate and display three random questions from the PDF to guide the user interaction.
+- **PDF Icon Color Customization**: Customize the PDF icon color to align with your brand or preference.
+
+## Enabling PDF Chat
+
+This guide will walk you through the steps to enable and configure the PDF Chat feature in your chatbot.
+
+<Tabs>
+  <TabItem value="shortcode" label="Shortcode" default>
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
+        <img src={PDFSettings} width="400" />
+        <li>Look for the <b>Enable PDF Upload</b> checkbox:</li>
+            <ul>
+                <li>Check the <b>Enable PDF Upload</b> box to allow users to upload PDF files in the chat interface.</li>
+                <li>In the <b>Page Limit</b> field, specify the maximum number of pages allowed for the uploaded PDFs. The limit can range from 1 to 120 pages.</li>
+                <li>Under <b>Success Message</b>, customize the message displayed to users upon successful upload of a PDF. The default message is "Congrats! Your PDF is uploaded now! You can ask questions about your document. Example Questions:[questions]".</li>
+                <li>Still under <b>Bot Settings</b>, navigate to the <b>Style</b> tab on the right side of your screen.</li>
+                <li>Here, you can customize the color of the PDF icon to match your brand or preference.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+    </TabItem>
+<TabItem value="widget" label="Widget">
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
+        <img src={PDFSettings} width="400" />
+        <li>Look for the <b>Enable PDF Upload</b> checkbox:</li>
+            <ul>
+                <li>Check the <b>Enable PDF Upload</b> box to allow users to upload PDF files in the chat interface.</li>
+                <li>In the <b>Page Limit</b> field, specify the maximum number of pages allowed for the uploaded PDFs. The limit can range from 1 to 120 pages.</li>
+                <li>Under <b>Success Message</b>, customize the message displayed to users upon successful upload of a PDF. The default message is "Congrats! Your PDF is uploaded now! You can ask questions about your document. Example Questions:[questions]".</li>
+                <li>Still under <b>Bot Settings</b>, navigate to the <b>Style</b> tab on the right side of your screen.</li>
+                <li>Here, you can customize the color of the PDF icon to match your brand or preference.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+</TabItem>
+</Tabs>
+
+Once these steps are completed, go to your chatbot.
+
+<img src={PDFchat} width="700" />
+
+You will notice a PDF icon appearing next to the microphone button. This allows users to upload PDF files directly in the chat interface.
