@@ -24,6 +24,8 @@ This feature introduces an innovative way to interact with documents, providing 
 
 PDF Chat feature is available only in the Pro plan.
 
+You can try out the demo here: [https://aipower.org/chatpdf/](https://aipower.org/chatpdf/)
+
 :::
 
 The PDF Chat feature provides the following functionalities:
@@ -38,12 +40,19 @@ The PDF Chat feature provides the following functionalities:
 
 This guide will walk you through the steps to enable and configure the PDF Chat feature in your chatbot.
 
+:::info
+
+Please note that the PDF chat feature only works with embeddings, so make sure you have configured your [Pinecone](/docs/embeddings#pinecone-setup) correctly.
+
+:::
+
 <Tabs>
   <TabItem value="shortcode" label="Shortcode" default>
     <ul>
         <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
         <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
         <img src={PDFSettings} width="400" />
+        <li>Make sure that the <b>Use Embeddings</b> box is checked. This option enables the chatbot to use embeddings for better understanding and response accuracy.</li>
         <li>Look for the <b>Enable PDF Upload</b> checkbox:</li>
             <ul>
                 <li>Check the <b>Enable PDF Upload</b> box to allow users to upload PDF files in the chat interface.</li>
@@ -60,6 +69,7 @@ This guide will walk you through the steps to enable and configure the PDF Chat 
         <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
         <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
         <img src={PDFSettings} width="400" />
+        <li>Make sure that the <b>Use Embeddings</b> box is checked. This option enables the chatbot to use embeddings for better understanding and response accuracy.</li>
         <li>Look for the <b>Enable PDF Upload</b> checkbox:</li>
             <ul>
                 <li>Check the <b>Enable PDF Upload</b> box to allow users to upload PDF files in the chat interface.</li>
