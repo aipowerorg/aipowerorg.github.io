@@ -51,6 +51,7 @@ AI Power offers an extensive array of features and tools designed to augment you
     - Training Module
 - **Embeddings** 
     - Content Builder
+    - Embedding PDF Files
     - Instant Embeddings
     - Index Builder with Cron Job
     - Pinecone Integration 
