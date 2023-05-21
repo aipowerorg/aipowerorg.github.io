@@ -22,21 +22,27 @@ Each agent is responsible for a specific task, and they must be configured corre
 
 The current version supports four GPT Agents, with plans to add more in the future.
 
-- **Queue Processor**: The central GPT Agent responsible for processing tasks in the Queue tab, submitted by other agents. This agent must be configured for the other GPT Agents to function.
-- **Google Sheets**: Responsible for retrieving data from configured Google Sheets at defined intervals and sending it to the Queue Processor agent for processing. Available in Pro plan.
-- **RSS**: Responsible for retrieving data from entered RSS feeds at defined intervals and sending it to the Queue Processor for processing. Available in Pro plan.
-- **Embeddings**: Responsible for monitoring new posts, pages, and WooCommerce products; once published, it embeds them in a vector database and indexes them to make the content available for the chatbot.
+| GPT Agent | Description | Availability |
+| --- | --- | --- |
+| **Queue Processor** | The central GPT Agent responsible for processing tasks in the Queue tab, submitted by other agents. This agent must be configured for the other GPT Agents to function. | All plans |
+| **Google Sheets** | Responsible for retrieving data from configured Google Sheets at defined intervals and sending it to the Queue Processor agent for processing. | Pro plan |
+| **RSS** | Responsible for retrieving data from entered RSS feeds at defined intervals and sending it to the Queue Processor for processing. | Pro plan |
+| **Embeddings** | Responsible for monitoring new posts, pages, and WooCommerce products; once published, it embeds them in a vector database and indexes them to make the content available for the chatbot. | All plans |
+| **Twitter Bot** | Responsible for writing a tweet for a post or sending tweets based on defined keywords and time intervals. | Pro plan |
 
 ## Requirements
 
 To ensure that AutoGPT and its GPT Agents function correctly on your website, there are several requirements that must be met:
 
-- **Server-side Cron Jobs**: AutoGPT and GPT Agents rely on server-side Cron Jobs to automate tasks and maintain their functionality. WordPress Cron Job plugins are not supported; you must set up Cron Jobs at the server level.
-- **PHP 7.4 and above**: Your server must be running PHP version 7.4 or higher to ensure compatibility with AutoGPT and its GPT Agents.
-- **Google Cloud Account**: For the Google Sheets GPT Agent, you need to have a Google Cloud account. This is required to access and retrieve data from the configured Google Sheets.
-- **PHP XML Extension**: The RSS GPT Agent requires the PHP XML extension to be installed and enabled on your server. This allows the agent to retrieve and process data from the entered RSS feeds.
+| Requirement | Description |
+| --- | --- |
+| **Server-side Cron Jobs** | AutoGPT and GPT Agents rely on server-side Cron Jobs to automate tasks and maintain their functionality. WordPress Cron Job plugins are not supported; you must set up Cron Jobs at the server level. |
+| **PHP 7.4 and above** | Your server must be running PHP version 7.4 or higher to ensure compatibility with AutoGPT and its GPT Agents. |
+| **Google Cloud Account** | For the Google Sheets GPT Agent, you need to have a Google Cloud account. This is required to access and retrieve data from the configured Google Sheets. |
+| **PHP XML Extension** | The RSS GPT Agent requires the PHP XML extension to be installed and enabled on your server. This allows the agent to retrieve and process data from the entered RSS feeds. |
+| **Twitter Account** | For the Twitter Bot GPT Agent, you need to have a Twitter account. This agent will use your Twitter account to write and send tweets. |
 
-By meeting these requirements, you can ensure optimal performance and compatibility for AutoGPT and its GPT Agents within your WordPress environment.
+By meeting these requirements, you'll ensure the smooth operation of the AutoGPT module and its GPT Agents on your website.
 
 ## Cron Job Setup
 
@@ -84,6 +90,12 @@ Below are the Cron Job configurations for each GPT Agent:
 
 ```bash
 * * * * * php /var/www/html/index.php -- wpaicg_builder=yes 
+```
+
+**Twitter Bot**:
+
+```bash
+* * * * * php /var/www/html/index.php -- wpaicg_tweet=yes 
 ```
 
 :::note
@@ -223,9 +235,9 @@ Some hosting providers (like Cloudways) do not permit running cron jobs with arg
 
 In such situations, you can create a separate PHP file and invoke that PHP file from the cron job.
 
-You can utilize the provided sample. Ensure that you place it in your root folder.
+You can use the provided sample. Ensure that you place it in your root folder.
 
-**queue_trigger_for_single_site.php**
+**queue_trigger.php**
 ```jsx
 <?php
 require __DIR__.'/wp-load.php';
@@ -234,18 +246,7 @@ $_GET['wpaicg_cron'] = 'yes';
 $wpaicg_cron->wpaicg_cron_job();
 ```
 
-**queue_trigger_for_multi_site.php**
-```jsx
-<?php
-$_SERVER['HTTP_HOST'] = 'CHANGE_WITH_YOUR_DOMAIN';
-$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
-require __DIR__.'/wp-load.php';
-$wpaicg_cron = \WPAICG\WPAICG_Cron::get_instance();
-$_GET['wpaicg_cron'] = 'yes';
-$wpaicg_cron->wpaicg_cron_job();
-```
-
-**embeddings_trigger_for_single_site.php**
+**embeddings_trigger.php**
 ```jsx
 <?php
 require __DIR__.'/wp-load.php';
@@ -254,18 +255,7 @@ $_GET['wpaicg_builder'] = 'yes';
 $wpaicg_builder->wpaicg_cron_job();
 ```
 
-**embeddings_trigger_for_multi_site.php**
-```jsx
-<?php
-$_SERVER['HTTP_HOST'] = 'CHANGE_WITH_YOUR_DOMAIN';
-$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
-require __DIR__.'/wp-load.php';
-$wpaicg_builder = \WPAICG\WPAICG_Embeddings::get_instance();
-$_GET['wpaicg_builder'] = 'yes';
-$wpaicg_builder->wpaicg_cron_job();
-```
-
-**rss_trigger_for_single_site.php**
+**rss_trigger.php**
 ```jsx
 <?php
 require __DIR__.'/wp-load.php';
@@ -274,18 +264,7 @@ $_GET['wpaicg_rss'] = 'yes';
 $wpaicg_rss->wpaicg_cron_job();
 ```
 
-**rss_trigger_for_multi_site.php**
-```jsx
-<?php
-$_SERVER['HTTP_HOST'] = 'CHANGE_WITH_YOUR_DOMAIN';
-$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
-require __DIR__.'/wp-load.php';
-$wpaicg_rss = \WPAICG\WPAICG_RSS::get_instance();
-$_GET['wpaicg_rss'] = 'yes';
-$wpaicg_rss->wpaicg_cron_job();
-```
-
-**sheets_trigger_for_single_site.php**
+**sheets_trigger.php**
 ```jsx
 <?php
 require __DIR__.'/wp-load.php';
@@ -294,15 +273,13 @@ $_GET['wpaicg_sheets'] = 'yes';
 $wpaicg_sheets->wpaicg_cron_job();
 ```
 
-**sheets_trigger_for_multi_site.php**
+**tweet_trigger.php**
 ```jsx
 <?php
-$_SERVER['HTTP_HOST'] = 'CHANGE_WITH_YOUR_DOMAIN';
-$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
-require __DIR__.'/wp-load.php';
-$wpaicg_sheets = \WPAICG\WPAICG_Google_Sheets::get_instance();
-$_GET['wpaicg_sheets'] = 'yes';
-$wpaicg_sheets->wpaicg_cron_job();
+require DIR.'/wp-load.php';
+$wpaicg_tweet= \WPAICG\WPAICG_Twitter::get_instance();
+$_GET['wpaicg_tweet'] = 'yes';
+$wpaicg_tweet->wpaicg_cron_job();
 ```
 
 ## Monitoring GPT Agents

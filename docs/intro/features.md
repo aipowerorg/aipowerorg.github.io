@@ -85,6 +85,8 @@ AI Power offers an extensive array of features and tools designed to augment you
     - Generate high-quality meta descriptions
     - WooCommerce integration
     - Yoast, Math Rank, and All in One SEO integration
+- **Social Poster**
+    - Generate high-quality tweets written by GPT
 - **Title Suggester**
     - Generate titles for your posts, pages, and products 
 - **Comment Replier**

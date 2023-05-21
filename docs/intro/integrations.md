@@ -17,3 +17,4 @@ AI Power integrates with a multitude of services and platforms to provide a comp
 | **Google Sheets** | AI Power integrates with Google Sheets for easy data management and content creation, streamlining your workflows. |
 | **RSS Feeds** | AI Power supports RSS feeds, enabling automatic content generation from various sources. |
 | **ElevenLabs and Google** | AI Power integrates with ElevenLabs and Google for text-to-speech functionality, offering a more engaging and accessible user experience. |
+| **Twitter** | AI Power integrates with the official Twitter API to automate tweet creation for each post. This allows for efficient and seamless sharing of your content on one of the largest social media platforms, expanding your reach and engagement. |

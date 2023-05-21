@@ -20,6 +20,7 @@ The AI Power Pro Plan offers several distinct benefits over the Free Plan. Here'
 | Chat Bot Moderation               | ❌        | ✅       |
 | Custom Post Types for Embeddings  | ❌        | ✅       |
 | Embedding PDF Files               | ❌        | ✅       |
+| Social Poster (Twitter)           | ❌        | ✅       |
 
 ## 1. Priority Email Support
 One of the most significant benefits of the Pro Plan is the priority email support. If you ever encounter any issues or have any questions about the AI Power plugin, you'll receive dedicated support from our expert team. Your queries will be given priority, ensuring that you receive quick and efficient help when you need it most.
@@ -67,3 +68,12 @@ With the Pro Plan, you gain the capability to embed your custom post types. This
 One of the unique features of the Pro Plan is the ability to embed PDF files directly into Pinecone as vectors. This advanced feature allows your chatbot to understand and engage with the content within these documents, thus expanding its knowledge base.
 
 With this feature, your PDFs - be it guides, manuals, or extensive documents - become an integral part of the chatbot's intelligence. Instead of merely providing a link for users to download or view the PDF, the chatbot can now reference, explain, and elaborate on the content within the PDFs during its interactions. This opens up a vast array of possibilities for enhancing the depth and quality of your chatbot's responses, making it a more comprehensive and valuable resource for your users.
+
+## 13. Social Poster
+
+Social Poster is an exclusive feature for the Pro Plan users. With this feature, you can automate your social media posting with AI. It comprises of two key functionalities: Blog2Tweet and Twitter Writer.
+
+Blog2Tweet: This functionality lets you setup your Twitter agent such that each time you publish a post on your site, it will automatically send a tweet. You can choose to include a link to your post in the tweet and customize the tweet prompt to match your preferred tone (e.g., sarcastic, cheerful, humorous, professional, etc.)
+
+Twitter Writer: Twitter Writer utilizes GPT to generate tweets based on your defined keywords and send them at pre-defined intervals. You can specify keywords of interest, choose how often you want to send a tweet, and customize the tweet prompt, just like in Blog2Tweet.
+With the Twitter Social Poster, you can keep your Twitter followers updated and engaged without lifting a finger.
