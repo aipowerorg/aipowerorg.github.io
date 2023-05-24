@@ -1,0 +1,284 @@
+---
+sidebar_position: 8
+---
+
+import accessaiforms from '/img/ai-forms/access-ai-forms.png';
+import FilteringForms from '/img/ai-forms/filtering.png';
+import Form from '/img/ai-forms/form.png';
+import FormDesign from '/img/ai-forms/form-design.png';
+import DuplicateForm from '/img/ai-forms/duplicate-form.png';
+import Properties from '/img/ai-forms/properties.png';
+import AIEngine from '/img/ai-forms/ai-engine.png';
+import Style from '/img/ai-forms/style.png';
+import FrontEnd from '/img/ai-forms/frontend.png';
+import Fields from '/img/ai-forms/fields.png';
+import Delete from '/img/ai-forms/delete.jpeg';
+import Logs from '/img/ai-forms/logs.png';
+import Token from '/img/ai-forms/token.png';
+
+# AI Forms
+
+AI Forms is a powerful feature in our WordPress plugin that offers more than 100 ready-to-use AI forms for your website.
+
+With this feature, you can easily search, run, and embed these forms on your website to provide an interactive experience for your users.
+
+In addition to the pre-built forms, you can also design and create your own forms using a simple interface.
+
+You can choose from a variety of GPT models and customize the forms to suit your needs.
+
+## Using Pre-built AI Forms
+
+To use one of the pre-built forms, simply browse through the available options in the AI Forms menu.
+
+You can search for forms by keyword, category, or author. Once you find a template you like, simply click on it to view the details.
+
+From there, you can copy the shortcode provided and paste it into your WordPress post or page where you want the form to appear.
+
+The shortcode will embed the form form on your page, and your users can start interacting with it right away.
+
+### Accessing AI Forms
+
+To access the pre-built forms, follow these steps:
+
+- Open your WordPress dashboard.
+- Navigate to the **AI Power** plugin menu on the sidebar.
+- Click on the **AI Forms** tab.
+
+<img src={accessaiforms} width="700" />
+
+Here, you'll see a search box at the top of the page. You can use this to search for specific forms based on your needs.
+
+### Browsing and Searching for Forms
+
+The AI Forms page displays up to 40 forms per page. You can browse through these using the page numbers at the bottom of the screen. With over 100 AI forms available, you can easily find the right form for your needs.
+
+On the left-hand side, you will find filtering options:
+
+- **Author**: This filter allows you to view forms by specific authors. By default, you'll see "AI Power (117)" which signifies 117 forms created by the AI Power plugin. If you have created any forms, your WordPress username will also be visible here, allowing you to filter forms you've authored.
+- **Category**: This filter lets you refine your search based on specific categories such as blog, Instagram, classification, and others. Simply put a check in the box to apply the filter.
+
+<img src={FilteringForms} />
+
+To use a form, hover over its icon and click on it to open it.
+
+### Using and Embedding a Form
+
+Once you open a form, a window will appear where you can interact with it. Here's what you'll find in this window:
+
+- **Form Fields**: Here, you can enter values and click "Generate" to get the output.
+- **AI Parameter Settings**: On the right side, you will find settings such as the GPT model, max tokens, etc.
+- **Shortcode**: At the bottom right of the window, you'll find the shortcode for the form. This shortcode allows you to embed the form on any of your pages. Simply copy it and paste it into your WordPress post or page where you want the form to appear. Your users can start interacting with it right away.
+- **Duplicate Button**: At the top right of the window, you'll find this button. Clicking on it will duplicate the form, enabling you to create a custom version for your needs. This will generate a new shortcode for the duplicated form.
+
+<img src={Form} />
+
+In the next part, we'll discuss how you can design and create your own AI forms.
+
+## Desigining Your Own AI Forms
+
+AI Power plugin allows you to not only use pre-built forms but also design your own AI Forms.
+
+This guide will explain how you can create and customize your own forms using different settings and options.
+
+### Initiating the Form Design Process
+
+To start designing your own AI forms, you have two options:
+
+#### Creating from Scratch:
+
+- Navigate to the **AI Forms** tab within the **AI Power** plugin menu.
+
+<img src={FormDesign} width="500" />
+
+- Click on the **Design Your Form** button.
+
+#### Using a Prebuilt Form as a Base:
+
+- Open a prebuilt form that you'd like to use as a base.
+
+<img src={DuplicateForm} width="500" />
+
+- Click the **Duplicate this Form** button located on the top right of the form window.
+
+Regardless of the method you choose, a modal window will open with five different tabs for designing your form: Properties, AI Engine, Style, Frontend, and Fields.
+
+### Properties
+
+The **Properties** tab contains the main information about your form, including:
+
+- **Title (Mandatory)**: Enter a title for your form. This is used to identify your form in the AI Forms menu.
+- **Category (Mandatory)**: Select a category for your form. This helps organize your forms within the menu.
+
+<img src={Properties} width="700" />
+
+- **Prompt (Mandatory)**: Enter the prompt to be displayed to users when they interact with your form.
+- **Sample Response (Optional)**: Enter a sample response for your prompt. This is for your reference and won't be displayed to users.
+
+### AI Parameters
+
+The "AI Engine" tab allows you to select the AI model and adjust the parameters for your form:
+
+- **Model (Optional)**: Choose the GPT model for your form. You can select from Davinci, Curie, Ada, or Babbage. If not selected, the default model (Davinci) will be used.
+
+<img src={AIEngine} width="700" />
+
+- **Temperature, Top P, Frequency Penalty, Presence Penalty (Optional)**: These options control the creativity, diversity, and uniqueness of the output, respectively. If not specified, the default values are applied.
+- **Stop Sequence (Optional)**: This determines when the AI should stop generating text.
+
+### Form Style
+
+Customize the appearance of your form in the "Style" tab:
+
+- **Background Color (Optional)**: Select a background color for your form. Default is white.
+
+<img src={Style} width="700" />
+
+- **Icon (Optional)**: Choose an icon for your form. If not selected, a default icon is used.
+- **Icon Color (Optional)**: Choose the color of your icon. The default color is applied if not selected.
+
+### Frontend Display
+
+The **Frontend** tab allows you to customize how the results are displayed and which interactive elements are available:
+
+- **Result**: Choose between **Text Editor** or **Inline** display for your results.
+- **Header**: Decide whether to display or hide the form's header.
+- **Number of Answers**: Choose to display or hide the number of answers feature.
+
+<img src={FrontEnd} width="700" />
+
+- **Save as Draft Button**: Decide whether to display or hide the **Save as Draft** button.
+- **Clear Button**: Choose to display or hide the "Clear" button.
+- **Notification Text**: Select whether to display or hide the notification text for non-registered users.
+- **Download button**: Choose to enable or disable the button that allows users to download their results.
+
+In addition to these display and interaction settings, you can also customize the following text strings to better match your website's language or branding:
+
+- **Generate Button Text**: The default text is **Generate**.
+- **Number of Answers Text**: The default text is **Number of Answers**.
+- **Save as Draft Button Text**: The default text is **Save Draft**.
+- **Clear Button Text**: The default text is **Clear**.
+- **Stop Button Text**: The default text is **Stop**.
+- **Notice for Non-Registered Users Text**: The default text is **Please register to save your result**.
+- **Download Button Text**: The default text is "Download".
+
+### Form Fields
+
+The Fields tab stands as a crucial component within the AI Forms modal window.
+
+This is where you can add customizable fields to your form, making your form distinct from those built with PromptBase.
+
+<img src={Fields} width="700" />
+
+This tab is divided into several elements: Label, ID, Type, Min, Max, and Options.
+
+- **Label (Mandatory)**: This is the name that will identify your field. It will appear in the AI Forms menu and will be visible to users interacting with your form.
+- **ID (Mandatory)**: This is an identifier unique to each field and must be written in the following format: {field_name}. This ID will also be visible to users as they input values into the field.
+- **Type (Mandatory)**: Here, you can select the data type for your field. Options include Text, Drop-Down, Number, URL, Text Area, Radio Button, and Checkbox. Each type corresponds to the type of input accepted. For instance, a "Text" field will accept any string of text, while a "URL" field will only accept valid URLs.
+- **Min (Optional)**: Set a minimum value for your field to facilitate input validation. If no minimum is set, the default will be 2.
+- **Max (Optional)**: Set a maximum value for your field to facilitate input validation. If no maximum is set, the default will be 100.
+- **Options (Only for Drop-Down, Radio Button, and Checkbox types)**: This allows you to define the possible options for your field. Options should be separated by a "|".
+
+Let's take the example of a **Google AdWords headline generator** form.
+
+In this case, you want to create a form that generates either creative, catchy, or unique headlines for a specified business.
+
+Here's how you would set up the form:
+
+Prompt: *"Generate a {headlinetype} headline for a Google AdWords ad for a {businessname}."*
+
+**Fields**:
+
+- **Label**: Headline Type
+- **ID**: {headlinetype}
+- **Type**: Dropdown
+- **Options**: Creative|Catchy|Unique
+
+- **Label**: Business Name
+- **ID**: {businessname}
+- **Type**: Text
+- **Min**: 5
+- **Max**: 80
+
+This configuration will result in a form that generates headlines based on the user-selected headline type for a given business name.
+
+Once you've added all the fields, click **Save** to generate the shortcode. Then, you can copy this shortcode and paste it into your WordPress post or page to display the form on your website.
+
+:::tip
+
+Remember, it's crucial that the fields are referenced in the prompt **in the order** they were defined.
+
+In this example, {headlinetype} must be mentioned before {businessname} in your prompt text for the form to function correctly.
+
+:::
+
+### Managing Your Forms: Edit, Duplicate, and Delete
+
+Once you've created your own forms, there might come a time when you need to modify their content or structure, replicate them for similar uses, or remove them entirely.
+
+The "AI Forms" interface offers these functionalities in a user-friendly way.
+
+<img src={Delete} width="700" />
+
+- **Editing Forms**: To edit a form, first locate the specific form in the "AI Forms" tab. Hover over the form's name, and you'll see three buttons appear: **Duplicate**, **Edit**, and **Delete**. Click on the **Edit** button to modify the form's properties, AI engine settings, style, frontend configuration, and fields. After making your changes, don't forget to save your modifications by clicking on the **Save** button.
+- **Duplicating Forms**: If you need to create a similar form or want to use an existing form as a template, the **Duplicate** button comes in handy. Hover over the form's name and click on **Duplicate**. This action creates an exact copy of the form, which you can then edit as needed.
+- **Deleting Forms**: To delete a form, hover over the form's name and click on the **Delete** button. A confirmation dialog will appear, asking if you're sure about deleting the form. Confirm your decision by clicking on **Yes**. Please note that this action is permanent and cannot be undone.
+
+By using these options, you can manage your forms effectively and ensure they meet your evolving requirements.
+
+## Monitoring Usage with AI Forms Logs
+
+The AI Forms Logs is a feature that allows you to track and monitor the usage of your AI forms effectively.
+
+It provides you with crucial data about your form's activity, helping you to understand better how your forms are being used and what their performance metrics look like.
+
+<img src={Logs} />
+
+Upon navigating to the **Logs** section under the **AI Forms** tab, you'll encounter a dashboard that displays several data points for each AI form usage:
+
+- **Form**: This column lists the names of the forms that have been used.
+- **ID**: Here you'll see the unique identification number assigned to each form.
+- **Prompt**: This column displays the prompt text that was used in each form.
+- **Page**: This indicates the specific page or post where the form was embedded and used.
+- **Model**: This column displays which model was used to generate the form's output.
+- **Duration**: This reflects the amount of time it took to generate the output for each form.
+- **Token**: This column shows how many tokens were expended to generate the content for each form.
+- **Estimated Cost**: Based on the number of tokens used, this column provides an estimate of the cost associated with each form's usage.
+- **Created At**: This column indicates when the form was used, providing a timestamp for each usage.
+
+The Logs feature also provides a search box, enabling you to quickly look up specific logs using keywords.
+
+Simply type your search term into the box and hit enter to display any matching results.
+
+This can be extremely useful for quickly locating specific forms, pages, or prompts.
+
+The AI Forms Logs feature gives you a comprehensive overview of your form's performance, helping you track usage, manage costs, and evaluate the effectiveness of different prompts and AI engines.
+
+## Token Handling
+
+Our plugin provides a robust token handling feature that allows you to control and limit the usage of the AI forms based on **user roles** and **registration status**.
+
+This can be found under the **AI Forms - Settings** tab.
+
+<img src={Token} width="500" />
+
+Here's a step-by-step guide on how to use this feature.
+
+- **Limit Registered User**: This setting allows you to decide whether to place a limit on registered users. To enable this feature, check the corresponding box. If you don't want to limit registered users, leave the checkbox unmarked.
+- **Token Limit for Registered Users**: This is where you define token limit for registered users. Enter the maximum amount you want each registered user to be able to spend on.
+- **Role-based Limit**: This feature allows you to set individual token limits for **different user roles** on your Wordpress site. Clicking on **Set Limit** will open a modal window displaying all the user roles in your Wordpress site. Here, you can assign a specific limit for each role.
+- **Limit Non-Registered User**: This setting is similar to **Limit Registered User**, but it applies to non-registered users. To enable this feature, check the corresponding box. If you don't want to limit non-registered users, leave the checkbox unmarked.
+- **Token Limit for Non-Registered Users**: This setting allows you to define token limit for non-registered users. Enter the maximum amount you want each non-registered user to be able to spend on.
+- **Notice**: Here, you can customize the message that users will see when they reach their limit. For example, *"You have reached your limit"*.
+- **Reset Limit**: This setting defines the interval at which the limit will reset. You can choose from **Never**, **1 day**, **3 days**, **1 week**, **2 weeks**, **1 month**, **2 months**, **3 months** or **6 months**. Selecting **Never** will mean that the limit does not reset, and users will have to wait until the next reset interval if they reach their limit.
+
+Remember to click **Save** once you're done adjusting these settings to ensure all changes are applied.
+
+This feature gives you great flexibility in managing usage and costs associated with the AI Forms on your site.
+
+## Token Sale
+
+You can charge your users for their use of your AI Forms.
+
+Our integration with WooCommerce allows you to sell tokens, which users can purchase and utilize to access and enjoy the AI Forms on your site.
+
+Learn more about it here: [User Account Management & Token Sale](/docs/user-management-token-sale)
