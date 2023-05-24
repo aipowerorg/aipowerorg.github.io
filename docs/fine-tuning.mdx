@@ -1,0 +1,202 @@
+---
+sidebar_position: 14
+---
+
+import ExampleJSONL from '/img/fine-tuning/example_jsonl.png';
+import Upload from '/img/fine-tuning/upload.png';
+import Files from '/img/fine-tuning/files.png';
+import ManualEntry from '/img/fine-tuning/manual_entry.png';
+import DataConversion from '/img/fine-tuning/data_conversion.png';
+import FineTune1 from '/img/fine-tuning/finetune1.png';
+import FineTune2 from '/img/fine-tuning/finetune2.png';
+import FineTune3 from '/img/fine-tuning/finetune3.png';
+import EventsDetail from '/img/fine-tuning/events.png';
+import Events from '/img/fine-tuning/events2.png';
+import HyperParams from '/img/fine-tuning/hyper-params.png';
+import ResultFiles from '/img/fine-tuning/result-files.png';
+import ResultFilesCSV from '/img/fine-tuning/result-files-csv.png';
+import FineTunedModels from '/img/ai-settings/fine-tuned-models.png';
+
+# Fine Tuning
+
+Fine-tuning allows you to customize a model for your application.
+
+Fine-tuning a model in OpenAI involves a few steps.
+
+There are 3 different ways of uploading your data to OpenAI and starting a fine-tuning process:
+
+- **Data Upload**: Upload your data from your computer. You can use this tool if you already have your data in the required format.
+- **Manual Entry**: Manually enter your data. You can use this tool if you want to enter your data manually.
+- **Data Converter**: This tool is one of the most popular one because it allows you to convert your database to the required format with one click.
+
+Below you can find a detailed explanation of how to fine-tune a model using our plugin.
+
+<iframe width="100%" height="535" src="https://www.youtube.com/embed/WQpPlSC8K0Q" title="How to Fine-Tune OpenAI GPT models" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+## AI Training and Custom Models
+
+Artificial Intelligence (AI) relies on massive datasets for its training. The objective of this training is to refine the AI model's ability to understand, respond, and interact accurately and effectively. Fine-tuning is a key process in this training regimen.
+
+Fine-tuning is essentially the process of customizing a pre-trained model for a specific application. In this context, the base AI model is modified slightly, enhancing its capabilities and ensuring it performs more effectively in a particular use-case. For instance, fine-tuning could enhance the AI's understanding of specific jargon, improve its response accuracy, or adapt its language style to better suit your needs.
+
+Custom models refer to these fine-tuned versions of the base AI model. They have been trained on specific data and tailored to a unique purpose. They provide a more personalized AI experience and can significantly improve user interaction quality.
+
+OpenAI provides several tools to streamline the fine-tuning process, making it user-friendly and efficient.
+
+## Embeddings or Fine-Tuning?
+
+While fine-tuning your AI model can provide excellent results, it's important to note that there's an alternative that may be more suitable depending on your requirements. We recommend considering the use of [Embeddings](/docs/embeddings.mdx).
+
+Embeddings is a feature extraction technique where high-dimensional data, like text, is converted into lower-dimensional vectors. This approach comes with several benefits. Firstly, it is cheaper since it doesn't involve the compute-intensive process of training an entire model. Secondly, it's generally faster and easier to implement. Finally, unlike custom models, which require a large and high-quality dataset for effective fine-tuning, embeddings allows you to embed your data into a vector database, which can then be leveraged by your chatbot for efficient and accurate responses.
+
+Given these advantages, unless you have very specific needs that require the customizability that comes with fine-tuning, embeddings could be the more economical and efficient choice for enhancing your AI model's performance.
+
+| Feature | Embeddings | Fine-Tuning |
+|---------|------------|-------------|
+| Cost | Lower | Higher |
+| Speed | Faster | Slower |
+| Ease of Implementation | Easier | More complex |
+| Dataset Size Requirement | Smaller | Larger |
+| Customizability | Limited | High |
+| Performance | Good for general applications | Excellent for specific applications |
+
+## Upload Your Data
+
+- First, navigate to the **Upload** tab.
+- In the Upload tab, you will be able to upload your datasets directly from your computer.
+
+:::info
+
+Please note that OpenAI only accepts `*.jsonl` files and the maximum upload size is **100MB per file**. To upload larger datasets, your WordPress maximum file upload size setting should be set to at least 100mb. You can follow this guide [here](https://www.wpbeginner.com/wp-tutorials/how-to-increase-the-maximum-file-upload-size-in-wordpress/).
+
+:::
+
+- Jsonl file contains prompt and completion pairs. The prompt is the question and the completion is the answer. You can find some examples [here](https://github.com/ledwards/gpt-swccg/tree/main/data).
+- Here is an example jsonl file.
+
+<img src={ExampleJSONL} />
+
+- There are 4 fields in the Datasets tab that you need to fill in:
+    - **File**: Click on the "Choose File" button to select the file you wish to upload. As we mentioned earlier, OpenAI only accepts *.jsonl files and the maximum upload size is 100MB per file. Learn about file format [here](https://jsonlines.org).
+    - **Purpose**: Select the purpose. Currently there is only one option which is "Fine-tune".
+    - **Model Base**: Select the model base you wish to fine-tune your model. You can select from the dropdown list. Options are: ada, babbage, curie and davinci.
+    - **Custom Model Name**: Enter the custom model name for the fine-tuned model. This is optional. If you leave it blank, the fine-tuned model will be named after the model base you selected. I suggest you to use a custom model name so you can easily identify the fine-tuned model.
+
+<img src={Upload} width="700" />
+
+- Once the file is uploaded, it will be displayed on the Datasets tab. You can view information such as the file's ID, size, creation date, filename, and purpose. There is also an "Actions" column where you can perform various actions on the uploaded files, such as creating a fine-tune request, retrieving content, and deleting the file.
+
+<img src={Files} />
+
+- If you wish to view the content of the file, you can click on the "Retrieve Content" button. For security reasons, OpenAI does not allow free plan users to view the content of the uploaded files. If you wish to view the content of the file, you will need to upgrade your account to a paid plan.
+- To delete the file, click on the "Delete" button.
+
+## Manual Data Entry
+
+- First, navigate to the Manual Entry tab.
+- In the Manual Entry tab, you will be able to manually enter your data.
+
+<img src={ManualEntry} />
+
+- Let say you want to enter your product data.
+
+Here is an example:
+
+``{"prompt":"Item is a handbag. Colour is army green. Price is midrange. Size is small.->", "completion":" This stylish small green handbag will add a unique touch to your look, without costing you a fortune."}``
+
+- Click on **Add More** to add more data.
+- Once you have entered all your data, select a model base, give a custom name (optional), and click on **Upload**.
+
+## Data Converter
+
+- First, navigate to the Data Converter tab.
+- In the Data Converter tab, you will be able to convert your entire Database to a JSONL file.
+
+<img src={DataConversion} />
+
+- There are 3 different options here.
+    - **Convert Your Posts**: This will convert all your posts in your DB to a JSONL file. Please note that this process will take a while depending on the number of posts you have. If you have huge DB it will split the datasets in small pieces.
+    - **Convert Your Pages**: This will convert all your pages in your DB to a JSONL file. Please note that this process will take a while depending on the number of pages you have. If you have huge DB it will split the datasets in small pieces.
+    - **Convert Your WooCommerce Products**: You will see this feature only if you have WooCommerce installed. This will convert all your WooCommerce products in your DB to a JSONL file. Please note that this process will take a while depending on the number of products you have. If you have huge DB it will split the datasets in small pieces.
+
+:::caution
+
+If you have huge DB, conversion might take longer and your website might become unresponsive if resources are not enough.
+
+:::
+
+## Creating Fine-Tune Request
+
+- To create a fine-tune request, click on the **Create Fine-Tune** button in the Datasets tab. This will create a fine-tune request on the OpenAI API based on the uploaded dataset.
+- There is an important step here before creating your fine-tune request. You need to either create a new model or select an existing model from the dropdown list. If you select an existing model, the fine-tuned model will be created based on the selected model. If you create a new model, the fine-tuned model will be created based on the model base you selected when you uploaded the dataset. So why this step is important? Because you can create multiple fine-tune requests for the same dataset. For example, you can create a fine-tune request for the same dataset using different model bases. Or you can create a fine-tune request for the same dataset using different models. This way, you can compare the results and choose the best model for your use case. A possible scenario is that you have huge dataset that is not possible to upload to OpenAI because of the 100MB limit. In this case, you can split your dataset into multiple files and upload them to OpenAI. Then, you can create a fine-tune request for each file using the same model base. This way, you can create a fine-tuned model based on the same model base but with different datasets.
+
+<img src={FineTune1} width="500" />
+
+<img src={FineTune2} width="500" />
+
+- If you wish to upload a file for the same model, you will need to select the model from the dropdown list when you hit the "Create Fine-Tune" button.
+- Now, let's move on to viewing the fine-tune requests.
+
+## Viewing Fine-Tune Request
+
+To view the fine-tune requests, click on the **View Fine-Tunes** button. This will display all the fine-tune requests you have created.
+
+<img src={FineTune3} />
+
+You can view information such as the fine-tune request's ID, creation date, model, and status.
+
+There is also an **Training** column where you can perform various actions on the fine-tune requests, such as viewing the fine-tune request's details, viewing the fine-tuned model, and deleting the fine-tune request.
+
+There are 4 buttons in the **Training** column: Events, Hyper-params, Result files and Training files.
+
+Let's take a look at each one of them.
+
+- **Events**: This button will display the fine-tune request's events. You can view information such as the event's ID, creation date, and status. It's important to note that fine-tuning a model can take some time, depending on the size of the dataset and the complexity of the model.
+
+Here is an example of a fine-tune request's events:
+
+<img src={Events} />
+
+If the last message says **Fine-tuning succeeded**, then the fine-tune request is complete and your model is ready to be used.
+
+<img src={EventsDetail} />
+
+- **Hyper-params**: This button will display the fine-tune request's hyper-parameters. You can view information such as Epochs, batch size, Learning rate, and prompt loss weight.
+
+Here is an example of a fine-tune request's hyper-parameters:
+
+<img src={HyperParams} />
+
+- **Result files**: This button will display the fine-tune request's result files. You can download the result file from training the model.
+
+Here is an example of a fine-tune request's result files:
+
+<img src={ResultFiles} />
+
+And here is how a result file looks like:
+
+<img src={ResultFilesCSV} />
+
+- **Training files**: This button will display the fine-tune request's training files. It is basically the file you uploaded to OpenAI.
+
+Now, let's move on to viewing the fine-tuned models.
+
+## Using Fine-Tuned Models
+
+Let say you already have a fine-tune request that is complete.
+
+Now, you want to use the fine-tuned model to with ChatBox in your website.
+
+To do that, please proceed to the **ChatGPT** page.
+
+You will see that your fine-tuned model is now available in the dropdown list.
+
+<img src={FineTunedModels} width="700" />
+
+You can select it and click on the **Save** button. This means from now on your ChatBox will use the fine-tuned model you selected.
+
+If you don't see your fine-tuned model in the dropdown list, please make sure that the fine-tune request is complete.
+
+You can also click on [Sync Models](/docs/ai-engine/openai/model-configuration#syncing-with-the-latest-openai-models) link to get latest models.
+
+Now head over to the ChatGPT and ask your ChatBox a question. You should see that the ChatBox is now using the fine-tuned model.
