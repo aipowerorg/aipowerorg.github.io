@@ -1,0 +1,34 @@
+---
+sidebar_position: 16
+---
+
+import Search from '/img/search/search.png';
+import SearchSettings from '/img/search/search-settings.png';
+
+# Semantic Search
+
+Our plugin offers a semantic search feature called **SearchGPT**.
+
+You can use this feature to enhance the search functionality of your website.
+
+To use the SearchGPT feature, you must have a Pinecone API key entered under the **Embeddings - Settings** page.
+
+You can learn how to setup Pinecone [here](/docs/embeddings#pinecone-setup).
+
+SearchGPT uses OpenAI embeddings and Pinecone vector database integration to provide a powerful semantic search experience.
+
+Semantic search is a type of search that uses machine learning algorithms to understand the intent behind a search query and find results that are related to that intent, rather than just matching specific keywords.
+
+To use the SearchGPT feature, simply copy the following shortcode and paste it into the page or post where you want to show the search box:
+
+``[wpaicg_search]``
+
+<img src={Search} />
+
+Once you've added the shortcode, you can customize the SearchGPT feature from the ** Settings - SearchGPT** page.
+
+Here, you can customize the placeholder message, font size, font color, border color, background color, width, and height for the search box.
+
+<img src={SearchSettings} />
+
+You can also customize the results, including the number of nearest results (from 1 to 5), font size, font color, background color, and in-progress background color.
