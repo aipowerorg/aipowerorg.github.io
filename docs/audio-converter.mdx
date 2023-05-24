@@ -1,0 +1,101 @@
+---
+sidebar_position: 13
+---
+
+import AudioConverter from '/img/audio-converter/audio-converter.png';
+import Logs from '/img/audio-converter/logs.png';
+import SpeechtoPost from '/img/audio-converter/speech-to-post.png';
+
+# Audio Converter
+
+This feature allows you to easily convert audio files into text format.
+
+It uses OpenAI's state-of-the-art open source Whisper model to convert audio files into text format.
+
+The cost of using OpenAI's Whisper API is **$0.006 per minute** of audio.
+
+Based on this pricing, a 10-minute audio would be approximately $0.06.
+
+## Using the Audio Converter
+
+In order to use this feature, you will need to follow a few simple steps:
+
+- Go to **Audio Converter** page from the plugin menu.
+
+<img src={AudioConverter} />
+
+- There are two options that you can use: **Transcription** and **Translation**.
+    - **Transcription**: This option allows you to convert audio files into text format. It currently supports 38 languages.
+    Supported languages are Afrikaans, Arabic, Armenian, Azerbaijani, Belarusian, Bosnian, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, Galician, German, Greek, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Macedonian, Malay, Marathi, Maori, Nepali, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swahili, Swedish, Tagalog, Tamil, Thai, Turkish, Ukrainian, Urdu, Vietnamese, and Welsh.
+    - **Translation**: This option allows you to convert audio files into text format and translate the text into English. This means that you can convert audio files from any language into English only.
+- There are three different methods that you can use to upload your audio file: Upload File, URL, and Record. Supported file types include mp3, mp4, mpeg, mpga, m4a, wav, and webm. The file size limit is 25 MB.
+    - **Upload File**: This option allows you to upload your audio file from your computer. Simply click on the "Choose File" button and select the file that you want to upload.
+    - **URL**: This option allows you to upload your audio file from a URL. Paste the URL of the audio file in the text box eg https://www.example.com/audio.mp3.
+    - **Record**: This option allows you to record your audio file directly from your browser. Click on the "Record" button and start recording. Make sure that your microphone is enabled and that your browser has access to it. You can click pause and resume recording as many times as you want. Once you are done recording, click on the "Stop" button.
+- Click on the **Start** button.
+- Wait for the file to be converted.
+- Once the file is converted, you will be able to see output under the Logs tab.
+
+There are some additional options that you can use to customize the output:
+
+- **Model**: This option allows you to select the model that you want to use for the conversion. Currently the only available model is "whisper-1".
+- **Prompt**: An optional text to guide the model's style or continue a previous audio segment. The prompt should match the audio language.
+- **Outout Format**: This option allows you to select the output format that you want to use for the conversion. Available options are post, page, text, json, srt, verbose_json, and vtt. If you select post or page then some additional options will be available such as title, category, author and post status.
+- **Temperature**: The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use log probability to automatically increase the temperature until certain thresholds are hit.
+
+:::info
+
+Please note that while the underlying model was trained on 98 languages, OpenAI only list the languages that exceeded less than 50% word error rate (WER) which is an industry standard benchmark for speech to text model accuracy. The model will return results for languages not listed above but the quality will be low.
+
+:::
+
+We also have a **Set as Default** button that allows you to set the default options for the conversion.
+
+## Logs
+
+This feature allows you to view the logs of the audio files that you have converted.
+
+<img src={Logs} />
+
+- Go to **Audio Converter - Logs**.
+- You will be able to see the logs of the audio files that you have converted.
+- There are six fields in the logs table: ID, Title, Format, Date, Duration, and Action.
+    - **ID**: This is the ID of the audio file.
+    - **Title**: This is the title of the audio file.
+    - **Format**: This is the format of the audio file.
+    - **Date**: This is the date when the audio file was converted.
+    - **Duration**: This shows how long did it take to convert the audio file.
+    - **Action**: You can delete or download the file from here.
+- You can also search for a specific audio file by using the search box.
+
+## Speech to Post
+
+You can convert your speech to a WordPress post with one click.
+
+<img src={SpeechtoPost} />
+
+- Go to **Content Writer - Speech to Post** tab.
+- Simply press the record button and speak your prompt, just like you would in a conversation.
+
+Example:
+
+*"Write a blog post about the latest mobile phones and their features. Include an introduction that highlights the importance of mobile phones in today's world. In the body of the post, discuss the latest mobile phone trends, such as foldable screens, 5G connectivity, and high refresh rate displays. Also, mention the most popular mobile phone brands and their latest releases. Don't forget to discuss the benefits and drawbacks of each phone and how they compare to one another. In the conclusion, summarize the key points of the post."*
+
+- After you are done speaking, press the stop button and wait for the post to be generated.
+- Once the post is generated, you can edit it and publish it.
+- You can see the token usage and other details in the **Content Writer - Logs** tab.
+
+Currently, the following parameters are hard-coded for the Speech to Post feature:
+
+- **Model**: Turbo
+- **Max Tokens**: 2000
+- **Temperature**: 0.7
+- **Top P**: 1
+- **Frequency Penalty**: 0.01
+- **Presence Penalty**: 0.01
+
+The cost of using OpenAI's Whisper API is **$0.006 per minute** of audio.
+
+Based on this pricing, a 10-minute audio would be approximately $0.06.
+
+When we calculate the final cost we are also adding cost of Completions API calls.
