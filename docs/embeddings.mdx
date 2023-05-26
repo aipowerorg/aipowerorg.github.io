@@ -17,6 +17,14 @@ import CustomPostFields from '/img/embeddings/fields.png';
 import InstantEmbeddings from '/img/embeddings/instant-embeddings.png';
 import Instant from '/img/embeddings/instant.png';
 import PDFUpload from '/img/embeddings/pdf-upload.png';
+import URLs from '/img/embeddings/url.png';
+import URLSample from '/img/embeddings/url-sample.png';
+import KnowledgeBase from '/img/embeddings/knowledgebase.png';
+import KnowledgeBaseSample from '/img/embeddings/knowledgebase-sample.png';
+import Product from '/img/embeddings/product.png';
+import ProductSample from '/img/embeddings/product-sample.png';
+import CompanyProfile from '/img/embeddings/company-profile.png';
+import CompanySample from '/img/embeddings/company-sample.png';
 
 # Embeddings
 
@@ -131,9 +139,11 @@ This enhanced feature of the Pro plan empowers you to create embeddings for a wi
 
 ## Content Builder
 
-The Content Builder allows you to create embeddings for all your website content.
+The Content Builder tool is designed to empower your chat bot with custom, high-quality embeddings for your various content.
 
-You can enter free text strings, FAQs, knowledge base topics, product details, URLs, and company profiles that you want to embed.
+Whether it's free text strings, FAQs, knowledge base topics, product details, URLs, or company profiles, this tool is equipped to handle them all.
+
+By adding these embeddings into your bot, you're creating a more personalized and effective interactions for your users, which can even serve as a useful resource for chatbot responses.
 
 To use the Content Builder, follow these steps:
 
@@ -145,6 +155,115 @@ To use the Content Builder, follow these steps:
 <img src={ContentBuilder} width="700" />
 
 You can view your entries under the **Embeddings - Entries** tab.
+
+### Knowledge Base Topics
+
+When your website features a rich array of knowledge base topics, you're providing your users with a comprehensive learning resource. These topics can cover anything from detailed product guides to software troubleshooting.
+
+Consider the case of a tech company: they can embed topics like 'Setting up your device,' or 'Troubleshooting software issues.' When users interact with their chatbot, it can pull from these topics to provide detailed assistance, minimizing the need for human intervention.
+
+To create Knowledge Base Topic embeddings, follow these steps:
+
+- First, navigate to the **Embeddings - Content Builder** on your dashboard.
+- Choose **KnowledgeBase** from the dropdown menu of content types.
+- You will be presented with input fields for the **Topic** and **Description**. In the **Topic** field, input the title or subject of your knowledge base entry.
+- In the **Description** field, provide detailed information about the topic. This could be a guide, an explanation, or any other form of information that would be useful to your users.
+
+<img src={KnowledgeBase} />
+
+- Once you've completed these fields, click the **Save** button to finalize your new knowledge base embedding.
+- Now that you have created your knowledgebase embedding, your chatbot can access this information and share it with users as needed. For example, if a user asks, "How can I troubleshoot Embeddings and Pinecone issues?", your chatbot can directly provide the saved knowledgebase for that questions. This leads to a more efficient and user-friendly navigation experience.
+
+<img src={KnowledgeBaseSample} />
+
+### Product Details
+
+Product details are crucial for any eCommerce site, providing users with all the information they need to make an informed purchasing decision.
+
+By embedding these details, your chatbot can access and relay them to potential customers.
+
+Imagine a clothing store: they can embed details for a particular dress, such as its available sizes, colors, fabric type, and price.
+
+When a user inquires about this dress, the chatbot can quickly provide all these details, facilitating a smooth shopping experience.
+
+To create Product Detail embeddings in the Content Builder, follow these steps:
+
+- Navigate to the **Embeddings - Content Builder** on your dashboard.
+- From the dropdown menu of content types, select **Product Details**.
+- Now, you will be presented with several input fields including **Product ID**, **Product Name**, **Product Description**, **Product Price**, and **Product URL**. Fill out each of these fields with the relevant details of the product you wish to embed.
+    - In the **Product ID** field, input a unique identifier for your product. This could be a SKU, a barcode number, or any other unique identifier used in your inventory system.
+    - In the **Product Name** field, input the name of the product as it is listed on your site.
+    - In the **Product Description** field, provide a detailed description of the product. This should include information such as its features, uses, and any other details a customer might need to know.
+    - In the **Product Price** field, input the current price of the product.
+    - Finally, in the **Product URL** field, input the URL of the product page on your website.
+- After filling in all the necessary fields, click on the Save button to store your new Product Detail embedding.
+
+<img src={Product} />
+
+Now, your chatbot has access to this embedded product information and can provide it to customers when needed. For example, if a user asks your chatbot, "What is the price of product X?", your chatbot can provide the saved price from the product details you've embedded.
+
+<img src={ProductSample} />
+
+### URLs
+
+Embedding URLs can greatly enhance your website's navigation and overall user experience.
+
+For instance, you can embed the URL of a new blog post, a product page, or a registration form.
+
+Your chatbot can then provide these direct links when a user needs them.
+
+For instance, a user might ask your chatbot, "Where can I register for the upcoming webinar?" Your chatbot can then provide the direct URL to the registration page, guiding the user efficiently.
+
+Creating URL embeddings is a straightforward process.
+
+Here's a step-by-step guide:
+
+- First, navigate to the **Embeddings - Content Builder** on your dashboard.
+- From the dropdown menu of content types, select **URL**.
+- You'll be presented with input fields for the URL and its associated description. Start by typing the URL you want to embed in the first field.
+- In the description field, provide some context about the URL. This could be a brief summary of the page it leads to or its relevance to your website or business.
+
+<img src={URLs} />
+
+- Once you've filled in both fields, click on the **Save** button to store your new URL embedding.
+
+<img src={URLSample} />
+
+- Now that you have created your URL embedding, your chatbot can access this information and share it with users as needed. For example, if a user asks, "Where can I register for the upcoming webinar?", your chatbot can directly provide the saved URL for the registration page. This leads to a more efficient and user-friendly navigation experience.
+
+### Company Profile
+
+A well-crafted company profile gives your website a professional feel, offering visitors insight into your business's history, goals, and achievements.
+
+By embedding this profile, your chatbot can share it with interested users or direct them to the page where it's hosted.
+
+Here's how to create Company Profile embeddings:
+
+- First, go to the **Embeddings - Content Builder** section on your dashboard.
+- From the dropdown menu of content types, select **Company Profile**.
+- You'll now see input fields where you can enter relevant information about your company:
+    - **Company Name:** Enter the official name of your company.
+    - **Founder:** Input the name of the person or people who founded the company.
+    - **CEO:** Enter the name of your current CEO.
+    - **Founded:** Input the year your company was founded.
+    - **Location:** Type in the city and country where your company is based.
+    - **Number of Employees:** Input the current number of employees in your company.
+    - **Industry:** Indicate the industry in which your company operates.
+    - **Products:** Provide a brief list or description of your main products or services.
+    - **Company Website:** Input the URL of your company's official website.
+    - **Company Email:** Input the general contact email for your company.
+    - **Company Phone:** Input the general contact phone number for your company.
+    - **Company Address:** Type in your company's physical address.
+    - **Company Description:** Provide a detailed overview of your company, including its mission, achievements, and any other notable information.
+- After you've filled out all the fields, click the **Save** button to create your new Company Profile embedding.
+
+<img src={CompanyProfile} />
+
+With this information embedded, your chatbot can provide users with comprehensive and accurate information about your company. As always, remember that the accuracy of your chatbot in providing these responses depends on its programming and configuration.
+
+For instance, if a user asks, "What does your company do?", the chatbot can pull from the 'Description' field to provide a comprehensive answer.
+
+<img src={CompanySample} />
 
 ## PDF Upload
 
