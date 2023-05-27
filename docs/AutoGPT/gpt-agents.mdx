@@ -282,6 +282,30 @@ $_GET['wpaicg_tweet'] = 'yes';
 $wpaicg_tweet->wpaicg_cron_job();
 ```
 
+## Hosting Providers
+
+### Bitnami
+
+You need to use ```sudo``` for Bitnami.
+
+Example:
+
+```
+
+* * * * * sudo php /opt/bitnami/your_path/index.php -- wpaicg_cron=yes
+
+```
+
+### Digital Ocean
+
+Example:
+
+```
+
+* * * * * php /var/www/html/index.php -- wpaicg_cron=yes
+
+```
+
 ## Monitoring GPT Agents
 
 To ensure that your GPT Agents are functioning correctly, it's essential to monitor their performance. The AutoGPT Dashboard provides an overview of the GPT Agents' status and activity. Follow these steps to monitor your GPT Agents:
