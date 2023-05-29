@@ -24,11 +24,19 @@ AI Power offers an extensive array of features and tools designed to augment you
     - Server-side Cron Job Integration
     - Post Scheduling
     - Auto Restart
-- **WooCommerce Product Writer**
+- **Social Poster**
+    - Twitter Integration
+    - Generate high-quality tweets written by GPT at defined time intervals and based on specific keywords
+    - Send a tweet after a post is published
+- **WooCommerce**
     - Product Title Generator
     - Product Description Generator
     - Product Meta Generator
     - Product Tags Generator
+    - Bulk Product Writer
+    - Token Sale
+    - Product Title Suggester
+    - Product Review Writer
 - **Image Generator**
     - DALL-E Support
     - Stable Diffusion
@@ -85,8 +93,6 @@ AI Power offers an extensive array of features and tools designed to augment you
     - Generate high-quality meta descriptions
     - WooCommerce integration
     - Yoast, Math Rank, and All in One SEO integration
-- **Social Poster**
-    - Generate high-quality tweets written by GPT
 - **Title Suggester**
     - Generate titles for your posts, pages, and products 
 - **Comment Replier**
