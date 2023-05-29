@@ -362,3 +362,20 @@ With the Queue feature, you can easily keep track of the progress of your conten
 Deleting a job from the queue will only remove the job from the queue and will not delete the content that was generated.
 
 :::
+
+## Limitations
+
+The Google Sheets module offers a convenient way to generate content in bulk using a Google Sheets document. However, there are a few limitations that users should be aware of:
+
+- **Availability of Google Sheets API**: The Google Sheets API must be available and accessible at all times. If the API is down or inaccessible, the plugin will not be able to fetch the rows and therefore cannot generate content.
+- **Google Sheets Format**: Your document must be in the Google Sheets format. Other formats like CSV or Excel are not supported by this module.
+- **Valid Google Cloud Service Account**: You must have a valid Google Cloud Service account. The plugin uses this account to interact with the Google Sheets API. If your account is invalid or suspended, the plugin will not be able to access your Google Sheets document.
+- **Google API Rules**: You must comply with [Google's API rules and limitations](https://developers.google.com/terms). Any breach of these rules can result in your Google Cloud Service account being suspended or even banned.
+- **Row Update per Minute**: The default value for this setting is 60. This means that the plugin will process 60 rows per minute. Changing this value can result in overloading the Google Sheets API, so it's recommended to leave it at the default unless you have a special quota from Google.
+- **Server Access to Google Sheets API Endpoints**: Your server must have access to Google Sheets API endpoints. If your server is blocked from accessing these endpoints, the plugin will not be able to fetch rows from the Google Sheets document. You may need to adjust your firewall or other network settings to ensure the necessary access.
+
+:::caution
+
+Ensure that the Google Sheets API is available, your document is in the Google Sheets format, you have a valid Google Cloud Service account, and you are complying with Google's API rules. The default setting for row update per minute is 60. It's recommended to avoid changing this value unless you have a special quota from Google.
+
+:::
