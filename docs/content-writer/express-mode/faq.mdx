@@ -1,0 +1,31 @@
+---
+sidebar_position: 13
+---
+
+# FAQ
+
+This is a list of frequently asked questions about Express Mode.
+
+## You exceeded your current quota
+
+**Q**: I am getting *“You exceeded your current quota, please check your plan and billing details.”* What should I do?
+
+**A**: This message coming from OpenAI and it’s not related with the plugin. It means that you have consumed all the credits or units allocated to your plan and have reached the limit of your billing cycle. You can check your usage [here](https://platform.openai.com/account/usage).
+
+## Timeout issue
+
+**Q**: I am getting *“It appears that your web server has some kind of timeout limit. This can also occur if you are using a VPS, CDN, proxy, firewall, or Cloudflare. To resolve this issue, please contact your hosting provider and request an increase in the timeout limit.”* message. What should I do?
+
+**A**: It means that your server have timeout limitation.
+
+If you are using **CloudFlare**, their default timeout limit is 100 seconds. Which means you won’t be able to generate content if content generation exceed 100 seconds. You can upgrade your plan with CloudFlare or disable their service or you can reduce number of headings for content generation.
+
+If you are using **Apache** as a web server, please contact your hosting provider to learn what the current timeout value is in ```httpd.conf``` file. You can increase this value.
+
+If you are using **Nginx** as a web server, please contact your hosting provider to learn what the current timeout value is in ```/etc/nginx/conf.d/timeout.conf``` file. You can increase this value.
+
+```
+proxy_connect_timeout 600;
+proxy_send_timeout 600;
+proxy_read_timeout 600;
+```

@@ -389,3 +389,13 @@ Under the **Action** column, there are two buttons:
 
 Through the Index Builder, you have full control over the indexing process, ensuring your website's content is properly embedded for optimal use by the AI Power plugin.
 
+## FAQ
+
+### Maximum Context Length
+
+What does the error message *"This model’s maximum context length is 4097 tokens. However, you requested 4893 tokens"* mean?
+
+This error message indicates that the total number of tokens (which include individual words and punctuation) in the content you're trying to generate is exceeding the maximum limit of 4097 tokens allowed by the model. Tokens are the smallest units of meaning that the model can process, and the limit exists to ensure optimal model performance. There are two primary ways to address this:
+
+- **Lower the maximum token value**: You can adjust the maximum token value to a lower number in your plugin settings. We recommend setting it to 500-700 tokens for optimal performance without losing the quality of output.
+- **Split your content into chunks**: If you are dealing with large content, consider dividing it into smaller pieces. Each piece should ideally not be more than 1000 words. This will ensure that each chunk of content remains within the model's token limit, and thus can be processed efficiently.
