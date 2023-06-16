@@ -322,3 +322,23 @@ To ensure that your GPT Agents are functioning correctly, it's essential to moni
     - **Last Content Generation**: Displays the last time the agent generated content. This can help you gauge the agent's activity and effectiveness.
 
 By monitoring the GPT Agents using the AutoGPT Dashboard, you can ensure that they are functioning correctly and address any issues promptly.
+
+:::tip
+
+Resolving the "Update failed: The update cannot be installed because some files could not be copied. This is usually due to inconsistent file permissions" error
+
+This error typically arises due to inconsistencies in file permissions. It's a server and permissions issue rather than a plugin-related problem. It occurs when a file created by a cron job running as a root user cannot be altered by WordPress, which runs under a different user.
+
+**Solution**:
+
+You can resolve this issue by ensuring that your cron job runs under the same user as your WordPress installation. This will help avoid permission mismatch.
+
+Here's how to do this:
+
+Add the WordPress username in front of all your cron job tasks. This ensures that the cron job runs under the same user that runs your WordPress, resolving the permission mismatch.
+
+The adjusted cron job command will look something like this:
+
+```* * * * * <WORDPRESS USERNAME> php /var/www/html/index.php -- wpaicg_cron=yes```
+
+:::
