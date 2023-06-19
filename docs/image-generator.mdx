@@ -294,6 +294,18 @@ Remember to click **Save** once you're done adjusting these settings to ensure a
 
 This feature gives you great flexibility in managing usage and costs associated with the Image Generator on your site.
 
+:::tip
+
+If you encounter issues with saving images, try adjusting the wp-config.php file by adding the following line of code:
+
+```
+define('ALLOW_UNFILTERED_UPLOADS', true);
+```
+
+This will enable unfiltered uploads, allowing you to save files without any restrictions.
+
+:::
+
 ### Limitations
 
 - Please note that our plugin is not capable of tracking usage for the 'Stable Diffusion' feature due to constraints in the provided API. This feature does not supply the necessary information for our plugin to track its usage effectively. Therefore, if you plan to implement a usage-based charge system for your users, we advise against enabling the 'Stable Diffusion' feature.
