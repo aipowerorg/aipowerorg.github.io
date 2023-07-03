@@ -18,6 +18,8 @@ This is a list of frequently asked questions about Express Mode.
 
 **A**: It means that your server have timeout limitation.
 
+If you are using cPanel, please check this [link](https://support.cpanel.net/hc/en-us/articles/360057903134-proxy-fcgi-error-errors-when-using-PHP-FPM).
+
 If you are using **CloudFlare**, their default timeout limit is 100 seconds. Which means you won’t be able to generate content if content generation exceed 100 seconds. You can upgrade your plan with CloudFlare or disable their service or you can reduce number of headings for content generation.
 
 If you are using **Apache** as a web server, please contact your hosting provider to learn what the current timeout value is in ```httpd.conf``` file. You can increase this value.
