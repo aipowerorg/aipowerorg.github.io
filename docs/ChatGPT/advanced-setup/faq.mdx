@@ -1,0 +1,25 @@
+---
+sidebar_position: 9
+---
+
+# FAQ
+
+## "Something went wrong" error
+
+**Question**:
+
+I've installed the ChatGPT plugin on a WordPress website, but the frontend users encounter a "Something Went Wrong" message. However, the logs indicate that a complete response was generated for that query. How can I resolve this problem?
+
+**Answer**:
+
+If you're using Nginx as your web server, please add the following lines to your Nginx configuration file:
+
+```fastcgi_buffers 16 16k;```
+
+```fastcgi_buffer_size 32k;```
+
+Here are a couple of guides to assist you:
+
+[How to edit Nginx configuration file](https://www.geekbits.io/nginx-configuration-guide/)
+
+[How to find the Nginx configuration file location](https://help.dreamhost.com/hc/en-us/articles/216455077-Nginx-configuration-file-locations)
