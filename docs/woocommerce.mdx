@@ -74,6 +74,22 @@ Here's how:
 
 Remember, *%s* is a placeholder for your product's name. Make sure to include it in your custom prompts.
 
+#### Available Variables
+
+When creating your custom prompts, you can use the following variables to dynamically include product data:
+
+- `%s`: This will be replaced with the product's title.
+- `[current_short_description]`: This shortcode will be replaced with the product's current short description. Please note that this shortcode is valid in both the "Short Description" and "Full Description" fields.
+- `[current_full_description]`: This shortcode will be replaced with the product's current full description. Please note that this shortcode is also valid in both the "Short Description" and "Full Description" fields.
+
+Here's an example of how you might use these variables in a custom prompt:
+
+"Use the existing description: [current_short_description]. Then, provide a compelling and concise summary in English for the following product: %s."
+
+In this example, `[current_short_description]` will be replaced with the product's short description, and `%s` will be replaced with the product's title.
+
+**Please note:** If you include `%s`, `[current_short_description]`, or `[current_full_description]` more than once in your prompt, each instance will be replaced with the same product title or description. Make sure to structure your prompts accordingly!
+
 ## Bulk Product Writer
 
 The WooCommerce Bulk Product Writer offers a convenient way to generate content for multiple products simultaneously.
