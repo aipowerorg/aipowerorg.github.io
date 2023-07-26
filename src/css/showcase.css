@@ -1,0 +1,126 @@
+/* src/css/showcase.css */
+
+.showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2em;
+    padding: 2em;
+    justify-items: center;
+}
+
+.showcaseItem {
+    background: var(--ifm-color-emphasis-0);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    padding: 1em;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+    .showcaseItem {
+        background: var(--ifm-color-emphasis-200); /* Darker color for light theme */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow for light theme */
+    }
+}
+
+.showcaseItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.showcaseItem h2 {
+    margin: 0;
+    color: var(--ifm-font-color-base);
+    font-size: 1.5em;
+}
+
+.showcaseItem p {
+    margin: 0.5em 0;
+    color: var(--ifm-font-color-secondary);
+}
+
+.showcaseItem a {
+    display: inline-block;
+    color: var(--ifm-link-color);
+    text-decoration: none;
+    background-color: var(--ifm-color-emphasis-0);
+    padding: 10px 20px;
+    border: 1px solid var(--ifm-link-color);
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.showcaseItem a:hover {
+    background-color: var(--ifm-link-color);
+    color: var(--ifm-color-emphasis-0);
+}
+
+.flag {
+    width: 25px;
+    /* adjust as needed */
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.customerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth perception */
+    transition: transform 0.2s ease-in-out;
+    /* Smooth transition for hover effect */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge image on hover */
+}
+.showcaseHeading {
+    text-align: center;
+    font-size: 2em;
+    color: var(--ifm-font-color-base);
+    margin: 1em 0;
+  }
+  
+  .showcaseDescription {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--ifm-font-color-secondary);
+    margin: 1em 0;
+  }
+  
+  .showcaseIntro {
+    text-align: center;  /* Center child elements */
+  }
+  
+  .addYourSite {
+    display: inline-block;
+    color: var(--ifm-link-color);
+    text-decoration: none;
+    background-color: var(--ifm-color-emphasis-0);
+    padding: 10px 20px;
+    border: 1px solid var(--ifm-link-color);
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    margin: 1em auto;
+    max-width: 200px;  /* Maximum width of the button */
+  }
+  
+  .addYourSite:hover {
+    background-color: var(--ifm-link-color);
+    color: var(--ifm-color-emphasis-0);
+  }
+  

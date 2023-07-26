@@ -29,3 +29,4 @@
   --ifm-color-primary-lightest: #FCF0E4;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+@import './showcase.css';

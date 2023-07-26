@@ -86,6 +86,7 @@ const config = {
           // {to: '/blog', label: 'Blog', position: 'left'},
           {to: 'https://aipower.org/features/', label: 'Features', position: 'left'},
           {to: 'https://aipower.org/pricing/', label: 'Pricing', position: 'left'},
+          {to: '/showcase/', label: 'Showcase', position: 'left'},
           {to: 'https://aipower.org/support/', label: 'Support', position: 'left'},
           {to: 'https://aipower.org/contact/', label: 'Contact', position: 'left'},
           {to: 'https://users.freemius.com', label: 'Sign In', position: 'right'},
