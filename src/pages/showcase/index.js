@@ -9,6 +9,13 @@ const showcases = [
         link: 'https://wordtap.net/create-a-story-using-these-words/',
         thumbnail: 'wordtap.png',
     },
+    {
+        customerName: 'Tony',
+        flagUrl: 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@master/svg/us.svg',
+        description: `FaithGuide is an AI-powered app providing quick and reliable answers about Catholic teachings. The app also allows users to share their experiences, creating a supportive community.`,
+        link: 'https://majellan.media/faithguide/',
+        thumbnail: 'majellan.media.png',
+    },
 ];
 
 function ShowcaseItem({ showcase }) {
