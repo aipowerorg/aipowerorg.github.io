@@ -11,6 +11,8 @@ import APIKey2 from '/img/chatgpt/elevenlabs/api-key2.png';
 import APIKey3 from '/img/chatgpt/elevenlabs/api-key3.png';
 import ElevenLabs from '/img/chatgpt/elevenlabs/elevenlabs.png';
 import ElevenLabsSample from '/img/chatgpt/elevenlabs/sample.png';
+import SyncVoices from '/img/chatgpt/elevenlabs/sync-voices.png';
+import SyncModels from '/img/chatgpt/elevenlabs/sync-models.png';
 import GoogleCloud from '/img/chatgpt/google/console.png';
 import GoogleCloudProject1 from '/img/chatgpt/google/project1.png';
 import GoogleCloudProject2 from '/img/chatgpt/google/project2.png';
@@ -197,18 +199,18 @@ With ElevenLabs, you can bring your ChatGPT bot to life with dynamic, expressive
 
 Here's how you can enable and customize the ElevenLabs integration:
 
-- First, you need to get an API key from ElevenLabs. Visit https://beta.elevenlabs.io/ and register for an account. They offer different plans, including a free plan that allows you to access Long-Form Speech Synthesis, 10,000 characters per month, create up to 3 custom voices, and use Voice Design for random voices. Please note that ElevenLabs currently supports **only the English language**.
+- First, you need to get an API key from ElevenLabs. Visit https://beta.elevenlabs.io/ and register for an account. They offer different plans, including a free plan that allows you to access Long-Form Speech Synthesis, 10,000 characters per month, create up to 3 custom voices, and use Voice Design for random voices.
 - Once you’ve created your account, click on your profile in the top right corner and select the **Profile** link.You will find your API key there.
 
 <img src={APIKey1} width="400" />
 
 - Copy your API key.
 
-<img src={APIKey2} width="500" />
+<img src={APIKey2} width="400" />
 
 - Head over to our plugin **ChatGPT – Settings** page. Enter your API key in the designated field.
 
-<img src={APIKey3} width="700" />
+<img src={APIKey3} width="400" />
 
 - In the settings page, you’ll find the option **Hide API errors in chat**. Enabling this will ensure that users won’t see API errors like “out of quota” or “invalid API key.” Instead, they will only see the chat text from OpenAI without audio from ElevenLabs.
 - Save your settings. After saving, click on the **Sync** button to sync all your custom voices from ElevenLabs. Remember, you can clone any famous person’s voice or even your own!
@@ -225,13 +227,59 @@ Go ahead and chat with your bot to experience its new voice capabilities.
 
 The possibilities are endless – you can create a bot that speaks like Steve Jobs and behaves like him by adding special instructions in the **Context – Additional Context** section and uploading a photo of Steve Jobs.
 
+#### Voice and Model Synchronization
+
+ElevenLabs offers a powerful and dynamic suite of voices and models for your chat system.
+
+To ensure you're leveraging these features to their fullest potential, it's crucial to keep them synchronized with your plugin settings.
+
+This guide will walk you through syncing voices and models after inputting your ElevenLabs API key.
+
+#### Syncing Voices
+
+1. **Saving the API Key:** After acquiring your ElevenLabs API key, enter it into the designated field within your plugin settings.
+2. **Click on "Sync Voices":** With your API key saved, you'll find a button labeled "Sync Voices". Initiating this will commence the synchronization process, importing all the voices tied to your ElevenLabs account.
+
+<img src={SyncVoices} width="400" />
+
+3. **Completion:** Post synchronization, all the voices available to you will be seamlessly integrated into your chat system. You can then cherry-pick your desired voice from the dropdown menu.
+
+#### Voice Settings
+
+Upon successfully synchronizing the voices from ElevenLabs, the plugin automatically pulls in the following voice settings:
+
+1. **Stability:** Determines the consistency of the voice output. A higher stability setting ensures the voice remains steady and consistent, avoiding unexpected fluctuations or changes in tone.
+
+2. **Similarity Boost:** This setting emphasizes the resemblance of the generated voice to a particular target voice. Elevating the similarity boost will make the synthesized voice sound more like the target.
+
+3. **Speaker Boost:** This enhances the distinctive characteristics of a chosen speaker's voice. By increasing the speaker boost, the synthesized voice will embody more of the unique nuances and idiosyncrasies of the target speaker.
+
+4. **Style:** Reflects the tone and manner of the generated voice. Whether you want a voice that's cheerful, serious, or neutral, adjusting the style allows you to fine-tune the emotion and demeanor of the voice output.
+
+#### Syncing Models
+
+1. **Saving the API Key:** If not done already, ensure your ElevenLabs API key is stored.
+2. **Click on "Sync Models":** Adjacent to the "Sync Voices" button, you'll spot another labeled "Sync Models". Activating this will fetch all models associated with your ElevenLabs account.
+
+<img src={SyncModels} width="400" />
+
+3. **Completion:** Post synchronization, you're set to deploy these models within your chat infrastructure.
+
+#### Understanding Models
+
+At present, two primary models are at your disposal:
+
+- **Eleven English v1:** Standard English language model to generate speech in a variety of voices, styles and moods.
+- **Eleven Multilingual v1:** Generate lifelike speech in multiple languages and create content that resonates with a broader audience. Languages: English (USA), English (UK), English (Australia), English (Canada), German, Polish
+ Spanish (Spain), Spanish (Mexico), Italian, French (France), French (Canada), Portuguese (Portgual), Portuguese (Brazil) and Hindi.
+
 #### Limitations
 
 While the new ElevenLabs voice integration with ChatGPT brings exciting possibilities for chatbot creators, it’s important to be aware of its limitations.
 
 Understanding these restrictions will help you make informed decisions when using this feature.
 
-- **Language Support**: Currently, ElevenLabs only supports the English language. This means that you cannot use their text-to-speech services for non-English languages. However, additional language support may become available in the future.
+- **Multilingual v1 Limitations**: Some numbers and symbols may currently be pronounced incorrectly. The generated speech can be unstable if the text exceeds 1000 characters.
 - **API Errors**: If you choose to hide API errors in chat, users won’t see errors like “out of quota” or “invalid API key.” Instead, they will only see the chat text from OpenAI without any audio from ElevenLabs. This could lead to confusion if users expect to hear a voice response.
 - **Quota Restrictions**: Depending on the ElevenLabs plan you choose, you may face limitations in terms of characters per month, custom voices, and commercial licensing. The free plan, for example, offers 10,000 characters per month and up to 3 custom voices without a commercial license.
 
