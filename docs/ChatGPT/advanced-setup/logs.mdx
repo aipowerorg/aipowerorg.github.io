@@ -7,6 +7,7 @@ import TabItem from '@theme/TabItem';
 import LogShortcode from '/img/chatgpt/logs-shortcode.png';
 import LogWidget from '/img/chatgpt/logs-widget.png';
 import Logs from '/img/chatgpt/logs.png';
+import Estimated from '/img/chatgpt/log-estimated.png';
 
 # Chat Logs
 
@@ -56,15 +57,17 @@ Here's how to manage chat logs settings and view saved logs.
 - You will see a comprehensive list of logs. Each log entry includes details such as Session ID, Date, User Message, Bot Response, IP, Page, Source (Shortcode), Token Usage, Estimated Cost, and an Action button labeled as **View**.
     - **SessionID**: This is a unique identifier for each chat session. It helps in distinguishing different chat sessions and tracking individual conversations.
     - **Date**: This represents the date and time when the chat session occurred. It is helpful for tracking the timeline of conversations and identifying any time-related trends or issues.
-    - **User Message**: This field shows the input or question that was provided by the user during the chat session.
-    - **Bot Response**: This displays the response that the ChatGPT bot provided to the user's input or question.
+    - **User**: This field shows the input or question that was provided by the user during the chat session.
+    - **AI**: This displays the response that the ChatGPT bot provided to the user's input or question.
     - **IP**: This represents the Internet Protocol (IP) address of the user. It can be useful for tracking the geographic location of users or identifying potential security issues.
     - **Page**: This field shows the specific page on your website where the chat session took place.
-    - **Source**: This indicates whether the chat session was initiated through a shortcode or a widget.
-    - **Token Usage**: This field shows the number of tokens used in the chat session. Tokens are units of measure used by OpenAI to calculate the cost of generating responses.
-    - **Estimated Cost**: This shows the estimated cost for the chat session based on the number of tokens used and the pricing rate.
-    - **View**: This is an action button. Clicking on this button will open a modal window displaying the complete conversation history for that particular chat session.
-- Click on the <b>View</b> button next to each log entry to open a modal window with the complete conversation history for that particular session.
-- Additionally, there's a search box at the top of the logs page that you can use to search for specific logs based on keywords.
+    - **Type**: This indicates whether the chat session was initiated through a shortcode or a widget.
+    - **Token**: This field shows the number of tokens used in the chat session. Tokens are units of measure used by OpenAI to calculate the cost of generating responses.
+    - **Question**: Total number of queries posed by users to the AI chatbot.
+    - **Estimated**: This shows the estimated cost for the chat session based on the number of tokens used and the pricing rate. Hovering over the question mark will reveal a breakdown detailing the total number of queries and the associated cost for each.
+
+<img src={Estimated} width="700" />
+
+Click on the <b>View</b> button next to each log entry to open a modal window with the complete conversation history for that particular session.
 
 These logs help you monitor interactions and ensure the chatbot is operating as expected.

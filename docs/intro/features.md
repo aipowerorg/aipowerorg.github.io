@@ -6,6 +6,8 @@ sidebar_position: 2
 
 AI Power offers an extensive array of features and tools designed to augment your WordPress website with the most advanced AI technology. Here are some core features of AI Power:
 
+- **Multiple AI Providers**
+    - Support for both OpenAI and Azure as API services
 - **Latest GPT Models**
     - GPT-3.5-Turbo
     - GPT-3.5-Turbo-16K
