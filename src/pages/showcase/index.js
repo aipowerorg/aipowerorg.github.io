@@ -1,20 +1,29 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 
+const FLAG_BASE_URL = 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@master/svg';
+
 const showcases = [
     {
         customerName: 'Carolyn',
-        flagUrl: 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@master/svg/fr.svg',
+        flagUrl: `${FLAG_BASE_URL}/fr.svg`,
         description: `Carolyn's site provides a unique tool for language learning. Users input vocabulary, and the tool crafts a personalized story for active learning and enhanced retention.`,
         link: 'https://wordtap.net/create-a-story-using-these-words/',
         thumbnail: 'wordtap.png',
     },
     {
         customerName: 'Tony',
-        flagUrl: 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@master/svg/us.svg',
+        flagUrl: `${FLAG_BASE_URL}/us.svg`,
         description: `FaithGuide is an AI-powered app providing quick and reliable answers about Catholic teachings. The app also allows users to share their experiences, creating a supportive community.`,
         link: 'https://majellan.media/faithguide/',
         thumbnail: 'majellan.media.png',
+    },
+    {
+        customerName: 'Josh',
+        flagUrl: `${FLAG_BASE_URL}/us.svg`,
+        description: `Josh's website offers Instant Career Services, all built with AI Forms, including Resumes, Cover Letters, Career Paths, Salary Negotiation and Job Descriptions.`,
+        link: 'https://jobhuntmode.com',
+        thumbnail: 'jobhuntmode.png',
     },
 ];
 
