@@ -111,11 +111,13 @@ Once all fields are populated, click the `Save` button in the plugin.
 
 Before setting Azure as your provider in the plugin, you should be aware of its limitations:
 
-- **Supported Modules**: Content Writer, AutoGPT, ChatGPT, PlayGround, Image Generator, AI Forms and PromptBase.
 - **Unsupported Modules**: Fine-tuning and Audio Converter.
-- **Chatbot Feature Limitations**: Once you enable Azure:
-  1. **Speech to Text**: This feature will be disabled because Whisper is not yet available on Azure. However, we plan to integrate it once it becomes available.
-  2. **Moderation**: Azure offers its own content filtering, so our plugin will automatically disable the moderation feature.
+
+Once you enable Azure:
+
+1. **Speech to Text**: This feature will be disabled because Whisper is not yet available on Azure. However, we plan to integrate it once it becomes available.
+2. **Moderation**: Azure offers its own content filtering, so our plugin will automatically disable the moderation feature.
+3. **Image Generator**: Azure only allows up to 5 images maximum whereas OpenAI allows up to 10 images.
 
 ## Frequently Asked Questions (FAQs)
 
