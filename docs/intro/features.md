@@ -18,6 +18,15 @@ AI Power offers an extensive array of features and tools designed to augment you
     - Custom Mode
     - Integration with DALL-E, Pexels and Pixabay images
     - Integration with Yoast, Math Rank, and All in One SEO
+- **SEO Optimizer**
+    - Generate high-quality meta descriptions
+    - WooCommerce integration
+    - Yoast, Math Rank, and All in One SEO integration
+    - Shorten URL
+    - Generate Title from Keywords
+    - Enforce Focus Keyword in URL
+    - Use Sentiment in Title
+    - Use Power Word in Title
 - **Auto Content Writer (AutoGPT)**
     - Bulk Editor
     - CSV Support
@@ -92,10 +101,6 @@ AI Power offers an extensive array of features and tools designed to augment you
     - Cost comparison
 - **Role Manager**
     - Limit features based on user roles 
-- **SEO Optimizer**
-    - Generate high-quality meta descriptions
-    - WooCommerce integration
-    - Yoast, Math Rank, and All in One SEO integration
 - **Title Suggester**
     - Generate titles for your posts, pages, and products 
 - **Comment Replier**
