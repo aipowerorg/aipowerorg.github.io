@@ -86,24 +86,6 @@ Please note that OpenAI only accepts `*.jsonl` files and the maximum upload size
 - If you wish to view the content of the file, you can click on the "Retrieve Content" button. For security reasons, OpenAI does not allow free plan users to view the content of the uploaded files. If you wish to view the content of the file, you will need to upgrade your account to a paid plan.
 - To delete the file, click on the "Delete" button.
 
-## Data Converter
-
-- First, navigate to the Data Converter tab.
-- In the Data Converter tab, you will be able to convert your entire Database to a JSONL file.
-
-<img src={DataConversion} />
-
-- There are 3 different options here.
-    - **Convert Your Posts**: This will convert all your posts in your DB to a JSONL file. Please note that this process will take a while depending on the number of posts you have. If you have huge DB it will split the datasets in small pieces.
-    - **Convert Your Pages**: This will convert all your pages in your DB to a JSONL file. Please note that this process will take a while depending on the number of pages you have. If you have huge DB it will split the datasets in small pieces.
-    - **Convert Your WooCommerce Products**: You will see this feature only if you have WooCommerce installed. This will convert all your WooCommerce products in your DB to a JSONL file. Please note that this process will take a while depending on the number of products you have. If you have huge DB it will split the datasets in small pieces.
-
-:::caution
-
-If you have huge DB, conversion might take longer and your website might become unresponsive if resources are not enough.
-
-:::
-
 ## Creating Fine-Tune Request
 
 - To create a fine-tune request, click on the **Create Fine-Tune** button in the Datasets tab. This will create a fine-tune request on the OpenAI API based on the uploaded dataset.
@@ -192,3 +174,21 @@ Given these advantages, unless you have very specific needs that require the cus
 | Dataset Size Requirement | Smaller | Larger |
 | Customizability | Limited | High |
 | Performance | Good for general applications | Excellent for specific applications |
+
+## Data Converter
+
+- First, navigate to the Data Converter tab.
+- In the Data Converter tab, you will be able to convert your entire Database to a JSONL file.
+
+<img src={DataConversion} />
+
+- There are 3 different options here.
+    - **Convert Your Posts**: This will convert all your posts in your DB to a JSONL file. Please note that this process will take a while depending on the number of posts you have. If you have huge DB it will split the datasets in small pieces.
+    - **Convert Your Pages**: This will convert all your pages in your DB to a JSONL file. Please note that this process will take a while depending on the number of pages you have. If you have huge DB it will split the datasets in small pieces.
+    - **Convert Your WooCommerce Products**: You will see this feature only if you have WooCommerce installed. This will convert all your WooCommerce products in your DB to a JSONL file. Please note that this process will take a while depending on the number of products you have. If you have huge DB it will split the datasets in small pieces.
+
+:::caution
+
+If you have huge DB, conversion might take longer and your website might become unresponsive if resources are not enough.
+
+:::
