@@ -21,6 +21,14 @@ import FineTunedModels from '/img/ai-settings/fine-tuned-models.png';
 
 Fine-tuning allows you to customize a model for your application.
 
+Some common use cases where fine-tuning can improve results:
+
+- Setting the style, tone, format, or other qualitative aspects
+- Improving reliability at producing a desired output
+- Correcting failures to follow complex prompts
+- Handling many edge cases in specific ways
+- Performing a new skill or task that’s hard to articulate in a prompt
+
 Fine-tuning a model in OpenAI involves a few steps.
 
 There are 3 different ways of uploading your data to OpenAI and starting a fine-tuning process:
@@ -31,34 +39,21 @@ There are 3 different ways of uploading your data to OpenAI and starting a fine-
 
 Below you can find a detailed explanation of how to fine-tune a model using our plugin.
 
-<iframe width="100%" height="535" src="https://www.youtube.com/embed/WQpPlSC8K0Q" title="How to Fine-Tune OpenAI GPT models" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+## Data Entry
 
-## AI Training and Custom Models
+- First, navigate to the Manual Entry tab.
+- In the Manual Entry tab, you will be able to manually enter your data.
 
-Artificial Intelligence (AI) relies on massive datasets for its training. The objective of this training is to refine the AI model's ability to understand, respond, and interact accurately and effectively. Fine-tuning is a key process in this training regimen.
+<img src={ManualEntry} />
 
-Fine-tuning is essentially the process of customizing a pre-trained model for a specific application. In this context, the base AI model is modified slightly, enhancing its capabilities and ensuring it performs more effectively in a particular use-case. For instance, fine-tuning could enhance the AI's understanding of specific jargon, improve its response accuracy, or adapt its language style to better suit your needs.
+- Let say you want to enter change your chat bot's tone.
 
-Custom models refer to these fine-tuned versions of the base AI model. They have been trained on specific data and tailored to a unique purpose. They provide a more personalized AI experience and can significantly improve user interaction quality.
+Here is an example:
 
-OpenAI provides several tools to streamline the fine-tuning process, making it user-friendly and efficient.
+``{"messages": [{"role": "system", "content": "Marv is a chatbot that is also sarcastic."}, {"role": "user", "content": "What's the capital of France?"}, {"role": "assistant", "content": "Paris, as if everyone doesn't know that already."}]}``
 
-## Embeddings or Fine-Tuning?
-
-While fine-tuning your AI model can provide excellent results, it's important to note that there's an alternative that may be more suitable depending on your requirements. We recommend considering the use of [Embeddings](/docs/embeddings.mdx).
-
-Embeddings is a feature extraction technique where high-dimensional data, like text, is converted into lower-dimensional vectors. This approach comes with several benefits. Firstly, it is cheaper since it doesn't involve the compute-intensive process of training an entire model. Secondly, it's generally faster and easier to implement. Finally, unlike custom models, which require a large and high-quality dataset for effective fine-tuning, embeddings allows you to embed your data into a vector database, which can then be leveraged by your chatbot for efficient and accurate responses.
-
-Given these advantages, unless you have very specific needs that require the customizability that comes with fine-tuning, embeddings could be the more economical and efficient choice for enhancing your AI model's performance.
-
-| Feature | Embeddings | Fine-Tuning |
-|---------|------------|-------------|
-| Cost | Lower | Higher |
-| Speed | Faster | Slower |
-| Ease of Implementation | Easier | More complex |
-| Dataset Size Requirement | Smaller | Larger |
-| Customizability | Limited | High |
-| Performance | Good for general applications | Excellent for specific applications |
+- Click on **Add More** to add more data.
+- Once you have entered all your data, select a model base, give a custom name (optional), and click on **Upload**.
 
 ## Upload Your Data
 
@@ -71,15 +66,15 @@ Please note that OpenAI only accepts `*.jsonl` files and the maximum upload size
 
 :::
 
-- Jsonl file contains prompt and completion pairs. The prompt is the question and the completion is the answer. You can find some examples [here](https://github.com/ledwards/gpt-swccg/tree/main/data).
-- Here is an example jsonl file.
+- Jsonl file contains role and content pairs.
+- Here is an example jsonl file. You can download it [here](https://gist.github.com/sensahin/130514da203b8d18b5b0d294e916dd21/archive/82d4211cf186cb6f8a8ff9a1a818a086e540a4f6.zip).
 
 <img src={ExampleJSONL} />
 
 - There are 4 fields in the Datasets tab that you need to fill in:
     - **File**: Click on the "Choose File" button to select the file you wish to upload. As we mentioned earlier, OpenAI only accepts *.jsonl files and the maximum upload size is 100MB per file. Learn about file format [here](https://jsonlines.org).
     - **Purpose**: Select the purpose. Currently there is only one option which is "Fine-tune".
-    - **Model Base**: Select the model base you wish to fine-tune your model. You can select from the dropdown list. Options are: ada, babbage, curie and davinci.
+    - **Model Base**: Select the model base you wish to fine-tune your model. You can select from the dropdown list. Options are: gpt-3.5-turbo, babbage-002 and davinci-002.
     - **Custom Model Name**: Enter the custom model name for the fine-tuned model. This is optional. If you leave it blank, the fine-tuned model will be named after the model base you selected. I suggest you to use a custom model name so you can easily identify the fine-tuned model.
 
 <img src={Upload} width="700" />
@@ -90,22 +85,6 @@ Please note that OpenAI only accepts `*.jsonl` files and the maximum upload size
 
 - If you wish to view the content of the file, you can click on the "Retrieve Content" button. For security reasons, OpenAI does not allow free plan users to view the content of the uploaded files. If you wish to view the content of the file, you will need to upgrade your account to a paid plan.
 - To delete the file, click on the "Delete" button.
-
-## Manual Data Entry
-
-- First, navigate to the Manual Entry tab.
-- In the Manual Entry tab, you will be able to manually enter your data.
-
-<img src={ManualEntry} />
-
-- Let say you want to enter your product data.
-
-Here is an example:
-
-``{"prompt":"Item is a handbag. Colour is army green. Price is midrange. Size is small.->", "completion":" This stylish small green handbag will add a unique touch to your look, without costing you a fortune."}``
-
-- Click on **Add More** to add more data.
-- Once you have entered all your data, select a model base, give a custom name (optional), and click on **Upload**.
 
 ## Data Converter
 
@@ -128,13 +107,9 @@ If you have huge DB, conversion might take longer and your website might become 
 ## Creating Fine-Tune Request
 
 - To create a fine-tune request, click on the **Create Fine-Tune** button in the Datasets tab. This will create a fine-tune request on the OpenAI API based on the uploaded dataset.
-- There is an important step here before creating your fine-tune request. You need to either create a new model or select an existing model from the dropdown list. If you select an existing model, the fine-tuned model will be created based on the selected model. If you create a new model, the fine-tuned model will be created based on the model base you selected when you uploaded the dataset. So why this step is important? Because you can create multiple fine-tune requests for the same dataset. For example, you can create a fine-tune request for the same dataset using different model bases. Or you can create a fine-tune request for the same dataset using different models. This way, you can compare the results and choose the best model for your use case. A possible scenario is that you have huge dataset that is not possible to upload to OpenAI because of the 100MB limit. In this case, you can split your dataset into multiple files and upload them to OpenAI. Then, you can create a fine-tune request for each file using the same model base. This way, you can create a fine-tuned model based on the same model base but with different datasets.
 
 <img src={FineTune1} width="500" />
 
-<img src={FineTune2} width="500" />
-
-- If you wish to upload a file for the same model, you will need to select the model from the dropdown list when you hit the "Create Fine-Tune" button.
 - Now, let's move on to viewing the fine-tune requests.
 
 ## Viewing Fine-Tune Request
@@ -200,3 +175,20 @@ If you don't see your fine-tuned model in the dropdown list, please make sure th
 You can also click on [Sync Models](/docs/ai-engine/openai/gpt-models#syncing-with-the-latest-openai-models) link to get latest models.
 
 Now head over to the ChatGPT and ask your ChatBox a question. You should see that the ChatBox is now using the fine-tuned model.
+
+## Embeddings or Fine-Tuning?
+
+While fine-tuning your AI model can provide excellent results, it's important to note that there's an alternative that may be more suitable depending on your requirements. We recommend considering the use of [Embeddings](/docs/embeddings.mdx).
+
+Embeddings is a feature extraction technique where high-dimensional data, like text, is converted into lower-dimensional vectors. This approach comes with several benefits. Firstly, it is cheaper since it doesn't involve the compute-intensive process of training an entire model. Secondly, it's generally faster and easier to implement. Finally, unlike custom models, which require a large and high-quality dataset for effective fine-tuning, embeddings allows you to embed your data into a vector database, which can then be leveraged by your chatbot for efficient and accurate responses.
+
+Given these advantages, unless you have very specific needs that require the customizability that comes with fine-tuning, embeddings could be the more economical and efficient choice for enhancing your AI model's performance.
+
+| Feature | Embeddings | Fine-Tuning |
+|---------|------------|-------------|
+| Cost | Lower | Higher |
+| Speed | Faster | Slower |
+| Ease of Implementation | Easier | More complex |
+| Dataset Size Requirement | Smaller | Larger |
+| Customizability | Limited | High |
+| Performance | Good for general applications | Excellent for specific applications |
