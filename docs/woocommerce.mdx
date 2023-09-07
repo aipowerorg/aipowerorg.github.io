@@ -81,12 +81,13 @@ When creating your custom prompts, you can use the following variables to dynami
 - `%s`: This will be replaced with the product's title.
 - `[current_short_description]`: This shortcode will be replaced with the product's current short description. Please note that this shortcode is valid in both the "Short Description" and "Full Description" fields.
 - `[current_full_description]`: This shortcode will be replaced with the product's current full description. Please note that this shortcode is also valid in both the "Short Description" and "Full Description" fields.
+- `[current_attributes]`: This shortcode will be replaced with a list of the product's current attributes. Please note that this shortcode is valid in both the "Short Description" and "Full Description" fields.
 
 Here's an example of how you might use these variables in a custom prompt:
 
-"Use the existing description: [current_short_description]. Then, provide a compelling and concise summary in English for the following product: %s."
+"Use the existing description: [current_short_description]. Then, provide a compelling and concise summary in English for the following product: %s. Also, include these attributes: [current_attributes]."
 
-In this example, `[current_short_description]` will be replaced with the product's short description, and `%s` will be replaced with the product's title.
+In this example, `[current_short_description]` will be replaced with the product's short description, and `%s` will be replaced with the product's title, and `[current_attributes]` will be replaced with the product's attributes.
 
 **Please note:** If you include `%s`, `[current_short_description]`, or `[current_full_description]` more than once in your prompt, each instance will be replaced with the same product title or description. Make sure to structure your prompts accordingly!
 
