@@ -83,8 +83,19 @@ When creating your custom prompts, you can use the following variables to dynami
 - `[current_full_description]`: This shortcode will be replaced with the product's current full description.
 - `[current_attributes]`: This shortcode will be replaced with a list of the product's current attributes.
 - `[current_categories]`: This shortcode will substitute a list of the product's current categories.
+- `[current_price]`: This shortcode will be replaced with the product's current price, along with the currency symbol.
+- `[current_weight]`: This shortcode will be replaced with the product's current weight in kilograms.
+- `[current_length]`: This shortcode will be replaced with the product's current length in centimeters.
+- `[current_width]`: This shortcode will be replaced with the product's current width in centimeters.
+- `[current_height]`: This shortcode will be replaced with the product's current height in centimeters.
+- `[current_sku]`: This shortcode will be replaced with the product's current SKU.
+- `[current_purchase_note]`: This shortcode will be replaced with the product's current purchase note.
 
-Here's an example to demonstrate how you can use these variables in a custom prompt:
+Feel free to use these variables to enhance your custom prompts. For example:
+
+"Craft a meta description for the product: %s that succinctly highlights its key features and benefits. Aim to stay within 155 characters. Use current price: [current_price], current weight: [current_weight] kg, current length: [current_length] cm, current width: [current_width] cm, current height: [current_height] cm, current SKU: [current_sku], and current purchase note: [current_purchase_note] for your reference."
+
+Here's another example to demonstrate how you can use these variables in a custom prompt:
 
 **Prompt**: *Create an SEO-friendly and eye-catching title for the product: %s. The title should emphasize its key features. Use the following for context: Attributes: [current_attributes], Short Description: [current_short_description], Full Description: [current_full_description], Product Categories: [current_categories].*
 
