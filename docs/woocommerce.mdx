@@ -82,14 +82,20 @@ When creating your custom prompts, you can use the following variables to dynami
 - `[current_short_description]`: This shortcode will be replaced with the product's current short description.
 - `[current_full_description]`: This shortcode will be replaced with the product's current full description.
 - `[current_attributes]`: This shortcode will be replaced with a list of the product's current attributes.
+- `[current_categories]`: This shortcode will substitute a list of the product's current categories.
 
-Here's an example of how you might use these variables in a custom prompt:
+Here's an example to demonstrate how you can use these variables in a custom prompt:
 
-"Use the existing description: [current_short_description]. Then, provide a compelling and concise summary in English for the following product: %s. Also, include these attributes: [current_attributes]."
+**Prompt**: *Create an SEO-friendly and eye-catching title for the product: %s. The title should emphasize its key features. Use the following for context: Attributes: [current_attributes], Short Description: [current_short_description], Full Description: [current_full_description], Product Categories: [current_categories].*
 
-In this example, `[current_short_description]` will be replaced with the product's short description, and `%s` will be replaced with the product's title, and `[current_attributes]` will be replaced with the product's attributes.
+In this example:
 
-**Please note:** If you include `%s`, `[current_short_description]`, or `[current_full_description]` more than once in your prompt, each instance will be replaced with the same product title or description. Make sure to structure your prompts accordingly!
+- `[current_short_description]` will be replaced with the product's short description.
+- `[current_full_description]` will be replaced with the product's full description.
+- `[current_attributes]` will be replaced with a list of the product's attributes.
+- `[current_categories]` will be replaced with a list of the product's current categories.
+
+**Note:** If you include these shortcodes more than once in your prompt, each instance will be replaced with the same respective product data. Structure your prompts accordingly and make sure that your existing descriptions, attributes and categories are not empty.
 
 ## Bulk Product Writer
 
