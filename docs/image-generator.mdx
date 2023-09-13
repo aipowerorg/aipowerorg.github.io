@@ -323,7 +323,58 @@ Dive into a new revenue stream while providing value to your users.
 
 Learn more about it here: [User Account Management & Token Sale](/docs/user-management-token-sale)
 
-## Customization of Interface Texts
+## Custom Style
+
+If you wish to add custom styling to your image generator form, you can follow below steps:
+
+- Navigate to your WordPress dashboard.
+- Go to **Appearance** and then click on **Customize**.
+- In the Customize interface, you will see an **Additional CSS** option. Click on it.
+- Here you can add your custom CSS rules.
+
+As an example, if you want to change the image generator form layout, you can add the following CSS rule:
+
+```
+/* Style the main form */
+#wpaicg-image-generator-form {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Style input fields and textareas */
+#wpaicg-image-generator-form input,
+#wpaicg-image-generator-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style labels */
+#wpaicg-image-generator-form label {
+  font-weight: bold;
+}
+
+/* Style buttons */
+#wpaicg-image-generator-form button {
+  background-color: #007BFF;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Button hover state */
+#wpaicg-image-generator-form button:hover {
+  background-color: #0056b3;
+}
+```
+
+## Custom Text
 
 Our image generator plugin allows you to customize various elements of the interface to better fit your website's style and user interaction.
 
