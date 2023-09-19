@@ -8,7 +8,7 @@ AI Power integrates with a multitude of services and platforms to provide a comp
 
 | Integration | Description |
 |-------------|-------------|
-| **OpenAI** | Our plugin integrates with OpenAI's advanced language models including GPT-3.5-Turbo, GPT-4, and GPT-4-32K for natural language processing and Whisper for speech-to-text conversion. |
+| **OpenAI** | Our plugin integrates with OpenAI's advanced language models including GPT-3.5-Turbo, GPT-3.5-Turbo-Instruct, GPT-4, and GPT-4-32K for natural language processing and Whisper for speech-to-text conversion. |
 | **Azure** | Our plugin supports Azure as a GPT API provider, allowing users to tap into Azure's advanced AI capabilities alongside OpenAI. |
 | **Yoast SEO, All In One SEO, and Rank Math** | These integrations allow AI Power to generate SEO-optimized content, helping your website to rank better in search engine results. |
 | **Pexels, Pixabay** | AI Power integrates with Pexels and Pixabay for high-quality, royalty-free image sourcing, enhancing the visual appeal of your content. |

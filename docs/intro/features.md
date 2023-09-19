@@ -11,6 +11,7 @@ AI Power offers an extensive array of features and tools designed to augment you
 - **Latest GPT Models**
     - GPT-3.5-Turbo
     - GPT-3.5-Turbo-16K
+    - GPT-3.5-Turbo-Instruct 
     - GPT-4
     - GPT-4-32K
 - **Content Writer**
