@@ -183,11 +183,32 @@ Supported SEO plugins:
 - Look for the **Generate Focus Keyword** checkbox.
 - Check it to enable and uncheck it to disable the feature.
 
-**How it Works**
+**How It Works**
 
 - When the Generate Focus Keyword feature is enabled, the system will use the language you've selected in the Content tab to automatically generate focus keywords for your product listings based on built-in prompts.
 - If you enable the Custom Prompt option, you'll be presented with a dropdown list of focus keyword templates. These templates offer various strategies for keyword selection, such as "SEO-Optimized and High-Volume", "Customer-Centric", "Niche-Specific and Unique", among others.
 - After selecting a template from the dropdown, a text area will be populated where you can review or manually adjust the focus keyword prompt. You also have the option to write your own custom prompt in this area.
+
+### Enforce Focus Keyword in URL
+
+The Enforce Focus Keyword in URL feature ensures that your chosen focus keyword is prominently featured in your product's URL.
+
+This enhances SEO by aligning the product's URL with its primary keyword, thus providing clarity and context for both search engines and users.
+
+**How to Enable/Disable**
+
+- Go to **Settings -> WooCommerce** tab in the plugin menu.
+- Look for the **Enforce Focus Keyword in URL** checkbox.
+- Check it to enable and uncheck it to disable the feature.
+
+**How It Works**
+
+- Once enabled, the system checks if the focus keyword (set using your SEO plugin) is already present in the product's URL.
+- If the focus keyword is absent, the system appends it to the beginning of the URL.
+- If the addition of the focus keyword makes the URL exceed 70 characters, the system will intelligently shorten the URL while retaining the focus keyword's prominence. Common stop words may be removed during this process to ensure optimal URL length.
+- If the focus keyword is already present in the URL, the system will skip the process.
+
+Note: Ensure that your selected focus keyword is set using supported SEO plugins like Yoast SEO, Rank Math, or All In One SEO for this feature to work effectively.
 
 ## Product Title Suggester
 
