@@ -15,6 +15,10 @@ import Fields from '/img/ai-forms/fields.png';
 import Delete from '/img/ai-forms/delete.jpeg';
 import Logs from '/img/ai-forms/logs.png';
 import Token from '/img/ai-forms/token.png';
+import Feedback1 from '/img/ai-forms/feedback1.png';
+import Feedback2 from '/img/ai-forms/feedback2.png';
+import Feedback3 from '/img/ai-forms/feedback3.png';
+import Feedback4 from '/img/ai-forms/feedback4.png';
 
 # AI Forms
 
@@ -202,6 +206,7 @@ The **Frontend** tab allows you to customize how the results are displayed and w
 - **Notification**: Select whether to display or hide the notification for non-registered users.
 - **Download button**: Choose to enable or disable the button that allows users to download their results. It will save it as "response.txt".
 - **Copy Button**: Choose to display or hide the button that enables users to copy their results to the clipboard.
+- **Feedback Buttons**: Decide whether to display or hide the thumbs up and thumbs down feedback options for users to collect feedback.
 
 In addition to these display and interaction settings, you can also customize the following text strings to better match your website's language or branding:
 
@@ -264,7 +269,7 @@ In this example, {headlinetype} must be mentioned before {businessname} in your 
 
 :::
 
-### Managing Your Forms: Edit, Duplicate, and Delete
+### Edit, Duplicate, and Delete
 
 Once you've created your own forms, there might come a time when you need to modify their content or structure, replicate them for similar uses, or remove them entirely.
 
@@ -278,7 +283,30 @@ The "AI Forms" interface offers these functionalities in a user-friendly way.
 
 By using these options, you can manage your forms effectively and ensure they meet your evolving requirements.
 
-## Monitoring Usage with AI Forms Logs
+## Feedback Collection
+
+Collecting feedback is a crucial aspect of ensuring your AI Forms meet user expectations and continually evolve to serve them better. With our feedback collection feature, you can seamlessly gather user opinions on the AI Form results.
+
+1. **Enabling Feedback Collection**: To start collecting feedback, navigate to the form settings and look for the "Frontend" tab. Here, you'll find an option to enable feedback collection. Simply set it to "Yes".
+
+<img src={Feedback1} />
+
+2. **Feedback Icons Display**: Once enabled, two icons representing thumbs up 👍 (for positive feedback) and thumbs down 👎 (for negative feedback) will be displayed right below the AI Form results on the frontend.
+
+<img src={Feedback2} />
+
+3. **Collecting Additional Comments**: Clicking on either of these icons will open a modal window, prompting users to provide additional comments about the generated content. This feature offers an avenue for users to share more detailed insights or specific issues they might have encountered.
+
+<img src={Feedback3} />
+
+4. **One-time Feedback Submission**: To ensure authenticity and prevent feedback spam, once a user submits feedback for a specific result, the feedback icons are disabled for that particular result. This means users can't provide multiple feedbacks for the same result. However, every time they generate a new response using the form, the feedback option becomes available again.
+5. **Viewing Collected Feedback**: All the collected feedback, along with any comments provided by the users, can be accessed easily. Navigate to the "AI Forms" section in your dashboard, and under it, you'll find the "Logs" menu. This section will display all the feedback received.
+
+<img src={Feedback4} />
+
+This feedback mechanism not only helps in gathering user insights but also in refining and improving your prompt performance over time. By understanding user preferences and issues, you can make necessary adjustments to your prompts or the AI parameters to yield better results.
+
+## Logs
 
 The AI Forms Logs is a feature that allows you to track and monitor the usage of your AI forms effectively.
 
@@ -296,6 +324,9 @@ Upon navigating to the **Logs** section under the **AI Forms** tab, you'll encou
 - **Duration**: This reflects the amount of time it took to generate the output for each form.
 - **Token**: This column shows how many tokens were expended to generate the content for each form.
 - **Estimated Cost**: Based on the number of tokens used, this column provides an estimate of the cost associated with each form's usage.
+- **User**: This column displays the username of the individual who used the form, allowing you to identify which registered or guest user interacted with a particular AI Form.
+- **Feedback**: This column showcases the feedback provided by the user for the generated output. It typically displays icons representing positive (👍) or negative (👎) feedback.
+- **Comment**: This column presents any additional comments or insights the user might have shared alongside their feedback.
 - **Created At**: This column indicates when the form was used, providing a timestamp for each usage.
 
 The Logs feature also provides a search box, enabling you to quickly look up specific logs using keywords.
