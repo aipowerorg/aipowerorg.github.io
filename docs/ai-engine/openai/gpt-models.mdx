@@ -98,11 +98,13 @@ If your organization has fine-tuned any models on specific datasets, you can eas
 
 ### Rate Limit Buffer
 
-Our plugin provides a feature named **Rate Limit Buffer** that is specifically designed for users who select GPT-3.5 or GPT-4 models. This feature appears as a dropdown menu and is only visible when either GPT-3.5 or GPT-4 has been chosen.
+Our plugin provides an option named Rate Limit Buffer to manage API requests more efficiently.
+
+This feature appears as a dropdown menu, allowing users to choose a delay ranging from 1 to 30 seconds.
 
 <img src={RateLimitBuffer} />
 
-With options ranging from 1 to 10 seconds, Rate Limit Buffer allows for a *brief pause* before initiating another API call.
+Rate Limit Buffer allows for a *brief pause* before initiating another API call.
 
 This delay is necessary due to the [rate limits](https://platform.openai.com/docs/guides/rate-limits) imposed by OpenAI for these particular models.
 

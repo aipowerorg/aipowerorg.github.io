@@ -13,6 +13,8 @@ import Bulk2 from '/img/woocommerce/bulk-2.png';
 import Bulk3 from '/img/woocommerce/bulk-3.png';
 import SEOOptimizer from '/img/woocommerce/seo-woocommerce.png';
 import SEOScore from '/img/woocommerce/seo-score.png';
+import RateLimitBuffer from '/img/ai-settings/rate-limit-buffer.png';
+import RateLimit from '/img/woocommerce/rate-limit.png';
 
 # WooCommerce
 
@@ -151,6 +153,27 @@ Please remember to check and adhere to any API rate limits when using this featu
 Also, don't forget that you can adjust the default settings for the content generation through **Settings > WooCommerce** in your WordPress dashboard.
 
 This allows you to customize the generated content to better meet your needs and preferences.
+
+### Rate Limit Buffer
+
+Rate limits are restrictions set by service providers to control the number of requests a user can send in a specified timeframe. These limits ensure that the services run smoothly and are available to all users without any disruptions. For services like OpenAI, rate limits are vital to manage the number of requests coming from various sources.
+
+<img src={RateLimit} />
+
+In the context of our plugin, when generating content for products, especially in bulk, there's a possibility of hitting these rate limits if requests are made rapidly in succession. That's where the Rate Limit Buffer comes into play.
+
+The Rate Limit Buffer is a feature designed to introduce a **brief pause** or delay between consecutive API calls. This delay helps in preventing the plugin from exceeding the set rate limits. 
+
+This delay is necessary due to the [rate limits](https://platform.openai.com/docs/guides/rate-limits) imposed by OpenAI for these particular models.
+
+To adjust the Rate Limit Buffer:
+
+1. Navigate to **Settings > AI Engine** tab.
+2. Here, you'll find an option to set the buffer ranging from **1 to 30 seconds**.
+
+<img src={RateLimitBuffer} />
+
+We recommend starting with the lowest value, for instance, 1 second. If you're still encountering rate limit errors, consider incrementally increasing this buffer. Adjust until you find an optimum value that provides a balance between response times and successful API calls without rate limit errors.
 
 ## SEO Optimization
 
