@@ -15,6 +15,10 @@ import SaveDefault from '/img/image-generator/save-default.png';
 import RoleLimit from '/img/image-generator/role-limit.png';
 import Surprise from '/img/image-generator/surprise.png';
 import Logs from '/img/image-generator/logs.png';
+import SD1 from '/img/image-generator/sd-models1.png';
+import SD2 from '/img/image-generator/sd-models2.png';
+import SD3 from '/img/image-generator/sd-models3.png';
+import SD4 from '/img/image-generator/sd-models4.png';
 
 # Image Generator
 
@@ -62,6 +66,94 @@ This is the error message that will be displayed if the request is not in compli
 
 :::
 
+### Settings
+
+Our image generator plugin is designed to offer a wide array of customization options to ensure that you get the most out of your AI-generated images.
+
+Here, we explain each setting in detail.
+
+#### Artist
+
+Our plugin provides a dropdown menu with over 40 renowned artist names.
+
+Artists that you can choose from are:
+
+*Albrecht Dürer, Alfred Sisley, Amedeo Modigliani, Andrea Mantegna, Andy Warhol, Camille Pissarro, Caravaggio, Caspar David Friedrich, Cézanne, Claude Monet, Diego Velázquez, Eugène Delacroix, Frida Kahlo, Gustav Klimt, Henri Matisse, Henri de Toulouse-Lautrec, Jackson Pollock, Jasper Johns, Joan Miró, Johannes Vermeer, Leonardo da Vinci, Mary Cassatt, Michelangelo, Pablo Picasso, Paul Cézanne, Paul Gauguin, Paul Klee, Pierre-Auguste Renoir, Pieter Bruegel the Elder, Piet Mondrian, Raphael, René Magritte, Salvador Dalí, Sandro Botticelli, Theo van Gogh, Titian, Vincent van Gogh, Vassily Kandinsky, Winslow Homer*.
+
+By selecting an artist, like Salvador Dali, the AI engine generates an image in that artist's style based on your prompt.
+
+If your prompt is *"A fantasy landscape with a floating castle and a dragon"* and Salvador Dali is selected, the final prompt would be *"A fantasy landscape with a floating castle and a dragon. Artist: Salvador Dali"*. If you do not want to specify an artist, you can leave the dropdown menu on **None**.
+
+#### Style
+
+Over 50 art style names are available in the dropdown menu.
+
+Art styles that you can choose from are:
+
+*Abstract, Abstract Expressionism, Art Brut, Art Deco, Art Nouveau, Baroque, Byzantine, Classical, Color Field, Conceptual, Cubism, Dada, Expressionism, Fauvism, Figurative, Futurism, Gothic, Hard-edge painting, Hyperrealism, Impressionism, Japonisme, Luminism, Lyrical Abstraction, Mannerism, Minimalism, Naive Art, Neo-expressionism, Neo-pop, New Realism, Op Art, Opus Anglicanum, Outsider Art, Photorealism, Pointillism, Pop Art, Post-Impressionism, Realism, Renaissance, Rococo, Romanticism, Street Art, Superflat, Surrealism, Symbolism, Tenebrism, Ukiyo-e, Western Art, YBA*.
+
+Upon selecting a style, the chosen AI engine generates an image in that style based on your prompt.
+
+If you don't want to select a style, simply leave the dropdown menu on **None**.
+
+The sample results provided below can be compared to see the impact of applying and not applying the artist and style options.
+
+**Artist and Style options are enabled**:
+<img src={DalleSample1} />
+
+**Artist and Style options are disabled**:
+<img src={DalleSample2} />
+
+#### Photography
+
+Our plugin features more than 30 photography styles for you to choose from, enabling the AI engine to generate images that closely align with your preferred photography style.
+
+*Abstract, Action, Aerial, Agricultural, Animal, Architectural, Artistic, Astrophotography, Bird photography, Black and white, Candid, Cityscape, Close-up, Commercial, Conceptual, Corporate, Documentary, Event, Family, Fashion, Fine art, Food, Food photography, Glamour, Industrial, Landscape, Lifestyle, Macro, Nature, Night, Portrait, Product, Sports, Street, Travel, Underwater, Wedding, Wildlife*.
+
+#### Lightning
+
+With more than 50 lighting styles available, you can ensure your AI-generated image matches your desired lighting aesthetic.
+
+*Ambient, Artificial light, Backlight, Black light, Blue hour, Candle light, Chiaroscuro, Cloudy, Color gels, Continuous light, Contre-jour, Direct light, Direct sunlight, Diffused light, Firelight, Flat light, Fluorescent, Fog, Front light, Golden hour, Hard light, Hazy sunlight, High key, Incandescent, Key light, LED, Low key, Moonlight, Natural light, Neon, Open shade, Overcast, Paramount, Party lights, Photoflood, Quarter light, Reflected light, Rim light, Shaded, Shaded light, Silhouette, Side light, Single-source, Softbox, Soft light, Split lighting, Stage lighting, Studio light, Sunburst, Tungsten, Umbrella lighting, Underexposed, Venetian blinds, Warm light, White balance*.
+
+#### Subject
+
+Choose from over 10 different subjects for your AI-generated image.
+
+This setting allows the AI engine to create images that are focused on the chosen subject matter.
+
+*Abstract, Action, Animals, Architecture, Candid, Cars, Cityscapes, Events, Flowers, Food, Landscapes, Nature, Night, People, Portrait, Seascapes, Still life, Street, Underwater, Wildlife*.
+
+#### Camera
+
+More than 40 different camera settings are available, simulating the adjustments one would make on a physical camera to achieve the desired image characteristics.
+
+*Active D-Lighting, Aperture, Aspect Ratio, Audio Recording, Auto Exposure Bracketing, Auto Focus Mode, Auto Focus Point, Auto ISO, Auto Lighting Optimizer, Auto Rotate, Chromatic Aberration Correction, Color Space, Continuous Shooting, Distortion Correction, Drive Mode, Dynamic Range, Exposure Compensation, Flash Mode, Focus Mode, Focus Peaking, Frame Rate, GPS, Grid Overlay, High Dynamic Range, Highlight Tone Priority, Image Format, Image Stabilization, Interval Timer Shooting, ISO, ISO Auto Setting, Lens Correction, Live View, Long Exposure Noise Reduction, Manual Focus, Metering Mode, Movie Mode, Movie Quality, Noise Reduction, Picture Control, Picture Style, Quality, Self-Timer, Shutter Speed, Time-lapse Interval, Time-lapse Recording, Virtual Horizon, Video Format, White Balance, Zebra Stripes*.
+
+#### Composition
+
+Our plugin offers more than 50 composition styles, which can affect the arrangement or 'composition' of the elements within the generated image.
+
+*Rule of Thirds, Asymmetrical, Balance, Centered, Close-up, Color blocking, Contrast, Cropping, Diagonal, Documentary, Environmental Portrait", Fill the Frame, Framing, Golden Ratio, High Angle, Leading Lines, Long Exposure, Low Angle, Macro, Minimalism, Negative Space, Panning, Patterns, Photojournalism, Point of View, Portrait, Reflections, Saturation, Scale, Selective Focus, Shallow Depth of Field, Silhouette, Simplicity, Snapshot, Street Photography, Symmetry, Telephoto, Texture, Tilt-Shift, Time-lapse, Tracking Shot, Travel, Triptych, Ultra-wide, Vanishing Point, Viewpoint, Vintage, Wide Angle, Zoom Blur, Zoom In/Zoom Out*.Rule of Thirds, Asymmetrical, Balance, Centered, Close-up, Color blocking, Contrast, Cropping, Diagonal, Documentary, Environmental Portrait", Fill the Frame, Framing, Golden Ratio, High Angle, Leading Lines, Long Exposure, Low Angle, Macro, Minimalism, Negative Space, Panning, Patterns, Photojournalism, Point of View, Portrait, Reflections, Saturation, Scale, Selective Focus, Shallow Depth of Field, Silhouette, Simplicity, Snapshot, Street Photography, Symmetry, Telephoto, Texture, Tilt-Shift, Time-lapse, Tracking Shot, Travel, Triptych, Ultra-wide, Vanishing Point, Viewpoint, Vintage, Wide Angle, Zoom Blur, Zoom In/Zoom Out.
+
+#### Resolution
+
+Choose from 7 different resolution options for your image.
+
+This setting dictates the amount of detail an image holds, the higher the resolution, the more detail in the image.
+
+*4K (3840x2160), 2K (2560x1440), 1080p (1920x1080), 720p (1280x720), 480p (854x480), 1080i (1920x1080), 720i (1280x720)*.
+
+#### Color
+
+Choose from 20 different color options for your image. This setting can significantly affect the mood and aesthetic of the generated image.
+
+*RGB, CMYK, Grayscale, HEX, Pantone, CMY, HSL, HSV, LAB, LCH, LUV, XYZ, YUV, YIQ, YCbCr, YPbPr, YDbDr, YCoCg, YCgCo, YCC*.RGB, CMYK, Grayscale, HEX, Pantone, CMY, HSL, HSV, LAB, LCH, LUV, XYZ, YUV, YIQ, YCbCr, YPbPr, YDbDr, YCoCg, YCgCo, YCC.
+
+Remember, these settings allow you to influence the AI's image generation process, helping you achieve the most suitable image for your purpose.
+
+So, feel free to experiment and see how each setting alters the final result.
+
 ## Stable Diffusion 🚀🚀🚀
 
 Stable Diffusion is another deep learning, text-to-image model.
@@ -105,95 +197,7 @@ You can explore various versions of the Stable Diffusion prediction models at [t
 
 :::
 
-## Settings
-
-Our image generator plugin is designed to offer a wide array of customization options to ensure that you get the most out of your AI-generated images.
-
-Here, we explain each setting in detail.
-
-### Artist
-
-Our plugin provides a dropdown menu with over 40 renowned artist names.
-
-Artists that you can choose from are:
-
-*Albrecht Dürer, Alfred Sisley, Amedeo Modigliani, Andrea Mantegna, Andy Warhol, Camille Pissarro, Caravaggio, Caspar David Friedrich, Cézanne, Claude Monet, Diego Velázquez, Eugène Delacroix, Frida Kahlo, Gustav Klimt, Henri Matisse, Henri de Toulouse-Lautrec, Jackson Pollock, Jasper Johns, Joan Miró, Johannes Vermeer, Leonardo da Vinci, Mary Cassatt, Michelangelo, Pablo Picasso, Paul Cézanne, Paul Gauguin, Paul Klee, Pierre-Auguste Renoir, Pieter Bruegel the Elder, Piet Mondrian, Raphael, René Magritte, Salvador Dalí, Sandro Botticelli, Theo van Gogh, Titian, Vincent van Gogh, Vassily Kandinsky, Winslow Homer*.
-
-By selecting an artist, like Salvador Dali, the AI engine generates an image in that artist's style based on your prompt.
-
-If your prompt is *"A fantasy landscape with a floating castle and a dragon"* and Salvador Dali is selected, the final prompt would be *"A fantasy landscape with a floating castle and a dragon. Artist: Salvador Dali"*. If you do not want to specify an artist, you can leave the dropdown menu on **None**.
-
-### Style
-
-Over 50 art style names are available in the dropdown menu.
-
-Art styles that you can choose from are:
-
-*Abstract, Abstract Expressionism, Art Brut, Art Deco, Art Nouveau, Baroque, Byzantine, Classical, Color Field, Conceptual, Cubism, Dada, Expressionism, Fauvism, Figurative, Futurism, Gothic, Hard-edge painting, Hyperrealism, Impressionism, Japonisme, Luminism, Lyrical Abstraction, Mannerism, Minimalism, Naive Art, Neo-expressionism, Neo-pop, New Realism, Op Art, Opus Anglicanum, Outsider Art, Photorealism, Pointillism, Pop Art, Post-Impressionism, Realism, Renaissance, Rococo, Romanticism, Street Art, Superflat, Surrealism, Symbolism, Tenebrism, Ukiyo-e, Western Art, YBA*.
-
-Upon selecting a style, the chosen AI engine generates an image in that style based on your prompt.
-
-If you don't want to select a style, simply leave the dropdown menu on **None**.
-
-The sample results provided below can be compared to see the impact of applying and not applying the artist and style options.
-
-**Artist and Style options are enabled**:
-<img src={DalleSample1} />
-
-**Artist and Style options are disabled**:
-<img src={DalleSample2} />
-
-### Photography
-
-Our plugin features more than 30 photography styles for you to choose from, enabling the AI engine to generate images that closely align with your preferred photography style.
-
-*Abstract, Action, Aerial, Agricultural, Animal, Architectural, Artistic, Astrophotography, Bird photography, Black and white, Candid, Cityscape, Close-up, Commercial, Conceptual, Corporate, Documentary, Event, Family, Fashion, Fine art, Food, Food photography, Glamour, Industrial, Landscape, Lifestyle, Macro, Nature, Night, Portrait, Product, Sports, Street, Travel, Underwater, Wedding, Wildlife*.
-
-### Lightning
-
-With more than 50 lighting styles available, you can ensure your AI-generated image matches your desired lighting aesthetic.
-
-*Ambient, Artificial light, Backlight, Black light, Blue hour, Candle light, Chiaroscuro, Cloudy, Color gels, Continuous light, Contre-jour, Direct light, Direct sunlight, Diffused light, Firelight, Flat light, Fluorescent, Fog, Front light, Golden hour, Hard light, Hazy sunlight, High key, Incandescent, Key light, LED, Low key, Moonlight, Natural light, Neon, Open shade, Overcast, Paramount, Party lights, Photoflood, Quarter light, Reflected light, Rim light, Shaded, Shaded light, Silhouette, Side light, Single-source, Softbox, Soft light, Split lighting, Stage lighting, Studio light, Sunburst, Tungsten, Umbrella lighting, Underexposed, Venetian blinds, Warm light, White balance*.
-
-### Subject
-
-Choose from over 10 different subjects for your AI-generated image.
-
-This setting allows the AI engine to create images that are focused on the chosen subject matter.
-
-*Abstract, Action, Animals, Architecture, Candid, Cars, Cityscapes, Events, Flowers, Food, Landscapes, Nature, Night, People, Portrait, Seascapes, Still life, Street, Underwater, Wildlife*.
-
-### Camera
-
-More than 40 different camera settings are available, simulating the adjustments one would make on a physical camera to achieve the desired image characteristics.
-
-*Active D-Lighting, Aperture, Aspect Ratio, Audio Recording, Auto Exposure Bracketing, Auto Focus Mode, Auto Focus Point, Auto ISO, Auto Lighting Optimizer, Auto Rotate, Chromatic Aberration Correction, Color Space, Continuous Shooting, Distortion Correction, Drive Mode, Dynamic Range, Exposure Compensation, Flash Mode, Focus Mode, Focus Peaking, Frame Rate, GPS, Grid Overlay, High Dynamic Range, Highlight Tone Priority, Image Format, Image Stabilization, Interval Timer Shooting, ISO, ISO Auto Setting, Lens Correction, Live View, Long Exposure Noise Reduction, Manual Focus, Metering Mode, Movie Mode, Movie Quality, Noise Reduction, Picture Control, Picture Style, Quality, Self-Timer, Shutter Speed, Time-lapse Interval, Time-lapse Recording, Virtual Horizon, Video Format, White Balance, Zebra Stripes*.
-
-### Composition
-
-Our plugin offers more than 50 composition styles, which can affect the arrangement or 'composition' of the elements within the generated image.
-
-*Rule of Thirds, Asymmetrical, Balance, Centered, Close-up, Color blocking, Contrast, Cropping, Diagonal, Documentary, Environmental Portrait", Fill the Frame, Framing, Golden Ratio, High Angle, Leading Lines, Long Exposure, Low Angle, Macro, Minimalism, Negative Space, Panning, Patterns, Photojournalism, Point of View, Portrait, Reflections, Saturation, Scale, Selective Focus, Shallow Depth of Field, Silhouette, Simplicity, Snapshot, Street Photography, Symmetry, Telephoto, Texture, Tilt-Shift, Time-lapse, Tracking Shot, Travel, Triptych, Ultra-wide, Vanishing Point, Viewpoint, Vintage, Wide Angle, Zoom Blur, Zoom In/Zoom Out*.Rule of Thirds, Asymmetrical, Balance, Centered, Close-up, Color blocking, Contrast, Cropping, Diagonal, Documentary, Environmental Portrait", Fill the Frame, Framing, Golden Ratio, High Angle, Leading Lines, Long Exposure, Low Angle, Macro, Minimalism, Negative Space, Panning, Patterns, Photojournalism, Point of View, Portrait, Reflections, Saturation, Scale, Selective Focus, Shallow Depth of Field, Silhouette, Simplicity, Snapshot, Street Photography, Symmetry, Telephoto, Texture, Tilt-Shift, Time-lapse, Tracking Shot, Travel, Triptych, Ultra-wide, Vanishing Point, Viewpoint, Vintage, Wide Angle, Zoom Blur, Zoom In/Zoom Out.
-
-### Resolution
-
-Choose from 7 different resolution options for your image.
-
-This setting dictates the amount of detail an image holds, the higher the resolution, the more detail in the image.
-
-*4K (3840x2160), 2K (2560x1440), 1080p (1920x1080), 720p (1280x720), 480p (854x480), 1080i (1920x1080), 720i (1280x720)*.
-
-### Color
-
-Choose from 20 different color options for your image. This setting can significantly affect the mood and aesthetic of the generated image.
-
-*RGB, CMYK, Grayscale, HEX, Pantone, CMY, HSL, HSV, LAB, LCH, LUV, XYZ, YUV, YIQ, YCbCr, YPbPr, YDbDr, YCoCg, YCgCo, YCC*.RGB, CMYK, Grayscale, HEX, Pantone, CMY, HSL, HSV, LAB, LCH, LUV, XYZ, YUV, YIQ, YCbCr, YPbPr, YDbDr, YCoCg, YCgCo, YCC.
-
-Remember, these settings allow you to influence the AI's image generation process, helping you achieve the most suitable image for your purpose.
-
-So, feel free to experiment and see how each setting alters the final result.
-
-### Additional Options
+### Settings
 
 In addition to the general settings, **Stable Diffusion** offers some unique features:
 
@@ -206,6 +210,46 @@ In addition to the general settings, **Stable Diffusion** offers some unique fea
 Once you've determined the optimal settings, click the **Save as Default** button to store them for future use.
 
 <img src={SaveDefault} width="400" />
+
+### How to Use Different Models on Replicate
+
+Replicate offers a plethora of AI models beyond just Stable Diffusion. With our plugin, you have the flexibility to tap into any of these models and harness their capabilities.
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/jDVsK16IOsE" title="Text to GIF AI Power WordPress Plugin" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+For instance, you can generate animated GIFs from text. Here are the steps:
+
+1. Navigate to Replicate's website.
+2. Click on the `Explore` link.
+
+<img src={SD1} />
+
+3. Search for your desired model, for example, [hotshot-xl](https://replicate.com/lucataco/hotshot-xl). This model allows you to generate animated GIFS from a given text.
+4. Once located, go to the `Versions` tab of the model.
+
+<img src={SD2} />
+
+5. Copy the latest version number.
+
+Back in our plugin:
+1. Access the `Settings` and then the `Image` tab.
+2. Paste the version number you copied into the `Version` field.
+
+<img src={SD3} />
+
+3. Save your changes.
+
+When you're ready to generate an image:
+
+1. Proceed to the `Image Generator` section and go to the `Stable Diffusion` tab.
+2. Scroll down, and you'll see a `Scheduler` dropdown on the right.
+3. Choose `Custom`. A text field will manifest.
+
+<img src={SD4} />
+
+4. Input the custom scheduler name. If you're in doubt about this, valid scheduler names can be found [here](https://replicate.com/lucataco/hotshot-xl/api) for this specific model.
+5. Click "save as default".
+6. Now, draft your prompt, press the `Generate` button, and be mesmerized as your text transforms into an animated GIF!
 
 ## Shortcodes
 
@@ -397,6 +441,35 @@ Each prompt should be listed on a separate line.
 If you leave this field empty, the plugin will use the default set of prompts.
 
 This allows you to add an element of surprise and randomness to the user's experience, and can be customized to suit the theme or purpose of your website.
+
+## Text to GIF:
+
+With our new feature, "Text to GIF", you're no longer bound to just the Stable Diffusion model when using Replicate. There's a vast universe of models out there, and we want you to experience them all. 
+
+To switch to a different model:
+1. Head over to Replicate's website.
+2. Click on the `Explore` link.
+3. Search for the "hotshot-xl" model.
+4. Navigate to the `Versions` tab of the model.
+5. Copy the latest version number.
+
+Back in our plugin:
+1. Go to `Settings` and then the `Image` tab.
+2. Paste the version number you copied into the `Version` field.
+3. Save your changes.
+
+When you're ready to generate an image:
+1. Head over to the `Image Generator` section and select the `Stable Diffusion` tab.
+2. Scroll down and you'll find a `Scheduler` dropdown on the right.
+3. Select `Custom`. A text field will appear.
+4. Enter the custom scheduler name. If you're unsure what to put, you can find valid scheduler names [here](https://replicate.com/lucataco/hotshot-xl/api).
+5. Click "save as default".
+6. Now, just write your prompt, hit the `Generate` button, and watch as an animated GIF forms from your text!
+
+![ImageGenerator](/img/image-generator/image-generator.jpeg)
+![APIKey](/img/ai-settings/api-key.png)
+![SDAPIKey](/img/image-generator/sd-api.png)
+![SDAPISave](/img/image-generator/sd-api-save.png)
 
 ## Logs
 
