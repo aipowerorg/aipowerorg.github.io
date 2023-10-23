@@ -1,7 +1,7 @@
 ---
 slug: welcome
 title: Welcome
-authors: [sengpt]
+authors: [sensahin]
 tags: [embeddings, troubleshoot, pinecone]
 ---
 

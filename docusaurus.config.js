@@ -114,7 +114,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/sengpt',
+                href: 'https://twitter.com/',
               },
             ],
           },
