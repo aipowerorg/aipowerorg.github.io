@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # FAQ
 
-## "Something went wrong" error
+## Something went wrong
 
 **Question**:
 
@@ -23,3 +23,31 @@ Here are a couple of guides to assist you:
 [How to edit Nginx configuration file](https://www.geekbits.io/nginx-configuration-guide/)
 
 [How to find the Nginx configuration file location](https://help.dreamhost.com/hc/en-us/articles/216455077-Nginx-configuration-file-locations)
+
+## Nonce verification failed
+
+**Question**:
+
+Why i am getting "Nonce verification failed" error in the chat bot?
+
+**Answer**:
+
+The invalid nonce error occurs when WordPress is unable to verify the security token, this can happen due to couple of reasons:
+
+1. The chat bot is kept open for hours and then submitted which will invalidate the security token and won’t let the submission to pass.
+2. The user open the chat bot, then in another page they log in or log out of the site and then send a message before refreshing the page that has the chat bot. Logging in or logging out would also invalidate the wordpress security token which would also cause this message.
+3. Your site is configured to have a very small lifespan for the security token which would make make users that don’t submit their messages fast enough to experience this message.
+4. You have a cache plugin that is caching the whole page for several days (including the js variables) which would cause the plugin to use an outdated nonce.
+
+So to fix it you could try:
+
+- Clear your cache. If you have a cache plugin please make sure to clear your cache from wp-admin dashboard. Disable any cache plugin that you have and see if the error goes away, it this is the case then the problem is that the cache plugin is also cacheing the security token. This means that whenever you update our plugin, you need to clear your cache at the backend as well.
+- Increase the life span of the nonces, you can add this filter in the wp-config file of your site apply_filters( ‘nonce_life’, $day_in_seconds ); replace $day_in_seconds with a number which should be the number of seconds that you want it to last (so for example 172800 would last 2 days).
+
+Please note that nonce errors do not originate from our plugin. They are a security standard by WordPress. 
+
+Here are some more suggestions;
+
+https://blog.hubspot.com/website/nonce-error
+
+https://developer.wordpress.org/apis/security/nonces/#why-use-a-nonce
