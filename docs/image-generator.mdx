@@ -40,6 +40,56 @@ You can generate images from simple text prompts by using Image Generator featur
 
 Check out the demo [here](https://aipower.org/image-generator-dall-e/).
 
+Our plugin supports three distinct DALL-E models provided by OpenAI, each with unique capabilities and image generation features:
+
+### DALL-E 3
+
+DALL-E 3 is the latest iteration of OpenAI's image generation models. It allows users to create images from scratch based on a text prompt.
+
+- **Image Sizes:** DALL-E 3 can generate images with resolutions of 1024x1024, 1024x1792, or 1792x1024 pixels.
+- **Quality Settings:** By default, images are generated at standard quality. For enhanced detail, you can opt for the "hd" quality setting when using DALL-E 3.
+- **Generation Speed:** Square, standard quality images are the fastest to generate.
+- **Generation Quantity:** You can request 1 image at a time.
+
+### DALL-E 3 HD
+
+As an extension of DALL-E 3, the DALL-E 3 HD model offers images with high definition and intricate details.
+
+- **Image Sizes:** The same as DALL-E 3, with the addition of "hd" quality for even more detailed imagery.
+- **Quality and Detail:** This model will provide images with superior clarity and depth.
+- **Generation Quantity:** Similar to DALL-E 3, only 1 image can be requested at a time.
+
+### DALL-E 2
+
+DALL-E 2 is the predecessor to DALL-E 3 but still offers a robust set of features.
+
+- **Image Sizes:** DALL-E 2 supports 256x256, 512x512, and 1024x1024 image sizes.
+- **Generation Quantity:** Up to 10 images can be generated in a single request.
+
+:::caution
+Please note that when submitting a generation request to DALL-E 3, OpenAI may automatically revise it for safety and to add more detail. Detailed prompts tend to yield higher quality images.
+:::
+
+### Usage in Our Plugin
+
+To use these models within our plugin:
+
+1. Ensure you have the [API key](/docs/ai-engine/openai/api-key.mdx) for DALL-E set up in the plugin settings.
+2. Navigate to **Image Generator** and input your prompt.
+3. Select the desired model and image specifications.
+4. Hit the **Generate** button and await your unique AI-generated image.
+
+:::info
+Our plugin has been updated to support the new pricing tiers associated with each model and image size. The cost will be calculated dynamically based on your selection.
+:::
+
+:::warning
+Not all prompts may lead to image generation due to OpenAI's strict [content policy](https://labs.openai.com/policies/content-policy). If a prompt or image does not comply, an error message will be displayed.
+:::
+
+Remember to explore our plugin's other features, including fine-tuning settings, handling pricing, and reviewing detailed logs, to enhance your image generation experience.
+
+
 - Make sure you have the [API key](/docs/ai-engine/openai/api-key.mdx) for DALL-E and you have entered it in the plugin settings.
 
 <img src={APIKey} width="700" />
