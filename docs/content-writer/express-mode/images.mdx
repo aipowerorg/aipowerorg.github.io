@@ -104,17 +104,31 @@ If you don't see an image generated in your content, it's possible that the imag
 
 ### Setting Image Size
 
-There are three image sizes to choose from:
+For DALL-E 2, you can choose from three image sizes:
 
 - Small (256 x 256)
 - Medium (512 x 512)
 - Large (1024 x 1024)
+
+However, DALL-E 3 introduces additional sizes and the option for HD quality:
+
+- Large (1024 x 1024)
+- Wide (1792 x 1024)
+- Tall (1024 x 1792)
+
+The HD quality is available when using the DALL-E 3 HD model.
 
 <img src={ImageSize} width="700" />
 
 Please note that these size limitations are imposed by DALL-E, not our plugin.
 
 The available image sizes are determined by the DALL-E API service capabilities.
+
+:::note HD Quality Consideration
+
+When selecting HD quality with DALL-E 3, please be aware that the generation process will take longer, and the resulting images will have a larger file size compared to standard quality images. This is due to the enhanced detail and higher resolution of HD images. Ensure that you accommodate for the additional time and storage requirements when using this option.
+
+:::
 
 ### Setting Image Style
 
