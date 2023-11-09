@@ -73,8 +73,6 @@ DALL-E 2 is the predecessor to DALL-E 3 but still offers a robust set of feature
 Please note that when submitting a generation request to DALL-E 3, OpenAI may automatically revise it for safety and to add more detail. Detailed prompts tend to yield higher quality images.
 :::
 
-### Usage in Our Plugin
-
 To use these models within our plugin:
 
 1. Ensure you have the [API key](/docs/ai-engine/openai/api-key.mdx) for DALL-E set up in the plugin settings.
@@ -86,12 +84,11 @@ To use these models within our plugin:
 Our plugin has been updated to support the new pricing tiers associated with each model and image size. The cost will be calculated dynamically based on your selection.
 :::
 
-:::warning
+:::info
 Not all prompts may lead to image generation due to OpenAI's strict [content policy](https://labs.openai.com/policies/content-policy). If a prompt or image does not comply, an error message will be displayed.
 :::
 
 Remember to explore our plugin's other features, including fine-tuning settings, handling pricing, and reviewing detailed logs, to enhance your image generation experience.
-
 
 - Make sure you have the [API key](/docs/ai-engine/openai/api-key.mdx) for DALL-E and you have entered it in the plugin settings.
 
@@ -126,6 +123,16 @@ This is the error message that will be displayed if the request is not in compli
 Our image generator plugin is designed to offer a wide array of customization options to ensure that you get the most out of your AI-generated images.
 
 Here, we explain each setting in detail.
+
+#### Image Type
+
+The style of the generated images can be **vivid** or **natural**.
+
+Vivid causes the model to lean towards generating **hyper-real** and **dramatic** images. This is a default value if none is defined.
+
+Natural causes the model to produce more **natural**, **less hyper-real** looking images. 
+
+This parameter is only supported for DALL-E 3 and DALL-E 3 HD.
 
 #### Artist
 
