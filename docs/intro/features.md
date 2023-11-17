@@ -58,7 +58,7 @@ AI Power offers an extensive array of features and tools designed to augment you
     - Content-Aware
     - User-Aware
     - PDF Chat
-    - VoiceChat (Integration with ElevenLabs and Google)
+    - VoiceChat (Integration with ElevenLabs, Google and OpenAI)
     - Logs
     - Token Management
     - Responsive Design

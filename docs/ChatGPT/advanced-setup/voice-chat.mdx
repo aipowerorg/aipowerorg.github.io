@@ -28,6 +28,7 @@ import Credentials2 from '/img/chatgpt/google/cloud-api.png';
 import ApiSave from '/img/chatgpt/google/api-save.png';
 import Sync from '/img/chatgpt/google/sync.png';
 import Google from '/img/chatgpt/google/google.png';
+import OpenAITS from '/img/chatgpt/text-to-speech-openai.png';
 
 # Voice Chat
 
@@ -93,7 +94,39 @@ Here's how you can enable and customize the Whisper integration:
 
 ## Voice Output
 
-### Google Integration
+### OpenAI
+
+Our plugin now includes support for OpenAI's state-of-the-art Text-to-Speech (TTS) technology. This feature allows you to convert written text into lifelike spoken audio, enhancing the interactive experience of your ChatGPT bot.
+
+#### Key Features and Capabilities:
+
+- **Multiple Voices**: Choose from six built-in voices: alloy, echo, fable, onyx, nova, and shimmer, to find the perfect tone for your audience.
+- **High-Quality Audio Options**: Select between the standard `tts-1` model for lower latency or the `tts-1-hd` model for higher quality audio.
+- **Supported Output Formats**: The default audio format is MP3, but you can also choose from OPUS, AAC, or FLAC, depending on your needs.
+  - *Opus*: Ideal for internet streaming and communication, offering low latency.
+  - *AAC*: Perfect for digital audio compression, widely used in platforms like YouTube, Android, and iOS.
+  - *FLAC*: Best for lossless audio compression, preferred by audiophiles for archiving.
+- **Voice Speed Control**: Adjust the speed of the generated audio to suit your needs. Select a value from 0.25 to 4.0, with 1.0 being the default speed. This allows for greater flexibility in matching the pace of speech to your specific requirements.
+- **Language Support**: While the TTS voices are optimized for English, the model supports a wide range of languages, following the Whisper model's language capabilities.
+
+#### Usage:
+
+To enable this feature, follow these steps:
+
+1. Access your chat bot settings and locate the "VoiceChat" tab.
+2. Tick the "Enable Text to Speech" option.
+
+<img src={OpenAITS} width="500" />
+
+3. Choose "OpenAI" as your provider from the dropdown menu.
+4. Select your preferred model, voice, output format, and voice speed.
+5. Click "Save" to apply the changes.
+
+That's all! Now, interact with your chat bot and enjoy the new voice capabilities. Your bot is ready to speak!
+
+With OpenAI's Text-to-Speech technology, you can now bring a new level of realism and engagement to your ChatGPT bot's interactions.
+
+### Google
 
 Google Text-to-Speech API is a service that allows you to convert text into natural-sounding speech.
 
@@ -185,7 +218,7 @@ Congratulations, you have successfully integrated Google Text-to-Speech with you
 
 Your bot is now equipped to speak with a voice of your choosing.
 
-### ElevenLabs Integration
+### ElevenLabs
 
 ElevenLabs has an impressive portfolio of voice technology capabilities that include state-of-the-art voice cloning.
 
