@@ -8,6 +8,7 @@ import Prompt from '/img/playground/prompt.png';
 import Generate from '/img/playground/generate.png';
 import Models from '/img/playground/select-model.png';
 import Google from '/img/playground/google.png';
+import TogetherAI from '/img/playground/togetherai.png';
 
 # Playground
 
@@ -37,14 +38,17 @@ In the **Provider** dropdown, you have two options: OpenAI and Google.
 
 - **OpenAI**: Selecting OpenAI will allow you to use models like GPT-4 and GPT-3.5.
 - **Google**: Choosing Google will give you access to models such as text-bison-001 and chat-bison-001.
+- **Together AI**: Choosing Together AI will give you access to models such as Mixtral (8x7B) Instruct, Mistral (7B) Instruct, LLaMA-2 Chat (70B), LLaMA-2 Chat (13B), LLaMA-2 Chat (7B), Yi Chat (34B) and Alpaca (7B).
 
-When Google is selected as the provider, you need to add your Google API key.
+When Google or Together AI is selected as the provider, you need to add your API key.
 
-Click on the "Add your Google API key" link and enter your key in the provided field.
+Click on the "Add your API key" link and enter your key in the provided field.
 
 Remember to save your key for the system to use it.
 
 You can obtain your Google API key from [here](https://makersuite.google.com/app/apikey).
+
+You can obtain your Together AI API key from [here](https://api.together.xyz/settings/api-keys).
 
 <img src={Google} />
 
@@ -54,6 +58,9 @@ Based on the chosen provider, the **Model** dropdown will update to show the rel
 
 - For OpenAI, you can choose between GPT-4, GPT-4 Turbo, GPT-4 32K, GPT-4 Vision, GPT-3.5 Turbo, GPT-3.5 Turbo 16K and GPT-3.5 Turbo Instruct. 
 - For Google, the options are text-bison-001 and chat-bison-001.
+- For Together AI, the options are Mixtral (8x7B) Instruct, Mistral (7B) Instruct, LLaMA-2 Chat (70B), LLaMA-2 Chat (13B), LLaMA-2 Chat (7B), Yi Chat (34B) and Alpaca (7B).
+
+<img src={TogetherAI} />
 
 Select the model that best suits your content generation needs.
 
