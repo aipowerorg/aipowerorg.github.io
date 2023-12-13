@@ -6,6 +6,8 @@ import Playground from '/img/playground/playground.png';
 import Category from '/img/playground/category.png';
 import Prompt from '/img/playground/prompt.png';
 import Generate from '/img/playground/generate.png';
+import Models from '/img/playground/select-model.png';
+import Google from '/img/playground/google.png';
 
 # Playground
 
@@ -20,6 +22,38 @@ To access the Playground, navigate to the **Content Writer** menu in your AI Pow
 <img src={Playground} />
 
 This will take you to the interactive interface where you can experiment with the AI's capabilities.
+
+## Selecting an AI Engine and Model
+
+Before diving into categories and prompts, you can choose the AI engine and model that will process your content.
+
+Above the **Category** section, you'll find two dropdown menus: **Provider** and **Model**.
+
+<img src={Models} />
+
+### Choosing a Provider
+
+In the **Provider** dropdown, you have two options: OpenAI and Google.
+
+- **OpenAI**: Selecting OpenAI will allow you to use models like GPT-4 and GPT-3.5.
+- **Google**: Choosing Google will give you access to models such as text-bison-001 and chat-bison-001.
+
+When Google is selected as the provider, you need to add your Google API key.
+
+Click on the "Add your Google API key" link and enter your key in the provided field.
+
+Remember to save your key for the system to use it.
+
+<img src={Google} />
+
+### Selecting a Model
+
+Based on the chosen provider, the **Model** dropdown will update to show the relevant models.
+
+- For OpenAI, you can choose between GPT-4, GPT-4 Turbo, GPT-4 32K, GPT-4 Vision, GPT-3.5 Turbo, GPT-3.5 Turbo 16K and GPT-3.5 Turbo Instruct. 
+- For Google, the options are text-bison-001 and chat-bison-001.
+
+Select the model that best suits your content generation needs.
 
 ## Selecting a Category
 
