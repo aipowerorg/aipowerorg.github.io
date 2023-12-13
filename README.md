@@ -4,7 +4,7 @@
 $ yarn
 ```
 
-### Local Development
+###  Local Development
 
 ```
 $ yarn start
