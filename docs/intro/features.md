@@ -7,13 +7,15 @@ sidebar_position: 2
 AI Power offers an extensive array of features and tools designed to augment your WordPress website with the most advanced AI technology. Here are some core features of AI Power:
 
 - **Multiple AI Providers**
-    - Support for both OpenAI and Azure as API services
+    - Support for both OpenAI and Azure as API services, along with integration capabilities for Google's Gemini Pro, Meta's LLaMA, and various open-source models like Mistral, Alpaca, and Yi Chat.
 - **Latest GPT Models**
     - GPT-3.5-Turbo
     - GPT-3.5-Turbo-16K
     - GPT-3.5-Turbo-Instruct 
     - GPT-4
     - GPT-4-32K
+    - GPT-4 Turbo
+    - GPT-4 Vision
 - **Content Writer**
     - Express Mode
     - Custom Mode

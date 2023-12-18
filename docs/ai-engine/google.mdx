@@ -1,0 +1,70 @@
+---
+sidebar_position: 3
+---
+
+import api1 from '/img/ai-settings/google/api1.png';
+import api2 from '/img/ai-settings/google/api2.png';
+import api3 from '/img/ai-settings/google/api3.png';
+import pg from '/img/ai-settings/google/playground.png';
+
+# Google
+
+## Bring Your Own Key Model
+
+Our plugin operates on a *Bring Your Own Key* basis, which means it serves as a **bridge between your WordPress site and Google AI services.**.
+
+In order to use our plugin, you need to have an Google account and purchase API credits from Google.
+
+With this approach, users are required to provide their own Google API key to access the plugin's functionality.
+
+This ensures that users maintain full control over their API keys and guarantees access to the latest, most advanced language processing technology offered by Google.
+
+:::info
+
+Purchasing our plugin does not provide any credit from Google.
+
+When you buy our plugin, you gain access to the [pro features](docs/intro/pro.md) of the plugin, but it does not include any API credit.
+
+You will still need to purchase credit from Google separately.
+
+You can refer to their [pricing page](https://ai.google.dev/pricing) for more details.
+
+:::
+
+## Generate Google API Key
+
+Generating a Google API key is a straightforward process. Here's a step-by-step guide to help you create your API key:
+
+1. Open your web browser and go to https://makersuite.google.com/app/apikey page.
+2. If you are not already logged in, you will be prompted to sign in with your Google account. Enter your credentials to access the API key creation page.
+3. Once you're logged in, look for a button labeled "Create new API key in a project" and click on it.
+
+<img src={api1} />
+
+<img src={api2} />
+
+4. After clicking the button, Google will automatically generate a new API key for you.
+
+<img src={api3} />
+
+5. Once your API key is displayed on the screen, make sure to copy it. You can use the copy button provided for ease.
+6. Save this key in a secure location. You will need this API key to integrate Google services into our plugin.
+
+## Setting Up AI Power Plugin
+
+Setting up the AI Power plugin to use Google's AI services in your WordPress site is a user-friendly process.
+
+Currently, Google's AI services are integrated into two modules of our plugin: **Content Writer - Custom Mode** and **Playground**.
+
+We plan to extend this integration to other modules gradually. 
+
+Here's how to get started:
+
+- Navigate to the AI Power plugin on your WordPress dashboard.
+- First, you'll need to input your Google API key into the plugin. To do this, go to the **Content Writer - Playground** tab.
+- In the provider dropdown list, select **Google**. You will see a hyperlink next to it labeled "Add your API key".
+- Click on this hyperlink, paste your previously generated Google API key, and then click the **Save** button.
+
+<img src={pg} />
+
+With the API key saved, you can now use the Playground or Custom Mode module to generate content.
