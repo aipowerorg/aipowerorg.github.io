@@ -15,7 +15,7 @@ The following table provides an overview of the parameters that are used by the 
 
 | Parameter           | Description                                                   | Default Value | Range |
 |---------------------|---------------------------------------------------------------|---------------|-------|
-| [Model](/docs/ai-engine/openai/gpt-models)               | The AI engine used by the chatbot.                            | Davinci       |    |
+| [Model](/docs/ai-engine/openai/gpt-models)               | The AI engine used by the chatbot.                            | gpt-3.5-turbo       |    |
 | [Temperature](/docs/ai-engine/openai/temperature)        | Controls the randomness. Higher values mean more randomness.  | 0.7           | 0-1   |
 | [Max Tokens](/docs/ai-engine/openai/max-tokens)          | Maximum number of tokens to generate.                         | 700           | 1-1400|
 | [Top P](/docs/ai-engine/openai/top-p)               | Controls the diversity. Lower values mean more predictability.| 1.0           | 0-1   |
@@ -42,7 +42,7 @@ Here are the steps to adjust the AI parameters of your chatbot:
         <img src={Parameters} />
         <li>Adjust the settings as necessary:</li>
             <ul>
-                <li><b>Model</b>: Select the AI engine used by the chatbot. The default is Davinci.</li>
+                <li><b>Model</b>: Select the AI engine used by the chatbot. The default is gpt-3.5-turbo.</li>
                 <li><b>Temperature</b>: Adjust the randomness. Higher values mean more randomness. The default is 0.7, and it can be set between 0 and 1.</li>
                 <li><b>Max Tokens</b>: Set the maximum number of tokens to generate. The default is 700, and it can be set between 1 and 1400.</li>
                 <li><b>Top P</b>: Control the diversity. Lower values mean more predictability. The default is 1.0, and it can be set between 0 and 1.</li>
@@ -60,7 +60,7 @@ Here are the steps to adjust the AI parameters of your chatbot:
         <img src={ParametersWidget} />
         <li>Adjust the settings as necessary:</li>
             <ul>
-                <li><b>Model</b>: Choose the AI engine model for your chatbot. The default model is Davinci.</li>
+                <li><b>Model</b>: Choose the AI engine model for your chatbot. The default model is gpt-3.5-turbo.</li>
                 <li><b>Temperature</b>: Enter a number between 0 and 1 to adjust the randomness of the AI's responses. Higher values will make the responses more random, while lower values will make them more deterministic. The default is 0.7.</li>
                 <li><b>Max Tokens</b>: Input a number between 1 and 1400 to set the maximum number of tokens that the AI can generate in a response. The default is 700.</li>
                 <li><b>Top P</b>: Enter a number between 0 and 1 to control the diversity of the AI's responses. Lower values make the AI's responses more predictable, while higher values make them more diverse. The default is 1.0.</li>
