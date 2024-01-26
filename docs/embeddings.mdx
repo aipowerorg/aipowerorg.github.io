@@ -4,7 +4,6 @@ sidebar_position: 8
 
 import PineconeIndex from '/img/embeddings/pinecone.png';
 import PineconeIndex1 from '/img/embeddings/pinecone1.png';
-import PineconeIndex2 from '/img/embeddings/pinecone2.png';
 import PineconeAPI from '/img/embeddings/pinecone-api.png';
 import PineconeAPISave from '/img/embeddings/api-save.png';
 import ContentBuilder from '/img/embeddings/content-builder.png';
@@ -25,6 +24,7 @@ import Product from '/img/embeddings/product.png';
 import ProductSample from '/img/embeddings/product-sample.png';
 import CompanyProfile from '/img/embeddings/company-profile.png';
 import CompanySample from '/img/embeddings/company-sample.png';
+import Models from '/img/embeddings/models.png';
 
 # Embeddings
 
@@ -39,11 +39,11 @@ To use this feature, you must first create a Pinecone account.
 You can think of Pinecone as a long-term external memory for your bot.
 
 :::info
-OpenAI charges a cost of $0.0004 per 1,000 tokens for embeddings.
+OpenAI charges a cost of $0.00002 per 1,000 tokens for embeddings.
 
 Assuming that 750 words are approximately equal to 1,000 tokens, let's consider a scenario where you have a website with 1,000 pages, and each page has 750 words.
 
-In this case, the website would have a total of 750,000 words, which translates to 1,000,000 tokens. Therefore, the cost of embeddings for the entire website would be $0.40.
+In this case, the website would have a total of 750,000 words, which translates to 1,000,000 tokens. Therefore, the cost of embeddings for the entire website would be $0.02.
 
 Please note that this is only an approximation. For the precise cost, please refer to OpenAI usage.
 
@@ -54,13 +54,27 @@ You can use embeddings for:
 - **Chat Bot** - You can use the embeddings feature to create a chat widget that will respond to your visitors’ questions related to your website.
 - **Semantic Search** - We have a feature called SearchGPT where you can create your own search engine. You can use the embeddings feature to create a semantic search engine. For example, if you search for “dog”, you will get results for “puppy”, “pooch”, “canine”, “hound”, etc. This is because the embeddings feature will find the most similar text strings to “dog”.
 
-:::tip
-
-OpenAI's text-embedding-ada-002 model can manage up to 8192 tokens, roughly equal to 8000 characters. So, if your WordPress post or page content has more than 8000 characters, you'll need to divide it into sections.
-
-:::
-
 Now let's take a look at all the features in detail.
+
+## Embedding Models
+
+Our plugin supports three different embedding models:
+
+| Model                  | Description | Performance | Dimension |
+|------------------------|------------------------|---------------------------------|---------------------------------|
+| text-embedding-3-large | Most capable embedding model for both english and non-english tasks                 | 64.6%                            | 3,072 |
+| text-embedding-3-small | Increased performance over 2nd generation ada embedding model                  | 62.3%                           | 1,536 |
+| text-embedding-ada-002 | Most capable 2nd generation embedding model, replacing 16 first generation models                 | 61.0%                           | 1,536 |
+
+You can switch between models under the Embeddings - Settings tab.
+
+<img src={Models} />
+
+It's recommended to transition from the older text-embedding-ada-002 to **text-embedding-3-small** or **text-embedding-3-large** for enhanced efficiency and cost-effectiveness.
+
+:::info
+Should you opt to switch your embedding model, remember to reindex all your content. This step is crucial to ensure your bot functions correctly after the model change.
+:::
 
 ## Pinecone Setup
 
@@ -88,15 +102,12 @@ By providing your credit card information for a trial, you can start using Pinec
 <img src={PineconeIndex} width="500" />
 
 - Click **Create Index**. Your index is now created!
-- Your new index will be associated with a specific environment, something like *us-east1-gcp*. Please take note of this environment as it will be needed in the AI Power settings.
-
-<img src={PineconeIndex2} />
 
 - Click on the **API Keys** option in the left side menu to generate your API key. Make sure to copy this key as you will need it later.
 
 <img src={PineconeAPI} />
 
-- Paste your Pinecone API Key in the corresponding field and select your Pinecone environment from the dropdown list under the **Embeddings - Settings** tab in AI Power. Be sure to save the changes after you've input the necessary information.
+- Paste your Pinecone API Key in the corresponding field under the **Embeddings - Settings** tab in AI Power and then hit Sync button. Select your index from the list. Be sure to save the changes after you've input the necessary information.
 
 <img src={PineconeAPISave} />
 
