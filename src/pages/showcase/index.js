@@ -25,6 +25,13 @@ const showcases = [
         link: 'https://jobhuntmode.com',
         thumbnail: 'jobhuntmode.png',
     },
+    {
+        customerName: 'Anthony',
+        flagUrl: `${FLAG_BASE_URL}/us.svg`,
+        description: `Introducing Alyssa! Alyssa is a Law Smart chatbot specifically trained on Florida state statutes as it pertains to family law issues here in the greater Tampa Bay area.`,
+        link: 'https://taylordangelonelaw.com',
+        thumbnail: 'alyssa.png',
+    },
 ];
 
 function ShowcaseItem({ showcase }) {
