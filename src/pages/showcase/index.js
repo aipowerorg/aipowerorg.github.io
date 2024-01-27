@@ -43,7 +43,7 @@ function ShowcaseItem({ showcase }) {
             </div>
             <p>{showcase.description}</p>
             <img className="thumbnail" src={`/img/showcase/${showcase.thumbnail}`} alt="Showcase thumbnail" />
-            <p><a href={showcase.link} target="_blank" rel="noopener noreferrer">View Form</a></p>
+            <p><a href={showcase.link} target="_blank" rel="noopener noreferrer">View</a></p>
         </div>
     );
 }
