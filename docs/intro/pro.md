@@ -84,7 +84,7 @@ With the Pro Plan, you gain access to advanced moderation features for the chat 
 With the Pro Plan, you gain the capability to embed your custom post types. This unique feature means that you can feed any custom content directly into the bot. As a result, your chatbot becomes more personalized and context-aware, being able to reference your own custom content during interactions.
 
 ## Embedding PDF Files
-One of the unique features of the Pro Plan is the ability to embed PDF files directly into Pinecone as vectors. This advanced feature allows your chatbot to understand and engage with the content within these documents, thus expanding its knowledge base.
+One of the unique features of the Pro Plan is the ability to embed PDF files directly into Pinecone or Qdrant as vectors. This advanced feature allows your chatbot to understand and engage with the content within these documents, thus expanding its knowledge base.
 
 With this feature, your PDFs - be it guides, manuals, or extensive documents - become an integral part of the chatbot's intelligence. Instead of merely providing a link for users to download or view the PDF, the chatbot can now reference, explain, and elaborate on the content within the PDFs during its interactions. This opens up a vast array of possibilities for enhancing the depth and quality of your chatbot's responses, making it a more comprehensive and valuable resource for your users.
 

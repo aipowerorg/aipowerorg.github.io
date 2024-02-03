@@ -77,7 +77,8 @@ AI Power offers an extensive array of features and tools designed to augment you
     - Embedding PDF Files
     - Instant Embeddings
     - Index Builder with Cron Job
-    - Pinecone Integration 
+    - Pinecone Integration
+    - Qdrant Integration
 - **AI Assistant**
     - Integration with Gutenberg and Classic Editor
     - Customizable Prompts

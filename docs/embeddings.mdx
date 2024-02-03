@@ -26,6 +26,17 @@ import CompanyProfile from '/img/embeddings/company-profile.png';
 import CompanySample from '/img/embeddings/company-sample.png';
 import Models from '/img/embeddings/models.png';
 
+import Qdrant1 from '/img/embeddings/qdrant/qdrant1.png';
+import Qdrant2 from '/img/embeddings/qdrant/qdrant2.png';
+import Qdrant3 from '/img/embeddings/qdrant/qdrant3.png';
+import Qdrant4 from '/img/embeddings/qdrant/qdrant4.png';
+import Qdrant5 from '/img/embeddings/qdrant/qdrant5.png';
+import Qdrant6 from '/img/embeddings/qdrant/qdrant6.png';
+
+import QdrantPlugin1 from '/img/embeddings/qdrant/qdrant_plugin1.png';
+import QdrantNew from '/img/embeddings/qdrant/qdrant_new.png';
+import Collection from '/img/embeddings/qdrant/collection.png';
+
 # Embeddings
 
 OpenAI’s text embeddings measure the relatedness of text strings.
@@ -76,7 +87,9 @@ It's recommended to transition from the older text-embedding-ada-002 to **text-e
 Should you opt to switch your embedding model, remember to reindex all your content. This step is crucial to ensure your bot functions correctly after the model change.
 :::
 
-## Pinecone Setup
+## Vector DB
+
+### Pinecone Setup
 
 To use the Embeddings feature in AI Power, you need to first create an account with Pinecone and obtain your API key.
 
@@ -120,6 +133,64 @@ Now you're ready to use the Embeddings feature!
 If you have more than one index on Pinecone, you can specify your default index in AI Power. Navigate to the Embeddings - Settings tab and use the "Select Index" dropdown menu to choose your default index. Remember to save your changes!
 
 :::
+
+### Qdrant Setup
+
+To use Qdrant as your vector database provider with AI Power, follow these steps to configure the plugin correctly:
+
+1. **Change DB Provider to Qdrant**: Navigate to the **Embeddings - Settings** tab within the AI Power plugin. From the dropdown list for the database provider, select **Qdrant**. Upon selection, additional fields specific to Qdrant configuration will appear, including **Qdrant API Key**, **Qdrant Cluster URL**, and **Qdrant Collections**.
+
+<img src={QdrantPlugin1} />
+
+2. **Obtain Qdrant API Key**:
+
+- Visit [Qdrant Cloud](https://cloud.qdrant.io/) and sign up for an account if you do not already have one.
+- Log in to the Qdrant console and select **Clusters** from the left menu.
+
+
+<img src={Qdrant1} />
+
+- Click the **Create** button to initiate a new cluster creation.
+- Provide a name for your cluster and click **Create**.
+
+<img src={QdrantNew} />
+
+- Once your cluster is created, navigate to **Data Access Control** on the left menu.
+
+<img src={Qdrant2} />
+
+- Click the **Create** button. A modal window will prompt you to select the cluster for which you wish to generate an API key. Choose your cluster and click **Ok**.
+
+<img src={Qdrant3} />
+
+- Your API key will then be displayed. Click the **Copy** button to copy this key.
+
+<img src={Qdrant4} />
+
+3. **Configure Qdrant in AI Power**:
+
+- Return to the **Embeddings - Settings** tab in your AI Power plugin menu.
+- Paste the copied API key into the **Qdrant API Key** field.
+- To obtain the **Qdrant Cluster URL**, go back to the Qdrant console and click on **Clusters** in the left menu. Select your cluster to view its details and copy the endpoint URL.
+
+<img src={Qdrant6} />
+
+- Paste this URL into the **Cluster URL** field in the plugin settings.
+
+<img src={QdrantPlugin1} />
+
+4. **Create a New Collection**:
+
+- In the AI Power settings under **Embeddings - Settings**, click the **Create New** button next to Qdrant Collections. This action will present a text field to enter a name for your new collection.
+- Enter a desired name for your collection and click the **Create** button to establish a new collection.
+
+<img src={Collection} />
+
+- Use the **Sync** button to synchronize your collections with AI Power.
+
+5. **Save Your Configuration**: Ensure all details are correctly entered and hit the **Save** button to apply your changes.
+
+With these steps, you have successfully configured Qdrant as the vector database provider for AI Power. Your plugin is now ready to utilize Qdrant for embeddings and related AI functionalities.
 
 ## Instant Embeddings
 

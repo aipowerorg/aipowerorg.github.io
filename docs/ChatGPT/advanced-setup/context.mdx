@@ -12,6 +12,7 @@ import ContentAware from '/img/chatgpt/content-aware.png';
 import ContentAwareWidget from '/img/chatgpt/content-aware-widget.png';
 import AdditionalContext from '/img/chatgpt/additional-context.png';
 import SelectIndex from '/img/chatgpt/select-index.png';
+import DBProvider from '/img/chatgpt/dbprovider.png';
 import IndexSync from '/img/chatgpt/index-sync.png';
 
 # Context
@@ -123,26 +124,28 @@ Consider revisiting and improving your current post excerpts. The better your ex
 
 ### Embeddings
 
-This feature requires integration with Pinecone.
+This feature requires integration with Pinecone or Qdrant.
 
 Learn more about [Embeddings](docs/embeddings.mdx).
 
 If enabled, the chatbot will generate responses based on the content of your pages using embeddings, which are vector space representations of text.
 
-Our plugin uses the Pinecone vector database as an **external long-term memory** for the bot.
+Our plugin uses vector database as an **external long-term memory** for the bot. 
+
+We offer two different options to select: **Pinecone** or **Qdrant**.
 
 For Embeddings, we offer two different methods:
 
 - **Embeddings + Completions**: This method uses the Embeddings to find the most relevant page and then uses completions to generate a response. This is the **recommended** option for chat bots and widgets.
 - **Embeddings Only**: This method uses the Embeddings to find the most relevant page and then uses the content of the page to generate a response. It does not use Davinci or any other GPT model for generating a response. For the "Embeddings Only" method, you can set the number of nearest answers that the chatbot will return. The default is 5, but it can be set to a value between 1 and 5.
 
-#### Index Selection
+#### Vector DB Selection
 
-Upon enabling the Embeddings feature, a dropdown menu labeled **Pinecone Index** becomes active.
+Upon enabling the Embeddings feature, a dropdown menu labeled **Vector DB** becomes active.
 
-<img src={SelectIndex} width="300" />
+<img src={DBProvider} width="300" />
 
-This feature allows you to choose different indices for different bots.
+This feature allows you to choose different vector dbs for different bots.
 
 The indices are the embeddings of your website content stored in the Pinecone vector database.
 
