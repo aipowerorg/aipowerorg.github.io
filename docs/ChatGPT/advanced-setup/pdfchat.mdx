@@ -149,6 +149,24 @@ Additionally, a user can also clear the current PDF session by simply refreshing
 
 Remember, managing your PDF sessions effectively is crucial for maintaining an efficient and user-friendly chatbot interface. It helps ensure that your chatbot provides accurate and relevant responses, while keeping the user experience smooth and intuitive.
 
+## Segregating User Content
+
+To ensure a personalized user experience within our PDF Chat feature, we employ a content separation system.
+
+This system utilizes **namespace** (on Pinecone) or **group_id** (on Qdrant) to segregate user-uploaded PDFs from the content of your website. 
+
+This is a critical component of our plugin, designed to prevent the mixing of content between different users or with your website's native content.
+
+When you upload content through our plugin, it automatically assigns a *default* value in the **group_id** section for your uploads. This acts as a fixed identifier for your content.
+
+However, when a user uploads a PDF, our plugin generates a unique random value for that particular user's group_id or namespace.
+
+This ensures that a user's queries are strictly confined to their uploaded content, enhancing privacy and content relevancy.
+
+This unique approach not only preserves the integrity and exclusivity of user interactions but also significantly boosts the efficacy and user-friendliness of our PDF Chat feature.
+
+By adopting this method, we empower users to interact with their documents in a more organized and efficient manner, ensuring that their content remains distinct and protected.
+
 ## Limitations
 
 While the PDF Chat feature is robust and interactive, there are a few limitations to keep in mind for optimal usage:
