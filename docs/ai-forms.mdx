@@ -20,6 +20,8 @@ import Feedback2 from '/img/ai-forms/feedback2.png';
 import Feedback3 from '/img/ai-forms/feedback3.png';
 import Feedback4 from '/img/ai-forms/feedback4.png';
 
+import EmbeddingsSettings from '/img/ai-forms/embeddings/settings.png';
+
 # AI Forms
 
 AI Forms is a powerful feature in our WordPress plugin that offers more than 100 ready-to-use AI forms for your website.
@@ -130,6 +132,30 @@ The "AI Engine" tab allows you to select the AI model and adjust the parameters 
 
 - **Temperature, Top P, Frequency Penalty, Presence Penalty (Optional)**: These options control the creativity, diversity, and uniqueness of the output, respectively. If not specified, the default values are applied.
 - **Stop Sequence (Optional)**: This determines when the AI should stop generating text.
+
+### Embeddings
+In addition to the variety of features already available in AI Forms, we now support the use of embeddings to enhance the functionality and intelligence of your forms. This feature allows for more context-aware responses and interactions, leveraging the power of vector databases (vector DBs) to process and understand user inputs at a deeper level.
+
+To take advantage of embeddings in your AI forms, you can enable this feature under the Embeddings tab. 
+
+Here's how:
+
+- Navigate to the Embeddings tab within your form settings.
+- The first option you'll encounter is "Use Embeddings", which is set to "No" by default. Switching this to "Yes" activates the embeddings feature for your form.
+
+<img src={EmbeddingsSettings} />
+
+- Upon enabling embeddings, another option becomes available for you to select a vector database. Currently, we support two types of vector databases: Qdrant and Pinecone.
+- Selecting either of these databases will further customize the form settings based on the chosen database's characteristics.
+- If you opt for Qdrant as your vector database, you'll be prompted to select from your available collections. If no collections are visible, it's likely that they haven't been synchronized with your AI Forms yet. To resolve this, visit the **Embeddings-Settings** page to create and sync your Qdrant collections.
+- Choosing Pinecone changes the naming convention to "indexes" to align with Pinecone's terminology. This option allows you to select from the indexes you have available within Pinecone's infrastructure. If no indexes are visible, it's likely that they haven't been synchronized with your AI Forms yet. To resolve this, visit the **Embeddings-Settings** page to create and sync your Pinecone indexes.
+
+Several other options will become visible upon selecting a vector database, enhancing the flexibility and customization of your AI Forms:
+- **Limit**: Define how many nearest results from the vector database should be retrieved and added to the prompt as context. You can select between 1, 2, and 3, with the default being 1. This setting determines the depth of context integration into your prompt.
+- **Context Label**: Customize the label that precedes the context from your vector database in the prompt. By default, this is set to "Context:", but you can modify it to suit your needs.
+- **Context Position**: Decide whether the context retrieved from the vector database should be appended before or after your prompt. The default setting is "after", which adds the context at the end of your prompt. Selecting "before" will place the context at the beginning.
+
+Embeddings offer a powerful way to enhance the intelligence and responsiveness of your AI Forms, making them even more versatile and user-friendly. By carefully configuring these settings, you can create forms that not only interact but also understand and adapt to user inputs in more meaningful ways.
 
 ### Form Style
 
