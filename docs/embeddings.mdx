@@ -70,13 +70,14 @@ Now let's take a look at all the features in detail.
 
 ## Embedding Models
 
-Our plugin supports three different embedding models:
+Our plugin supports four different embedding models:
 
-| Model                  | Description | Performance | Dimension |
-|------------------------|------------------------|---------------------------------|---------------------------------|
-| text-embedding-3-large | Most capable embedding model for both english and non-english tasks                 | 64.6%                            | 3,072 |
-| text-embedding-3-small | Increased performance over 2nd generation ada embedding model                  | 62.3%                           | 1,536 |
-| text-embedding-ada-002 | Most capable 2nd generation embedding model, replacing 16 first generation models                 | 61.0%                           | 1,536 |
+| Model                  | Provider | Description | Performance | Dimension |
+|------------------------|------------------------| ------------------------|---------------------------------|---------------------------------|
+| text-embedding-3-large | OpenAI | Most capable embedding model for both english and non-english tasks                 | 64.6%                            | 3,072 |
+| text-embedding-3-small | OpenAI | Increased performance over 2nd generation ada embedding model                  | 62.3%                           | 1,536 |
+| text-embedding-ada-002 | OpenAI | Most capable 2nd generation embedding model, replacing 16 first generation models                 | 61.0%                           | 1,536 |
+| embedding-001 | Google | Google's most capable embedding model                | NA                           | 768 |
 
 You can switch between models under the Embeddings - Settings tab.
 

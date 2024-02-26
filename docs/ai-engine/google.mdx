@@ -5,6 +5,7 @@ sidebar_position: 3
 import api1 from '/img/ai-settings/google/api1.png';
 import api2 from '/img/ai-settings/google/api2.png';
 import api3 from '/img/ai-settings/google/api3.png';
+import googleapi from '/img/ai-settings/google/google-api.png';
 import pg from '/img/ai-settings/google/playground.png';
 
 # Google
@@ -35,7 +36,7 @@ You can refer to their [pricing page](https://ai.google.dev/pricing) for more de
 
 Generating a Google API key is a straightforward process. Here's a step-by-step guide to help you create your API key:
 
-1. Open your web browser and go to https://makersuite.google.com/app/apikey page.
+1. Open your web browser and go to https://aistudio.google.com/app/apikey page.
 2. If you are not already logged in, you will be prompted to sign in with your Google account. Enter your credentials to access the API key creation page.
 3. Once you're logged in, look for a button labeled "Create new API key in a project" and click on it.
 
@@ -54,17 +55,27 @@ Generating a Google API key is a straightforward process. Here's a step-by-step 
 
 Setting up the AI Power plugin to use Google's AI services in your WordPress site is a user-friendly process.
 
-Currently, Google's AI services are integrated into two modules of our plugin: **Content Writer - Custom Mode** and **Playground**.
-
-We plan to extend this integration to other modules gradually. 
-
 Here's how to get started:
 
 - Navigate to the AI Power plugin on your WordPress dashboard.
-- First, you'll need to input your Google API key into the plugin. To do this, go to the **Content Writer - Playground** tab.
-- In the provider dropdown list, select **Google**. You will see a hyperlink next to it labeled "Add your API key".
-- Click on this hyperlink, paste your previously generated Google API key, and then click the **Save** button.
+- First, you'll need to input your Google API key into the plugin. To do this, go to the **Settings - AI Engine** tab.
+- In the provider dropdown list, select **Google**. You will see a text field to enter your key.
+- Paste your previously generated Google API key, and then click the **Save** button.
 
-<img src={pg} />
+<img src={googleapi} />
 
-With the API key saved, you can now use the Playground or Custom Mode module to generate content.
+With the API key saved, you can now use the plugin with your Google api key.
+
+## Limitations
+
+Before setting Google as your provider in the plugin, you should be aware of its limitations:
+
+Unsupported Modules: Fine-tuning and Audio Converter.
+
+Once you enable Google:
+
+- **Speech to Text**: This feature will be disabled because Google's speech to text feature is not yet available on Google AI Studio. However, we plan to integrate it once it becomes available.
+- **Moderation**: Google offers its own content filtering, so our plugin will automatically disable the moderation feature.
+- **Image Generator**: Google's image generator module is not publicly available yet.
+
+Most importantly, Gemini Pro is still in its early stages and is not as stable as OpenAI's GPT models. Therefore, expect to encounter incomplete responses, nonsensical replies, and a higher rate of errors with this model.
