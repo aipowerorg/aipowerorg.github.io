@@ -32,6 +32,13 @@ const showcases = [
         link: 'https://taylordangelonelaw.com',
         thumbnail: 'alyssa.png',
     },
+    {
+        customerName: 'Robert',
+        flagUrl: `${FLAG_BASE_URL}/us.svg`,
+        description: `Documend helps nurses document faster and more accurate; audits chart before submission and notifies healthcare workers of missed assessments or interventions.`,
+        link: 'https://documend.io/webapp/',
+        thumbnail: 'documend.png',
+    },
 ];
 
 function ShowcaseItem({ showcase }) {
