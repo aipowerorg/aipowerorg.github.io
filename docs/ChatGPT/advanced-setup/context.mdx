@@ -14,6 +14,8 @@ import AdditionalContext from '/img/chatgpt/additional-context.png';
 import SelectIndex from '/img/chatgpt/select-index.png';
 import DBProvider from '/img/chatgpt/dbprovider.png';
 import IndexSync from '/img/chatgpt/index-sync.png';
+import starters from '/img/chatgpt/starters/starters.png';
+import startersSetup from '/img/chatgpt/starters/starters-setup.png';
 
 # Context
 
@@ -285,7 +287,7 @@ If the majority of your chatbot users are non-registered or anonymous visitors, 
 
 :::
 
-here's how to adjust the User Aware settings of your chatbot:
+Here's how to adjust the User Aware settings of your chatbot:
 
 <Tabs>
   <TabItem value="shortcode" label="Shortcode" default>
@@ -307,3 +309,34 @@ here's how to adjust the User Aware settings of your chatbot:
     </ul>
 </TabItem>
 </Tabs>
+
+## Conversation Starters
+
+Conversation starters allow you to create and define your own engaging questions that appear in the chat window. 
+
+Users can simply click on these starters to instantly receive answers.
+
+<img src={starters} />
+
+Here's a step-by-step guide on how to enable and use Conversation Starters.
+
+- Go to the **ChatGPT - Shortcode** or **ChatGPT - Widget** tab and then navigate to the **Knowledge** tab.
+- Scroll down until you find the **Conversation Starters** section under the Knowledge tab.
+- You'll see a text field labeled for Conversation Starters. Enter your desired conversation starter question here.
+- As you type, a new text field will appear below it, allowing you to add more questions.
+- You can add up to 10 conversation starters.
+
+<img src={startersSetup} />
+
+- Conversation starters will be displayed in the chat window in the order they are entered.
+- To remove a starter, click the "X" button next to the corresponding text field.
+- Once you're satisfied with your conversation starters, hit the Save button.
+
+Visit your chatbot on your website to see the conversation starter questions added right above the text input area.
+
+**Styling Options**
+
+- Conversation starters inherit their background color from the User Message Color setting, meaning they will match the background color of user messages in your chat.
+- The font color for conversation starters is taken from the main chat window's font color.
+
+That's all! By following these steps, you can enhance user interaction on your site by providing them with immediate questions to engage with your ChatGPT bot.
