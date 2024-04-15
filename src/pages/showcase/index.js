@@ -42,9 +42,16 @@ const showcases = [
     {
         customerName: 'Human Design',
         flagUrl: `${FLAG_BASE_URL}/us.svg`,
-        description: `A chatbot that adds astrology, quantum physics, the chakra system, and other ancient systems into a tool which allows the users to understand who they are or on an energetic and quantum level. `,
+        description: `A chatbot that adds astrology, quantum physics, the chakra system, and other ancient systems into a tool which allows the users to understand who they are or on an energetic and quantum level.`,
         link: 'https://humandesign.ai/',
         thumbnail: 'humandesign.png',
+    },
+    {
+        customerName: 'ScandalsBot',
+        flagUrl: `${FLAG_BASE_URL}/us.svg`,
+        description: `The ScandalsBot explains "The Solomon Scandals", a complex, character-driven novel novel by David H. Rothman, offering users an engaging narrative experience.`,
+        link: 'https://www.solomonscandals.com/chatbot/',
+        thumbnail: 'solomon.png',
     },
 ];
 
