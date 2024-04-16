@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 5
 ---
 
 import PineconeIndex from '/img/embeddings/pinecone.png';
@@ -7,7 +7,7 @@ import PineconeIndex1 from '/img/embeddings/pinecone1.png';
 import PineconeAPI from '/img/embeddings/pinecone-api.png';
 import PineconeAPISave from '/img/embeddings/api-save.png';
 import ContentBuilder from '/img/embeddings/content-builder.png';
-import Cron from '/img/embeddings/embeddings-cron.png';
+import Cron from '/img/embeddings/index-builder.png';
 import CronSample from '/img/embeddings/sample.jpeg';
 import CronIndex from '/img/embeddings/cron-index.png';
 import IndexBuilder from '/img/embeddings/index-builder.png';
@@ -37,7 +37,7 @@ import QdrantPlugin1 from '/img/embeddings/qdrant/qdrant_plugin1.png';
 import QdrantNew from '/img/embeddings/qdrant/qdrant_new.png';
 import Collection from '/img/embeddings/qdrant/collection.png';
 
-# Embeddings
+# AI Training
 
 OpenAI’s text embeddings measure the relatedness of text strings.
 
@@ -79,9 +79,9 @@ Our plugin supports four different embedding models:
 | text-embedding-ada-002 | OpenAI | Most capable 2nd generation embedding model, replacing 16 first generation models                 | 61.0%                           | 1,536 |
 | embedding-001 | Google | Google's most capable embedding model                | NA                           | 768 |
 
-You can switch between models under the Embeddings - Settings tab.
+You can switch between models under the AI Training - Settings tab.
 
-<img src={Models} />
+<img src={Models} width="700" />
 
 It's recommended to transition from the older text-embedding-ada-002 to **text-embedding-3-small** or **text-embedding-3-large** for enhanced efficiency and cost-effectiveness.
 
@@ -122,9 +122,9 @@ By providing your credit card information for a trial, you can start using Pinec
 
 <img src={PineconeAPI} />
 
-- Paste your Pinecone API Key in the corresponding field under the **Embeddings - Settings** tab in AI Power and then hit Sync button. Select your index from the list. Be sure to save the changes after you've input the necessary information.
+- Paste your Pinecone API Key in the corresponding field under the **AI Training - Settings** tab in AI Power and then hit Sync button. Select your index from the list. Be sure to save the changes after you've input the necessary information.
 
-<img src={PineconeAPISave} />
+<img src={PineconeAPISave} width="700" />
 
 With these steps, you have successfully created an account with Pinecone, created an index, and configured AI Power to use this index.
 
@@ -140,7 +140,7 @@ If you have more than one index on Pinecone, you can specify your default index 
 
 To use Qdrant as your vector database provider with AI Power, follow these steps to configure the plugin correctly:
 
-1. **Change DB Provider to Qdrant**: Navigate to the **Embeddings - Settings** tab within the AI Power plugin. From the dropdown list for the database provider, select **Qdrant**. Upon selection, additional fields specific to Qdrant configuration will appear, including **Qdrant API Key**, **Qdrant Cluster URL**, and **Qdrant Collections**.
+1. **Change DB Provider to Qdrant**: Navigate to the **AI Training - Settings** tab within the AI Power plugin. From the dropdown list for the database provider, select **Qdrant**. Upon selection, additional fields specific to Qdrant configuration will appear, including **Qdrant API Key**, **Qdrant Cluster URL**, and **Qdrant Collections**.
 
 <img src={QdrantPlugin1} />
 
@@ -171,7 +171,7 @@ To use Qdrant as your vector database provider with AI Power, follow these steps
 
 3. **Configure Qdrant in AI Power**:
 
-- Return to the **Embeddings - Settings** tab in your AI Power plugin menu.
+- Return to the **AI Training - Settings** tab in your AI Power plugin menu.
 - Paste the copied API key into the **Qdrant API Key** field.
 - To obtain the **Qdrant Cluster URL**, go back to the Qdrant console and click on **Clusters** in the left menu. Select your cluster to view its details and copy the endpoint URL.
 
@@ -183,7 +183,7 @@ To use Qdrant as your vector database provider with AI Power, follow these steps
 
 4. **Create a New Collection**:
 
-- In the AI Power settings under **Embeddings - Settings**, click the **Create New** button next to Qdrant Collections. This action will present a text field to enter a name for your new collection.
+- In the AI Power settings under **AI Training - Settings**, click the **Create New** button next to Qdrant Collections. This action will present a text field to enter a name for your new collection.
 - Enter a desired name for your collection and click the **Create** button to establish a new collection.
 
 <img src={Collection} />
@@ -198,7 +198,7 @@ With these steps, you have successfully configured Qdrant as the vector database
 
 AI Power plugin features a robust tool called **Instant Embeddings**.
 
-This feature allows you to generate embeddings for individual posts, pages, or products without the necessity of setting up a Cron Job or waiting for the Index Builder to run.
+This feature allows you to generate embeddings for individual posts, pages, or products without the necessity of setting up a Cron Job or waiting for the Auto Scan to run.
 
 This makes for a quicker and more flexible approach to generating embeddings.
 
@@ -227,135 +227,18 @@ This action will create an instant embedding for your selected custom post type 
 
 This enhanced feature of the Pro plan empowers you to create embeddings for a wider range of content types, further enhancing the capabilities of your AI-powered chatbot.
 
-## Content Builder
+## Knowledge Builder
 
-The Content Builder tool is designed to empower your chat bot with custom, high-quality embeddings for your various content.
+You can provide data to your bot using Knowledge Builder.
 
-Whether it's free text strings, FAQs, knowledge base topics, product details, URLs, or company profiles, this tool is equipped to handle them all.
+To use the Knowledge Builder, follow these steps:
 
-By adding these embeddings into your bot, you're creating a more personalized and effective interactions for your users, which can even serve as a useful resource for chatbot responses.
-
-To use the Content Builder, follow these steps:
-
-- Navigate to **Embeddings - Content Builder**.
-- Select the content type that you want to use.
-- Enter all the required information.
-- Click on the **Save** button.
+- Go to **AI Training - Knowledge Builder**.
+- Enter your data and hit save. That's it!
 
 <img src={ContentBuilder} width="700" />
 
-You can view your entries under the **Embeddings - Entries** tab.
-
-### Knowledge Base Topics
-
-When your website features a rich array of knowledge base topics, you're providing your users with a comprehensive learning resource. These topics can cover anything from detailed product guides to software troubleshooting.
-
-Consider the case of a tech company: they can embed topics like 'Setting up your device,' or 'Troubleshooting software issues.' When users interact with their chatbot, it can pull from these topics to provide detailed assistance, minimizing the need for human intervention.
-
-To create Knowledge Base Topic embeddings, follow these steps:
-
-- First, navigate to the **Embeddings - Content Builder** on your dashboard.
-- Choose **KnowledgeBase** from the dropdown menu of content types.
-- You will be presented with input fields for the **Topic** and **Description**. In the **Topic** field, input the title or subject of your knowledge base entry.
-- In the **Description** field, provide detailed information about the topic. This could be a guide, an explanation, or any other form of information that would be useful to your users.
-
-<img src={KnowledgeBase} />
-
-- Once you've completed these fields, click the **Save** button to finalize your new knowledge base embedding.
-- Now that you have created your knowledgebase embedding, your chatbot can access this information and share it with users as needed. For example, if a user asks, "How can I troubleshoot Embeddings and Pinecone issues?", your chatbot can directly provide the saved knowledgebase for that questions. This leads to a more efficient and user-friendly navigation experience.
-
-<img src={KnowledgeBaseSample} />
-
-### Product Details
-
-Product details are crucial for any eCommerce site, providing users with all the information they need to make an informed purchasing decision.
-
-By embedding these details, your chatbot can access and relay them to potential customers.
-
-Imagine a clothing store: they can embed details for a particular dress, such as its available sizes, colors, fabric type, and price.
-
-When a user inquires about this dress, the chatbot can quickly provide all these details, facilitating a smooth shopping experience.
-
-To create Product Detail embeddings in the Content Builder, follow these steps:
-
-- Navigate to the **Embeddings - Content Builder** on your dashboard.
-- From the dropdown menu of content types, select **Product Details**.
-- Now, you will be presented with several input fields including **Product ID**, **Product Name**, **Product Description**, **Product Price**, and **Product URL**. Fill out each of these fields with the relevant details of the product you wish to embed.
-    - In the **Product ID** field, input a unique identifier for your product. This could be a SKU, a barcode number, or any other unique identifier used in your inventory system.
-    - In the **Product Name** field, input the name of the product as it is listed on your site.
-    - In the **Product Description** field, provide a detailed description of the product. This should include information such as its features, uses, and any other details a customer might need to know.
-    - In the **Product Price** field, input the current price of the product.
-    - Finally, in the **Product URL** field, input the URL of the product page on your website.
-- After filling in all the necessary fields, click on the Save button to store your new Product Detail embedding.
-
-<img src={Product} />
-
-Now, your chatbot has access to this embedded product information and can provide it to customers when needed. For example, if a user asks your chatbot, "What is the price of product X?", your chatbot can provide the saved price from the product details you've embedded.
-
-<img src={ProductSample} />
-
-### URLs
-
-Embedding URLs can greatly enhance your website's navigation and overall user experience.
-
-For instance, you can embed the URL of a new blog post, a product page, or a registration form.
-
-Your chatbot can then provide these direct links when a user needs them.
-
-For instance, a user might ask your chatbot, "Where can I register for the upcoming webinar?" Your chatbot can then provide the direct URL to the registration page, guiding the user efficiently.
-
-Creating URL embeddings is a straightforward process.
-
-Here's a step-by-step guide:
-
-- First, navigate to the **Embeddings - Content Builder** on your dashboard.
-- From the dropdown menu of content types, select **URL**.
-- You'll be presented with input fields for the URL and its associated description. Start by typing the URL you want to embed in the first field.
-- In the description field, provide some context about the URL. This could be a brief summary of the page it leads to or its relevance to your website or business.
-
-<img src={URLs} />
-
-- Once you've filled in both fields, click on the **Save** button to store your new URL embedding.
-
-<img src={URLSample} />
-
-- Now that you have created your URL embedding, your chatbot can access this information and share it with users as needed. For example, if a user asks, "Where can I register for the upcoming webinar?", your chatbot can directly provide the saved URL for the registration page. This leads to a more efficient and user-friendly navigation experience.
-
-### Company Profile
-
-A well-crafted company profile gives your website a professional feel, offering visitors insight into your business's history, goals, and achievements.
-
-By embedding this profile, your chatbot can share it with interested users or direct them to the page where it's hosted.
-
-Here's how to create Company Profile embeddings:
-
-- First, go to the **Embeddings - Content Builder** section on your dashboard.
-- From the dropdown menu of content types, select **Company Profile**.
-- You'll now see input fields where you can enter relevant information about your company:
-    - **Company Name:** Enter the official name of your company.
-    - **Founder:** Input the name of the person or people who founded the company.
-    - **CEO:** Enter the name of your current CEO.
-    - **Founded:** Input the year your company was founded.
-    - **Location:** Type in the city and country where your company is based.
-    - **Number of Employees:** Input the current number of employees in your company.
-    - **Industry:** Indicate the industry in which your company operates.
-    - **Products:** Provide a brief list or description of your main products or services.
-    - **Company Website:** Input the URL of your company's official website.
-    - **Company Email:** Input the general contact email for your company.
-    - **Company Phone:** Input the general contact phone number for your company.
-    - **Company Address:** Type in your company's physical address.
-    - **Company Description:** Provide a detailed overview of your company, including its mission, achievements, and any other notable information.
-- After you've filled out all the fields, click the **Save** button to create your new Company Profile embedding.
-
-<img src={CompanyProfile} />
-
-With this information embedded, your chatbot can provide users with comprehensive and accurate information about your company. As always, remember that the accuracy of your chatbot in providing these responses depends on its programming and configuration.
-
-For instance, if a user asks, "What does your company do?", the chatbot can pull from the 'Description' field to provide a comprehensive answer.
-
-<img src={CompanySample} />
-
-## PDF Upload
+### PDF Upload
 
 The PDF Upload feature of AI Power allows you to upload and embed PDF documents, enabling your chat bot to read and understand the content within those documents.
 
@@ -365,7 +248,8 @@ This feature processes your PDF files by each page, making the information avail
 
 Here's how to use this feature:
 
-- Navigate to the **Embeddings - PDF** Tab in AI Power.
+- Navigate to the **AI Training** page in AI Power.
+- Select PDF Upload from data source.
 - Click on the **Browse** button to select a PDF document from your device.
 - After you have selected a PDF document, click on the **Start** button to begin the upload and embedding process.
 
@@ -384,15 +268,15 @@ For optimal results, it is recommended to upload PDF documents that are primaril
 
 By using this feature, you can enhance the functionality and effectiveness of your AI-powered chatbot, making it an even more powerful tool for delivering high-quality, contextually relevant responses to user inquiries.
 
-## Index Builder
+### Auto-Scan
 
-To be able to use Index Builder you need to setup a cron job.
+To be able to use auto-scan feature you need to setup a cron job.
 
 ### Configuring Cron Jobs
 
 - Follow the steps outlined in this guide to [set up a Cron Job](/docs/AutoGPT/gpt-agents#cron-job-setup).
 - Ensure that you include the specific PHP command for the Embeddings job in your Cron Job configuration to make it functional.
-- You can find your php command under **Embeddings - Settings** tab.
+- You can find your php command under **AI Training** page.
 
 <img src={Cron} />
 
@@ -412,29 +296,29 @@ This is how my Cron setup looks like.
 
 <img src={CronSample} />
 
-Once the Cron Job setup is complete, you should see a message stating, “Great! It looks like your Cron Job is running properly. You should now be able to use the Index Builder."
+Once the Cron Job setup is complete, you should see a message stating, “Great! It looks like your Cron Job is running properly. You should now be able to use the Auto Scan."
 
-### Configuring the Index Builder
+### Configuring the Auto-Scan
 
-Once you have set up the Cron Job, you can start using the Index Builder. Here's how:
+Once you have set up the Cron Job, you can start using the Auto Scan. Here's how:
 
-- Navigate to the **Embeddings - Index Builder** tab in AI Power.
-- Toggle the **Cron Indexing** option to **Yes**. Please note that enabling this option will start indexing your website content. Moreover, every time you create a new post, page, or product, it will be indexed automatically.
+- Navigate to the **AI Training - Settings ** page in AI Power.
+- Toggle the **Enable Auto-Scan** option to **Yes**. Please note that enabling this option will start scanning your website content. Moreover, every time you create a new post, page, or product, it will be indexed automatically.
 - Check the box for **Posts, Pages, and Products**.
 
 <img src={CronIndex} width="500" />
 
 - Click on the **Save** button.
 - Wait for the indexing process to finish.
-- You can track the progress of the indexing in the Index Builder tab.
+- You can track the progress of the indexing in the Auto Scan tab.
 
-### Indexing Custom Post Types
+### Scanning Custom Post Types
 
-The Pro plan of AI Power offers the ability to index custom post types.
+The Pro plan of AI Power offers the ability to scan custom post types.
 
-Once you have upgraded to the Pro plan, you can navigate to the **Embeddings - Settings** tab.
+Once you have upgraded to the Pro plan, you can navigate to the **AI Training - Settings** tab.
 
-Here, you will find the option **Build Index for:**. If you have any custom post types, they will be listed here.
+Here, you will find the option **Post Types to Scan:**. If you have any custom post types, they will be listed here.
 
 <img src={CustomPost} width="500" />
 
@@ -446,15 +330,17 @@ Clicking on this button will open a modal window where you can select fields and
 
 These metadata will be added into the embeddings to deliver better search results.
 
-### Using the Index Builder
+### Using the Auto Scan
 
-The Index Builder is a powerful tool that allows you to manage and monitor the indexing of your website's content. Once your Cron job is set up and running, all your content will be indexed and appear under the **Embeddings - Index Builder** tab in the AI Power.
+The Auto Scan is a powerful tool that allows you to manage and monitor the indexing of your website's content. 
 
-The Index Builder is divided into three tabs:
+Once your Cron job is set up and running, all your content will be indexed and appear under the **AI Training** page in the AI Power.
+
+The Auto Scan is divided into three tabs:
 
 - **Indexed**: This tab displays a list of pages that have been successfully indexed.
 - **Failed**: This tab lists the pages that failed to index. There can be several reasons why a page may not index, but the most common issue is related to encoding. If your pages have encoding problems, they may fail to index. To resolve this, you need to clean them up.
-- **Skipped**: This tab shows a list of pages that have been skipped. The Index Builder does not index pages if their content is **less than 50 characters**. Therefore, if you have **shortcodes** or other content that is less than 50 characters, they will likely not be indexed.
+- **Skipped**: This tab shows a list of pages that have been skipped. The Auto Scan does not index pages if their content is **less than 50 characters**. Therefore, if you have **shortcodes** or other content that is less than 50 characters, they will likely not be indexed.
 
 <img src={IndexBuilder} />
 
@@ -477,7 +363,7 @@ Under the **Action** column, there are two buttons:
 - **Reindex**: This button allows you to reindex the content. This is particularly useful when you have updated a post, page, or product and you want the index to reflect the latest changes.
 - **Delete**: This button allows you to delete an index.
 
-Through the Index Builder, you have full control over the indexing process, ensuring your website's content is properly embedded for optimal use by the AI Power plugin.
+Through the Auto Scan, you have full control over the indexing process, ensuring your website's content is properly embedded for optimal use by the AI Power plugin.
 
 ## FAQ
 
