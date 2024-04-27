@@ -217,6 +217,35 @@ As an example, if you want to change the form layout, you can add the following 
 }
 ```
 
+If you want to change the form layout to create two columns of equal width, you can use this:
+
+```
+.wpaicg-mb-10 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two columns of equal width */
+    gap: 20px; /* Adjusts space between the columns */
+    padding: 20px; /* Optional padding around the grid */
+}
+
+.wpaicg-form-field {
+    display: flex;
+    flex-direction: column; /* Ensures labels and inputs are stacked vertically */
+}
+
+.wpaicg-prompt-flex-center {
+    grid-column: 1 / -1; /* Makes the buttons span across all columns */
+    display: flex;
+    justify-content: center; /* Centers the buttons */
+    padding-top: 20px; /* Optional padding above the button section */
+}
+
+/* If you want to align the textarea to cover both columns like the buttons */
+.wpaicg-prompt-title {
+    grid-column: 1 / -1;
+}
+```
+
+
 ### Frontend Display
 
 The **Frontend** tab allows you to customize how the results are displayed and which interactive elements are available:
