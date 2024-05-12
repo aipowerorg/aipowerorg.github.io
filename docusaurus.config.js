@@ -89,7 +89,7 @@ const config = {
           {to: '/showcase/', label: 'Showcase', position: 'left'},
           {to: 'https://aipower.org/support/', label: 'Support', position: 'right'},
           {to: 'https://aipower.org/contact/', label: 'Contact', position: 'right'},
-          {to: 'https://ai-power.canny.io/', label: 'Roadmap', position: 'left'},
+          {to: 'https://ai-power.supahub.com/', label: 'Roadmap', position: 'left'},
           {to: 'https://discord.gg/3GWp77JEM7', label: 'Discord', position: 'right'},
         ],
       },
