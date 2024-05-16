@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhelp=self.webpackChunkhelp||[]).push([[3373],{9884:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/embeddings","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
