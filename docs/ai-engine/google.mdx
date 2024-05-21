@@ -7,8 +7,22 @@ import api2 from '/img/ai-settings/google/api2.png';
 import api3 from '/img/ai-settings/google/api3.png';
 import googleapi from '/img/ai-settings/google/google-api.png';
 import pg from '/img/ai-settings/google/playground.png';
+import safety from '/img/blog/1862/safety.png';
 
 # Google
+
+## Supported Models
+
+- gemini-1.0-pro
+- gemini-1.0-pro-001
+- gemini-1.0-pro-latest
+- gemini-1.5-flash-latest
+- gemini-1.5-pro-latest
+- gemini-pro
+
+To get the latest Google models, go to the **Settings - AI Engine** tab, select Google from the provider list, and click the Sync button. This will retrieve the latest models from Google.
+
+<img src={googleapi} />
 
 ## Bring Your Own Key Model
 
@@ -65,6 +79,18 @@ Here's how to get started:
 <img src={googleapi} />
 
 With the API key saved, you can now use the plugin with your Google api key.
+
+## Safety Settings
+
+You can specify safety levels for Google models.
+
+- Go to `Settings` > `AI Engine` tab and select Google from the provider list.
+- Click on the "Safety settings" button to see four options: Harassment, Hate Speech, Sexually Explicit, and Dangerous Content.
+
+<img src={safety}/>
+
+- Default setting is "Block None". Users can choose to block content at different levels: Block None, Block Few, Block Some, or Block Most.
+- If offensive language is used, the API response depends on the chosen safety level.
 
 ## Limitations
 
