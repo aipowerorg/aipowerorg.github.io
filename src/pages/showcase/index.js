@@ -26,13 +26,6 @@ const showcases = [
         thumbnail: 'jobhuntmode.png',
     },
     {
-        customerName: 'Law Smart',
-        flagUrl: `${FLAG_BASE_URL}/us.svg`,
-        description: `Introducing Alyssa! Alyssa is a Law Smart chatbot specifically trained on Florida state statutes as it pertains to family law issues here in the greater Tampa Bay area.`,
-        link: 'https://taylordangelonelaw.com',
-        thumbnail: 'alyssa.png',
-    },
-    {
         customerName: 'Documend',
         flagUrl: `${FLAG_BASE_URL}/us.svg`,
         description: `Documend helps nurses document faster and more accurate; audits chart before submission and notifies healthcare workers of missed assessments or interventions.`,
@@ -52,6 +45,13 @@ const showcases = [
         description: `The ScandalsBot explains "The Solomon Scandals", a complex, character-driven novel novel by David H. Rothman, offering users an engaging narrative experience.`,
         link: 'https://www.solomonscandals.com/chatbot/',
         thumbnail: 'solomon.png',
+    },
+    {
+        customerName: 'Verai Art',
+        flagUrl: `${FLAG_BASE_URL}/us.svg`,
+        description: `Verai Art is designed for artists of all skill levels and features a powerful image generator to create stunning, unique artworks.`,
+        link: 'https://veraiart.com/create/',
+        thumbnail: 'verai.png',
     },
 ];
 
