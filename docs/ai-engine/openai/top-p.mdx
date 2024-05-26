@@ -8,53 +8,39 @@ import TopP from '/img/ai-settings/top_p.png';
 
 ## What is Top_P?
 
-An alternative to sampling with temperature is called **nucleus sampling**, in which the model only takes into account the tokens with the highest probability mass (as determined by the **top_p** parameter).
+Top_P, also known as nucleus sampling, controls the diversity of the generated text by only considering tokens with the highest probability mass.
 
-For example, a value of 0.1 means that only the tokens with the top **10% probability** mass are considered.
+- **Top_P = 0.1**: Only tokens within the top 10% probability are considered.
+- **Top_P = 0.9**: Considers tokens within the top 90% probability.
 
-OpenAI generally recommends to **use either temperature sampling or nucleus sampling, but not both.**
-
-You can adjust your **top_p** value in settings page of our plugin as shown below.
+OpenAI recommends using either temperature sampling or nucleus sampling, but not both.
 
 ## Adjusting the Top_P Setting
 
-When our plugin is installed for the first time, it comes with **0.01** as the default Top_P value.
+The default Top_P value is **0.01**. You can change it in the **AI Engine** tab.
 
-However you can change it from the **Top_P** field in the **AI Engine** tab.
+Steps to change the Top_P:
 
-Here are the steps:
-
-- First, navigate to the plugin menu on your WordPress dashboard.
-- Click on the **Settings** page and look for the **AI Engine** tab.
-- Enter a new value in the **Top_P** field.
+1. Go to the plugin menu on your WordPress dashboard.
+2. Click on the **Settings** page and find the **AI Engine** tab.
+3. Enter a new value in the **Top_P** field.
 
 <img src={TopP} width="700" />
 
-- Click on the **Save** button to save your changes.
+4. Click the **Save** button.
 
 ## Balancing Diversity in GPT Text Generation
 
-The Top_P parameter is a control for the **diversity** of the generated text produced by GPT.
+Top_P controls how many of the highest-probability words are included in the generated text.
 
-When generating text with GPT, the model produces a probability distribution over the vocabulary for each word in the generated text.
+- **Lower Top_P value**: More diverse text.
+- **Higher Top_P value**: More repetitive or "safe" text.
 
-The Top_P parameter controls how many of the **highest-probability words are selected** to be included in the generated text.
+Increasing Top_P makes the model produce more conservative text by considering only the most probable outcomes, leading to less diversity. A lower Top_P value makes the model take more risks, generating more diverse text but with a higher chance of nonsensical sentences.
 
-Specifically, **it sets a threshold such that only the words with probabilities greater than or equal to the threshold will be included.**
+### Summary
 
-The threshold is calculated by taking the Top P percent of the words with the highest probabilities.
+- **Higher Top_P**: Generates safer, more repetitive text.
+- **Lower Top_P**: Generates more diverse, riskier text.
 
-For example, if top_p=0.9, then the threshold is set to the probability of the word that is in the **90th percentile** of the words with the highest probabilities.
-
-The value of Top_P can be set between 0 and 1, where a lower value will result in more diverse generated text and a higher value will result in more repetitive or "safe" text.
-
-- **Lower value: **More diverse generated text.
-- **Higher value: **More repetitive or "safe" text.
-
-When you increase the Top_P the model will tend to produce more **conservative** text because, with the threshold of probability, most probable outcomes will be considered, thus resulting in less diversity.
-
-Also, with a higher top_p parameter, the model **may not take any risks in generating new texts** and instead, will tend to select the more **common/repetitive** words.
-
-On the other hand, with a low Top_P parameter, the model will tend to generate more diverse text and may take risks by selecting less probable words. However, this may also increase the **risk of producing nonsensical** or **nonsensical sentences.**
-
-In summary, the Top_P parameter allows to control the level of “**risk**” the model is willing to take when generating text. With a higher value, the model will tend to generate more repetitive text, and with a lower value, it will tend to generate more diverse text.
+Adjust the Top_P parameter to control the level of "risk" the model takes when generating text.

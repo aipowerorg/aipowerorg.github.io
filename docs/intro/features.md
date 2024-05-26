@@ -4,119 +4,108 @@ sidebar_position: 2
 
 # Features
 
-AI Power offers an extensive array of features and tools designed to augment your WordPress website with the most advanced AI technology. Here are some core features of AI Power:
+AI Power adds advanced AI features to your WordPress site.
+
+Here are the main features:
 
 - **Multiple AI Providers**
-    - OpenAI: GPT models
-    - Google: Gemini Pro
-    - Microsoft Azure: GPT models
-    - Meta: LLaMa
-    - and various open-source models like Mistral, Alpaca, and Yi Chat.
-- **Latest GPT Models**
-    - GPT-3.5-Turbo
-    - GPT-3.5-Turbo-16K
-    - GPT-3.5-Turbo-Instruct 
-    - GPT-4
-    - GPT-4-32K
-    - GPT-4 Turbo
-    - GPT-4 Vision
-- **Content Writer**
-    - Express Mode
-    - Custom Mode
-    - Integration with DALL-E, Pexels and Pixabay images
-    - Integration with Yoast, Math Rank, and All in One SEO
-- **SEO Optimizer**
-    - Generate high-quality meta descriptions
-    - WooCommerce integration
-    - Yoast, Math Rank, and All in One SEO integration
-    - Shorten URL
-    - Generate Title from Keywords
-    - Enforce Focus Keyword in URL
-    - Use Sentiment in Title
-    - Use Power Word in Title
-- **Auto Content Writer (AutoGPT)**
-    - Bulk Editor
-    - CSV Support
-    - Copy-Paste Feature
-    - RSS Support
-    - Google Sheets Compatibility
-    - Server-side Cron Job Integration
-    - Post Scheduling
-    - Auto Restart
-- **Social Poster**
-    - Twitter Integration
-    - Generate high-quality tweets written by GPT at defined time intervals and based on specific keywords
-    - Send a tweet after a post is published
-- **WooCommerce**
-    - Product Title Generator
-    - Product Description Generator
-    - Product Meta Generator
-    - Product Tags Generator
-    - Bulk Product Writer
-    - Token Sale
-    - Product Title Suggester
-    - Product Review Writer
-- **Image Generator**
-    - DALL-E Support
-    - Stable Diffusion
-    - Shortcodes
-- **Custom ChatGPT**
-    - Content-Aware
-    - User-Aware
-    - PDF Chat
-    - VoiceChat (Integration with ElevenLabs, Google and OpenAI)
-    - Logs
-    - Token Management
-    - Responsive Design
-    - Unlimited Bots 
-    - Moderation Features
+  - OpenAI, Microsoft Azure, Google, Anthropic, OpenRouter, Meta-Llama, Mistral, and others
+
+- **Latest and Most Powerful Models**
+  - **OpenAI**: gpt-4, gpt-4o, gpt-3.5, gpt-3.5-turbo, gpt-4-vision, gpt-3.5-turbo-16k, gpt-3.5-turbo-instruct
+  - **Microsoft Azure**: All OpenAI models are accessible via Azure integration.
+  - **Google**: Gemma 7B IT, Palm 2 Chat Bison, Palm 2 Codechat Bison, Palm 2 Chat Bison 32K, Palm 2 Codechat Bison 32K, Gemini Pro, Gemini Pro Vision, Gemini Pro 1.5, Gemini Flash 1.5
+  - **Anthropic**: Claude 3 Opus, Claude 3 Sonnet, Claude 3 Haiku, Claude 2, Claude 2.0, Claude 2.1, Claude Instant 1, Claude 3 Opus Beta, Claude 3 Sonnet Beta, Claude 3 Haiku Beta, Claude 2 Beta, Claude 2.0 Beta, Claude 2.1 Beta, Claude Instant 1 Beta
+  - **Perplexity**: Llama 3 Sonar Small 32K Chat, Llama 3 Sonar Small 32K Online, Llama 3 Sonar Large 32K Chat, Llama 3 Sonar Large 32K Online
+  - **Qwen**: Qwen 110B Chat, Qwen 32B Chat, Qwen 14B Chat, Qwen 7B Chat, Qwen 4B Chat
+  - **Meta-Llama**: Llama 3 8B Instruct, Llama 3 70B, Llama 3 Lumimaid 8B, Llama 3 8B Instruct Extended, Llama Guard 2 8B, CodeLlama 34B Instruct, Llama 3 8B, Llama 3 70B, Llama 3 Lumimaid 8B Extended
+  - **NousResearch**: Nous Capybara 7B, Nous Hermes Yi 34B, Nous Hermes 2 Mixtral 8x7B SFT, Nous Hermes 2 Mistral 7B DPO
+  - **MistralAI**: Mistral 7B Instruct, Mixtral 8x7B, Mixtral 8x7B Instruct Nitro, OpenOrca Mistral 7B
+  - **OpenRouter**: Auto, Cinematika 7B
+
+- **Chatbots**
+    - Content and user-aware
+    - PDF and VoiceChat support
+    - Logs and moderation features
+    - Unlimited bots
+
 - **AI Training**
-    - Fine Tuner
-    - Option to Upload Your Own Dataset
-    - Manual Entry
-    - Data Converter
-    - Training Module
-- **Embeddings** 
-    - Content Builder
-    - Embedding PDF Files
-    - Instant Embeddings
-    - Index Builder with Cron Job
-    - Pinecone Integration
-    - Qdrant Integration
+  - Fine tuning
+  - Custom datasets
+  - Data conversion
+
+- **Embeddings**
+  - Content builder
+  - PDF embedding
+  - Auto Scan
+
+- **Content Writer**
+  - Express Mode
+  - Custom Mode
+  - Image integration with DALL-E, Pexels, Pixabay
+  - SEO integration with Yoast, Math Rank, All in One SEO
+
+- **SEO Optimizer**
+  - Meta descriptions
+  - WooCommerce integration
+  - URL shortening
+  - Title and keyword tools
+
+- **Auto Content Writer**
+  - Bulk Editor
+  - CSV support
+  - Google Sheets compatibility
+  - Post scheduling and auto restart
+
+- **Social Poster**
+  - Twitter integration
+  - Automated tweets
+
+- **WooCommerce Tools**
+  - Product titles, descriptions, meta, and tags
+  - Bulk product writer
+
+- **Image Generator**
+  - DALL-E and Stable Diffusion support
+  - Shortcodes
+
 - **AI Assistant**
-    - Integration with Gutenberg and Classic Editor
-    - Customizable Prompts
-    - Support for up to 20 prompts
+  - Integration with Gutenberg and Classic Editor
+  - Customizable prompts
+
 - **AI Forms**
-    - Create and design your own AI forms
-    - Use built-in AI forms
-    - Shortcodes for your frontend
-    - Token management
+  - Custom AI forms
+  - Built-in forms and shortcodes
+
 - **PromptBase**
-    - Create and design your own prompts
-    - Use built-in prompts
-    - Shortcodes for your frontend
-    - Token management
+  - Custom and built-in prompts
+  - Shortcodes
+
 - **Audio Converter**
-    - Convert your speech to text with Whisper
-    - Translation tool
-    - Convert from computer, URL, and audio recording
-    - Multiple output formats
+  - Speech to text with Whisper
+  - Translation tool
+
 - **Playground**
-    - More than 100 custom prompts
+  - Over 100 custom prompts
+
 - **Model Comparison Tool**
-    - Speed comparison
-    - Cost comparison
+  - Speed and cost comparison
+
 - **Role Manager**
-    - Limit features based on user roles 
+  - Feature limits based on user roles
+
 - **Title Suggester**
-    - Generate titles for your posts, pages, and products 
+  - Title generation for posts, pages, and products
+
 - **Comment Replier**
-    - Generate replies to your comments
+  - Auto-generated comment replies
+
 - **Personalized AI Account**
-    - Create an AI Account page for your users
-    - Log management
+  - User AI account page
+  - Log management
+
 - **Token Sale with WooCommerce**
-    - Sell your tokens via WooCommerce 
-- **More than 40 Language Support**
-    - Integrated with Express Mode
+  - Sell tokens via WooCommerce
+
+- **Language Support**
+  - Over 40 languages

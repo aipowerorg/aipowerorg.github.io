@@ -8,38 +8,33 @@ import BestOf from '/img/ai-settings/best-of.png';
 
 ## What is Best Of?
 
-Best Of generates multiple **candidate** completions on the OpenAI side and returns the "**best**" ones based on the **highest log probability per token**.
-
-You can adjust your **best of** value in settings page of our plugin as shown below.
+Best Of generates multiple candidate completions on the OpenAI side and returns the "best" one based on the highest log probability per token.
 
 :::info
-
-In future versions of our plugin, we will be removing the Best Of parameter option. For the specific use case of our plugin, the Best Of value should always be set to 1 to ensure consistent and coherent text generation.
-
+In future versions of our plugin, we will remove the Best Of parameter. For our plugin, the Best Of value should always be set to 1 to ensure consistent and coherent text generation.
 :::
 
 ## Adjusting the Best Of Setting
 
-When our plugin is installed for the first time, it comes with **1** as the default Best Of value.
+The default Best Of value is **1**. You can change it in the **AI Engine** tab.
 
-However you can change it from the **Best Of** field in the **AI Engine** tab.
+Steps to change the Best Of:
 
-Here are the steps:
-
-- First, navigate to the plugin menu on your WordPress dashboard.
-- Click on the **Settings** page and look for the **AI Engine** tab.
-- Enter a new value in the **Best Of** field.
+1. Go to the plugin menu on your WordPress dashboard.
+2. Click on the **Settings** page and find the **AI Engine** tab.
+3. Enter a new value in the **Best Of** field.
 
 <img src={BestOf} width="700" />
 
-- Click on the **Save** button to save your changes.
+4. Click the **Save** button.
 
 ## Getting Optimal Responses with Best Of
 
-The "Best Of" option in GPT allows users to **generate multiple responses** to a query and select the **most appropriate** one to display.
+The "Best Of" option generates multiple responses to a query and selects the best one. The selection is based on factors like relevance, coherence, consistency, and fluency.
 
-The decision on which response is the "best" is made by the algorithm that powers GPT, which takes into account various factors such as the **relevance** of the response to the query, the **coherence and consistency of the language used**, and the overall **fluency** of the response.
+- **Multiple responses**: Generates various completions.
+- **Selects the best**: Chooses the one with the highest log probability per token.
 
-One potential use case for this option is when a user wants to generate multiple variations of a response and wants to see the one that is most relevant or well-written.
+While this feature can generate multiple variations and select the most appropriate one, its usefulness may be limited since the selection process is handled by the algorithm and is not visible in real-time.
 
-However, it's also possible that users may not find a good use of this option, as it can be difficult to anticipate how the algorithm will select the best response, and the lack of real-time display may be seen as a limitation.
+In summary, the Best Of option helps in getting the most relevant and well-written response by generating and selecting from multiple candidates.

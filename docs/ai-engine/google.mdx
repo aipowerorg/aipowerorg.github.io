@@ -26,82 +26,67 @@ To get the latest Google models, go to the **Settings - AI Engine** tab, select 
 
 ## Bring Your Own Key Model
 
-Our plugin operates on a *Bring Your Own Key* basis, which means it serves as a **bridge between your WordPress site and Google AI services.**.
+Our plugin uses a *Bring Your Own Key* model, acting as a bridge between your WordPress site and Google AI services.
 
-In order to use our plugin, you need to have an Google account and purchase API credits from Google.
-
-With this approach, users are required to provide their own Google API key to access the plugin's functionality.
-
-This ensures that users maintain full control over their API keys and guarantees access to the latest, most advanced language processing technology offered by Google.
+You need a Google account and API credits from Google to use our plugin. This approach lets you control your API keys and ensures access to the latest Google AI technology.
 
 :::info
-
-Purchasing our plugin does not provide any credit from Google.
-
-When you buy our plugin, you gain access to the [pro features](docs/intro/pro.md) of the plugin, but it does not include any API credit.
-
-You will still need to purchase credit from Google separately.
-
-You can refer to their [pricing page](https://ai.google.dev/pricing) for more details.
-
+Buying our plugin does not include Google credits. You need to purchase credits separately from Google. Check their [pricing page](https://ai.google.dev/pricing) for details.
 :::
 
 ## Generate Google API Key
 
-Generating a Google API key is a straightforward process. Here's a step-by-step guide to help you create your API key:
+Generating a Google API key is straightforward. Follow these steps:
 
-1. Open your web browser and go to https://aistudio.google.com/app/apikey page.
-2. If you are not already logged in, you will be prompted to sign in with your Google account. Enter your credentials to access the API key creation page.
-3. Once you're logged in, look for a button labeled "Create new API key in a project" and click on it.
+1. Open your web browser and go to [Google API Key](https://aistudio.google.com/app/apikey).
+2. Sign in with your Google account if prompted.
+3. Click "Create new API key in a project".
 
 <img src={api1} />
 
 <img src={api2} />
 
-4. After clicking the button, Google will automatically generate a new API key for you.
+4. Google will generate a new API key.
 
 <img src={api3} />
 
-5. Once your API key is displayed on the screen, make sure to copy it. You can use the copy button provided for ease.
-6. Save this key in a secure location. You will need this API key to integrate Google services into our plugin.
+5. Copy the API key and save it in a secure location. You will need it to integrate Google services into our plugin.
 
 ## Setting Up AI Power Plugin
 
-Setting up the AI Power plugin to use Google's AI services in your WordPress site is a user-friendly process.
-
-Here's how to get started:
+Set up the AI Power plugin to use Google AI services:
 
 - Navigate to the AI Power plugin on your WordPress dashboard.
-- First, you'll need to input your Google API key into the plugin. To do this, go to the **Settings - AI Engine** tab.
-- In the provider dropdown list, select **Google**. You will see a text field to enter your key.
-- Paste your previously generated Google API key, and then click the **Save** button.
+- Go to the **Settings - AI Engine** tab.
+- Select **Google** from the provider dropdown list.
+- Enter your Google API key and click **Save**.
 
 <img src={googleapi} />
 
-With the API key saved, you can now use the plugin with your Google api key.
+Now you can use the plugin with your Google API key.
 
 ## Safety Settings
 
-You can specify safety levels for Google models.
+Specify safety levels for Google models:
 
 - Go to `Settings` > `AI Engine` tab and select Google from the provider list.
-- Click on the "Safety settings" button to see four options: Harassment, Hate Speech, Sexually Explicit, and Dangerous Content.
+- Click on "Safety settings" to see options: Harassment, Hate Speech, Sexually Explicit, and Dangerous Content.
 
 <img src={safety}/>
 
-- Default setting is "Block None". Users can choose to block content at different levels: Block None, Block Few, Block Some, or Block Most.
-- If offensive language is used, the API response depends on the chosen safety level.
+- Default setting is "Block None". You can choose to block content at different levels: Block None, Block Few, Block Some, or Block Most.
+- The API response depends on the chosen safety level if offensive language is used.
 
 ## Limitations
 
-Before setting Google as your provider in the plugin, you should be aware of its limitations:
+Before setting Google as your provider, note its limitations:
 
-Unsupported Modules: Fine-tuning and Audio Converter.
+- **Unsupported Modules**: Fine-tuning and Audio Converter.
 
-Once you enable Google:
+When you enable Google:
 
-- **Speech to Text**: This feature will be disabled because Google's speech to text feature is not yet available on Google AI Studio. However, we plan to integrate it once it becomes available.
-- **Moderation**: Google offers its own content filtering, so our plugin will automatically disable the moderation feature.
-- **Image Generator**: Google's image generator module is not publicly available yet.
+1. **Speech to Text**: Disabled because Google's speech-to-text feature is not available on Google AI Studio yet.
+2. **Moderation**: Google's content filtering replaces the plugin's moderation feature.
+3. **Image Generator**: Google's image generator module is not publicly available yet.
 
-Most importantly, Gemini Pro is still in its early stages and is not as stable as OpenAI's GPT models. Therefore, expect to encounter incomplete responses, nonsensical replies, and a higher rate of errors with this model.
+Gemini Pro is still in early stages and not as stable as OpenAI's GPT models. Expect incomplete responses, nonsensical replies, and a higher rate of errors with this model.

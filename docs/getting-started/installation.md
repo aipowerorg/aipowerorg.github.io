@@ -2,40 +2,48 @@
 sidebar_position: 1
 ---
 
+import install from '/img/install/install.png';
+import UpgradeButton from '/img/how-to-buy.png';
+
 # Installing the Plugin
 
 ## Download the plugin
 
-This guide will help you through the process of installing the plugin, whether you're starting with our free version or jumping straight into the Pro version.
+This guide will help you install the plugin, whether you're starting with the free version or upgrading to the Pro version.
 
 ### Installing the Free Version
 
-The free version of AI Power - Complete AI Pack can be easily installed directly from your WordPress dashboard. 
+To install the free version of AI Power - Complete AI Pack:
 
-Here's how:
+1. Go to your WordPress admin dashboard.
+2. Click on **Plugins** in the sidebar menu.
+3. Click on **Add New** at the top of the Plugins page.
+4. Type **AI Power** in the search bar and press enter.
+5. Find **AI Power** in the search results and click **Install Now**.
 
-Navigate to your WordPress admin dashboard, and click on **Plugins** from the sidebar menu.
+<img src={install}/>
 
-- Click on **Add New** at the top of the Plugins page.
-- In the search bar, type **AI Power** and press enter.
-- Locate **AI Power** in the search results and click 'Install Now'.
-- After the installation is complete, click **Activate** to start using the plugin.
+6. After installation, click **Activate**.
 
-You also have the option to download the plugin directly from the WordPress plugins directory, and then upload it to your site. However, we recommend the above method for simplicity.
+You can also download the plugin from the WordPress plugins directory and upload it to your site, but the above method is easier.
 
 ### Upgrading to Pro Version
 
-If you're ready to take advantage of the full range of features offered by AI Power, you can upgrade to the Pro version in one of two ways:
+To upgrade to the Pro version, you have two options:
 
 #### Through the Free Version
-- After installing the free version as described above, go to the **AI Power** menu in your WordPress dashboard's sidebar.
-- Click on the **Upgrade** link on the left.
-- Choose the number of websites you want to license and complete the payment process.
-- Once payment is complete, you'll receive an email with instructions on how to install the Pro version.
+1. Install the free version as described above.
+2. Go to the **AI Power** menu in your WordPress dashboard's sidebar.
+3. Click on the **Upgrade** link.
+
+<img src={UpgradeButton} width="200"/>
+
+4. Choose the number of websites you want to license and complete the payment process.
+5. You'll receive an email with instructions to install the Pro version.
 
 #### Directly from Our Website
-- Visit our [website](https://aipower.org).
-- Select your desired license type and complete the purchase.
-- After completing the payment, you'll receive an email with instructions on how to install the Pro version.
+1. Visit our [website](https://aipower.org/pricing/).
+2. Select your desired license type and complete the purchase.
+3. You'll receive an email with instructions to install the Pro version.
 
-Remember to follow the instructions in the email to install the Pro version of the plugin.
+Follow the instructions in the email to install the Pro version of the plugin.

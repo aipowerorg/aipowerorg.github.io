@@ -14,135 +14,106 @@ import DeployModel from '/img/ai-settings/azure/deploy-model.png';
 
 ## Bring Your Own Key Model
 
-Our plugin operates on a *Bring Your Own Key* basis, which means it serves as a **bridge between your WordPress site and Azure OpenAI services.**.
+Our plugin uses a *Bring Your Own Key* model, acting as a bridge between your WordPress site and Azure OpenAI services.
 
-In order to use our plugin, you need to have an Azure account and purchase API credits from Azure.
-
-With this approach, users are required to provide their own Azure API key to access the plugin's functionality. This ensures that users maintain full control over their API keys and guarantees access to the latest, most advanced language processing technology offered by Azure OpenAI.
+You need an Azure account and API credits from Azure to use our plugin. This approach lets you control your API keys and ensures access to the latest Azure OpenAI technology.
 
 :::info
-
-Purchasing our plugin does not provide any credit from Azure.
-
-When you buy our plugin, you gain access to the [pro features](docs/intro/pro.md) of the plugin, but it does not include any API credit.
-
-You will still need to purchase credit from Azure separately.
-
-You can refer to their [pricing page](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/) for more details.
-
+Buying our plugin does not include Azure credits. You need to purchase credits separately from Azure. Check their [pricing page](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/) for details.
 :::
 
 ## How to Generate an Azure OpenAI API Key
 
-Azure OpenAI Service is a powerful tool integrated into the Azure ecosystem. Here's how you can get started with it:
-
 ### Registration
-Azure OpenAI Service, despite being generally available, still requires users to register. Microsoft might restrict access based on availability and other eligibility criteria.
+Azure OpenAI Service requires registration. Microsoft may restrict access based on availability and eligibility.
 
 ### Application Process
 - Visit [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).
-- Click on the `Apply Now` button.
-- Complete the form that appears. Make sure to use your work email address; personal emails like Gmail or Hotmail might decrease your chances of approval.
+- Click `Apply Now`.
+- Complete the form using your work email.
 
 ### Awaiting Approval
-After submission, Microsoft will review your request. Once approved, they will inform you about the access.
+After submission, Microsoft will review your request. Once approved, they will inform you.
 
 ### Accessing Azure Portal
 - Navigate to [Azure Portal](https://azure.microsoft.com).
-- Click on "Create a Resource".
+- Click "Create a Resource".
 
 <img src={AzureResource1} />
 
-- In the search bar, type "OpenAI". Select Azure OpenAI from the search results.
-- Click on `Create Azure OpenAI`. This action will initiate the creation of a resource for you.
+- In the search bar, type "OpenAI". Select Azure OpenAI from the results.
+- Click `Create Azure OpenAI`.
 
 <img src={AzureResource2} />
 
-- After the resource is created, select it. On the left menu, look for "Keys and Endpoint" under the Resource Management section.
+- After creating the resource, select it. On the left menu, find "Keys and Endpoint".
 
 <img src={KeysEndpoint} />
 
-- Here, you can find your Azure OpenAI API keys and endpoint. Click the copy icon to copy the API key.
+- Copy your Azure OpenAI API key and endpoint.
 
 ### Setting Up AI Power Plugin
 - Go to the AI Power plugin on your WordPress dashboard.
 - Navigate to `Settings` > `AI Engine` tab.
-- From the dropdown list, select `Azure`. This action will present four new fields:
-  1. Azure API key
-  2. Azure Endpoint
-  3. Azure Deployment
-  4. Azure Embeddings
-  
-The first three fields are mandatory, while the last one is optional (but required if you're using embeddings).
+- Select `Azure` from the dropdown list. Enter your API key, endpoint, and deployment name.
 
 <img src={PluginSettings} />
 
-- Fill in your API key and endpoint.
-- Now, navigate to [Azure AI Studio](https://oai.azure.com) and log in.
-- From the left menu, click on `Models`. This will display all the models available to deploy. 
+- Log in to [Azure AI Studio](https://oai.azure.com).
+- Click `Models` to see available models.
 
 <img src={AzureModels} />
 
 :::info
-
-Not all models can be deployed; only those marked "Yes" under "Deployable" can be.
-
+Only models marked "Yes" under "Deployable" can be deployed.
 :::
 
 ### Deploying a Model
-- From the models list, select a deployable model.
+- Select a deployable model.
 
 <img src={BaseModels} />
 
-- Click the `Deploy` button at the top.
+- Click `Deploy`.
 
 <img src={DeployModel} />
 
-- In the modal window, specify the base model, model version, and deployment name.
-- Click `Deploy`.
-- After deployment, copy the deployment name and paste it into the plugin under `Settings` > `AI Engine` tab.
-  
-For embeddings, select the `text-embedding-ada-002` model and deploy it. Once deployed, copy its name and paste it in the plugin's relevant field.
+- Specify the base model, version, and deployment name. Click `Deploy`.
+- Copy the deployment name and paste it into the plugin under `Settings` > `AI Engine`.
+
+For embeddings, deploy the `text-embedding-ada-002` model and copy its name.
 
 ### Save Settings
-Once all fields are populated, click the `Save` button in the plugin.
+Click `Save` in the plugin after entering all details.
 
 ## Limitations
 
-Before setting Azure as your provider in the plugin, you should be aware of its limitations:
+Before setting Azure as your provider, note its limitations:
 
 - **Unsupported Modules**: Fine-tuning and Audio Converter.
 
-Once you enable Azure:
-
-1. **Speech to Text**: This feature will be disabled because Whisper is not yet available on Azure. However, we plan to integrate it once it becomes available.
-2. **Moderation**: Azure offers its own content filtering, so our plugin will automatically disable the moderation feature.
-3. **Image Generator**: Azure only allows up to 5 images maximum whereas OpenAI allows up to 10 images.
+When you enable Azure:
+1. **Speech to Text**: Disabled because Whisper is not available on Azure yet.
+2. **Moderation**: Azure's content filtering replaces the plugin's moderation feature.
+3. **Image Generator**: Azure allows up to 5 images, while OpenAI allows up to 10.
 
 ## Frequently Asked Questions (FAQs)
 
 ### 1. Why is GPT-4 not in the Azure model list?
-
-**Answer**: You need to fill out another form to get on the GPT-4 waitlist. [Apply for GPT-4 waitlist here](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xURjE4QlhVUERGQ1NXOTlNT0w1NldTWjJCMSQlQCN0PWcu).
+You need to fill out another form to get on the GPT-4 waitlist. [Apply here](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xURjE4QlhVUERGQ1NXOTlNT0w1NldTWjJCMSQlQCN0PWcu).
 
 ### 2. What is the price for using Azure OpenAI Service?
-
-**Answer**: Pricing is based on a pay-as-you-go consumption model, with a price per unit for each model. For detailed pricing, check [Azure OpenAI Service pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/).
+Pricing is pay-as-you-go. For details, check [Azure OpenAI Service pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/).
 
 ### 3. What criteria does Azure use to evaluate and approve submitted use cases?
-
-**Answer**: Azure evaluates submitted use cases based on several factors, including:
-- Responsible use of the service—making sure the models are used as intended.
-- Capacity—ensuring they can onboard and serve customers adequately.
+Azure evaluates based on:
+- Responsible use of the service.
+- Capacity to onboard and serve customers.
 
 ### 4. How is Azure OpenAI Service different from the OpenAI API provided by OpenAI?
-
-**Answer**: Azure OpenAI Service combines the capabilities of OpenAI API with Azure's enterprise-level security, compliance, and regional availability.
+Azure OpenAI Service combines OpenAI API capabilities with Azure's enterprise-level security, compliance, and regional availability.
 
 ### 5. What models are available through Azure OpenAI Service?
-
-**Answer**: Azure OpenAI Service offers access to GPT-3, Codex, and Embeddings models. Dall·E 2 is available only to invited customers. [Learn more about the models here](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models).
+Azure OpenAI Service offers GPT-3, Codex, and Embeddings models. Dall·E 2 is available to invited customers. [Learn more](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models).
 
 ### 6. What is the service-level agreement (SLA) for Azure OpenAI Service?
-
-**Answer**: Azure guarantees that Azure OpenAI Service will have an uptime of at least 99.9%. For more detailed information, view the [SLA details](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1).
+Azure guarantees 99.9% uptime. For details, view the [SLA](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1).

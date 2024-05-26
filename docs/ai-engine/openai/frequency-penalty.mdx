@@ -8,71 +8,48 @@ import fp from '/img/ai-settings/fp.png';
 
 ## What is Frequency Penalty?
 
-Frequency Penalty is between **-2.0** and **2.0** and it impacts **how the model penalizes new tokens based on their existing frequency in the text**.
+Frequency Penalty ranges from **-2.0** to **2.0** and affects how the model penalizes new tokens based on their frequency in the text.
 
-Positive values will decrease the likelihood of the model **repeating the same line** verbatim by penalizing new tokens that have already been used frequently.
+- **Positive values**: Decrease the likelihood of repeating the same lines by penalizing frequent tokens.
+- **Negative values**: Increase the likelihood of repetition.
 
-The presence penalty is a one-time, additive contribution that applies to all tokens that have been sampled at least once, while the frequency penalty is a contribution that is **proportional** to **how often** a specific token has already been sampled.
-
-For the purpose of slightly reducing repetitive samples, reasonable values for the penalty coefficients are typically around **0.1 to 1**.
-
-If the goal is to significantly suppress repetition, the coefficients can be increased up to 2, but this may **negatively impact the quality of the samples**.
-
-Alternatively, using negative values can increase the likelihood of repetition.
+For reducing repetition slightly, values between **0.1 to 1** are typical. Higher values up to **2** can significantly suppress repetition but may lower sample quality.
 
 ## Adjusting the Frequency Penalty
 
-When our plugin is installed for the first time, it comes with **0.01** as the default Frequency Penalty value.
+The default Frequency Penalty is **0.01**. You can change it in the **AI Engine** tab.
 
-However you can change it from the **Frequency Penalty** field in the **AI Engine** tab.
+Steps to change the Frequency Penalty:
 
-Here are the steps:
-
-- First, navigate to the plugin menu on your WordPress dashboard.
-- Click on the **Settings** page and look for the **AI Engine** tab.
-- Enter a new value in the **Frequency Penalty** field.
+1. Go to the plugin menu on your WordPress dashboard.
+2. Click on the **Settings** page and find the **AI Engine** tab.
+3. Enter a new value in the **Frequency Penalty** field.
 
 <img src={fp} width="700" />
 
-- Click on the **Save** button to save your changes.
+4. Click the **Save** button.
 
 ## Frequency Penalty's Impact on Generated Text Diversity
 
-The frequency penalty parameter is a control for the "**diversity**" of the generated text produced by GPT.
+Frequency Penalty controls the "diversity" of the generated text.
 
-It allows to adjust the trade-off between the **likelihood** of the generated text and its **novelty**.
+- **Higher values**: Encourage novel or less common words.
+- **Lower values**: Keep text more similar to training data.
 
-GPT, like any other language model, uses **probability distribution** to predict the next word given a prompt or seed text.
+Values between 0 and 1 balance familiar and novel words. 
 
-The frequency penalty parameter modifies this distribution to make less likely words that the model has seen more frequently during its training, in this way it encourages the model to generate novel or less common words.
+- **0**: No penalty, usual behavior.
+- **1**: Generates entirely novel or random text.
 
-Frequency penalty works as a scaling factor for the log probabilities of the model's predictions.
-
-The scaling factor is calculated as: **(1 - frequency_penalty) * log_probability**, where frequency penalty is a value between 0 and 1 and log probability is the natural logarithm of the probability of the word.
-
-- When frequency penalty is set to 0, the model's behavior is the same as usual, the scaling factor is 0 and the model's predictions are not affected.
-- When frequency penalty is set to 1, the scaling factor is 1 and the **model will not generate any word that was seen during training**, resulting in entirely **novel** or **random text**.
-
-Values between 0 and 1 encourage the model to generate a balance of familiar and novel words.
-
-In general, the default value for frequency penalty is 0 and it's used when you want to generate text that is similar to the text the **model was trained on**.
-
-On the other hand, if you want the model to generate text that is more diverse and less repetitive, you might want to use a higher frequency penalty, this will encourage the model to generate less common words and will make it less likely to generate common phrases.
-
-In summary, frequency penalty parameter is a control for the trade-off between the likelihood of the generated text and its novelty.
-
-This parameter modifies the probability distribution of the model to make less likely the words that the model has seen more frequently during its training.
-
-It allows to encourage the model to generate more diverse and less repetitive text.
+Use higher values for more diverse and less repetitive text.
 
 ## Differences Between Frequency and Presence Penalty
 
-The main difference between the two parameters is the way they modify the probability distribution of the model's predictions.
+- **Frequency Penalty**: Penalizes words seen frequently during training.
+- **Presence Penalty**: Penalizes words present in the input text.
 
-Frequency penalty parameter modifies the probability distribution to make less likely words that the model has seen more frequently **during its training**. This encourages the model to generate novel or less common words. It works by scaling down the log probabilities of words that the model has seen frequently during training, making it less likely for the model to generate these common words.
+Both increase text diversity but in different ways. Depending on your needs, you might use one or both.
 
-On the other hand, the presence penalty parameter modifies the probability distribution to make less likely words that were present in the** input prompt** or **seed text**. This encourages the model to generate words that were not in the input. It works by scaling down the log probabilities of words that were present in the input, making it less likely for the model to generate these words that are already in the input.
+Frequency Penalty modifies the probability of words seen frequently during training, making them less likely. Presence Penalty modifies the probability of words in the input text, making them less likely to repeat in the output.
 
-To put it simply, frequency penalty penalizes the model for generating the common words that the model has seen a lot **during training** whereas presence penalty penalizes the model for generating the words that are present in the **input text.**
-
-Both parameters can be used to increase the diversity of the generated text and to encourage the model to generate more novel or unexpected words, but they do so in different ways and depending on the use case and specific requirements, one may be more beneficial than the other, or they can be used together to control the diversity of the generated text.
+Using both can help control the diversity and novelty of the generated text.
