@@ -9,6 +9,7 @@ import CustomPrompt from '/img/autogpt/custom-prompt.png';
 import Queue from '/img/autogpt/queue.png';
 import NewTitle from '/img/autogpt/rss/new-title.png';
 import Filtering from '/img/autogpt/filtering.png';
+import keyword from '/img/autogpt/rss/keyword.png';
 
 # RSS
 
@@ -97,6 +98,16 @@ To enable this feature:
 - In the **Settings** tab, look for the **Generate New Title** option. This option might be unchecked by default. To enable it, click on the checkbox next to it.
 
 <img src={NewTitle} width="700" />
+
+## Keyword Filtering
+
+You can enter keywords to filter specific content from RSS feeds. 
+
+For example, if you're getting feeds from BBC (https://feeds.bbci.co.uk/news/rss.xml) but only want titles containing "AI" or "ChatGPT" you can enter these keywords under the **AutoGPT - Settings** tab.
+
+Our plugin will then check the RSS feed and retrieve only the titles with those keywords.
+
+<img src={keyword} width="700" />
 
 ## Using Custom Prompt
 
