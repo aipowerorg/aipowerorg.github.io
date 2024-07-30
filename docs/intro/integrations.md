@@ -20,6 +20,7 @@ AI Power integrates with many services and platforms to provide a comprehensive 
 | **Qdrant** | Uses Qdrant for building content and providing long-term external memory for the chatbot, ensuring smooth and intelligent interactions. |
 | **WooCommerce** | Automates the writing of product descriptions, meta tags, and titles, saving time and improving consistency across your WooCommerce store. |
 | **Google Sheets** | Integrates with Google Sheets for easy data management and content creation, streamlining your workflows. |
+| **Google Custom Search** | Allows the chatbot to perform internet searches and retrieve up-to-date information using a Google Custom Search Engine. |
 | **RSS Feeds** | Supports RSS feeds, enabling automatic content generation from various sources. |
 | **ElevenLabs, Google, and OpenAI** | Integrates with ElevenLabs, Google, and OpenAI for text-to-speech functionality, offering a more engaging and accessible user experience. |
 | **Twitter** | Integrates with the official Twitter API to automate tweet creation for each post, allowing efficient and seamless sharing of your content on one of the largest social media platforms, expanding your reach and engagement. |

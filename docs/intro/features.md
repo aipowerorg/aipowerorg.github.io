@@ -25,6 +25,7 @@ Here are the main features:
 
 - **Chatbots**
     - Content and user-aware
+    - Internet browsing
     - PDF and VoiceChat support
     - Logs and moderation features
     - Unlimited bots
