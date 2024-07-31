@@ -176,6 +176,8 @@ By following these steps, you will have created a custom search engine and obtai
   </TabItem>
 </Tabs>
 
-## Notes
-- The effectiveness of responses depends on the quality of search results.
-- The internet browsing feature is available in the free plan of our plugin. However, Google provides only 100 search queries per day for free through the Custom Search JSON API. If you need more queries, you will need to sign up for billing in the Google API Console. Google charges $5 per 1000 additional queries, up to 10k queries per day.
+## Limitations
+
+- **Beta Feature**: The internet browsing feature is still in beta. We are continually learning and improving its functionality.
+- **Query Optimization**: Currently, the plugin sends user queries directly to Google without optimization. For example, if a user asks, "What is the bitcoin price now?" the exact query is sent to Google. However, if the user follows up with "What about Ethereum?" the plugin sends this follow-up query directly, which may not yield relevant results. We plan to improve this by adding query optimization using AI models to provide more relevant content.
+- **Pricing**: Google Custom Search API offers 100 free queries per day. Beyond this limit, Google charges $5 per 1000 additional queries, up to 10k queries per day. If you need more queries, you will need to sign up for billing in the Google API Console. Google charges $5 per 1000 additional queries, up to 10k queries per day.
