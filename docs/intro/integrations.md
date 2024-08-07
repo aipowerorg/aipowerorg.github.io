@@ -13,7 +13,7 @@ AI Power integrates with many services and platforms to provide a comprehensive 
 | **Google** | Supports Google's models including Gemini Pro, Gemma 7B IT, Palm 2 Chat Bison, Palm 2 Codechat Bison, Palm 2 Chat Bison 32K, Palm 2 Codechat Bison 32K, Gemini Pro Vision, Gemini Pro 1.5, and Gemini Flash 1.5. |
 | **Anthropic** | Integrates with Anthropic's models for advanced AI functionalities. |
 | **OpenRouter** | Connects with OpenRouter to provide a variety of AI models and functionalities. |
-| **Yoast SEO, All In One SEO, and Rank Math** | Generates SEO-optimized content, helping your website rank better in search engine results. |
+| **Yoast SEO, All In One SEO, Rank Math and The SEO Framework** | Generates SEO-optimized content, helping your website rank better in search engine results. |
 | **Pexels, Pixabay** | Integrates with Pexels and Pixabay for high-quality, royalty-free image sourcing, enhancing the visual appeal of your content. |
 | **DALL-E and Stable Diffusion** | Generates unique and compelling images, enriching your content with creative visuals. |
 | **Pinecone** | Uses Pinecone for building content and providing long-term external memory for the chatbot, ensuring smooth and intelligent interactions. |

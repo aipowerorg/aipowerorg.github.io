@@ -44,7 +44,7 @@ Here are the main features:
   - Express Mode
   - Custom Mode
   - Image integration with DALL-E, Pexels, Pixabay
-  - SEO integration with Yoast, Math Rank, All in One SEO
+  - SEO integration with Yoast, Math Rank, All in One SEO and The SEO Framework
 
 - **SEO Optimizer**
   - Meta descriptions
