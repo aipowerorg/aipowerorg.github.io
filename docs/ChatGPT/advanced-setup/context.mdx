@@ -18,6 +18,10 @@ import starters from '/img/chatgpt/starters/starters.png';
 import startersSetup from '/img/chatgpt/starters/starters-setup.png';
 import hideconversations from '/img/chatgpt/starters/hide-conversations.png';
 
+import revise1 from '/img/chatgpt/revise/1.png';
+import revise2 from '/img/chatgpt/revise/2.png';
+import revise3 from '/img/chatgpt/revise/3.png';
+
 # Context
 
 One of the most important aspects in the custom ChatGPT is the context.
@@ -350,3 +354,59 @@ You can disable it under the **ChatGPT - Settings** tab.
 - Font color and font size for conversation starters is taken from the main chat window's font properties.
 
 That's all! By following these steps, you can enhance user interaction on your site by providing them with immediate questions to engage with your ChatGPT bot.
+
+## Response Quality
+
+The "Revise Answer" feature allows you to update chatbot responses that didn't meet your expectations.
+
+By using this feature, you can improve the chatbot's performance and ensure more accurate answers in the future.
+
+### How It Works
+
+To use the "Revise Answer" feature, you must first enable the **"Save Logs"** option under the **Security** tab in the bot settings.
+
+This ensures that chat logs are stored, allowing you to review and revise responses.
+
+Once the "Save Logs" option is enabled, follow these steps to revise a chatbot response:
+
+1. **Access Chat Logs:**
+   - Go to **ChatGPT - Logs** tab.
+   - Browse through the logs or use the search feature to locate the conversation containing the response you want to revise and hit View button.
+
+<img src={revise1} />
+
+3. **Revise the Answer:**
+   - In the log details, you will see the option to "Revise Answer" next to each AI-generated response.
+   - Click on the "Revise Answer" link.
+   - A text area will appear, allowing you to input the improved response.
+
+<img src={revise2} />
+
+4. **Save the Revision:**
+   - After entering the revised answer, click the "Save" button.
+   - The revised answer will be stored, and the chatbot will use this response for similar queries in the future.
+
+<img src={revise3} />
+
+### Example Use Case
+
+Imagine your chatbot provided a vague or incorrect answer to a customer query. Instead of leaving it as is, you can quickly update the response:
+
+1. A user asks, "How do I install the plugin?"
+2. The chatbot might respond with a generic answer.
+3. You review the log and decide the answer should be more detailed.
+4. You click "Revise Answer" and input a step-by-step installation guide.
+5. Now, whenever a user asks a similar question, the chatbot will provide the updated guide.
+
+### Benefits
+
+- **Improved Accuracy:** Ensures the chatbot provides more accurate and helpful responses over time.
+- **Customization:** Tailor responses to better fit your audience's needs.
+- **Continuous Learning:** Helps the chatbot evolve by learning from previous interactions.
+
+### Best Practices
+
+- Regularly review chat logs to identify areas where the chatbot's responses can be improved.
+- Use the feature to refine answers based on user feedback or changes in your product or service.
+
+By effectively using the "Revise Answer" feature, you can maintain high-quality interactions between your chatbot and users, leading to better user satisfaction and engagement.
