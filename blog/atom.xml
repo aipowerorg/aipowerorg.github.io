@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://aipower.org/blog</id>
+    <title>AI Power Blog</title>
+    <updated>2024-05-16T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://aipower.org/blog"/>
+    <subtitle>AI Power Blog</subtitle>
+    <icon>https://aipower.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Safety Settings and Simplified Scheduling]]></title>
+        <id>https://aipower.org/blog/safety-settings-scheduler</id>
+        <link href="https://aipower.org/blog/safety-settings-scheduler"/>
+        <updated>2024-05-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I am excited to announce new features and improvements in the AI Power Plugin. These updates bring more control, flexibility, and ease of use to our users.]]></summary>
+        <content type="html"><![CDATA[<p>I am excited to announce new features and improvements in the AI Power Plugin. These updates bring more control, flexibility, and ease of use to our users.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="autogpt-and-embeddings-scheduler">AutoGPT and Embeddings Scheduler<a href="#autogpt-and-embeddings-scheduler" class="hash-link" aria-label="Direct link to AutoGPT and Embeddings Scheduler" title="Direct link to AutoGPT and Embeddings Scheduler">​</a></h2><p>No need to set up server-side cron jobs. Use WordPress standard cron jobs to trigger tasks.</p><ul><li>Go to <code>AutoGPT</code> &gt; <code>Queue</code> tab or <code>AI Training</code> &gt; <code>AutoScan</code> tab.</li><li>Select a schedule from the dropdown, ranging from 5 minutes to 1 week.</li></ul><img loading="lazy" src="/assets/images/scheduler-d8e4b737cc02218a1821e9fa064ad912.png" class="img_ev3q"><ul><li>For tasks needing more frequent execution, users can set up server-side cron jobs.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="added-safety-settings-for-google-models">Added Safety Settings for Google Models<a href="#added-safety-settings-for-google-models" class="hash-link" aria-label="Direct link to Added Safety Settings for Google Models" title="Direct link to Added Safety Settings for Google Models">​</a></h2><p>Users can now specify safety levels for Google models.</p><ul><li>Go to <code>Settings</code> &gt; <code>AI Engine</code> tab and select Google from the provider list.</li><li>Click on the "Safety settings" button to see four options: Harassment, Hate Speech, Sexually Explicit, and Dangerous Content.</li></ul><img loading="lazy" src="/assets/images/safety-30ded0f4eca9b223728dcfa8da8e5625.png" class="img_ev3q"><ul><li>Default setting is "Block None". Users can choose to block content at different levels: Block None, Block Few, Block Some, or Block Most.</li><li>If offensive language is used, the API response depends on the chosen safety level.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="refactored-and-standardized-api-cost-pricing">Refactored and Standardized API Cost Pricing<a href="#refactored-and-standardized-api-cost-pricing" class="hash-link" aria-label="Direct link to Refactored and Standardized API Cost Pricing" title="Direct link to Refactored and Standardized API Cost Pricing">​</a></h2><p>Backend improvements for easier process management.</p><ul><li>Standardized API cost pricing and model retrieving.</li><li>This change is mostly code cleanup and not visible to users.</li></ul>]]></content>
+        <author>
+            <name>Senol Sahin</name>
+            <uri>https://twitter.com/</uri>
+        </author>
+        <category label="autogpt" term="autogpt"/>
+        <category label="google" term="google"/>
+        <category label="safety" term="safety"/>
+    </entry>
+</feed>

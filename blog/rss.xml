@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>AI Power Blog</title>
+        <link>https://aipower.org/blog</link>
+        <description>AI Power Blog</description>
+        <lastBuildDate>Thu, 16 May 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Safety Settings and Simplified Scheduling]]></title>
+            <link>https://aipower.org/blog/safety-settings-scheduler</link>
+            <guid>https://aipower.org/blog/safety-settings-scheduler</guid>
+            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[I am excited to announce new features and improvements in the AI Power Plugin. These updates bring more control, flexibility, and ease of use to our users.]]></description>
+            <content:encoded><![CDATA[<p>I am excited to announce new features and improvements in the AI Power Plugin. These updates bring more control, flexibility, and ease of use to our users.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="autogpt-and-embeddings-scheduler">AutoGPT and Embeddings Scheduler<a href="#autogpt-and-embeddings-scheduler" class="hash-link" aria-label="Direct link to AutoGPT and Embeddings Scheduler" title="Direct link to AutoGPT and Embeddings Scheduler">​</a></h2><p>No need to set up server-side cron jobs. Use WordPress standard cron jobs to trigger tasks.</p><ul><li>Go to <code>AutoGPT</code> &gt; <code>Queue</code> tab or <code>AI Training</code> &gt; <code>AutoScan</code> tab.</li><li>Select a schedule from the dropdown, ranging from 5 minutes to 1 week.</li></ul><img loading="lazy" src="/assets/images/scheduler-d8e4b737cc02218a1821e9fa064ad912.png" class="img_ev3q"><ul><li>For tasks needing more frequent execution, users can set up server-side cron jobs.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="added-safety-settings-for-google-models">Added Safety Settings for Google Models<a href="#added-safety-settings-for-google-models" class="hash-link" aria-label="Direct link to Added Safety Settings for Google Models" title="Direct link to Added Safety Settings for Google Models">​</a></h2><p>Users can now specify safety levels for Google models.</p><ul><li>Go to <code>Settings</code> &gt; <code>AI Engine</code> tab and select Google from the provider list.</li><li>Click on the "Safety settings" button to see four options: Harassment, Hate Speech, Sexually Explicit, and Dangerous Content.</li></ul><img loading="lazy" src="/assets/images/safety-30ded0f4eca9b223728dcfa8da8e5625.png" class="img_ev3q"><ul><li>Default setting is "Block None". Users can choose to block content at different levels: Block None, Block Few, Block Some, or Block Most.</li><li>If offensive language is used, the API response depends on the chosen safety level.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="refactored-and-standardized-api-cost-pricing">Refactored and Standardized API Cost Pricing<a href="#refactored-and-standardized-api-cost-pricing" class="hash-link" aria-label="Direct link to Refactored and Standardized API Cost Pricing" title="Direct link to Refactored and Standardized API Cost Pricing">​</a></h2><p>Backend improvements for easier process management.</p><ul><li>Standardized API cost pricing and model retrieving.</li><li>This change is mostly code cleanup and not visible to users.</li></ul>]]></content:encoded>
+            <category>autogpt</category>
+            <category>google</category>
+            <category>safety</category>
+        </item>
+    </channel>
+</rss>
