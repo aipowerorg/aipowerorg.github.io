@@ -25,6 +25,8 @@ import revise3 from '/img/chatgpt/revise/3.png';
 
 import confidence from '/img/chatgpt/revise/confidence.png';
 
+import indices from '/img/chatgpt/indexes.png';
+
 # Context
 
 One of the most important aspects in the custom ChatGPT is the context.
@@ -254,15 +256,17 @@ Upon enabling the Embeddings feature, a dropdown menu labeled **Vector DB** beco
 
 This feature allows you to choose different vector dbs for different bots.
 
-The indices are the embeddings of your website content stored in the Pinecone vector database.
+#### Index / Collection Selection
 
-:::tip
+Indexes represent the embeddings of your website's content, stored in the Pinecone vector database. In Qdrant, these are referred to as Collections.
 
-Choosing different indices for different chatbots can be immensely beneficial, especially when managing multiple chatbots across various pages or websites with distinct content or purposes.
+After setting up your Pinecone or Qdrant integration, you can sync your indexes/collections. All available indexes/collections will be listed in the Index/Collection dropdown menu.
 
-:::
+<img src={indices} width="300" />
 
-You can manage and sync your indices via the **AI Training - Settings** tab.
+Using different indexes for various chatbots is highly advantageous, especially when managing multiple chatbots across different pages or websites with unique content or objectives.
+
+You can manage and sync your indexes/collections through the AI Training - Settings tab.
 
 <img src={IndexSync} width="700" />
 
@@ -276,9 +280,9 @@ For example, if 1 is selected, the chatbot will retrieve 1 nearest answer from t
 
 The **Confidence Score Threshold** option lets you set a minimum confidence level for the retrieved answers. 
 
-You can choose a threshold between 1 and 100, with the default set at 50. 
+You can choose a threshold between 1 and 100, with the default set at 20. 
 
-If the confidence score of an answer is below 50, it will not be used by the chatbot. 
+If the confidence score of an answer is below 20, it will not be used by the chatbot. 
 
 You can experiment with this setting to find the threshold that works best for your needs. 
 
