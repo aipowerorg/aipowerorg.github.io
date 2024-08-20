@@ -5,6 +5,7 @@ sidebar_position: 5
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import MemoryShortcode from '/img/chatgpt/memory-shortcode.png';
+import MemoryShortcodeLimit from '/img/chatgpt/memory-shortcode-limit.png';
 import MemoryWidget from '/img/chatgpt/memory-widget.png';
 import UserAware from '/img/chatgpt/user-aware.png';
 import UserAwareSample from '/img/chatgpt/user-aware-sample.png';
@@ -32,50 +33,60 @@ Providing a relevant context to your chatbot is key for it to make sense of the 
 
 Let's explore the various aspects of context and how you can customize them for your chatbot.
 
-## Conversation Memory
+## Custom Instructions
 
-Conversation Memory is a feature that significantly contributes to making the interaction with a chatbot more engaging and meaningful.
+You can give custom instructions to the chatbot which can be used alongside the Excerpt or Embeddings options.
 
-By recalling the context of the conversation, the chatbot can provide responses that are more personalized and relevant to the ongoing dialogue.
+:::tip
 
-### Remember Conversation
+Check out our [Chatbot Prompt Library](docs/prompt-guide/chatbot-prompts.mdx)
 
-By enabling the **Remember Conversation** option, the chatbot is granted the ability to remember the dialogue history.
+:::
 
-This means, the chatbot can continue the conversation from where it last left off, even if there was an interruption or if the user returns after a break.
+Remember, adjusting these settings will directly influence the chatbot's understanding of the user's intent and its ability to generate relevant responses.
 
-The functionality behind this feature is made possible by utilizing **browser cookies** to store the user's interaction with the chatbot.
+It's recommended to experiment with different configurations to find what works best for your use case.
 
-When a user engages with the chatbot, their conversation is saved in the browser cookies.
+The Custom Instructions feature allows you to supplement the chatbot's understanding of the conversation with predefined or customized context.
 
-Then, each time a user asks something new, our plugin bundles all previous conversations from these cookies and sends them in the prompt section to the OpenAI API.
+This could be anything from the specific role the bot is playing, the nature of the website it's on, or the type of queries it's expected to handle.
 
-This allows the chatbot to understand the context of the conversation and provide coherent responses.
+For instance, if your website primarily deals with sales, the chatbot can be given additional context related to sales support.
 
-### Remember Conversation Up To
+This way, the chatbot not only knows it's interacting with a user but also understands that it's part of a sales support team on a specific website.
 
-The **Remember Conversation Up To** feature allows you to set the limit on the number of messages that the chatbot will remember from the conversation history.
+This contextual awareness allows it to tailor its responses more precisely to the user's needs.
 
-The default value is set at 10, but it can be adjusted to any value between 3 and 50 based on your requirements.
+The importance of the Custom Instructions feature lies in its ability to significantly boost the chatbot's performance.
 
-For example, if you set **Remember Conversation Up To** to 10, it means that up to 10 conversations will be saved.
+By providing relevant instructions, you can guide the AI to deliver highly personalized and situation-appropriate responses.
 
-Once that number is reached, the first conversation will be deleted from the cookies to maintain the maximum at 10 all the time.
+Whether you're using ready-to-use templates or crafting your own unique contexts, this feature gives you the power to shape the chatbot's interactions as per your requirements.
 
-### Configuring Conversation Memory
+For example, we're using the same chatbot on our website and have named our assistant 'Lisa'. We've instructed her not to respond to any questions unless they pertain to our plugin.
 
-This guide will walk you through the steps to configure the **Remember Conversation** and **Remember Conversation Up To** features in your chatbot.
+Here's our custom instructions for Lisa:
+
+*"You are a helpful AI assistant. Your name is Lisa. Your primary purpose is to provide accurate, relevant, and helpful information exclusively about the AI Power WordPress plugin. If a user asks a question or initiates a discussion that is not directly related to the plugin or its features, functionalities, and usage, do not provide an answer or engage in the conversation. Instead, politely redirect the users focus back to the AI Power plugin and its related content. Your expertise should be limited to the websites content, and you must not provide any information or suggestions on topics that fall outside the scope of the AI Power plugin."*
+
+You can craft your own instructions based on your specific needs.
+
+### Configuring Custom Instructions
+
+This guide will assist you in setting up the **Custom Instructions** feature in your chatbot.
 
 <Tabs>
   <TabItem value="shortcode" label="Shortcode" default>
     <ul>
         <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
-        <img src={MemoryShortcode} />
-        <li>Look for the <b>Remember Conversation</b> and <b>Remember Conversation Up To</b> options:</li>
+        <li>Click on the <b>Settings</b> tab.</li>
+        <img src={AdditionalContext} width="300" />
+        <li>Look for the <b>Custom Instructions</b> option:</li>
             <ul>
-                <li><b>Remember Conversation</b>: Toggle this switch to enable the chatbot to remember the conversation history.</li>
-                <li><b>Remember Conversation Up To</b>: Set the number of messages that the chatbot will remember from the conversation history. The default value is 10, but you can set it to any value between 3 and 50 based on your requirements.</li>
+                <li><b>Custom Instructions</b>: Toggle this switch to enable custom instructions setting. Upon enabling, a dropdown menu labeled <b>Template</b> and a textarea field will be activated.</li>
+                <li>The "Template" dropdown menu contains pre-defined contexts for various scenarios, such as Sales Support, Customer Support, Product Support etc.. When a template is selected, its corresponding context is populated in the textarea field. You can then modify this context as per your requirements.</li>
+                <li>For instance, if "Sales Support" is selected, the following context will be appended into the textarea: <i>"As an adept and proactive sales support assistant, you are an essential part of the [sitename] team. Your expertise in sales processes, combined with exceptional interpersonal skills, enables you to facilitate seamless customer interactions, foster strong relationships, and drive business growth. Dedicate yourself to providing unparalleled support and contributing to the overall success of [sitename]."</i></li>
+                <li>You can add dynamic variables into the context using shortcodes: [sitename], [siteurl], [domain], and [date].</li>
             </ul>
         <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
@@ -83,13 +94,68 @@ This guide will walk you through the steps to configure the **Remember Conversat
 <TabItem value="widget" label="Widget">
     <ul>
         <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
-        <img src={MemoryWidget} />
-        <li>Look for the <b>Remember Conversation</b> and <b>Remember Conversation Up To</b> options:</li>
-             <ul>
-                <li><b>Remember Conversation</b>: Toggle this switch to enable the chatbot to remember the conversation history.</li>
-                <li><b>Remember Conversation Up To</b>: Set the number of messages that the chatbot will remember from the conversation history. The default value is 10, but you can set it to any value between 3 and 50 based on your requirements.</li>
+        <li>Click on the <b>Settings</b> tab.</li>
+        <img src={AdditionalContext} width="300" />
+        <li>Look for the <b>Additional Context</b> option:</li>
+            <ul>
+                <li><b>Additional Context</b>: Toggle this switch to enable additional context setting. Upon enabling, a dropdown menu labeled <b>Template</b> and a textarea field will be activated.</li>
+                <li>The "Template" dropdown menu contains pre-defined contexts for various scenarios, such as Sales Support, Customer Support, Product Support etc.. When a template is selected, its corresponding context is populated in the textarea field. You can then modify this context as per your requirements.</li>
+                <li>For instance, if "Sales Support" is selected, the following context will be appended into the textarea: <i>"As an adept and proactive sales support assistant, you are an essential part of the [sitename] team. Your expertise in sales processes, combined with exceptional interpersonal skills, enables you to facilitate seamless customer interactions, foster strong relationships, and drive business growth. Dedicate yourself to providing unparalleled support and contributing to the overall success of [sitename]."</i></li>
+                <li>You can add dynamic variables into the context using shortcodes: [sitename], [siteurl], [domain], and [date].</li>
             </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+</TabItem>
+</Tabs>
+
+## Conversation Memory
+
+Conversation Memory helps make interactions with the chatbot more engaging and meaningful by recalling the context of previous conversations. This allows the chatbot to provide more personalized and relevant responses.
+
+When you enable the Remember Conversation option, the chatbot can remember the dialogue history. This means the chatbot can pick up the conversation where it left off, even after an interruption or if the user returns later.
+
+Conversation history is stored in the browser's local storage. 
+
+When a user interacts with the chatbot, their conversation is saved locally. Each time a new question is asked, the plugin retrieves previous conversations from local storage and sends them in the prompt to the OpenAI API. This helps the chatbot understand the context and respond coherently.
+
+### Memory Limit
+
+Limit feature lets you set the number of messages the chatbot will remember from the conversation history. 
+
+The default is 10, but it can be adjusted between 3 and 50 based on your needs.
+
+For example, if set to 10, up to 10 messages will be saved. Once the limit is reached, the oldest conversation will be deleted to keep the total at 10.
+
+### Configuring Memory
+
+This guide will walk you through the steps to configure the **Memory** feature in your chatbot.
+
+<Tabs>
+  <TabItem value="shortcode" label="Shortcode" default>
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Click on the <b>Knowledge</b> tab.</li>
+        <img src={MemoryShortcode} width="600" />
+        <li>Look for the <b>Memory</b> and <b>Limit</b> options:</li>
+            <ul>
+                <li><b>Memory</b>: Toggle this switch to enable the chatbot to remember the conversation history.</li>
+                <li><b>Limit</b>: Scroll down and click on "Show Additional Options". Set the number of messages that the chatbot will remember from the conversation history. The default value is 10, but you can set it to any value between 3 and 50 based on your requirements.</li>
+            </ul>
+        <img src={MemoryShortcodeLimit} width="300" />
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+    </TabItem>
+<TabItem value="widget" label="Widget">
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Click on the <b>Knowledge</b> tab.</li>
+        <img src={MemoryShortcode} width="600" />
+        <li>Look for the <b>Memory</b> and <b>Limit</b> options:</li>
+            <ul>
+                <li><b>Memory</b>: Toggle this switch to enable the chatbot to remember the conversation history.</li>
+                <li><b>Limit</b>: Set the number of messages that the chatbot will remember from the conversation history. The default value is 10, but you can set it to any value between 3 and 50 based on your requirements.</li>
+            </ul>
+        <img src={MemoryShortcodeLimit} width="300" />
         <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
 </TabItem>
@@ -103,7 +169,39 @@ There are three options for this:
 
 - Excerpt
 - Embeddings
-- Additional Context
+- Instructions
+- Internet Browsing
+
+This guide will assist you in setting up the **Content Awareness** feature in your chatbot.
+
+<Tabs>
+  <TabItem value="shortcode" label="Shortcode" default>
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Click on the <b>Knowledge</b> tab.</li>
+        <img src={ContentAware} width="300" />
+        <li>Look for the <b>Content Aware</b> option:</li>
+            <ul>
+                <li><b>Content Aware</b>: Toggle this switch to enable the chatbot to retrieve and understand the content of your website. This allows the chatbot to generate more relevant and informed responses.</li>
+                <li>Once Content Awareness is set to "Yes", two methods will be activated, <b>Use Excerpt</b> and <b>Embeddings</b>. By default, <b>Use Excerpt</b> will be enabled. You can select either of these methods, but not both at the same time.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+    </TabItem>
+<TabItem value="widget" label="Widget">
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Click on the <b>Knowledge</b> tab.</li>
+        <img src={ContentAware} width="300" />
+        <li>Look for the <b>Content Aware</b> option:</li>
+            <ul>
+                <li><b>Content Aware</b>: Toggle this switch to enable the chatbot to retrieve and understand the content of your website. This allows the chatbot to generate more relevant and informed responses.</li>
+                <li>Once Content Awareness is set to "Yes", two methods will be activated, <b>Use Excerpt</b> and <b>Embeddings</b>. By default, <b>Use Excerpt</b> will be enabled. You can select either of these methods, but not both at the same time.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+</TabItem>
+</Tabs>
 
 ### Excerpt
 
@@ -146,7 +244,7 @@ We offer two different options to select: **Pinecone** or **Qdrant**.
 For Embeddings, we offer two different methods:
 
 - **Embeddings + Completions**: This method uses the Embeddings to find the most relevant page and then uses completions to generate a response. This is the **recommended** option for chat bots and widgets.
-- **Embeddings Only**: This method uses the Embeddings to find the most relevant page and then uses the content of the page to generate a response. It does not use Davinci or any other GPT model for generating a response. For the "Embeddings Only" method, you can set the number of nearest answers that the chatbot will return. The default is 5, but it can be set to a value between 1 and 5.
+- **Embeddings Only**: This method uses the Embeddings to find the most relevant page and then uses the content of the page to generate a response. It does not use any ai model for generating a response. 
 
 #### Vector DB Selection
 
@@ -164,117 +262,28 @@ Choosing different indices for different chatbots can be immensely beneficial, e
 
 :::
 
-You can manage and sync your indices via the **Embeddings - Settings** tab.
+You can manage and sync your indices via the **AI Training - Settings** tab.
 
 <img src={IndexSync} width="700" />
 
-### Configuring Content Awareness
+#### Limit
 
-This guide will assist you in setting up the **Content Awareness** feature in your chatbot.
+The **Limit** option allows you to select how many of the nearest or most relevant answers to retrieve from the vector database. It's a dropdown with a default value of 1, and the maximum is 5. 
 
-<Tabs>
-  <TabItem value="shortcode" label="Shortcode" default>
-    <ul>
-        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
-        <img src={ContentAware} width="700" />
-        <li>Look for the <b>Content Aware</b> option:</li>
-            <ul>
-                <li><b>Content Aware</b>: Toggle this switch to enable the chatbot to retrieve and understand the content of your website. This allows the chatbot to generate more relevant and informed responses.</li>
-                <li>Once Content Awareness is set to "Yes", two methods will be activated, <b>Use Excerpt</b> and <b>Embeddings</b>. By default, <b>Use Excerpt</b> will be enabled. You can select either of these methods, but not both at the same time.</li>
-            </ul>
-        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
-    </ul>
-    </TabItem>
-<TabItem value="widget" label="Widget">
-    <ul>
-        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
-        <img src={ContentAwareWidget} width="700" />
-        <li>Look for the <b>Content Aware</b> option:</li>
-            <ul>
-                <li><b>Content Aware</b>: Toggle this switch to enable the chatbot to retrieve and understand the content of your website. This allows the chatbot to generate more relevant and informed responses.</li>
-                <li>Once Content Awareness is set to "Yes", two methods will be activated, <b>Use Excerpt</b> and <b>Embeddings</b>. By default, <b>Use Excerpt</b> will be enabled. You can select either of these methods, but not both at the same time.</li>
-            </ul>
-        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
-    </ul>
-</TabItem>
-</Tabs>
+For example, if 1 is selected, the chatbot will retrieve 1 nearest answer from the vector database and feed it to the bot. If 5 is selected, it will retrieve the 5 nearest answers and feed them to the bot, providing a broader context for generating responses.
 
-## Additional Context
+#### Confidence Score Threshold
 
-You can add additional context to the chatbot which can be used alongside the Excerpt or Embeddings options.
+The **Confidence Score Threshold** option lets you set a minimum confidence level for the retrieved answers. 
 
-:::tip
+You can choose a threshold between 1 and 100, with the default set at 50. 
 
-Check out our [Chatbot Prompt Library](docs/prompt-guide/chatbot-prompts.mdx)
+If the confidence score of an answer is below 50, it will not be used by the chatbot. 
 
-:::
+You can experiment with this setting to find the threshold that works best for your needs. 
 
-Remember, adjusting these settings will directly influence the chatbot's understanding of the user's intent and its ability to generate relevant responses.
+Additionally, you can use the Revise Answer feature in the logs to revise any poor results and fine-tune the responses.
 
-It's recommended to experiment with different configurations to find what works best for your use case.
-
-The Additional Context feature allows you to supplement the chatbot's understanding of the conversation with predefined or customized context.
-
-This could be anything from the specific role the bot is playing, the nature of the website it's on, or the type of queries it's expected to handle.
-
-For instance, if your website primarily deals with sales, the chatbot can be given additional context related to sales support.
-
-This way, the chatbot not only knows it's interacting with a user but also understands that it's part of a sales support team on a specific website.
-
-This contextual awareness allows it to tailor its responses more precisely to the user's needs.
-
-The importance of the Additional Context feature lies in its ability to significantly boost the chatbot's performance.
-
-By providing relevant additional context, you can guide the AI to deliver highly personalized and situation-appropriate responses.
-
-Whether you're using ready-to-use templates or crafting your own unique contexts, this feature gives you the power to shape the chatbot's interactions as per your requirements.
-
-For example, we're using the same chatbot on our website and have named our assistant 'Lisa'. We've instructed her not to respond to any questions unless they pertain to our plugin.
-
-Here's our additional context for Lisa:
-
-*"You are a helpful AI assistant. Your name is Lisa. Your primary purpose is to provide accurate, relevant, and helpful information exclusively about the GPT AI Power WordPress plugin. If a user asks a question or initiates a discussion that is not directly related to the plugin or its features, functionalities, and usage, do not provide an answer or engage in the conversation. Instead, politely redirect the users focus back to the GPT AI Power plugin and its related content. Your expertise should be limited to the websites content, and you must not provide any information or suggestions on topics that fall outside the scope of the GPT AI Power plugin."*
-
-You can craft your own instructions based on your specific needs.
-
-### Configuring Additional Context
-
-This guide will assist you in setting up the **Additional Context** feature in your chatbot.
-
-<Tabs>
-  <TabItem value="shortcode" label="Shortcode" default>
-    <ul>
-        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
-        <img src={AdditionalContext} width="300" />
-        <li>Look for the <b>Additional Context</b> option:</li>
-            <ul>
-                <li><b>Additional Context</b>: Toggle this switch to enable additional context setting. Upon enabling, a dropdown menu labeled <b>Template</b> and a textarea field will be activated.</li>
-                <li>The "Template" dropdown menu contains pre-defined contexts for various scenarios, such as Sales Support, Customer Support, Product Support etc.. When a template is selected, its corresponding context is populated in the textarea field. You can then modify this context as per your requirements.</li>
-                <li>For instance, if "Sales Support" is selected, the following context will be appended into the textarea: <i>"As an adept and proactive sales support assistant, you are an essential part of the [sitename] team. Your expertise in sales processes, combined with exceptional interpersonal skills, enables you to facilitate seamless customer interactions, foster strong relationships, and drive business growth. Dedicate yourself to providing unparalleled support and contributing to the overall success of [sitename]."</i></li>
-                <li>You can add dynamic variables into the context using shortcodes: [sitename], [siteurl], [domain], and [date].</li>
-            </ul>
-        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
-    </ul>
-    </TabItem>
-<TabItem value="widget" label="Widget">
-    <ul>
-        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
-         <img src={AdditionalContext} width="300" />
-        <li>Look for the <b>Additional Context</b> option:</li>
-            <ul>
-                <li><b>Additional Context</b>: Toggle this switch to enable additional context setting. Upon enabling, a dropdown menu labeled <b>Template</b> and a textarea field will be activated.</li>
-                <li>The "Template" dropdown menu contains pre-defined contexts for various scenarios, such as Sales Support, Customer Support, Product Support etc.. When a template is selected, its corresponding context is populated in the textarea field. You can then modify this context as per your requirements.</li>
-                <li>For instance, if "Sales Support" is selected, the following context will be appended into the textarea: <i>"As an adept and proactive sales support assistant, you are an essential part of the [sitename] team. Your expertise in sales processes, combined with exceptional interpersonal skills, enables you to facilitate seamless customer interactions, foster strong relationships, and drive business growth. Dedicate yourself to providing unparalleled support and contributing to the overall success of [sitename]."</i></li>
-                <li>You can add dynamic variables into the context using shortcodes: [sitename], [siteurl], [domain], and [date].</li>
-            </ul>
-        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
-    </ul>
-</TabItem>
-</Tabs>
 
 ## User Aware
 
@@ -300,18 +309,18 @@ Here's how to adjust the User Aware settings of your chatbot:
   <TabItem value="shortcode" label="Shortcode" default>
     <ul>
         <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
+        <li>Click on the <b>Knowledge</b> tab.</li>
         <img src={UserAware} width="300" />
-        <li>Enable or disable the User Aware option as necessary:</li>
+        <li>Enable or disable the User Aware option as necessary.</li>
         <li>After adjusting the setting, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
     </TabItem>
 <TabItem value="widget" label="Widget">
     <ul>
         <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
-        <li>Click on the <b>Context</b> tab located on the right side of your screen.</li>
+        <li>Click on the <b>Knowledge</b> tab.</li>
         <img src={UserAware} width="300" />
-        <li>Enable or disable the User Aware option as necessary:</li>
+        <li>Enable or disable the User Aware option as necessary.</li>
         <li>After adjusting the setting, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
 </TabItem>
