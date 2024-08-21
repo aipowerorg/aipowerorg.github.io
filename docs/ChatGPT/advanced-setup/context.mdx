@@ -24,8 +24,19 @@ import revise2 from '/img/chatgpt/revise/2.png';
 import revise3 from '/img/chatgpt/revise/3.png';
 
 import confidence from '/img/chatgpt/revise/confidence.png';
+import confidence2 from '/img/chatgpt/revise/conf2.png';
 
 import indices from '/img/chatgpt/indexes.png';
+
+import con1 from '/img/chatgpt/confidence/1-min.png';
+import con2 from '/img/chatgpt/confidence/2-min.png';
+import con3 from '/img/chatgpt/confidence/3-min.png';
+import con4 from '/img/chatgpt/confidence/4-min.png';
+import con5 from '/img/chatgpt/confidence/5-min.png';
+import con7 from '/img/chatgpt/confidence/7-min.png';
+import con8 from '/img/chatgpt/confidence/8-min.png';
+import con9 from '/img/chatgpt/confidence/9-min.png';
+import con10 from '/img/chatgpt/confidence/10-min.png';
 
 # Context
 
@@ -280,14 +291,209 @@ For example, if 1 is selected, the chatbot will retrieve 1 nearest answer from t
 
 The **Confidence Score Threshold** option lets you set a minimum confidence level for the retrieved answers. 
 
-You can choose a threshold between 1 and 100, with the default set at 20. 
+You can choose a threshold between 1 and 100, with the default set at 20.
+
+<img src={confidence2} width="300" />
 
 If the confidence score of an answer is below 20, it will not be used by the chatbot. 
 
-You can experiment with this setting to find the threshold that works best for your needs. 
+You can experiment with this setting to find the threshold that works best for your needs.
+
+:::tip
+
+Based on our tests, the `text-embedding-ada-002` model provides the best results when using embeddings.
+
+:::
 
 Additionally, you can use the Revise Answer feature in the logs to revise any poor results and fine-tune the responses.
 
+**How Confidence Score Works**
+
+Whenever a user asks a question to the bot, our plugin sends that query to the embedding API to generate a vector representation. This vector is then sent to Pinecone or Qdrant to retrieve the nearest results from the vector database.
+
+The number of results retrieved depends on the **Limit** setting:
+- If the limit is set to 1, the plugin will retrieve only the single nearest result.
+- If the limit is set to 5, it will retrieve the top 5 nearest results.
+
+Each retrieved result has a score ranging from 0 to 1. This score indicates how closely the result matches the query. The **Confidence Score Threshold** determines which results will be fed to the bot:
+- If the threshold is set to 50%, only results with a score above 0.5 will be used as context for the bot.
+- Any results with a score below 0.5 will not be fed to the bot.
+
+#### Example for Better Understanding
+
+Let's walk through an example. 
+
+Suppose we're using Qdrant as our vector database with a 1536 cosine index and the embedding model is `text-embedding-ada-002`. 
+
+The **Limit** is set to 5, meaning the plugin will retrieve 5 results from the vector database. 
+
+We've added the following records to the vector database:
+
+1. Senol Sahin loves coding.
+2. Senol Sahin has 1 kid.
+3. Senol Sahin is the lead developer of the AI Power plugin.
+4. Senol Sahin is from Istanbul, Turkey.
+5. Senol Sahin is 32 years old.
+
+The **Confidence Score Threshold** is set to 70. This means that only results with a score above 0.7 will be used as context.
+
+Now, let's ask the bot: **"Where is Senol Sahin from?"**
+
+<img src={con1} />
+
+The bot correctly answers that he is from Istanbul. 
+
+When we check the logs, we see that the confidence score for the retrieved data is strong, with a score of 88.
+
+<img src={con2} />
+
+Since our threshold is 70, all 5 results are sent to the bot, as they all have scores above 0.7:
+
+```json
+{
+  "status": "success",
+  "data": "senol sahin is from istanbul, turkey.\nsenol sahin is 32 years old.\nsenol sahin has 1 kid.\nsenol sahin loves coding.\nsenol sahin is the lead developer of ai power plugin.",
+  "tokens": 7,
+  "matches": [
+    {
+      "id": 4224,
+      "score": "0.8824"
+    },
+    {
+      "id": 4223,
+      "score": "0.8219"
+    },
+    {
+      "id": 4227,
+      "score": "0.8169"
+    },
+    {
+      "id": 4228,
+      "score": "0.7835"
+    },
+    {
+      "id": 4225,
+      "score": "0.7696"
+    }
+  ]
+}
+```
+
+Now, let's increase our threshold to 85 and ask the same question again.
+
+<img src={con4} />
+
+The bot still gives the correct answer, but this time, the confidence score is higher: Confidence Score: 92% Highly Confident! 
+
+<img src={con5} />
+
+Checking the context, we see that only 3 results were fed to the bot because the other 2 were below the 85% threshold.
+
+<img src={con3} />
+
+Next, let's ask the bot something not related to the data in our vector database, like simply saying "hi." 
+
+With the confidence threshold still set to 85, the bot greets us normally.
+
+<img src={con7} />
+
+When we check the logs, we notice there's no confidence score, and no context was fed to the bot from the vector database.
+
+<img src={con8} />
+
+Why? 
+
+Because all the results for the query "hi" were below the 85% score, so the bot wasn't fed any irrelevant data.
+
+```json
+{
+  "status": "success",
+  "data": "",
+  "tokens": 1,
+  "matches": [
+    
+  ]
+}
+```
+
+Finally, let's set the confidence threshold to the lowest value, 1, and say "hi" to the bot again.
+
+<img src={con10} />
+
+This time, when we check the logs, we see that the bot was fed all 5 records from the database because they all had scores higher than 1 for the query "hi." 
+
+However, the results were irrelevant, highlighting the importance of setting an appropriate confidence threshold.
+
+**Conclusion**
+
+The **Confidence Score Threshold** and **Limit** settings are powerful tools that allow you to fine-tune how your chatbot retrieves and uses data from the vector database. By adjusting these settings, you can control the relevance and accuracy of the bot's responses.
+
+**Benefits:**
+- **Improved Relevance:** By setting a higher confidence threshold, you ensure that only the most relevant data is used in the bot's responses.
+- **Contextual Understanding:** The ability to retrieve multiple relevant answers (using the Limit setting) improves the bot's ability to understand and respond to complex queries.
+- **Customization:** These settings allow you to tailor the bot's behavior to your specific needs, balancing between precision and context.
+
+**Things to Be Careful Of:**
+- **Setting the Threshold Too Low:** If the threshold is set too low, the bot might be fed irrelevant data, leading to poor responses.
+- **Setting the Threshold Too High:** If the Limit is set too high, the bot might receive too much information, potentially diluting the relevance of its responses.
+
+Experiment with these settings to find the optimal balance for your use case, and use the Revise Answer feature in the logs to refine the bot's performance.
+
+## Response Quality
+
+The **Response Quality** feature allows you to improve your chatbot's performance by revising answers and assessing confidence levels.
+
+### Revise Answer
+
+The "Revise Answer" feature lets you update chatbot responses that didn't meet your expectations. 
+
+To use this feature, ensure that the **"Save Logs"** option is enabled under the **Security** tab in the bot settings. This allows chat logs to be stored for review.
+
+#### Steps to Revise a Response
+
+1. **Access Chat Logs:**
+   - Go to the **ChatGPT - Logs** tab.
+   - Browse or search for the conversation you want to revise and click "View."
+
+<img src={revise1} />
+
+2. **Revise the Answer:**
+   - Click on the "Revise Answer" link next to the AI-generated response.
+   - A text area will appear where you can input the improved response.
+
+<img src={revise2} />
+
+3. **Save the Revision:**
+   - After entering the revised answer, click "Save." The chatbot will use this updated response for similar queries in the future.
+
+<img src={revise3} />
+
+### Confidence Score
+
+The **Confidence Score** feature provides insights into how closely the chatbot's response matches the user's query. 
+
+This score is calculated based on the relevancy of responses fetched from vector databases like Pinecone or Qdrant.
+
+<img src={confidence} />
+
+The score is displayed as a percentage, reflecting the confidence level of the chatbot's response:
+
+- **Absolutely Certain! 💯** (98% and above)
+- **Highly Confident! 👍** (90% to 97%)
+- **Strong Match! ✔️** (80% to 89%)
+- **Good Match 😊** (70% to 79%)
+- **Needs Improvement ⚠️** (50% to 69%)
+- **Uncertain 🤔** (30% to 49%)
+- **Poor Match 🚩** (10% to 29%)
+- **Highly Unreliable ❌** (Below 10%)
+
+### Benefits
+
+- **Improved Accuracy:** Quickly identify and correct low-confidence responses.
+- **Enhanced User Trust:** Users can see that responses are backed by a confidence score.
+- **Continuous Learning:** The chatbot evolves by learning from revised responses.
+
+By effectively using the **Revise Answer** and **Confidence Score** features, you can ensure your chatbot consistently delivers accurate and reliable answers, enhancing the overall user experience.
 
 ## User Aware
 
@@ -369,59 +575,3 @@ You can disable it under the **ChatGPT - Settings** tab.
 - Font color and font size for conversation starters is taken from the main chat window's font properties.
 
 That's all! By following these steps, you can enhance user interaction on your site by providing them with immediate questions to engage with your ChatGPT bot.
-
-## Response Quality
-
-The **Response Quality** feature allows you to improve your chatbot's performance by revising answers and assessing confidence levels.
-
-### Revise Answer
-
-The "Revise Answer" feature lets you update chatbot responses that didn't meet your expectations. 
-
-To use this feature, ensure that the **"Save Logs"** option is enabled under the **Security** tab in the bot settings. This allows chat logs to be stored for review.
-
-#### Steps to Revise a Response
-
-1. **Access Chat Logs:**
-   - Go to the **ChatGPT - Logs** tab.
-   - Browse or search for the conversation you want to revise and click "View."
-
-<img src={revise1} />
-
-2. **Revise the Answer:**
-   - Click on the "Revise Answer" link next to the AI-generated response.
-   - A text area will appear where you can input the improved response.
-
-<img src={revise2} />
-
-3. **Save the Revision:**
-   - After entering the revised answer, click "Save." The chatbot will use this updated response for similar queries in the future.
-
-<img src={revise3} />
-
-### Confidence Score
-
-The **Confidence Score** feature provides insights into how closely the chatbot's response matches the user's query. 
-
-This score is calculated based on the relevancy of responses fetched from vector databases like Pinecone or Qdrant.
-
-<img src={confidence} />
-
-The score is displayed as a percentage, reflecting the confidence level of the chatbot's response:
-
-- **Absolutely Certain! 💯** (98% and above)
-- **Highly Confident! 👍** (90% to 97%)
-- **Strong Match! ✔️** (80% to 89%)
-- **Good Match 😊** (70% to 79%)
-- **Needs Improvement ⚠️** (50% to 69%)
-- **Uncertain 🤔** (30% to 49%)
-- **Poor Match 🚩** (10% to 29%)
-- **Highly Unreliable ❌** (Below 10%)
-
-### Benefits
-
-- **Improved Accuracy:** Quickly identify and correct low-confidence responses.
-- **Enhanced User Trust:** Users can see that responses are backed by a confidence score.
-- **Continuous Learning:** The chatbot evolves by learning from revised responses.
-
-By effectively using the **Revise Answer** and **Confidence Score** features, you can ensure your chatbot consistently delivers accurate and reliable answers, enhancing the overall user experience.
