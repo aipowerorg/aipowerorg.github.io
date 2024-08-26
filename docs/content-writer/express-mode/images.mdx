@@ -24,14 +24,22 @@ import PexelsSample from '/img/images/pexels-sample.jpeg';
 import PexelsSample2 from '/img/images/pexels-sample2.jpeg';
 import PexelsSample3 from '/img/images/pexels-sample3.jpeg';
 import ImgType from '/img/images/img-type.png';
+import SDAPIKey from '/img/image-generator/sd-api.png';
+import SDAPISave from '/img/image-generator/sd-api-save.png';
+import retrievemodels from '/img/image-generator/retrieve_replicate_models.png';
+import replicatemodels from '/img/image-generator/replicate_models.png';
+import ReplicateSample from '/img/image-generator/replicate-sample.jpeg';
+import ReplicateSample2 from '/img/image-generator/replicate-sample2.jpeg';
+import ReplicateSample3 from '/img/image-generator/replicate-sample3.jpeg';
 
 # Images
 
-You can add images to your content using OpenAI’s **DALL-E** model, **Pexels** or **Pixabay**.
+You can add images to your content using OpenAI’s **DALL-E** model, **Replicate** models, **Pexels** or **Pixabay**.
 
 Here's an overview of the four available options for adding images to your content:
 
 - **DALL-E** (AI-generated images): Create unique and contextually relevant images using OpenAI's DALL-E model.
+- **Replicate** (AI-generated images): Generate images using various models available on Replicate, including  Flux, Stable Diffusion, SDXL, Kandinsky, and more.
 - **Pexels**: Access a vast library of high-quality and royalty-free images from the Pexels platform.
 - **Pixabay**: Utilize the extensive collection of free-to-use images available on Pixabay.
 - **None**: Choose this option if you don't want to add any images to your content.
@@ -45,7 +53,7 @@ Here's an overview of the four available options for adding images to your conte
 
 Please note the distinction between the two image sources:
 
-- **Image Source**: This option determines which platform (DALL-E, Pexels, Pixabay, or None) will be used to insert images directly into your post. The selected images will be added to your content based on the configured settings.
+- **Image Source**: This option determines which platform (DALL-E, Pexels, Pixabay, Replicate or None) will be used to insert images directly into your post. The selected images will be added to your content based on the configured settings.
 - **Featured Image Source**: This option determines the source of the featured image for your post. The featured image typically serves as a visual representation of the post's content and is displayed prominently on your website, such as in the blog index or social media previews.
 
 Understanding the difference between these two settings will help you better manage the visual elements of your content and create a more engaging user experience.
@@ -66,7 +74,7 @@ When enabled, the plugin will automatically set the generated image as the featu
 
 ## SEO-Friendly Images
 
-Once our plugin generates an image (whether it is from DALL-E, Pexels or Pixabay), it automatically saves the image to your WordPress media library.
+Once our plugin generates an image (whether it is from DALL-E, Pexels, Pixabay or Replicate), it automatically saves the image to your WordPress media library.
 
 To optimize the image for SEO, our plugin ensures that the image's **alt text**, **title**, **description**, and **caption** are properly set.
 
@@ -74,7 +82,7 @@ To optimize the image for SEO, our plugin ensures that the image's **alt text**,
 
 This practice not only enhances the user experience but also improves your website's visibility in search engine results.
 
-## Using DALL-E
+## DALL-E
 
 *Note: Make sure you have already entered your OpenAI API key in the **Settings - AI Engine** tab API Key field, as the DALL-E image generation works with the API key.*
 
@@ -200,7 +208,7 @@ Remember that experimenting with these settings can help you generate images tha
 
 :::
 
-## Using Pixabay
+## Pixabay
 
 you can enhance your articles with high-quality images from Pixabay, a leading platform for sharing beautiful, royalty-free images, illustrations, and vector graphics.
 
@@ -235,7 +243,7 @@ Our plugin uses the **title** as the search term for finding images. For example
 
 :::
 
-## Using Pexels
+## Pexels
 
 To begin using this feature, follow these simple steps:
 
@@ -279,9 +287,48 @@ This will enable unfiltered uploads, allowing you to save files without any rest
 
 :::
 
+## Replicate
+
+Replicate allows to acces various text to image models including Flux, Stable Diffusion, SDXL, Kandinsky, and more.
+
+To use models from Replicate:
+
+1. **Obtain an API Key:**
+   - Go to [replicate.com](https://replicate.com/signin) and log in with your GitHub account. (Please note that Replicate only supports GitHub account login, so make sure to [create a GitHub account](https://github.com/signup) first if you don't have one.)
+   - Once you're logged into Replicate, navigate to [API Tokens](https://replicate.com/account/api-tokens). Here, you'll find your API key.
+
+  <img src={SDAPIKey} width="700" />
+
+   - Copy this key, then return to our plugin.
+   - Go to the **Settings - Image** tab, and find the **Replicate** section.
+   - Paste your API key into the appropriate field and hit the Save button.
+
+  <img src={SDAPISave} width="700" />
+
+2. **Retrieve Models:**
+   - After saving your API key, click the **Retrieve** button next to the Models dropdown. This will fetch the latest text-to-image models from Replicate.
+   
+   <img src={retrievemodels} width="700" />
+   
+   - Once all models are retrieved, you can select any model from the list.
+   
+    <img src={replicatemodels} width="400" />
+   
+   - Please note that models on Replicate might have different versions. Our plugin automatically retrieves the latest version and appends it to the version text field under the model dropdown. If you wish to use a different (earlier) version of a model, you can manually enter it in the version text field.
+
+:::tip
+
+Our plugin takes all settings for the Replicate prompt from the **Image Generator - Replicate** tab.
+
+You can experiment with different styling options there and set them as default. These settings will then be used in your image generation.
+
+:::
+
+Now, everything is set up, and you can start generating content using these image models.
+
 ## Comparing Image Providers
 
-In this section, we'll showcase and compare images generated by three different providers: DALL-E, Pixabay, and Pexels.
+In this section, we'll showcase and compare images generated by three different providers: DALL-E, Pixabay, Pexels and Replicate (Flux).
 
 By examining their unique features and image styles, you can better understand the visual impact each provider brings to your content and make an informed decision on which one suits your needs best.
 
@@ -291,6 +338,7 @@ By examining their unique features and image styles, you can better understand t
     <th>DALL-E</th>
     <th>Pixabay</th>
     <th>Pexels</th>
+    <th>Replicate</th>
   </tr>
   <tr>
     <td>
@@ -302,6 +350,9 @@ By examining their unique features and image styles, you can better understand t
     <td>
       <img src={PexelsSample} width="300" />
     </td>
+        <td>
+      <img src={ReplicateSample} width="300" />
+    </td>
   </tr>
 </table>
 
@@ -311,6 +362,7 @@ By examining their unique features and image styles, you can better understand t
     <th>DALL-E</th>
     <th>Pixabay</th>
     <th>Pexels</th>
+    <th>Replicate</th>
   </tr>
   <tr>
     <td>
@@ -322,6 +374,9 @@ By examining their unique features and image styles, you can better understand t
     <td>
       <img src={PexelsSample2} width="300" />
     </td>
+    <td>
+      <img src={ReplicateSample2} width="300" />
+    </td>
   </tr>
 </table>
 
@@ -331,6 +386,7 @@ By examining their unique features and image styles, you can better understand t
     <th>DALL-E</th>
     <th>Pixabay</th>
     <th>Pexels</th>
+    <th>Replicate</th>
   </tr>
   <tr>
     <td>
@@ -341,6 +397,9 @@ By examining their unique features and image styles, you can better understand t
     </td>
     <td>
       <img src={PexelsSample3} width="300" />
+    </td>
+        <td>
+      <img src={ReplicateSample3} width="300" />
     </td>
   </tr>
 </table>

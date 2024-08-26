@@ -67,7 +67,7 @@ Here are the main features:
   - Bulk product writer
 
 - **Image Generator**
-  - DALL-E and Stable Diffusion support
+  - DALL-E and Replicate support
   - Shortcodes
 
 - **AI Assistant**

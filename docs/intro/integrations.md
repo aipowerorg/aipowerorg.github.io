@@ -15,7 +15,7 @@ AI Power integrates with many services and platforms to provide a comprehensive 
 | **OpenRouter** | Connects with OpenRouter to provide a variety of AI models and functionalities. |
 | **Yoast SEO, All In One SEO, Rank Math and The SEO Framework** | Generates SEO-optimized content, helping your website rank better in search engine results. |
 | **Pexels, Pixabay** | Integrates with Pexels and Pixabay for high-quality, royalty-free image sourcing, enhancing the visual appeal of your content. |
-| **DALL-E and Stable Diffusion** | Generates unique and compelling images, enriching your content with creative visuals. |
+| **DALL-E and Replicate** | Generates unique and compelling images, enriching your content with creative visuals. |
 | **Pinecone** | Uses Pinecone for building content and providing long-term external memory for the chatbot, ensuring smooth and intelligent interactions. |
 | **Qdrant** | Uses Qdrant for building content and providing long-term external memory for the chatbot, ensuring smooth and intelligent interactions. |
 | **WooCommerce** | Automates the writing of product descriptions, meta tags, and titles, saving time and improving consistency across your WooCommerce store. |

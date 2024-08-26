@@ -20,18 +20,18 @@ import SD2 from '/img/image-generator/sd-models2.png';
 import SD3 from '/img/image-generator/sd-models3.png';
 import SD4 from '/img/image-generator/sd-models4.png';
 import allmodels from '/img/image-generator/models.png';
+import retrievemodels from '/img/image-generator/retrieve_replicate_models.png';
+import replicatemodels from '/img/image-generator/replicate_models.png';
 
 # Image Generator
 
-The Image Generator feature of our plugin is a powerful tool that allows you to generate images using advanced AI models such as **DALL-E** and **Stable Diffusion** 🚀🚀🚀.
+The Image Generator feature of our plugin allows you to generate images using advanced AI models such as **DALL-E** and various models available on Replicate, including  Flux, Stable Diffusion, SDXL, Kandinsky, and more.
 
 You can generate images from simple text prompts, adjust various settings to fine-tune your results, implement price handling, and monitor detailed logs.
 
 We've made this feature interactive for your users with shortcodes that can be embedded in your front-end.
 
-Check out the demo [here](https://aipower.org/image-generator-dall-e/).
-
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/KYArfalJBbE" title="WordPress Image Generator with DALL-E and Stable Diffusion" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/KYArfalJBbE" title="WordPress Image Generator with DALL-E and Replicate" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 ## DALL-E
 
@@ -216,54 +216,56 @@ Remember, these settings allow you to influence the AI's image generation proces
 
 So, feel free to experiment and see how each setting alters the final result.
 
-## Stable Diffusion 🚀🚀🚀
+## Replicate
 
-Stable Diffusion is another deep learning, text-to-image model.
+Replicate allows to acces various text to image models including Flux, Stable Diffusion, SDXL, Kandinsky, and more.
 
-Check out the demo [here](https://aipower.org/image-generator-dall-e/).
 
-To use Stable Diffusion:
+To use models from Replicate:
 
-- First we need API key for Stable Diffusion. Go to [replicate.com](https://replicate.com/signin) and log in with your GitHub account. (Please note that Replicate only supports GitHub account login, so make sure to [create a GitHub account](https://github.com/signup) first if you don't have one.)
-- Once you're logged into Replicate, navigate to https://replicate.com/account/api-tokens. Here, you'll find your API key.
+1. **Obtain an API Key:**
+   - Go to [replicate.com](https://replicate.com/signin) and log in with your GitHub account. (Please note that Replicate only supports GitHub account login, so make sure to [create a GitHub account](https://github.com/signup) first if you don't have one.)
+   - Once you're logged into Replicate, navigate to [API Tokens](https://replicate.com/account/api-tokens). Here, you'll find your API key.
 
-<img src={SDAPIKey} width="700" />
+  <img src={SDAPIKey} width="700" />
 
-- Copy this key, then return to our plugin
-- Go to **Settings - Image** tab, and find the **Stable Diffusion** section.
-- Paste your API key into the appropriate field.
+   - Copy this key, then return to our plugin.
+   - Go to the **Settings - Image** tab, and find the **Replicate** section.
+   - Paste your API key into the appropriate field and hit the Save button.
 
-<img src={SDAPISave} width="700" />
+  <img src={SDAPISave} width="700" />
 
-- You'll also see an optional field named **Version**. If you know your version number, you can enter it here. If not, no worries — just leave it blank. Our plugin will automatically use the latest version from Stable Diffusion.
-- Click **Save** to finalize your changes.
+2. **Retrieve Models:**
+   - After saving your API key, click the **Retrieve** button next to the Models dropdown. This will fetch the latest text-to-image models from Replicate.
+   
+   <img src={retrievemodels} width="700" />
+   
+   - Once all models are retrieved, you can select any model from the list.
+   
+    <img src={replicatemodels} width="400" />
+   
+   - Please note that models on Replicate might have different versions. Our plugin automatically retrieves the latest version and appends it to the version text field under the model dropdown. If you wish to use a different (earlier) version of a model, you can manually enter it in the version text field.
 
-Now your API key is ready, you can start generating images.
+Now, everything is set up, and you can start generating images.
 
-- Navigate to the **Image Generator** and switch to **Stable Diffusion** tab.
+- Navigate to the **Image Generator** and switch to **Replicate** tab.
 - Enter a prompt in the text field.
 - Click on the **Generate** button.
 - Wait for the images to be generated.
 
 <img src={ImageGeneratorSD} width="700" />
 
-- Simply click on an image to delve into its details. While our plugin automatically assigns the prompt as **alternative text**, **caption**, **description**, and **title**, you have the freedom to modify them as per your preference.
+- Simply click on an image to check its details. While our plugin automatically assigns the prompt as **alternative text**, **caption**, **description**, and **title**, you have the freedom to modify them as per your preference.
 
 <img src={SDModal} width="700" />
 
 - Select the image you like the most and click on the **Save to Media** button to save the image to your WordPress Media Library.
 
-Stable Diffusion supports sizes from **128x128** to **1024x1024** and can generate **up to 2 images** per request.
-
-:::tip
-
-You can explore various versions of the Stable Diffusion prediction models at [this link](https://replicate.com/stability-ai/stable-diffusion/versions).
-
-:::
+Replicate supports sizes from **128x128** to **1024x1024** and can generate **up to 2 images** per request.
 
 ### Settings
 
-In addition to the general settings, **Stable Diffusion** offers some unique features:
+In addition to the general settings, **Replicate** offers some unique features:
 
 - **Negative Prompt**: This allows you to specify certain words that you want the generated image to exclude. If you have multiple words, you can separate them with a comma.
 - **Prompt Strength**: This controls the amount of noise added to the input image. It's a value between 0.0 and 1.0, where a higher value will add more noise, and a lower value will add less.
@@ -275,67 +277,25 @@ Once you've determined the optimal settings, click the **Save as Default** butto
 
 <img src={SaveDefault} width="400" />
 
-### How to Use Different Models on Replicate
-
-Replicate offers a plethora of AI models beyond just Stable Diffusion. With our plugin, you have the flexibility to tap into any of these models and harness their capabilities.
-
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/jDVsK16IOsE" title="Text to GIF AI Power WordPress Plugin" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-
-For instance, you can generate animated GIFs from text.
-
-Here are the steps:
-
-1. Navigate to Replicate's website.
-2. Click on the `Explore` link.
-
-<img src={SD1} />
-
-3. Search for your desired model, for example, [hotshot-xl](https://replicate.com/lucataco/hotshot-xl). This model allows you to generate animated GIFS from a given text.
-4. Once located, go to the `Versions` tab of the model.
-
-<img src={SD2} />
-
-5. Copy the latest version number.
-
-Back in our plugin:
-1. Access the `Settings` and then the `Image` tab.
-2. Paste the version number you copied into the `Version` field.
-
-<img src={SD3} />
-
-3. Save your changes.
-
-When you're ready to generate an image:
-
-1. Proceed to the `Image Generator` section and go to the `Stable Diffusion` tab.
-2. Scroll down, and you'll see a `Scheduler` dropdown on the right.
-3. Choose `Custom`. A text field will manifest.
-
-<img src={SD4} />
-
-4. Input the custom scheduler name. If you're in doubt about this, valid scheduler names can be found [here](https://replicate.com/lucataco/hotshot-xl/api) for this specific model.
-5. Click "save as default".
-6. Now, draft your prompt, press the `Generate` button, and be mesmerized as your text transforms into an animated GIF!
-
 ## Shortcodes
 
-Integrating AI-driven image generators into your website can significantly enhance user experience by providing interactive features.
+Integrating AI-driven image generators into your website can improve user experience by providing interactive features.
 
-This guide will explain how you can easily embed the DALL-E and Stable Diffusion image generators into your website using shortcodes.
+This guide will explain how you can embed the DALL-E and Replicate image generators into your website using shortcodes.
 
 ### What are shortcodes?
 
 Shortcodes are small pieces of code that you can insert into your website's posts or pages to execute a specific function or display a feature.
 
-In this case, the shortcodes will display the DALL-E and Stable Diffusion image generators.
+In this case, the shortcodes will display the DALL-E and Replicate image generators.
 
 ### How to Use Shortcodes
 
 Firstly, decide where you would like to display the image generator. This could be in a post or a page. Then, open the editor of that post or page.
 
-#### Displaying Both DALL-E and Stable Diffusion
+#### Displaying Both DALL-E and Replicate
 
-To allow users to generate images using both the DALL-E and Stable Diffusion models, use the following shortcode:
+To allow users to generate images using both the DALL-E and Replicate models, use the following shortcode:
 
 ```
 [wpcgai_img]
@@ -353,9 +313,9 @@ If you prefer to offer only the DALL-E model, use the following shortcode:
 
 Copy this shortcode and paste it into the desired location.
 
-#### Displaying Only Stable Diffusion
+#### Displaying Only Replicate
 
-To display only the Stable Diffusion model, use the following shortcode:
+To display only the Replicate model, use the following shortcode:
 
 ```
 [wpcgai_img sd=yes]
@@ -380,8 +340,6 @@ Simply choose the appropriate shortcode and paste it where you'd like the settin
 After you've inserted the desired shortcode, save your changes.
 
 Your image generator, based on the shortcode you used, should now be visible and interactive on your website.
-
-Remember, by embedding these AI-driven image generators on your website, you are not only enhancing the aesthetic appeal of your site, but also providing a unique, engaging, and interactive experience for your users.
 
 ## Price Handling
 
@@ -420,7 +378,7 @@ This will enable unfiltered uploads, allowing you to save files without any rest
 
 ### Limitations
 
-- Please note that our plugin is not capable of tracking usage for the 'Stable Diffusion' feature due to constraints in the provided API. This feature does not supply the necessary information for our plugin to track its usage effectively. Therefore, if you plan to implement a usage-based charge system for your users, we advise against enabling the 'Stable Diffusion' feature.
+- Please note that our plugin is not capable of tracking usage for the 'Replicate' feature due to constraints in the provided API. This feature does not supply the necessary information for our plugin to track its usage effectively. Therefore, if you plan to implement a usage-based charge system for your users, we advise against enabling the 'Replicate' feature.
 - Regarding DALL-E usage, OpenAI adopts a different charging scheme. Unlike most features that are charged based on the number of tokens used, DALL-E usage is charged on a dollar basis. This means the cost for using DALL-E is not calculated based on the number of tokens, but instead corresponds directly to a monetary value. Please keep this in mind while utilizing the DALL-E feature.
 
 ## Token Sale
