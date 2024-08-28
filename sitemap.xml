@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://docs.aipower.org/</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/introduction</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/blog</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/showcase</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/intro</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/intro/features</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/intro/integrations</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/intro/pro</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/intro/testimonials</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/intro/pricing</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/getting-started</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/ai-engines</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/chatgpt</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/embeddings</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/content-writer</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/autogpt</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-forms</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/promptbase</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/image-generator</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/user-management-token-sale</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/woocommerce</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/fine-tuning</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/audio-converter</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/semantic-search</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/role-manager</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/prompt-guide</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/blog/safety-settings-scheduler</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/blog/tags/autogpt</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/blog/tags/google</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/blog/tags/safety</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/getting-started/user-portal</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/getting-started/installation</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/getting-started/activating-pro</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/openai</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openrouter</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/google</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/azure-openai</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/chatgpt-wordpress</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/features</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/quick-setup</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/advanced-setup</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/AutoGPT/gpt-agents</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/faq</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/express-mode</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/custom-mode</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/ai-assistant</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/comment-replier</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/title-suggester</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/playground</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/AutoGPT</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/auto-content-writer</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/category/social-poster</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/AutoGPT/social-poster/twitter</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openai/api-key</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openai/gpt-models</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/prompt-guide/chatbot-prompts</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/blog/tags</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openai/temperature</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openai/max-tokens</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openai/frequency-penalty</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openai/presence-penalty</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openai/top-p</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openai/best-of</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ai-engine/openai/usage</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/ai-parameters</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/style</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/streaming</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/context</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/internet-browsing</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/pdfchat</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/image-upload</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/voice-chat</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/moderation</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/security</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/token-handling</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/language-tone-profession</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/ChatGPT/advanced-setup/logs</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/generating-content</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/language-style-tone</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/headings</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/images</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/seo</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/keywords</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/links</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/qa</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/table-of-contents</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/additional-content</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/custom-prompt</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/content-writer/express-mode/faq</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/AutoGPT/auto-content-writer/bulk-editor</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/AutoGPT/auto-content-writer/csv-import</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/AutoGPT/auto-content-writer/copy-paste</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/AutoGPT/auto-content-writer/google-sheets</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://docs.aipower.org/docs/AutoGPT/auto-content-writer/rss</loc>
+  <lastmod>2024-08-26T03:23:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
