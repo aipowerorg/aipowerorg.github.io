@@ -5,6 +5,7 @@ sidebar_position: 7
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ChatVoiceShortcode from '/img/chatgpt/voicechat-shortcode.png';
+import ChatVoicecustom from '/img/chatgpt/voicechat-custom.png';
 import ChatVoiceWidget from '/img/chatgpt/voicechat-widget.png';
 import APIKey1 from '/img/chatgpt/elevenlabs/api-key.png';
 import APIKey2 from '/img/chatgpt/elevenlabs/api-key2.png';
@@ -13,7 +14,6 @@ import hideerrors from '/img/chatgpt/elevenlabs/hide-errors.png';
 import ElevenLabs from '/img/chatgpt/elevenlabs/elevenlabs.png';
 import ElevenLabsSample from '/img/chatgpt/elevenlabs/sample.png';
 import SyncVoices from '/img/chatgpt/elevenlabs/sync-voices.png';
-import SyncModels from '/img/chatgpt/elevenlabs/sync-models.png';
 import GoogleCloud from '/img/chatgpt/google/console.png';
 import GoogleCloudProject1 from '/img/chatgpt/google/project1.png';
 import GoogleCloudProject2 from '/img/chatgpt/google/project2.png';
@@ -33,73 +33,72 @@ import OpenAITS from '/img/chatgpt/text-to-speech-openai.png';
 
 # Voice Chat
 
-With our chatbot, we understand the importance of creating a more interactive and engaging experience for your users.
+We offer voice integration for your chatbot to create a more interactive experience.
 
-Therefore, we've integrated with top-notch voice technologies to elevate your chatbot interaction.
+- **Speech to Text**: For voice input, we've integrated with **Whisper**, which is a **Speech-to-Text** model from OpenAI. With this feature, your users can speak directly to the chatbot using their microphone, and the chatbot will transcribe and process their spoken words as if they were typed messages.
+- **Text to Speech**: You can enable voice output for your chatbot with our integrations with **OpenAI**, **ElevenLabs** and **Google Text to Speech**. This allows your chatbot to read out its responses, creating a more dynamic and conversational experience for your users.
 
-- **Voice Input**: For voice input, we've integrated with **Whisper**, which is a **Speech-to-Text** model from OpenAI. With this feature, your users can speak directly to the chatbot using their microphone, and the chatbot will transcribe and process their spoken words as if they were typed messages.
-- **Voice Output**: You can enable voice output for your chatbot with our integrations with **ElevenLabs** and **Google Text to Speech**. This allows your chatbot to read out its responses, creating a more dynamic and conversational experience for your users.
+These features make your chatbot more accessible and easy to use.
 
-By combining these features, you can create a seamless voice chat experience for your users, making your chatbot more accessible and intuitive to use.
+## Speech to Text
 
-## Voice Input
+You can enable or disable the voice input feature for the chatbot. 
 
-You can enable or disable the voice input.
+If enabled, a microphone icon will appear, and when clicked, the chatbot will start listening to the user. The user's speech will be converted to text using Whisper, an advanced Automatic Speech Recognition (ASR) system developed by OpenAI. You can also customize the microphone and stop button colors.
 
-If you enable this option, the chatbot will display a microphone icon.
+Whisper is designed to convert spoken language into written text and is trained on multilingual data. 
 
-When the user clicks on the microphone icon, the chatbot will start listening to the user.
+This feature can improve the user experience, particularly for users who prefer voice interaction or need hands-free access.
 
-The user can speak to the chatbot and the chatbot will convert the speech to text. You can customize mic and stop button color.
-
-### Whisper Integration
-
-Whisper is an advanced Automatic Speech Recognition (ASR) system developed by OpenAI.
-
-You can view demo here: https://aipower.org/gpt-4o-chat-bot-demo-speech-to-text/
-
-It's designed to convert spoken language into written text, and it's trained on a large amount of multilingual and multitask supervised data collected from the web.
-
-Integrating Whisper with our chatbot can elevate the user experience, providing a hands-free mode of interaction that is particularly useful for users who are visually impaired, have motor disabilities, or simply prefer voice interaction.
+You can view a live demo [here](https://aipower.org/gpt-4o-chat-bot-demo-text-to-speech/).
 
 Here's how you can enable and customize the Whisper integration:
 
 <Tabs>
   <TabItem value="shortcode" label="Shortcode" default>
     <ul>
-        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
-        <li>Find the <b>VoiceChat</b> tab located on the right side of your screen.</li>
+        <li>Navigate to the <b>Chat Bot - Shortcode</b> tab in your dashboard.</li>
+        <li>Find the <b>Speech</b> tab.</li>
         <img src={ChatVoiceShortcode} width="700" />
-        <li>Here, you will find several settings related to managing voice input:</li>
-            <ul>
-                <li><b>Enable Text to Speech</b>: Toggle this switch to enable or disable voice input. When enabled, a microphone icon will appear in the chatbot text message field, allowing users to speak their messages.</li>
-                <li><b>Mic Button Color</b>: This setting allows you to customize the color of the microphone icon.</li>
-                <li><b>Stop Button Color</b>: This setting allows you to customize the color of the stop button that appears when the chatbot is actively listening.</li>
-            </ul>
+        <li>Toggle the speech to text switch to enable or disable voice input. When enabled, a microphone icon will appear in the chatbot text message field, allowing users to speak their messages.</li>
         <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
   </TabItem>
 <TabItem value="widget" label="Widget">
     <ul>
-        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
-        <li>Find the <b>VoiceChat</b> tab located on the right side of your screen.</li>
+        <li>Navigate to the <b>Chat Bot - Widget</b> tab in your dashboard.</li>
+        <li>Find the <b>Speech</b> tab located on the right side of your screen.</li>
         <img src={ChatVoiceWidget} width="700" />
-        <li>Here, you will find several settings related to managing voice input:</li>
-            <ul>
-                <li><b>Enable Text to Speech</b>: Toggle this switch to enable or disable voice input. When enabled, a microphone icon will appear in the chatbot text message field, allowing users to speak their messages.</li>
-                <li><b>Mic Button Color</b>: This setting allows you to customize the color of the microphone icon.</li>
-                <li><b>Stop Button Color</b>: This setting allows you to customize the color of the stop button that appears when the chatbot is actively listening.</li>
-            </ul>
+        <li> Toggle the speech to text switch to enable or disable voice input. When enabled, a microphone icon will appear in the chatbot text message field, allowing users to speak their messages.</li>
         <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
 </TabItem>
+  <TabItem value="customBots" label="Custom Bots">
+    <ul>
+        <li>Navigate to the <b>Chat Bot - Custom Bots</b> tab in your dashboard.</li>
+        <li>Click <b>Edit</b> for an existing bot or create a new one if you don't have one already.</li>
+        <li>Find the <b>Speech</b> tab.</li>
+        <img src={ChatVoicecustom} width="700" />
+        <li>Toggle the speech to text switch to enable or disable voice input. When enabled, a microphone icon will appear in the chatbot text message field, allowing users to speak their messages.</li>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+  </TabItem>
 </Tabs>
 
-## Voice Output
+## Text to Speech
+
+Our plugin supports three different Text-to-Speech (TTS) providers: OpenAI, Google, and ElevenLabs.
 
 ### OpenAI
 
-Our plugin now includes support for OpenAI's state-of-the-art Text-to-Speech (TTS) technology. This feature allows you to convert written text into lifelike spoken audio, enhancing the interactive experience of your ChatGPT bot.
+OpenAI's Text-to-Speech (TTS) technology, allowing you to convert written text into lifelike spoken audio to improve the interactive experience of your ChatGPT bot.
+
+TTS is an AI model that converts text to natural-sounding spoken text. 
+
+We offer two model variants via OpenAI integration:
+
+- tts-1: Optimized for real-time text-to-speech use cases.
+- tts-1-hd: Optimized for higher quality.
 
 #### Key Features and Capabilities:
 
@@ -116,18 +115,19 @@ Our plugin now includes support for OpenAI's state-of-the-art Text-to-Speech (TT
 
 To enable this feature, follow these steps:
 
-1. Access your chat bot settings and locate the "VoiceChat" tab.
+1. Access your chat bot settings and locate the "Speech" tab.
 2. Tick the "Enable Text to Speech" option.
 
-<img src={OpenAITS} width="500" />
+<img src={OpenAITS} />
 
 3. Choose "OpenAI" as your provider from the dropdown menu.
 4. Select your preferred model, voice, output format, and voice speed.
 5. Click "Save" to apply the changes.
 
-That's all! Now, interact with your chat bot and enjoy the new voice capabilities. Your bot is ready to speak!
+There are two additional options on this Speech tab:
 
-With OpenAI's Text-to-Speech technology, you can now bring a new level of realism and engagement to your ChatGPT bot's interactions.
+- Allow users to switch voice on/off: If you tick this option, an audio button will appear in the top bar of the chatbot. Users can enable or disable the audio from here.
+- Muted by default: If you tick this option, the audio will be muted on the frontend by default. The user must click the audio button to enable it.
 
 ### Google
 
@@ -135,7 +135,7 @@ Google Text-to-Speech API is a service that allows you to convert text into natu
 
 You can view demo here: https://aipower.org/gpt-4o-chat-bot-demo-text-to-speech/
 
-Powered by Google’s leading AI technologies, it offers high-fidelity speech, a vast selection of voices, voice customization, and much more.
+Powered by Google’s AI technologies, it offers high-fidelity speech, a vast selection of voices, voice customization, and much more.
 
 Features of Google Text-to-Speech:
 
@@ -199,17 +199,17 @@ Here's how you can enable and customize the Google integration:
 
 <img src={Credentials2} width="700" />
 
-- Once you have your API key, open our plugin’s ChatGPT page. Go to the **Settings** tab and enter your API key in the provided field, then click **Save**.
+- Once you have your API key, go to Chat Bot - Settings tab and then hit "Integrations" tab and enter your API key in the provided field, then click **Save**.
 
-<img src={ApiSave} width="700" />
+<img src={ApiSave} />
 
-- After saving, a **Sync** button will appear. Click on it to synchronize the voices with the plugin.
+- After saving, go to Text to Speech tab and click on "Sync Google Voices" to synchronize the voices with the plugin.
 
-<img src={Sync} width="700" />
+<img src={Sync} />
 
-- Now, navigate to your bot’s settings page and locate the **VoiceChat** tab. Enable the **Text to Speech** option and select **Google** from the **Provider** dropdown menu.
+- Now, navigate to your bot’s settings page and locate the **Speech** tab. Enable the **Text to Speech** option and select **Google** from the **Provider** dropdown menu.
 
-<img src={Google} width="400" />
+<img src={Google} />
 
 - Upon selecting **Google**, four new dropdown options will appear:
     - **Voice Language**: This option allows you to select the language in which you want the text to be converted to speech. Google supports a wide range of languages.
@@ -248,41 +248,21 @@ Here's how you can enable and customize the ElevenLabs integration:
 
 <img src={APIKey2} width="400" />
 
-- Head over to our plugin **ChatGPT – Settings** page. Enter your API key in the designated field.
+- Head over to our plugin **Chat Bot – Settings** page. Enter your API key in the designated field under the **Integrations** tab.
 
-<img src={APIKey3} width="400" />
+<img src={APIKey3} />
 
-- In the settings page, you’ll find the option **Hide API errors in chat**. Enabling this will ensure that users won’t see API errors like “out of quota” or “invalid API key.” Instead, they will only see the chat text from OpenAI without audio from ElevenLabs.
-- Save your settings. After saving, click on the **Sync** button to sync all your custom voices from ElevenLabs. Remember, you can clone any famous person’s voice or even your own!
+- After saving, go to **Text to Speech** tab and click on "Sync ElevenLabs Voices" and "Sync ElevenLabs Models" to synchronize the voices and models with the plugin.
 
-Now, go to your bot settings page and navigate to the **VoiceChat** tab. Enable **Text to Speech** by checking the option, select ElevenLabs from Provider list and then select a voice from the dropdown list. Finally, hit **Save**.
+<img src={SyncVoices} />
 
-<img src={ElevenLabs} width="400" />
+Now, go to your bot settings page and navigate to the **Speech** tab. Enable **Text to Speech** by checking the option, select ElevenLabs from Provider list and then select a voice from the dropdown list. Finally, hit **Save**.
+
+<img src={ElevenLabs} />
 
 Congratulations! Your bot can now speak.
 
 Go ahead and chat with your bot to experience its new voice capabilities.
-
-<img src={ElevenLabsSample} width="400" />
-
-The possibilities are endless – you can create a bot that speaks like Steve Jobs and behaves like him by adding special instructions in the **Context – Additional Context** section and uploading a photo of Steve Jobs.
-
-#### Voice and Model Synchronization
-
-ElevenLabs offers a powerful and dynamic suite of voices and models for your chat system.
-
-To ensure you're leveraging these features to their fullest potential, it's crucial to keep them synchronized with your plugin settings.
-
-This guide will walk you through syncing voices and models after inputting your ElevenLabs API key.
-
-#### Syncing Voices
-
-1. **Saving the API Key:** After acquiring your ElevenLabs API key, enter it into the designated field within your plugin settings.
-2. **Click on "Sync Voices":** With your API key saved, you'll find a button labeled "Sync Voices". Initiating this will commence the synchronization process, importing all the voices tied to your ElevenLabs account.
-
-<img src={SyncVoices} width="400" />
-
-3. **Completion:** Post synchronization, all the voices available to you will be seamlessly integrated into your chat system. You can then cherry-pick your desired voice from the dropdown menu.
 
 #### Voice Settings
 
@@ -296,21 +276,14 @@ Upon successfully synchronizing the voices from ElevenLabs, the plugin automatic
 
 4. **Style:** Reflects the tone and manner of the generated voice. Whether you want a voice that's cheerful, serious, or neutral, adjusting the style allows you to fine-tune the emotion and demeanor of the voice output.
 
-#### Syncing Models
-
-1. **Saving the API Key:** If not done already, ensure your ElevenLabs API key is stored.
-2. **Click on "Sync Models":** Adjacent to the "Sync Voices" button, you'll spot another labeled "Sync Models". Activating this will fetch all models associated with your ElevenLabs account.
-
-<img src={SyncModels} width="400" />
-
-3. **Completion:** Post synchronization, you're set to deploy these models within your chat infrastructure.
 
 #### Understanding Models
 
-At present, two primary models are at your disposal:
-
-- **Eleven English v1:** Standard English language model to generate speech in a variety of voices, styles and moods.
-- **Eleven Multilingual v1:** Generate lifelike speech in multiple languages and create content that resonates with a broader audience. Languages: English (USA), English (UK), English (Australia), English (Canada), German, Polish
+- **Multilingual v2**: This model has good stability, great language diversity, and fantastic accuracy in cloning voices and accents. Its speed is rather remarkable considering its size as it supports 28 languages, but it is slower than English v1.
+- **Turbo v2.5**: It generates human-like text to speech in 32 languages with low latency.
+- **Turbo v2**: A highly optimized model, specifically tailored for low-latency applications without sacrificing vocal performance and keeping inline with the quality standard that people have come to expect from our models. It is an English-only model.
+- **English v1:** Standard English language model to generate speech in a variety of voices, styles and moods.
+- **Multilingual v1:** Generate lifelike speech in multiple languages and create content that resonates with a broader audience. Languages: English (USA), English (UK), English (Australia), English (Canada), German, Polish
  Spanish (Spain), Spanish (Mexico), Italian, French (France), French (Canada), Portuguese (Portgual), Portuguese (Brazil) and Hindi.
 
 #### Limitations
