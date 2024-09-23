@@ -53,6 +53,13 @@ const showcases = [
         link: 'https://veraiart.com/create/',
         thumbnail: 'verai.png',
     },
+    {
+        customerName: 'baGPT',
+        flagUrl: `${FLAG_BASE_URL}/us.svg`,
+        description: `baGPT is a chatbot trained in project management knowledge. It helps users to understand and apply project management concepts.`,
+        link: 'https://bridgesconsultinc.com/bagptfree/',
+        thumbnail: 'bagpt.png',
+    },
 ];
 
 function ShowcaseItem({ showcase }) {

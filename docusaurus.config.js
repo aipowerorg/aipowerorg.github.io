@@ -83,7 +83,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {to: 'https://aipower.org/features/', label: 'Features', position: 'left'},
           {to: 'https://aipower.org/pricing/', label: 'Pricing', position: 'left'},
           {to: 'https://aipower.org/demo/', label: 'Demo', position: 'left'},
