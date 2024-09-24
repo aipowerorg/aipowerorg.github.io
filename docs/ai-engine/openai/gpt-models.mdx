@@ -10,7 +10,7 @@ import ComparisonTool2 from '/img/comparison-tool/comparison2.png';
 
 # Models
 
-**AI Power** supports OpenAI **GPT-3**, **GPT-3.5**, and **GPT-4** models.
+**AI Power** supports OpenAI **GPT-3**, **GPT-3.5**, **GPT-4**, and **o1** models.
 
 ## GPT-4o
 
@@ -35,6 +35,36 @@ GPT-4 is currently in limited beta, which means that access to the GPT-4 API fro
 :::caution
 If you don't have GPT-4 API access and select GPT-4 or GPT-4-32K, you will get an error: *"The model: gpt-4 does not exist"* or *"The model: gpt-4-32k does not exist"*.
 :::
+
+## o1 Models (Beta)
+
+The o1 series of large language models are designed with reinforcement learning to perform complex reasoning tasks. 
+
+These models think before answering, producing a long internal chain of thought to solve challenging problems.
+
+| Model      | Description                                                                                     | Context window | Max output tokens | Training data    |
+|------------|-------------------------------------------------------------------------------------------------|----------------|-------------------|------------------|
+| o1-preview | A reasoning model designed to solve hard problems across multiple domains. Points to the most recent snapshot of the o1 model. | 128,000 tokens | 32,768 tokens     | Up to Oct 2023   |
+| o1-mini    | A faster and cheaper reasoning model, particularly good at coding, math, and science. Points to the most recent o1-mini snapshot.  | 128,000 tokens | 65,536 tokens     | Up to Oct 2023   |
+
+
+The o1 models are currently in beta with limited features. 
+
+Access is restricted to users in **tier 5** (check your usage tier [here](https://platform.openai.com/docs/guides/rate-limits/usage-tiers)), with low rate limits. 
+
+OpenAI is working on adding more features, increasing rate limits, and expanding access to more users in the coming weeks.
+
+During the beta phase, several chat completion API parameters and features are not yet available:
+
+- **Modalities:** Text only. Images are not supported.
+- **Message types:** Only user and assistant messages are supported. System messages are not.
+- **Streaming:** Not supported.
+- **Tools:** Function calling, tools, and response format parameters are not supported.
+- **Logprobs:** Not supported.
+- **Other API parameters:** 
+    - `temperature`, `top_p`, and `n` are fixed at `1`.
+    - `presence_penalty` and `frequency_penalty` are fixed at `0`.
+- **Assistants and Batch:** These models are not supported in the Assistants API or Batch API.
 
 ## GPT-3.5
 

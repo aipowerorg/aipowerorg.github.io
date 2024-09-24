@@ -5,8 +5,8 @@ sidebar_position: 5
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import MemoryShortcode from '/img/chatgpt/memory-shortcode.png';
-import MemoryShortcodeLimit from '/img/chatgpt/memory-shortcode-limit.png';
 import MemoryWidget from '/img/chatgpt/memory-widget.png';
+import MemoryCustom from '/img/chatgpt/memory-custom-bot.png';
 import UserAware from '/img/chatgpt/user-aware.png';
 import UserAwareSample from '/img/chatgpt/user-aware-sample.png';
 import ContentAware from '/img/chatgpt/content-aware.png';
@@ -91,7 +91,7 @@ This guide will assist you in setting up the **Custom Instructions** feature in 
 <Tabs>
   <TabItem value="shortcode" label="Shortcode" default>
     <ul>
-        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Navigate to the <b>Chat Bot - Shortcode</b> tab in your dashboard.</li>
         <li>Click on the <b>Settings</b> tab.</li>
         <img src={AdditionalContext} width="300" />
         <li>Look for the <b>Custom Instructions</b> option:</li>
@@ -106,7 +106,7 @@ This guide will assist you in setting up the **Custom Instructions** feature in 
     </TabItem>
 <TabItem value="widget" label="Widget">
     <ul>
-        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Navigate to the <b>Chat Bot - Widget</b> tab in your dashboard.</li>
         <li>Click on the <b>Settings</b> tab.</li>
         <img src={AdditionalContext} width="300" />
         <li>Look for the <b>Additional Context</b> option:</li>
@@ -135,7 +135,7 @@ When a user interacts with the chatbot, their conversation is saved locally. Eac
 
 Limit feature lets you set the number of messages the chatbot will remember from the conversation history. 
 
-The default is 10, but it can be adjusted between 3 and 50 based on your needs.
+The default is 100, but it can be adjusted between 3 and 500 based on your needs.
 
 For example, if set to 10, up to 10 messages will be saved. Once the limit is reached, the oldest conversation will be deleted to keep the total at 10.
 
@@ -146,32 +146,44 @@ This guide will walk you through the steps to configure the **Memory** feature i
 <Tabs>
   <TabItem value="shortcode" label="Shortcode" default>
     <ul>
-        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Navigate to the <b>Chat Bot - Shortcode</b> tab in your dashboard.</li>
         <li>Click on the <b>Knowledge</b> tab.</li>
-        <img src={MemoryShortcode} width="600" />
         <li>Look for the <b>Memory</b> and <b>Limit</b> options:</li>
             <ul>
                 <li><b>Memory</b>: Toggle this switch to enable the chatbot to remember the conversation history.</li>
-                <li><b>Limit</b>: Scroll down and click on "Show Additional Options". Set the number of messages that the chatbot will remember from the conversation history. The default value is 10, but you can set it to any value between 3 and 50 based on your requirements.</li>
+                <li><b>Limit</b>: Scroll down and set the number of messages that the chatbot will remember from the conversation history. The default value is 100, but you can set it to any value between 3 and 500 based on your requirements.</li>
             </ul>
-        <img src={MemoryShortcodeLimit} width="300" />
+        <img src={MemoryShortcode} width="400" />
         <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
     </TabItem>
 <TabItem value="widget" label="Widget">
     <ul>
-        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Navigate to the <b>Chat Bot - Widget</b> tab in your dashboard.</li>
         <li>Click on the <b>Knowledge</b> tab.</li>
-        <img src={MemoryShortcode} width="600" />
         <li>Look for the <b>Memory</b> and <b>Limit</b> options:</li>
             <ul>
                 <li><b>Memory</b>: Toggle this switch to enable the chatbot to remember the conversation history.</li>
-                <li><b>Limit</b>: Set the number of messages that the chatbot will remember from the conversation history. The default value is 10, but you can set it to any value between 3 and 50 based on your requirements.</li>
+                <li><b>Limit</b>: Set the number of messages that the chatbot will remember from the conversation history. The default value is 100, but you can set it to any value between 3 and 500 based on your requirements.</li>
             </ul>
-        <img src={MemoryShortcodeLimit} width="300" />
+        <img src={MemoryWidget} width="400" />
         <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
     </ul>
 </TabItem>
+  <TabItem value="custom_bots" label="Custom Bots">
+    <ul>
+        <li>Navigate to the <b>Chat Bot - Custom Bots</b> tab in your dashboard.</li>
+        <li>Click the <b>Create New</b> button to create a new bot, or hit the <b>Edit</b> button to modify an existing one.</li>
+        <li>Once the modal window opens, go to the <b>Knowledge</b> tab.</li>
+        <li>The rest of the configuration is the same as in the other tabs, where you can set the <b>Memory</b> and <b>Limit</b> options:</li>
+            <ul>
+                <li><b>Memory</b>: Enable the chatbot to remember conversation history.</li>
+                <li><b>Limit</b>: Set the number of messages the bot will remember. The default is 100, but can be adjusted between 3 and 500.</li>
+            </ul>
+        <img src={MemoryCustom} width="400" />
+        <li>Click <b>Save</b> to apply your changes.</li>
+    </ul>
+  </TabItem>
 </Tabs>
 
 ## Content Aware
