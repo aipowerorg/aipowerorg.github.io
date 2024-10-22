@@ -3,6 +3,7 @@ sidebar_position: 2
 ---
 
 import ModelWindow2 from '/img/ai-settings/changing-model.png';
+import SyncButton from '/img/ai-settings/sync-button.png';
 import FineTunedModels from '/img/ai-settings/fine-tuned-models.png';
 import RateLimitBuffer from '/img/ai-settings/rate-limit-buffer.png';
 import ComparisonTool1 from '/img/comparison-tool/comparison1.png';
@@ -82,18 +83,17 @@ When our plugin is installed for the first time, it comes with **gpt-3.5-turbo**
 The **Express Mode** in Content Writer and **Auto Content Writer** both use the models set in the **Settings - AI Engine** tab. Any changes made here will apply to both modules.
 :::
 
-### Changing the GPT Model
+### Changing a Model
 
 Here are the steps:
 
 - Navigate to the plugin menu on your WordPress dashboard.
-- Click on the **Settings** page and look for the **AI Engine** tab.
+- Click on the **Dashboard** page and look for the **AI Settings** tab.
 
 <img src={ModelWindow2} width="700" />
 
 - Click on the **Model** dropdown menu to see the available GPT models.
 - Select your desired model.
-- Click the **Save** button to save your changes.
 
 :::caution
 If you don't have GPT-4 API access and select GPT-4 or GPT-4-32K, you will get an error: *"The model: gpt-4 does not exist"* or *"The model: gpt-4-32k does not exist"*.
@@ -103,9 +103,11 @@ If you don't have GPT-4 API access and select GPT-4 or GPT-4-32K, you will get a
 
 Use the **Sync** button next to the model dropdown to synchronize the plugin with the latest OpenAI models. If OpenAI releases a new model, you can use this button to update the plugin.
 
-<img src={FineTunedModels} />
+<img src={SyncButton} />
 
 If your organization has fine-tuned any models, you can find them under the Model dropdown.
+
+<img src={FineTunedModels} />
 
 ### Rate Limit Buffer
 
