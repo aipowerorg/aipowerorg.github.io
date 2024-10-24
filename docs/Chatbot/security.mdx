@@ -1,0 +1,236 @@
+---
+sidebar_position: 6
+---
+
+import Sec1 from '/img/chatgpt/security/banned-ip.png';
+import Sec2 from '/img/chatgpt/security/security-message.png';
+import Sec3 from '/img/chatgpt/security/banned-words.png';
+import Sec4 from '/img/chatgpt/security/word.png';
+import LogShortcode from '/img/chatgpt/logs-shortcode.png';
+import LogWidget from '/img/chatgpt/logs-widget.png';
+import Logs from '/img/chatgpt/logs.png';
+import Estimated from '/img/chatgpt/log-estimated.png';
+import ShortcodeModeration from '/img/chatgpt/shortcode-moderation.png';
+import WidgetModeration from '/img/chatgpt/widget-moderation.png';
+import Moderation from '/img/chatgpt/moderation.png';
+import ModerationLog from '/img/chatgpt/mod-log.png';
+import ModerationLogView from '/img/chatgpt/mod-log-view.png';
+
+# Security
+
+## Restricting Access by IP Address
+
+Security is paramount, and we understand that there might be instances where you'd want to restrict certain IP addresses from accessing your chat bot. Our plugin allows you to specify which IP addresses should be blocked from interacting with the chat bot, ensuring you have full control over who gets to use the feature on your website.
+
+Here's how you can set it up:
+
+- **Navigate to the Plugin Menu**: In your WordPress dashboard, go to the **ChatGPT - Settings** tab.
+- **Locate the Security Section**: Scroll down until you find the **Security** section.
+- **Enter the Banned IP Addresses**: You will notice a text field labeled "Banned IP Addresses". In this field, you can type in the IP addresses you wish to block. If you're entering multiple IP addresses, separate each one with a comma.
+
+<img src={Sec1} />
+
+- **Save the Changes**: After entering the IP addresses, scroll down and click on **Save** to apply the changes.
+
+Once you've set this up, any user attempting to interact with the chat bot from one of the specified IP addresses will receive a message saying, "You are not allowed to access this feature."
+
+If you wish to modify this default message, you can do so using any WordPress translation tool, such as Loco Translate.
+
+<img src={Sec2} width="300" />
+
+It's a simple yet effective way to manage and control access to your chat bot.
+
+## Banning Specific Words
+
+Apart from restricting access based on IP addresses, there might be scenarios where you'd want to prevent certain words from being used in the chat.
+
+This can be essential to maintain the chat's decorum or to prevent triggering undesired bot responses.
+
+To set up banned words:
+
+- **Navigate to the Plugin Menu**: If you're not already there, head over to the **ChatGPT - Settings** tab in your WordPress dashboard.
+- **Locate the Security Section**: Scroll until you come across the Security section.
+- **Enter the Banned Words**: Here, you'll find a text field labeled "Banned Words". In this field, you can type in the words you wish to ban. For multiple words, separate each one with a comma.
+
+<img src={Sec3} />
+
+- **Save the Changes**: After specifying the words, make sure to click on Save to implement the changes.
+
+Once a user includes a banned word in their message, the chat bot will respond with: "Your message contains prohibited words. Please modify your message and try again."
+
+<img src={Sec4} />
+
+If you wish to modify this default message, you can do so using any WordPress translation tool, such as Loco Translate.
+
+## Chat Logs
+
+Chat logs are an important feature for tracking and understanding the conversations your chatbot has with users.
+
+Here's how to manage chat logs settings and view saved logs.
+
+### Managing Chat Logs
+
+<Tabs>
+  <TabItem value="shortcode" label="Shortcode" default>
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Click on the <b>Logs</b> tab located on the right side of your screen.</li>
+        <img src={LogShortcode} width="700" />
+        <li>Here, you will find several settings related to managing and viewing chat logs:</li>
+            <ul>
+                <li><b>Save Chat Logs</b>: Toggle this switch to enable or disable the saving of chat logs. When enabled, the chatbot will store the logs of the conversation.</li>
+                <li><b>Display Notice</b>: Toggle this switch to enable or disable the display of a notice to users. When enabled, the chatbot will inform the user that their conversation is being logged.</li>
+                <li><b>Notice Text</b>: This field allows you to customize the text of the notice. The default text is "Please note that your conversations will be recorded."</li>
+                <li><b>Save Prompt</b>: When enabled, this feature will save the prompts so you can view them in the logs.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+  </TabItem>
+<TabItem value="widget" label="Widget">
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Click on the <b>Logs</b> tab located on the right side of your screen.</li>
+        <img src={LogWidget} width="700" />
+        <li>Here, you will find several settings related to managing and viewing chat logs:</li>
+            <ul>
+                <li><b>Save Chat Logs</b>: Toggle this switch to enable or disable the saving of chat logs. When enabled, the chatbot will store the logs of the conversation.</li>
+                <li><b>Display Notice</b>: Toggle this switch to enable or disable the display of a notice to users. When enabled, the chatbot will inform the user that their conversation is being logged.</li>
+                <li><b>Notice Text</b>: This field allows you to customize the text of the notice. The default text is "Please note that your conversations will be recorded."</li>
+                <li><b>Save Prompt</b>: When enabled, this feature will save the prompts so you can view them in the logs.</li>
+            </ul>
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+</TabItem>
+</Tabs>
+
+### Viewing Chat Logs
+
+- Navigate to the **ChatGPT - Logs** section in your dashboard to view the chat logs.
+<img src={Logs} width="700" />
+- You will see a comprehensive list of logs. Each log entry includes details such as Session ID, Date, User Message, Bot Response, IP, Page, Source (Shortcode), Token Usage, Estimated Cost, and an Action button labeled as **View**.
+    - **SessionID**: This is a unique identifier for each chat session. It helps in distinguishing different chat sessions and tracking individual conversations.
+    - **Date**: This represents the date and time when the chat session occurred. It is helpful for tracking the timeline of conversations and identifying any time-related trends or issues.
+    - **User**: This field shows the input or question that was provided by the user during the chat session.
+    - **AI**: This displays the response that the ChatGPT bot provided to the user's input or question.
+    - **IP**: This represents the Internet Protocol (IP) address of the user. It can be useful for tracking the geographic location of users or identifying potential security issues.
+    - **Page**: This field shows the specific page on your website where the chat session took place.
+    - **Type**: This indicates whether the chat session was initiated through a shortcode or a widget.
+    - **Token**: This field shows the number of tokens used in the chat session. Tokens are units of measure used by OpenAI to calculate the cost of generating responses.
+    - **Question**: Total number of queries posed by users to the AI chatbot.
+    - **Estimated**: This shows the estimated cost for the chat session based on the number of tokens used and the pricing rate. Hovering over the question mark will reveal a breakdown detailing the total number of queries and the associated cost for each.
+
+<img src={Estimated} width="700" />
+
+Click on the <b>View</b> button next to each log entry to open a modal window with the complete conversation history for that particular session.
+
+These logs help you monitor interactions and ensure the chatbot is operating as expected.
+
+## Moderation
+
+To ensure a safe and respectful conversation environment, it's essential to have robust moderation features in place.
+
+This is where the Moderation comes into play.
+
+The Moderation feature in ChatGPT provides a powerful tool for moderating user messages.
+
+It can identify and filter out offensive or inappropriate content, ensuring that your chatbot maintains a respectful, safe, and productive conversation environment.
+
+:::info
+
+Moderation feature is available only in the Pro plan.
+
+:::
+
+Moderation feature classifies the following categories:
+
+| CATEGORY        | DESCRIPTION                                                                                           |
+|-----------------|-------------------------------------------------------------------------------------------------------|
+| hate            | Content that expresses, incites, or promotes hate based on race, gender, ethnicity, religion, nationality, sexual orientation, disability status, or caste. |
+| hate/threatening| Hateful content that also includes violence or serious harm towards the targeted group.              |
+| self-harm       | Content that promotes, encourages, or depicts acts of self-harm, such as suicide, cutting, and eating disorders. |
+| sexual          | Content meant to arouse sexual excitement, such as the description of sexual activity, or that promotes sexual services (excluding sex education and wellness). |
+| sexual/minors   | Sexual content that includes an individual who is under 18 years old.                                 |
+| violence        | Content that promotes or glorifies violence or celebrates the suffering or humiliation of others.     |
+| violence/graphic| Violent content that depicts death, violence, or serious physical injury in extreme graphic detail.  |
+
+### Benefits
+
+- **Improved User Experience**: By ensuring that all interactions are respectful and positive, you can provide a better user experience, which can lead to increased customer satisfaction and loyalty.
+- **Automated Content Moderation**: The feature uses OpenAI's cutting-edge models to automatically moderate content, relieving you from the need to manually monitor and manage inappropriate user inputs.
+- **Customizable Response**: You can customize the message that users receive when their content is flagged, allowing you to tailor your brand's communication style.
+- **Flexible Model Selection**: Choose between the 'text-moderation-stable' and 'text-moderation-latest' models based on your needs. The latter ensures you're always using the most accurate and up-to-date model.
+- **Compliance With Policies**: By filtering out content that doesn't comply with OpenAI's usage policies, you can ensure the respect and safety of all users.
+- **Transparency and Control**: The feature provides a log of all moderated content, giving you transparency and control over the chatbot's interactions.
+
+By enabling the Moderation feature, you can make your ChatGPT a safer, more respectful, and user-friendly tool for your customers or audience.
+
+### Enabling Moderation
+
+This guide will walk you through the steps to enable and configure the Moderation feature in your chatbot.
+
+<Tabs>
+  <TabItem value="shortcode" label="Shortcode" default>
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Click on the <b>Moderation</b> tab located on the right side of your screen.</li>
+        <img src={ShortcodeModeration} width="700" />
+        <li>Look for the <b>Enable Moderation</b> and <b>Model</b> options:</li>
+            <ul>
+                <li><b>Enable Moderation</b>: Toggle this switch to enable the chatbot to moderate user messages to detect any offensive words or content.</li>
+                <li><b>Model</b>: Choose the content moderation model you wish to use. Two options are available: <b>text-moderation-stable</b> and <b>text-moderation-latest</b>. The default is text-moderation-latest, which automatically upgrades over time.</li>
+                <li><b>Notice</b>: Customize the notice message that will be displayed when offensive content is detected. The default message is "Your message has been flagged as potentially harmful or inappropriate..."</li>
+            </ul>
+        <img src={Moderation} width="300" />
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+    </TabItem>
+<TabItem value="widget" label="Widget">
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Click on the <b>Moderation</b> tab located on the right side of your screen.</li>
+        <img src={WidgetModeration} width="700" />
+        <li>Look for the <b>Enable Moderation</b> and <b>Model</b> options:</li>
+             <ul>
+                <li><b>Enable Moderation</b>: Toggle this switch to enable the chatbot to moderate user messages to detect any offensive words or content.</li>
+                <li><b>Model</b>: Choose the content moderation model you wish to use. Two options are available: text-moderation-stable and text-moderation-latest. The default is text-moderation-latest, which automatically upgrades over time.</li>
+                <li><b>Notice</b>: Customize the notice message that will be displayed when offensive content is detected. The default message is "Your message has been flagged as potentially harmful or inappropriate..."</li>
+            </ul>
+        <img src={Moderation} width="300" />
+        <li>After adjusting the settings, click on the <b>Save</b> button to apply the changes.</li>
+    </ul>
+</TabItem>
+</Tabs>
+Note: If a message is flagged as potentially harmful or inappropriate, the chatbot will not respond to the user. You can view the logs of the moderation in the Logs tab.
+
+### Moderation Log
+
+To monitor the effectiveness of the Moderation feature and to review flagged content, a Moderation Log is available.
+
+To access this:
+
+<Tabs>
+  <TabItem value="shortcode" label="Shortcode" default>
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Shortcode</b> tab in your dashboard.</li>
+        <li>Click on the <b>Logs</b> tab located on the top of your screen.</li>
+        <li>Here, you will find a column labeled "Moderation". In this column, each conversation is labeled either as <b>Passed</b> or <b>Flagged</b>.</li>
+        <img src={ModerationLog} width="700" />
+        <li>To see more details about why a conversation was flagged, click the <b>View</b> button next to each conversation. This will take you to a detailed view of the conversation.</li>
+        <li>In the detailed view, flagged content will be marked with a red label, specifying the reason for the flag (for example, "Flagged as Violence").</li>
+        <img src={ModerationLogView} width="700" />
+        <li>This log allows you to review moderated content and better understand how the Moderation feature is working to maintain a respectful and safe conversation environment.</li>
+    </ul>
+  </TabItem>
+<TabItem value="widget" label="Widget">
+    <ul>
+        <li>Navigate to the <b>ChatGPT - Widget</b> tab in your dashboard.</li>
+        <li>Click on the <b>Logs</b> tab located on the top of your screen.</li>
+        <li>Here, you will find a column labeled "Moderation". In this column, each conversation is labeled either as <b>Passed</b> or <b>Flagged</b>.</li>
+        <img src={ModerationLog} width="700" />
+        <li>To see more details about why a conversation was flagged, click the <b>View</b> button next to each conversation. This will take you to a detailed view of the conversation.</li>
+        <li>In the detailed view, flagged content will be marked with a red label, specifying the reason for the flag (for example, "Flagged as Violence").</li>
+        <img src={ModerationLogView} width="700" />
+        <li>This log allows you to review moderated content and better understand how the Moderation feature is working to maintain a respectful and safe conversation environment.</li>
+    </ul>
+</TabItem>
+</Tabs>

@@ -1,0 +1,48 @@
+---
+sidebar_position: 2
+---
+
+import Parameters from '/img/chatgpt/ai-settings/parameters.png';
+import SelectingProvider from '/img/chatgpt/ai-settings/selecting-provider.png';
+import SelectingModel from '/img/chatgpt/ai-settings/selecting-model.png'
+import SyncingModels from '/img/chatgpt/ai-settings/syncing-models.png';
+
+# AI Settings
+
+You can define different AI providers, models, and parameters for each chatbot.
+
+## Selecting Provider
+
+You can select the AI provider for your chatbot from the **Provider** dropdown. 
+
+The default provider is **OpenAI**, but you can also choose from **OpenRouter**, **Google**, and **Azure**.
+
+<img src={SelectingProvider} />
+
+## Selecting Model
+
+Once the provider is selected, you can choose the model from the **Model** dropdown. 
+
+The available models will automatically adjust based on your selected provider.
+
+<img src={SelectingModel} />
+
+Additionally, there's a **Sync** button next to the model dropdown, which allows you to retrieve the latest models from the provider.
+
+<img src={SyncingModels} />
+
+## Setting AI Parameters
+
+Click on the **gear**icon next to the Model dropdown, as shown below, to open the AI parameters window.
+
+<img src={Parameters} />
+
+- **Max Tokens**: Set the maximum number of tokens to generate.
+- **Temperature**: Adjust the randomness. Higher values mean more randomness.
+- **Frequency Penalty**: Control the frequency. Lower values mean more frequency. 
+- **Presence Penalty**: Control the presence. Lower values mean more presence.
+- **Top P**: Control the diversity. Lower values mean more predictability. 
+
+Remember, the adjustments made to these parameters will directly influence the performance and response behavior of your chatbot. 
+
+It is recommended to test different configurations to find what works best for your use case.
