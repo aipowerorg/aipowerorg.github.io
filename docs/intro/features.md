@@ -89,9 +89,6 @@ Here are the main features:
 - **Playground**
   - Over 100 custom prompts
 
-- **Model Comparison Tool**
-  - Speed and cost comparison
-
 - **Role Manager**
   - Feature limits based on user roles
 
