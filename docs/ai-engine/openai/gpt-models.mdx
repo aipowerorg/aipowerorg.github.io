@@ -6,8 +6,10 @@ import ModelWindow2 from '/img/ai-settings/changing-model.png';
 import SyncButton from '/img/ai-settings/sync-button.png';
 import FineTunedModels from '/img/ai-settings/fine-tuned-models.png';
 import RateLimitBuffer from '/img/ai-settings/rate-limit-buffer.png';
+import AssistantSync from '/img/ai-settings/assistant_sync.png';
+import Assistants from '/img/ai-settings/assistants.png';
 
-# Models
+# Model & Assistant
 
 **AI Power** supports OpenAI **GPT-3**, **GPT-3.5**, **GPT-4**, and **o1** models.
 
@@ -115,16 +117,23 @@ Our plugin has a Rate Limit Buffer to manage API requests efficiently. This feat
 
 We recommend starting with a 1-second delay and increasing it if needed.
 
-## Best Practices
+## Assistant Configuration
 
-For different tasks, different GPT models may be more suitable:
+Our plugin supports the OpenAI Assistant API, allowing you to create and sync custom assistants for use in your chatbot. Here’s how to configure it:
 
-### Content Writing
-- **GPT-3.5 Turbo**: Most capable GPT-3.5 model, cost-effective.
-- **GPT-4**: More capable than any GPT-3.5 model, able to do more complex tasks.
+1. **Create an Assistant on OpenAI**  
+   Go to [OpenAI Assistants](https://platform.openai.com/assistants/) and create your assistant by providing instructions and uploading any relevant files.
 
-### Chat Bots
-- **GPT-3.5 Turbo**: Optimized for chat and cost-effective.
-- **GPT-4**: More capable than any GPT-3.5 model, able to do more complex tasks, and optimized for chat.
+2. **Sync the Assistant with the Plugin**  
+   - Go to the **Dashboard** in the plugin menu.
+   - Go to the **Chatbot** tab.
+   - Click "Edit" for an existing bot or create a new bot using the **Create New Bot** button.
+   - Use the **Sync** button next to the model list to fetch your assistants from OpenAI.
 
-Choose the model that best fits your needs in terms of capabilities, cost, and availability.
+<img src={AssistantSync} width="700" />
+
+   - Your assistant will now appear in the model list. Select it to link it to your bot.
+
+<img src={Assistants} width="700" />
+
+That’s it! Your chatbot will now use your custom assistant.

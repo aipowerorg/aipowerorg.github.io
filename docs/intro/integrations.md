@@ -8,7 +8,7 @@ AI Power integrates with many services and platforms to provide a comprehensive 
 
 | Integration | Description |
 |-------------|-------------|
-| **OpenAI** | Integrates with OpenAI's advanced language models including GPT-3.5-Turbo, GPT-3.5-Turbo-Instruct, GPT-4, GPT-4o, GPT-4-32K, GPT-4-Turbo for natural language processing, Whisper for speech-to-text conversion, and Text-to-Speech technology for voice synthesis. |
+| **OpenAI** | Integrates with OpenAI's advanced language models, including GPT-3.5-Turbo, GPT-3.5-Turbo-Instruct, GPT-4, GPT-4o, GPT-4-32K, GPT-4-Turbo for natural language processing, Whisper for speech-to-text conversion, Text-to-Speech technology for voice synthesis, the OpenAI Assistant API, and new advanced models like o1-mini and o1-preview. |
 | **Microsoft Azure** | Supports Azure as a GPT API provider, allowing users to tap into Azure's advanced AI capabilities alongside OpenAI. |
 | **Google** | Supports Google's models including Gemini Pro, Gemma 7B IT, Palm 2 Chat Bison, Palm 2 Codechat Bison, Palm 2 Chat Bison 32K, Palm 2 Codechat Bison 32K, Gemini Pro Vision, Gemini Pro 1.5, and Gemini Flash 1.5. |
 | **Anthropic** | Integrates with Anthropic's models for advanced AI functionalities. |

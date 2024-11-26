@@ -9,10 +9,10 @@ AI Power adds advanced AI features to your WordPress site.
 Here are the main features:
 
 - **Multiple AI Providers**
-  - OpenAI, Microsoft Azure, Google, Anthropic, OpenRouter, Meta-Llama, Mistral, and others
+  - OpenAI, including the OpenAI Assistant API, Microsoft Azure, Google, Anthropic, OpenRouter, Meta-Llama, Mistral, and others
 
 - **Latest and Most Powerful Models**
-  - **OpenAI**: gpt-4, gpt-4o, gpt-3.5, gpt-3.5-turbo, gpt-4-vision, gpt-3.5-turbo-16k, gpt-3.5-turbo-instruct
+  - **OpenAI**: gpt-4, gpt-4o, gpt-3.5, gpt-3.5-turbo, gpt-4-vision, gpt-3.5-turbo-16k, gpt-3.5-turbo-instruct, o1-mini, o1-preview.
   - **Microsoft Azure**: All OpenAI models are accessible via Azure integration.
   - **Google**: Gemma 7B IT, Palm 2 Chat Bison, Palm 2 Codechat Bison, Palm 2 Chat Bison 32K, Palm 2 Codechat Bison 32K, Gemini Pro, Gemini Pro Vision, Gemini Pro 1.5, Gemini Flash 1.5
   - **Anthropic**: Claude 3 Opus, Claude 3 Sonnet, Claude 3.5 Sonnet, Claude 3 Haiku, Claude 2, Claude 2.0, Claude 2.1, Claude Instant 1, Claude 3 Opus Beta, Claude 3 Sonnet Beta, Claude 3 Haiku Beta, Claude 2 Beta, Claude 2.0 Beta, Claude 2.1 Beta, Claude Instant 1 Beta
@@ -22,6 +22,7 @@ Here are the main features:
   - **NousResearch**: Nous Capybara 7B, Nous Hermes Yi 34B, Nous Hermes 2 Mixtral 8x7B SFT, Nous Hermes 2 Mistral 7B DPO
   - **MistralAI**: Mistral 7B Instruct, Mixtral 8x7B, Mixtral 8x7B Instruct Nitro, OpenOrca Mistral 7B
   - **OpenRouter**: Auto, Cinematika 7B
+  - **xAI**: Grok
 
 - **Chatbots**
     - Content and user-aware
