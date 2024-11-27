@@ -58,7 +58,6 @@ const config = {
         },
         // add sitemap plugin config here
         sitemap: {
-          lastmod: 'date', // optional: adds <lastmod> tag
           changefreq: 'weekly', // set change frequency
           priority: 0.5, // default priority for pages
           ignorePatterns: ['/tags/**'], // ignore specific patterns
