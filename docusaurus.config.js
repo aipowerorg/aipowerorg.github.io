@@ -56,6 +56,19 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        // add sitemap plugin config here
+        sitemap: {
+          lastmod: 'date', // optional: adds <lastmod> tag
+          changefreq: 'weekly', // set change frequency
+          priority: 0.5, // default priority for pages
+          ignorePatterns: ['/tags/**'], // ignore specific patterns
+          filename: 'sitemap.xml', // filename for the sitemap
+          createSitemapItems: async (params) => {
+            const { defaultCreateSitemapItems, ...rest } = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes('/page/')); // exclude certain urls
+          },
+        },
         // Add your Google Analytics configuration here:
         gtag: {
           trackingID: 'G-D4CDTL01MK', // Replace 'G-XXXXXXXXXX' with your Google Analytics tracking ID.
