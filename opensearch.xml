@@ -4,8 +4,8 @@
   <ShortName>AI Power</ShortName>
   <Description>Search AI Power</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://aipower.org/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://aipower.org/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://aipower.org/opensearch.xml" />
-  <moz:SearchForm>https://aipower.org/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://docs.aipower.org/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://docs.aipower.org/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.aipower.org/opensearch.xml" />
+  <moz:SearchForm>https://docs.aipower.org/</moz:SearchForm>
 </OpenSearchDescription>
