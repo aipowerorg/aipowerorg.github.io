@@ -285,7 +285,7 @@ This is where you can add customizable fields to your form, making your form dis
 This tab is divided into several elements: Label, ID, Type, Min, Max, and Options.
 
 - **Label (Mandatory)**: This is the name that will identify your field. It will appear in the AI Forms menu and will be visible to users interacting with your form.
-- **ID (Mandatory)**: This is an identifier unique to each field and must be written in the following format: {field_name}. This ID will also be visible to users as they input values into the field.
+- **ID (Mandatory)**: This is an identifier unique to each field and must be written in the following format: ``` {field_name}```. This ID will also be visible to users as they input values into the field.
 - **Type (Mandatory)**: Here, you can select the data type for your field. Options include Text, Drop-Down, Number, URL, Text Area, Radio Button, and Checkbox. Each type corresponds to the type of input accepted. For instance, a "Text" field will accept any string of text, while a "URL" field will only accept valid URLs.
 - **Min (Optional)**: Set a minimum value for your field to facilitate input validation. If no minimum is set, the default will be 2.
 - **Max (Optional)**: Set a maximum value for your field to facilitate input validation. If no maximum is set, the default will be 100.
@@ -297,17 +297,17 @@ In this case, you want to create a form that generates either creative, catchy, 
 
 Here's how you would set up the form:
 
-Prompt: *"Generate a {headlinetype} headline for a Google AdWords ad for a {businessname}."*
+Prompt: *"Generate a ``` {headlinetype}``` headline for a Google AdWords ad for a ``` {businessname}```."*
 
 **Fields**:
 
 - **Label**: Headline Type
-- **ID**: {headlinetype}
+- **ID**: ``` {headlinetype}```
 - **Type**: Dropdown
 - **Options**: Creative|Catchy|Unique
 
 - **Label**: Business Name
-- **ID**: {businessname}
+- **ID**: ``` {businessname}```
 - **Type**: Text
 - **Min**: 5
 - **Max**: 80
@@ -320,7 +320,7 @@ Once you've added all the fields, click **Save** to generate the shortcode. Then
 
 Remember, it's crucial that the fields are referenced in the prompt **in the order** they were defined.
 
-In this example, {headlinetype} must be mentioned before {businessname} in your prompt text for the form to function correctly.
+In this example, ``` {headlinetype}``` must be mentioned before ``` {businessname}``` in your prompt text for the form to function correctly.
 
 :::
 
