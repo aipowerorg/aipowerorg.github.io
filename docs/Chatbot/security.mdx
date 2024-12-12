@@ -6,6 +6,8 @@ import SecuritySettings from '/img/chatbot/logs/log-settings.png';
 import EnableModeration from '/img/chatbot/security/moderation.png';
 import GeneralSecurity from '/img/chatbot/security/general-security.png';
 import BannedWordsIPs from '/img/chatbot/security/banned-words-ips.png';
+import ipanon1 from '/img/chatbot/security/ip-anon.png';
+import ipanon2 from '/img/chatbot/security/ip-anon2.png';
 
 # Security
 
@@ -67,3 +69,21 @@ In this window, you can:
 - **Add Banned IPs**: Enter IP addresses separated by commas. These addresses will be blocked from accessing the chatbot.
 
 <img src={BannedWordsIPs} />
+
+##  IP Anonymization
+
+To further protect user privacy and adhere to GDPR requirements, you can enable IP Anonymization.
+
+When this feature is enabled, the plugin will store anonymized versions of user IP addresses in the database.
+
+This ensures that sensitive information is not retained, helping your site remain compliant with data protection regulations.
+
+To enable IP Anonymization, go to **Dashboard - Chatbot - Settings** tab, and under the Security label, click the gear icon.
+
+<img src={ipanon1} />
+
+In the security settings window, you can toggle the IP Anonymization option on or off.
+
+<img src={ipanon2} />
+
+When activated, the plugin will automatically mask the last portion of IPv4 addresses and truncate IPv6 addresses before saving them, maintaining user privacy while preserving essential functionality.
