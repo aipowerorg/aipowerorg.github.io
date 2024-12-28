@@ -97,7 +97,6 @@ const config = {
           {to: 'https://aipower.org/support/', label: 'Support', position: 'right'},
           {to: 'https://aipower.org/contact/', label: 'Contact', position: 'right'},
           {to: 'https://ai-power.supahub.com/', label: 'Roadmap', position: 'left'},
-          {to: 'https://discord.gg/3GWp77JEM7', label: 'Discord', position: 'right'},
         ],
       },
       footer: {
@@ -116,12 +115,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Discord',
-                href: 'https://discord.gg/3GWp77JEM7',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/',
+                label: 'Forum',
+                href: 'https://wordpress.org/support/plugin/gpt3-ai-content-generator/',
               },
             ],
           },
