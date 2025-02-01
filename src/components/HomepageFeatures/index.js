@@ -22,7 +22,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Powered by GPT-4',
+    title: 'Powered by AI',
     // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>

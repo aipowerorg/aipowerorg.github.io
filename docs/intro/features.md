@@ -9,7 +9,7 @@ AI Power adds advanced AI features to your WordPress site.
 Here are the main features:
 
 - **Multiple AI Providers**
-  - OpenAI, including the OpenAI Assistant API, Microsoft Azure, Google, Anthropic, OpenRouter, Meta-Llama, Mistral, and others
+  - OpenAI, including the OpenAI Assistant API, Microsoft Azure, Google, Anthropic, OpenRouter, DeepSeek R1, Meta-Llama, Mistral, and others
 
 - **Latest and Most Powerful Models**
   - **OpenAI**: gpt-4, gpt-4o, gpt-3.5, gpt-3.5-turbo, gpt-4-vision, gpt-3.5-turbo-16k, gpt-3.5-turbo-instruct, o1-mini, o1-preview.
