@@ -4,6 +4,8 @@ sidebar_position: 5
 
 import StyleTab from '/img/chatbot/style/style-tab.png';
 import Interface1 from '/img/chatbot/style/interface1.png';
+import ConvSidebar from '/img/chatbot/style/conversation-sidebar.png';
+import ConvSidebar2 from '/img/chatbot/style/conversation-sidebar2.png';
 import TypeWriter from '/img/chatbot/style/typewriter.png';
 import BotThemes from '/img/chatbot/style/theme.png';
 
@@ -58,6 +60,7 @@ You can also change the chatbot interface under the **Interface** tab.
 
 Below are the options:
 
+- **Conversations**: Adds a conversation sidebar to the left of the chat window allowing users to see their past conversations.
 - **Fullscreen Mode**: Adds an icon to the top of the chat window allowing users to make it fullscreen.
 - **Download**: Adds an icon to download the chat conversation as a .txt file.
 - **Clear**: Adds an icon to clear the current chat session.
@@ -68,6 +71,7 @@ You can also customize:
 - **AI Name**
 - **User Name**
 - **Response Wait Message**
+- **New Chat**
 - **Input Field Placeholder**
 - **Footnote**
 - **Avatar Picture**
@@ -79,6 +83,27 @@ For the widget, you can set the **Widget Icon** too.
 You can use the `Shift + Enter` shortcut to create a line break instead of sending a message in the chatbot.
 
 :::
+
+## Conversation Sidebar
+
+You can enable the conversation sidebar exclusively for **shortcode-based chatbots** (this feature is not available for widget bots).
+
+To turn it on or off, navigate to the **Dashboard - Chatbot** under the **Interface** tab, where you'll find the **"Conversations"** switch.
+
+<img src={ConvSidebar} />
+
+When enabled, a toggle button will appear on the chatbot interface, allowing users to open or close the conversation sidebar.
+
+This sidebar lists all past user conversations with the chatbot in descending order by time.
+
+<img src={ConvSidebar2} />
+
+Additionally, there is a **"New Chat"** button within the sidebar. Clicking it starts a new conversation. The label for this button can be customized in the **"New Chat"** field under the bot settings **Interface** tab, allowing you to modify or translate the text.  
+
+Users can revisit the sidebar at any time to resume previous conversations seamlessly.  
+
+The **sidebar styling is dynamic**, inheriting its appearance (colors, fonts, etc.) from the main chatbot window.
+
 
 ## Type Writer Effect
 
