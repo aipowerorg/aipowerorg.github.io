@@ -19,6 +19,17 @@ import Feedback1 from '/img/ai-forms/feedback1.png';
 import Feedback2 from '/img/ai-forms/feedback2.png';
 import Feedback3 from '/img/ai-forms/feedback3.png';
 import Feedback4 from '/img/ai-forms/feedback4.png';
+import FormName from '/img/ai-forms/form-name.png';
+import ElementSettings from '/img/ai-forms/element-settings.png';
+import aiprovider from '/img/ai-forms/provider.png';
+import aiparameters from '/img/ai-forms/parameters.png';
+import usembeddings from '/img/ai-forms/embeddings.png';
+import useinternet from '/img/ai-forms/internet.png';
+import google from '/img/ai-forms/google.png';
+import modi from '/img/ai-forms/modi.png';
+import feed1 from '/img/ai-forms/feed1.png';
+import feed2 from '/img/ai-forms/feed2.png';
+import cool from '/img/ai-forms/cool.png';
 
 import EmbeddingsSettings from '/img/ai-forms/embeddings/settings.png';
 
@@ -36,7 +47,7 @@ You can choose from a variety of GPT models and customize the forms to suit your
 
 AI Forms also supports the KaTeX format, ensuring that mathematical expressions are displayed correctly.
 
-## Using Pre-built AI Forms
+## Using Pre-built Forms
 
 To use one of the pre-built forms, simply browse through the available options in the AI Forms menu.
 
@@ -46,19 +57,15 @@ From there, you can copy the shortcode provided and paste it into your WordPress
 
 The shortcode will embed the form form on your page, and your users can start interacting with it right away.
 
-### Accessing AI Forms
-
 To access the pre-built forms, follow these steps:
 
 - Open your WordPress dashboard.
 - Navigate to the **AI Power** plugin menu on the sidebar.
 - Click on the **AI Forms** tab.
 
-<img src={accessaiforms} width="700" />
+<img src={accessaiforms} />
 
 Here, you'll see a search box at the top of the page. You can use this to search for specific forms based on your needs.
-
-### Browsing and Searching for Forms
 
 The AI Forms page displays up to 40 forms per page. You can browse through these using the page numbers at the bottom of the screen. With over 100 AI forms available, you can easily find the right form for your needs.
 
@@ -71,104 +78,138 @@ On the left-hand side, you will find filtering options:
 
 To use a form, hover over its icon and click on it to open it.
 
-### Using and Embedding a Form
-
 Once you open a form, a window will appear where you can interact with it. Here's what you'll find in this window:
 
 - **Form Fields**: Here, you can enter values and click "Generate" to get the output.
-- **AI Parameter Settings**: On the right side, you will find settings such as the GPT model, max tokens, etc.
-- **Shortcode**: At the bottom right of the window, you'll find the shortcode for the form. This shortcode allows you to embed the form on any of your pages. Simply copy it and paste it into your WordPress post or page where you want the form to appear. Your users can start interacting with it right away.
-- **Duplicate Button**: At the top right of the window, you'll find this button. Clicking on it will duplicate the form, enabling you to create a custom version for your needs. This will generate a new shortcode for the duplicated form.
+- **Shortcode**: At the top of the window, you'll find the shortcode for the form. This shortcode allows you to embed the form on any of your pages. Simply copy it and paste it into your WordPress post or page where you want the form to appear. Your users can start interacting with it right away.
+- **Duplicate**:  At the top of the window, you'll find this button. Clicking on it will duplicate the form, enabling you to create a custom version for your needs. This will generate a new shortcode for the duplicated form.
+- **Edit**: You can edit an existing form by clicking this button.
+- **Delete**: You can delete that form by clicking Delete button.
 
-<img src={Form} />
+<img src={Form} width="700" />
 
-In the next part, we'll discuss how you can design and create your own AI forms.
-
-## Desigining Your Own AI Forms
+## Creating a Form
 
 AI Power plugin allows you to not only use pre-built forms but also design your own AI Forms.
 
 This guide will explain how you can create and customize your own forms using different settings and options.
 
-### Initiating the Form Design Process
+To start designing your own AI forms, go to the **AI Forms** page within the **AI Power** plugin menu.
 
-To start designing your own AI forms, you have two options:
-
-#### Creating from Scratch:
-
-- Navigate to the **AI Forms** tab within the **AI Power** plugin menu.
+Click on the **Create New** button.
 
 <img src={FormDesign} width="500" />
 
-- Click on the **Design Your Form** button.
+When you click Create New, two tabs appear: New Form and Settings tab.
 
-#### Using a Prebuilt Form as a Base:
+Double-click the tab label to rename your form.
 
-- Open a prebuilt form that you'd like to use as a base.
+<img src={FormName} width="500" />
 
-<img src={DuplicateForm} width="500" />
+### Form Elements
 
-- Click the **Duplicate this Form** button located on the top right of the form window.
+- Available fields: Single Line Text, Multi Line Text, Email, Number, Checkbox, Radio, Select, URL, and File Upload.
+- Drag and drop any element into the next section (the Drop Zone).
 
-Regardless of the method you choose, a modal window will open with five different tabs for designing your form: Properties, AI Engine, Style, Frontend, and Fields.
+<img src={Fields} width="400" />
 
-### Properties
+### Drop Zone
 
-The **Properties** tab contains the main information about your form, including:
+- Arrange your dragged form elements in any order.
+- Each element requires a Label and an ID (auto-generated as id1, id2, etc., but you can change them).
+- Remove an element by clicking the X icon.
+- Click the gear icon (Settings) on each element to configure:
+  - Text: min/max length
+  - Multi Line: min/max length, rows, cols
+  - Email, URL: no extra settings
+  - Number: min, max
+  - Checkbox, Radio, Select: add or edit options
+  - File Upload: Allowed file types (comma-separated). txt, csv, doc and docx supported.
 
-- **Title (Mandatory)**: Enter a title for your form. This is used to identify your form in the AI Forms menu.
-- **Category (Mandatory)**: Select a category for your form. This helps organize your forms within the menu.
+<img src={ElementSettings} />
 
-<img src={Properties} width="700" />
+### AI & Prompt Settings
 
-- **Prompt (Mandatory)**: Enter the prompt to be displayed to users when they interact with your form.
-- **Sample Response (Optional)**: Enter a sample response for your prompt. This is for your reference and won't be displayed to users.
+The "AI Settings" tab allows you to select the AI provider, model and adjust the parameters for your form.
 
-### AI Parameters
+- **Provider**: Choose an AI Provider (OpenRouter, OpenAI, Google, Azure).
+- **Model**: Choose an AI model for your form. Model list will be populated based on provider selection.
 
-The "AI Engine" tab allows you to select the AI model and adjust the parameters for your form:
+<img src={aiprovider} />
 
-- **Engine (Optional)**: Choose the GPT model for your form. You can select from gpt-4, gpt-3.5 or any of your custom models. If not selected, the default model (gpt-3.5-turbo) will be used.
-
-<img src={AIEngine} width="700" />
+Click the gear icon next to the model for advanced parameters (max tokens, stop words, top_p, etc.).
 
 - **Temperature, Top P, Frequency Penalty, Presence Penalty (Optional)**: These options control the creativity, diversity, and uniqueness of the output, respectively. If not specified, the default values are applied.
 - **Stop Sequence (Optional)**: This determines when the AI should stop generating text.
 
+<img src={aiparameters} width="500" />
+
 ### Embeddings
-In addition to the variety of features already available in AI Forms, we now support the use of embeddings to enhance the functionality and intelligence of your forms. This feature allows for more context-aware responses and interactions, leveraging the power of vector databases (vector DBs) to process and understand user inputs at a deeper level.
 
-To take advantage of embeddings in your AI forms, you can enable this feature under the Embeddings tab. 
+This feature allows for more context-aware responses and interactions, using vector databases (Pinecone, Qdrant) to retrieve relevant context from your knowledge base.
 
-Here's how:
+You can enable this feature under the Embeddings subheading.
 
-- Navigate to the Embeddings tab within your form settings.
-- The first option you'll encounter is "Use Embeddings", which is set to "No" by default. Switching this to "Yes" activates the embeddings feature for your form.
+The first option you'll see is "Use Embeddings", which is set to "No" by default. Switching this to "Yes" activates the embeddings feature for your form.
 
-<img src={EmbeddingsSettings} />
+<img src={usembeddings} width="500" />
 
 - Upon enabling embeddings, another option becomes available for you to select a vector database. Currently, we support two types of vector databases: Qdrant and Pinecone.
-- Selecting either of these databases will further customize the form settings based on the chosen database's characteristics.
-- If you opt for Qdrant as your vector database, you'll be prompted to select from your available collections. If no collections are visible, it's likely that they haven't been synchronized with your AI Forms yet. To resolve this, visit the **Embeddings-Settings** page to create and sync your Qdrant collections.
-- Choosing Pinecone changes the naming convention to "indexes" to align with Pinecone's terminology. This option allows you to select from the indexes you have available within Pinecone's infrastructure. If no indexes are visible, it's likely that they haven't been synchronized with your AI Forms yet. To resolve this, visit the **Embeddings-Settings** page to create and sync your Pinecone indexes.
+- If you opt for Qdrant as your vector database, you'll be prompted to select from your available collections. If no collections are visible, it's likely that they haven't been synchronized with your AI Forms yet. To resolve this, visit the **AI Training-Settings** page to create and sync your Qdrant collections.
+- Choosing Pinecone changes the naming convention to "indexes" to align with Pinecone's terminology. This option allows you to select from the indexes you have available within Pinecone. If no indexes are visible, it's likely that they haven't been synchronized with your AI Forms yet. To resolve this, visit the **AI Training-Settings** page to create and sync your Pinecone indexes.
 
 Several other options will become visible upon selecting a vector database, enhancing the flexibility and customization of your AI Forms:
 - **Limit**: Define how many nearest results from the vector database should be retrieved and added to the prompt as context. You can select between 1, 2, and 3, with the default being 1. This setting determines the depth of context integration into your prompt.
 - **Context Label**: Customize the label that precedes the context from your vector database in the prompt. By default, this is set to "Context:", but you can modify it to suit your needs.
 - **Context Position**: Decide whether the context retrieved from the vector database should be appended before or after your prompt. The default setting is "after", which adds the context at the end of your prompt. Selecting "before" will place the context at the beginning.
 
-Embeddings offer a powerful way to enhance the intelligence and responsiveness of your AI Forms, making them even more versatile and user-friendly. By carefully configuring these settings, you can create forms that not only interact but also understand and adapt to user inputs in more meaningful ways.
+### Internet Browsing
 
-### Form Style
+The Internet Browsing feature enables your form to search the web for answers in real time, ensuring up-to-date information.
 
-Customize the appearance of your form in the "Style" tab:
+When activated, your form uses a Google Custom Search Engine (CSE) to fetch relevant results and generate responses.
 
-- **Background Color (Optional)**: Select a background color for your form. Default is white.
+You can check the demo here: https://aipower.org/cryptocoin-price-analysis/
 
-<img src={Style} width="700" />
+You can enable this feature from the AI Settings panel.
 
-- **Icon (Optional)**: Choose an icon for your form. If not selected, a default icon is used.
-- **Icon Color (Optional)**: Choose the color of your icon. The default color is applied if not selected.
+Click the globe icon – it will turn blue when enabled.
+
+<img src={useinternet} />
+
+To use this feature, you must enter your Google API key and CSE ID in the **AI Forms - Settings** page.
+
+Follow this guide for step-by-step instructions: https://docs.aipower.org/docs/Chatbot/tools#internet-browsing
+
+<img src={google} />
+
+### Style
+
+You can customize the appearance of your form in the "Settings" tab:
+
+- **Background Color**: Select a background color for your form. Default is white.
+- **Icon**: Choose an icon for your form. If not selected, a default icon is used.
+- **Icon Color**: Choose the color of your icon. The default color is applied if not selected.
+- **Output**: Choose between **Text Editor** or **Inline** display for your results.
+- **Header**: Decide whether to display or hide the form's header.
+- **Save as Draft Button**: Decide whether to display or hide the **Save as Draft** button.
+- **Clear Button**: Choose to display or hide the "Clear" button.
+- **Notification**: Select whether to display or hide the notification for non-registered users.
+- **Download button**: Choose to enable or disable the button that allows users to download their results. It will save it as "response.txt".
+- **Copy Button**: Choose to display or hide the button that enables users to copy their results to the clipboard.
+- **Feedback Buttons**: Decide whether to display or hide the thumbs up and thumbs down feedback options for users to collect feedback.
+
+<img src={Style} />
+
+In addition to these display and interaction settings, you can also customize the following text strings to better match your website's language or branding:
+
+- **Generate Button Text**: The default text is **Generate**.
+- **Save as Draft Button Text**: The default text is **Save Draft**.
+- **Clear Button Text**: The default text is **Clear**.
+- **Stop Button Text**: The default text is **Stop**.
+- **Notice for Non-Registered Users Text**: The default text is **Please register to save your result**.
+- **Download Button Text**: The default text is "Download".
+- **Copy Button Text**: The default text is "Copy".
 
 If you wish to add custom styling to your form, you can follow below steps:
 
@@ -247,119 +288,48 @@ If you want to change the form layout to create two columns of equal width, you 
 }
 ```
 
-
-### Frontend Display
-
-The **Frontend** tab allows you to customize how the results are displayed and which interactive elements are available:
-
-- **Result**: Choose between **Text Editor** or **Inline** display for your results.
-- **Header**: Decide whether to display or hide the form's header.
-- **Number of Answers**: Choose to display or hide the number of answers feature.
-
-<img src={FrontEnd} width="700" />
-
-- **Save as Draft Button**: Decide whether to display or hide the **Save as Draft** button.
-- **Clear Button**: Choose to display or hide the "Clear" button.
-- **Notification**: Select whether to display or hide the notification for non-registered users.
-- **Download button**: Choose to enable or disable the button that allows users to download their results. It will save it as "response.txt".
-- **Copy Button**: Choose to display or hide the button that enables users to copy their results to the clipboard.
-- **Feedback Buttons**: Decide whether to display or hide the thumbs up and thumbs down feedback options for users to collect feedback.
-
-In addition to these display and interaction settings, you can also customize the following text strings to better match your website's language or branding:
-
-- **Generate Button Text**: The default text is **Generate**.
-- **Number of Answers Text**: The default text is **Number of Answers**.
-- **Save as Draft Button Text**: The default text is **Save Draft**.
-- **Clear Button Text**: The default text is **Clear**.
-- **Stop Button Text**: The default text is **Stop**.
-- **Notice for Non-Registered Users Text**: The default text is **Please register to save your result**.
-- **Download Button Text**: The default text is "Download".
-- **Copy Button Text**: The default text is "Copy".
-
-### Form Fields
-
-The Fields tab stands as a crucial component within the AI Forms modal window.
-
-This is where you can add customizable fields to your form, making your form distinct from those built with PromptBase.
-
-<img src={Fields} width="700" />
-
-This tab is divided into several elements: Label, ID, Type, Min, Max, and Options.
-
-- **Label (Mandatory)**: This is the name that will identify your field. It will appear in the AI Forms menu and will be visible to users interacting with your form.
-- **ID (Mandatory)**: This is an identifier unique to each field and must be written in the following format: ``` {field_name}```. This ID will also be visible to users as they input values into the field.
-- **Type (Mandatory)**: Here, you can select the data type for your field. Options include Text, Drop-Down, Number, URL, Text Area, Radio Button, and Checkbox. Each type corresponds to the type of input accepted. For instance, a "Text" field will accept any string of text, while a "URL" field will only accept valid URLs.
-- **Min (Optional)**: Set a minimum value for your field to facilitate input validation. If no minimum is set, the default will be 2.
-- **Max (Optional)**: Set a maximum value for your field to facilitate input validation. If no maximum is set, the default will be 100.
-- **Options (Only for Drop-Down, Radio Button, and Checkbox types)**: This allows you to define the possible options for your field. Options should be separated by a "|".
-
-Let's take the example of a **Google AdWords headline generator** form.
-
-In this case, you want to create a form that generates either creative, catchy, or unique headlines for a specified business.
-
-Here's how you would set up the form:
-
-Prompt: *"Generate a ``` {headlinetype}``` headline for a Google AdWords ad for a ``` {businessname}```."*
-
-**Fields**:
-
-- **Label**: Headline Type
-- **ID**: ``` {headlinetype}```
-- **Type**: Dropdown
-- **Options**: Creative|Catchy|Unique
-
-- **Label**: Business Name
-- **ID**: ``` {businessname}```
-- **Type**: Text
-- **Min**: 5
-- **Max**: 80
-
-This configuration will result in a form that generates headlines based on the user-selected headline type for a given business name.
-
-Once you've added all the fields, click **Save** to generate the shortcode. Then, you can copy this shortcode and paste it into your WordPress post or page to display the form on your website.
-
-:::tip
-
-Remember, it's crucial that the fields are referenced in the prompt **in the order** they were defined.
-
-In this example, ``` {headlinetype}``` must be mentioned before ``` {businessname}``` in your prompt text for the form to function correctly.
-
-:::
-
-### Edit, Duplicate, and Delete
+## Previewing and Modifying Forms
 
 Once you've created your own forms, there might come a time when you need to modify their content or structure, replicate them for similar uses, or remove them entirely.
 
-The "AI Forms" interface offers these functionalities in a user-friendly way.
+- **Preview**: Click a form in the AI Forms list to open and test it.
+- **Duplicate**: In preview mode, click Duplicate to clone the form.
+- **Edit**: In preview mode, click Edit to reopen the form builder.
+- **Delete**: In preview mode, click Delete.
 
-<img src={Delete} width="700" />
-
-- **Editing Forms**: To edit a form, first locate the specific form in the "AI Forms" tab. Hover over the form's name, and you'll see three buttons appear: **Duplicate**, **Edit**, and **Delete**. Click on the **Edit** button to modify the form's properties, AI engine settings, style, frontend configuration, and fields. After making your changes, don't forget to save your modifications by clicking on the **Save** button.
-- **Duplicating Forms**: If you need to create a similar form or want to use an existing form as a template, the **Duplicate** button comes in handy. Hover over the form's name and click on **Duplicate**. This action creates an exact copy of the form, which you can then edit as needed.
-- **Deleting Forms**: To delete a form, hover over the form's name and click on the **Delete** button. A confirmation dialog will appear, asking if you're sure about deleting the form. Confirm your decision by clicking on **Yes**. Please note that this action is permanent and cannot be undone.
-
-By using these options, you can manage your forms effectively and ensure they meet your evolving requirements.
+<img src={modi} />
 
 ## Feedback Collection
 
-Collecting feedback is a crucial aspect of ensuring your AI Forms meet user expectations and continually evolve to serve them better. With our feedback collection feature, you can seamlessly gather user opinions on the AI Form results.
+Collecting feedback is an important aspect of ensuring your AI Forms meet user expectations and continually evolve to improve them. 
 
-1. **Enabling Feedback Collection**: To start collecting feedback, navigate to the form settings and look for the "Frontend" tab. Here, you'll find an option to enable feedback collection. Simply set it to "Yes".
+With the feedback collection feature, you can gather user opinions on the AI Form results.
 
-<img src={Feedback1} />
+To start collecting feedback, go to the form settings and look for the "Interface" panel under Settings tab. 
 
-2. **Feedback Icons Display**: Once enabled, two icons representing thumbs up 👍 (for positive feedback) and thumbs down 👎 (for negative feedback) will be displayed right below the AI Form results on the frontend.
+Here, you'll find an option to enable feedback collection. 
 
-<img src={Feedback2} />
+Simply switch it on.
 
-3. **Collecting Additional Comments**: Clicking on either of these icons will open a modal window, prompting users to provide additional comments about the generated content. This feature offers an avenue for users to share more detailed insights or specific issues they might have encountered.
+<img src={feed1}  width="500"  />
 
-<img src={Feedback3} />
+Once enabled, two icons representing thumbs up 👍 (for positive feedback) and thumbs down 👎 (for negative feedback) will be displayed right below the AI Form results on the frontend.
 
-4. **One-time Feedback Submission**: To ensure authenticity and prevent feedback spam, once a user submits feedback for a specific result, the feedback icons are disabled for that particular result. This means users can't provide multiple feedbacks for the same result. However, every time they generate a new response using the form, the feedback option becomes available again.
-5. **Viewing Collected Feedback**: All the collected feedback, along with any comments provided by the users, can be accessed easily. Navigate to the "AI Forms" section in your dashboard, and under it, you'll find the "Logs" menu. This section will display all the feedback received.
+<img src={feed2}  width="500"  />
 
-<img src={Feedback4} />
+Clicking on either of these icons will open a modal window, prompting users to provide additional comments about the generated content. 
+
+This feature offers an option for users to share more detailed insights or specific issues they might have encountered.
+
+<img src={Feedback3} width="500" />
+
+To ensure authenticity and prevent feedback spam, once a user submits feedback for a specific result, the feedback icons are disabled for that particular result. This means users can't provide multiple feedbacks for the same result. However, every time they generate a new response using the form, the feedback option becomes available again.
+
+All the collected feedback, along with any comments provided by the users, can be accessed from Logs.
+
+Go to the "AI Forms" section in your dashboard, and under it, you'll find the "Logs" menu. This section will display all the feedback received.
+
+<img src={cool} width="700" />
 
 This feedback mechanism not only helps in gathering user insights but also in refining and improving your prompt performance over time. By understanding user preferences and issues, you can make necessary adjustments to your prompts or the AI parameters to yield better results.
 
@@ -367,21 +337,18 @@ This feedback mechanism not only helps in gathering user insights but also in re
 
 The AI Forms Logs is a feature that allows you to track and monitor the usage of your AI forms effectively.
 
-It provides you with crucial data about your form's activity, helping you to understand better how your forms are being used and what their performance metrics look like.
+It provides you with insights about your form's activity, helping you to understand better how your forms are being used and what their performance metrics look like.
 
 <img src={Logs} />
 
-Upon navigating to the **Logs** section under the **AI Forms** tab, you'll encounter a dashboard that displays several data points for each AI form usage:
+Upon navigating to the **Logs** section under the **AI Forms** page, you'll see a dashboard that displays several data points for each AI form usage:
 
 - **Form**: This column lists the names of the forms that have been used.
 - **ID**: Here you'll see the unique identification number assigned to each form.
 - **Prompt**: This column displays the prompt text that was used in each form.
-- **Page**: This indicates the specific page or post where the form was embedded and used.
 - **Model**: This column displays which model was used to generate the form's output.
 - **Duration**: This reflects the amount of time it took to generate the output for each form.
 - **Token**: This column shows how many tokens were expended to generate the content for each form.
-- **Estimated Cost**: Based on the number of tokens used, this column provides an estimate of the cost associated with each form's usage.
-- **User**: This column displays the username of the individual who used the form, allowing you to identify which registered or guest user interacted with a particular AI Form.
 - **Feedback**: This column showcases the feedback provided by the user for the generated output. It typically displays icons representing positive (👍) or negative (👎) feedback.
 - **Comment**: This column presents any additional comments or insights the user might have shared alongside their feedback.
 - **Created At**: This column indicates when the form was used, providing a timestamp for each usage.
@@ -390,13 +357,9 @@ The Logs feature also provides a search box, enabling you to quickly look up spe
 
 Simply type your search term into the box and hit enter to display any matching results.
 
-This can be extremely useful for quickly locating specific forms, pages, or prompts.
-
-The AI Forms Logs feature gives you a comprehensive overview of your form's performance, helping you track usage, manage costs, and evaluate the effectiveness of different prompts and AI engines.
-
 ## Token Handling
 
-Our plugin provides a robust token handling feature that allows you to control and limit the usage of the AI forms based on **user roles** and **registration status**.
+Our plugin provides a token handling feature that allows you to control and limit the usage of the AI forms based on **user roles** and **registration status**.
 
 This can be found under the **AI Forms - Settings** tab.
 
