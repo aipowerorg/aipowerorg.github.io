@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'AI Power',
+  title: 'AIP',
   tagline: 'Complete AI Pack for WordPress',
   favicon: 'img/favicon.ico',
 
@@ -77,7 +77,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/ai-power-social-card.jpg',
       navbar: {
-        title: 'AI Power',
+        title: 'AIP',
         logo: {
           alt: 'Complete AI Pack for WordPress',
           src: 'img/logo.png',
@@ -90,7 +90,7 @@ const config = {
             label: 'Docs',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
-          {to: 'https://aipower.org/features/', label: 'Features', position: 'left'},
+          // {to: 'https://aipower.org/features/', label: 'Features', position: 'left'},
           {to: 'https://aipower.org/pricing/', label: 'Pricing', position: 'left'},
           {to: 'https://aipower.org/demo/', label: 'Demo', position: 'left'},
           {to: '/showcase/', label: 'Showcase', position: 'left'},
@@ -130,7 +130,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} AI Power`,
+        copyright: `Copyright © ${new Date().getFullYear()} AIP`,
       },
       prism: {
         theme: lightCodeTheme,
