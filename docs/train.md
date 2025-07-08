@@ -114,6 +114,6 @@ When you select a knowledge base from the "Target" dropdown, its details and man
 ## Use Your Knowledge Base
 
 Once your knowledge base is populated, you can connect it to other AIP modules:
--   **Chatbots**: In the [Chatbot editor](/docs/chat/context), go to the **Context** section to connect your knowledge base.
+-   **Chatbots**: In the [Chatbot editor](/docs/Chat/context), go to the **Context** section to connect your knowledge base.
 -   **AI Forms**: In the [AI Form builder](/docs/ai-forms/context), go to the **Context** section to connect your knowledge base.
 -   **Content Writer**: In the [Write module](/docs/write/context), use the **Context** section to generate articles based on your knowledge base.
