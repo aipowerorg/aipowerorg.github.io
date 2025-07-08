@@ -64,7 +64,7 @@ For generating multiple articles, you can use one of the task-based modes. When 
 
 :::info
 
-Task-based generation is managed by the **Automate** module. This section provides a brief overview. For detailed information on managing, monitoring, and scheduling, please see the [Automate](/docs/autogpt/automated-tasks-overview) documentation.
+Task-based generation is managed by the **Automate** module. This section provides a brief overview. For detailed information on managing, monitoring, and scheduling, please see the [Automate](/docs/automate) documentation.
 
 :::
 
@@ -271,4 +271,3 @@ It's time to create a Google Sheet, grant write permissions to the service accou
 | E      | Post Type Slug   | Optional. Slug for post type (e.g., `post`, `page`). |
 
 > One topic per row is required.
-

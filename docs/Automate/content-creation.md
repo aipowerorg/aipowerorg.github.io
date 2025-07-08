@@ -106,7 +106,7 @@ Connect a Google Sheet to manage a large content calendar. The task will generat
 -   **Authentication**: You will need to provide your Google Sheet ID and Service Account credentials.
 
 :::info How to Set Up Google Sheets
-For a detailed, step-by-step guide on creating a service account and setting up your Google Sheet, please see the **[Write > Generation Modes > Google Sheets](/docs/write/modules#google-sheets)** documentation. The setup process is identical.
+For a detailed, step-by-step guide on creating a service account and setting up your Google Sheet, please see the **[Write > Generation Modes > Google Sheets](/docs/Write/modules#google-sheets)** documentation. The setup process is identical.
 :::
 
 After the **Setup** step, the following configuration steps are the same for all content creation tasks. These settings control how the AI generates the content and how the final article is saved.

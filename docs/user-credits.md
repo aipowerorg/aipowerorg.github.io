@@ -94,6 +94,6 @@ When a logged-in user visits that page, they will see a dashboard showing:
 
 While this module manages the token *balance* from purchases, the *free periodic limits* (e.g., daily or monthly allowances) are configured within each specific module's settings. This allows you to set different free tiers for your Chatbots versus your AI Forms, for example.
 
--   **Chatbot Limits**: See the [Chat > Token Management](/docs/Chat/token-management) documentation.
--   **AI Forms Limits**: See the [AI Forms > Token Management](/docs/AI-Forms/token-management) documentation.
+-   **Chatbot Limits**: See the [Chat > Token Management](/docs/token-management) documentation.
+-   **AI Forms Limits**: See the [AI Forms > Token Management](/docs/ai-forms/token-management) documentation.
 -   **Image Generator Limits**: See the [Image Generator > Token Management](/docs/image-generator#token-management) documentation.

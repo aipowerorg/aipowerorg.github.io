@@ -40,7 +40,7 @@ Define which posts you want the task to enhance.
 
 ## Context
 
-Connect a vector store to provide the AI with additional context. This is useful if you want to rewrite content to include information from your knowledge base. The settings are the same as in the [Write](/docs/write/context) module.
+Connect a vector store to provide the AI with additional context. This is useful if you want to rewrite content to include information from your knowledge base. The settings are the same as in the [Write](/docs/Write/context) module.
 
 <img src={enablevector} width="600" />
 
