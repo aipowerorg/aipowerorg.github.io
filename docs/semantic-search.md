@@ -14,7 +14,7 @@ import semanticdemo from '/img/semantic-search/semantic-demo.png';
 
 Semantic Search adds a search tool to your website's frontend. Unlike traditional keyword search, it understands the *meaning* and *context* of a user's query.
 
-This feature connects directly to a knowledge base you've created in the **[Train](/docs/ai-training/intro)** module, allowing your visitors to find the most relevant content from your custom data.
+This feature connects directly to a knowledge base you've created in the **[Train](/docs/train.md)** module, allowing your visitors to find the most relevant content from your custom data.
 
 ## How to Enable
 
