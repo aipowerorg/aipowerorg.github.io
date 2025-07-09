@@ -15,7 +15,7 @@ Version 2.3 of AI Power is a complete rewrite from the ground up, featuring a mo
 
 While a Migration Tool is available, we strongly recommend **not migrating old data** and instead starting with a fresh setup. The new version includes powerful features like **OpenAI Vector Store** support, which is significantly faster and easier to manage.
 
-If you were previously using external services like **Pinecone** or **Qdrant**, you might not need them anymore. The new built-in OpenAI Vector Store is optimized for performance and fully integrated with AI Power 2.0+.
+If you were previously using external services like **Pinecone** or **Qdrant**, you might not need them anymore. The new built-in OpenAI Vector Store is optimized for performance and fully integrated with AI Power 2.3+.
 
 :::
 
