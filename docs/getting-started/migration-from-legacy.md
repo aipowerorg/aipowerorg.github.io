@@ -8,7 +8,7 @@ import migrate from '/img/migration/migrate.png';
 
 # Migrating from Legacy Plugin
 
-Version 2.0 of AI Power is a complete rewrite from the ground up, featuring a more robust and modular architecture. Due to these significant changes, data from versions prior to 2.0 is not automatically compatible.
+Version 2.3 of AI Power is a complete rewrite from the ground up, featuring a more robust and modular architecture. Due to these significant changes, data from versions prior to 2.3 is not automatically compatible.
 
 
 :::tip 🚨 We Highly Recommend Starting Fresh
@@ -40,7 +40,7 @@ The migration is a two-phase process: Analysis and Action.
 
 ### 1. The Migration Notice
 
-After updating to version 2.0+, if you have legacy data, you will see a notification bar at the top of the AI Power dashboard.
+After updating to version 2.3, if you have legacy data, you will see a notification bar at the top of the AI Power dashboard.
 
 Click the **Go to Migration Tool** button to begin. You can also access the tool directly from the WordPress admin menu under **AIP > Migration Tool**.
 
