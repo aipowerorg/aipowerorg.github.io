@@ -102,7 +102,7 @@ Connect a Google Sheet to manage a large content calendar. The task will generat
 
 <img src={ccsheets} />
 
--   **Format**: Your sheet must have columns in the order: `Topic`, `Keywords`, `Category ID`, `Author`, `Post Type`.
+-   **Format**: Your sheet must have columns in the order: `Topic`, `Keywords`, `Category ID`, `Author`, `Post Type`. A sixth column, `Status`, will be automatically updated by the plugin to "Processed" after an article is generated, preventing duplicates on future runs.
 -   **Authentication**: You will need to provide your Google Sheet ID and Service Account credentials.
 
 :::info How to Set Up Google Sheets

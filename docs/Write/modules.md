@@ -130,6 +130,7 @@ Connect a Google Sheet to manage a large content calendar. The task will generat
     -   Column C: Category ID
     -   Column D: Author Username
     -   Column E: Post Type Slug
+    -   **Column F: Status (Optional)**. The plugin will write "Processed on [Date]" to this column after successfully generating an article. Rows with any value in the Status column will be skipped in future runs.
 
 <img src={sheetid} />
 
@@ -269,5 +270,6 @@ It's time to create a Google Sheet, grant write permissions to the service accou
 | C      | Category ID      | Optional. WordPress numeric category ID.  |
 | D      | Author Login     | Optional. WordPress username of the author. |
 | E      | Post Type Slug   | Optional. Slug for post type (e.g., `post`, `page`). |
+| F      | Status           | Optional. The plugin writes "Processed" here and skips rows with a value in this column. |
 
 > One topic per row is required.
