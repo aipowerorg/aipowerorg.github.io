@@ -57,7 +57,7 @@ This will open the **Content Assistant** modal, where you can configure the AI e
 
 <img src={cacontext} />
 
--   **Prompts**: Check the box for each field you want the AI to update (Title, Excerpt, Content, Meta Description, Focus Keyword). For each selected field, a tab will appear where you can write a custom prompt. Use placeholders like `{original_title}` and `{original_content}` to provide the AI with the post's existing data.
+-   **Prompts**: Check the box for each field you want the AI to update (Title, Excerpt, Content, Tags, Meta Description, Focus Keyword). For each selected field, a tab will appear where you can write a custom prompt. Use placeholders like `{original_title}` and `{original_content}` to provide the AI with the post's existing data.
 
 <img src={caprompts} />
 
@@ -77,7 +77,7 @@ For single-post improvements, you can use the "Enhance" link directly from the p
 
 <img src={caenhance} width="600" />
 
-4.  Select an action, such as **Generate Title**, **Generate Excerpt**, or **Generate Meta Desc**.
+4.  Select an action, such as **Generate Title**, **Generate Excerpt**, **Generate Tags** or **Generate Meta Desc**.
 
 A modal will appear with several AI-generated suggestions. Click any suggestion to apply it to the post instantly.
 

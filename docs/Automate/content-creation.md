@@ -20,6 +20,7 @@ import contextenable from '/img/automate/context-enable.png';
 import metacc from '/img/automate/meta.png';
 import focuscc from '/img/automate/focus.png';
 import excerptcc from '/img/automate/excerpt.png';
+import tagscc from '/img/write/tags.png';
 import toccc from '/img/automate/toc.png';
 import enableimage from '/img/automate/enable-image.png';
 import replicateaddon from '/img/chat/replicate-addon.png';
@@ -156,9 +157,13 @@ Optimize your content for search engines by automatically generating SEO element
 
 <img src={focuscc} width="600"  />
 
-- **Excerpt**: Generates a custom post excerpt, which is used by your WordPress theme on archive pages.
+- **Excerpt**: Generates a custom post excerpt, which is used by your WordPress theme on archive pages or blog rolls.
 
 <img src={excerptcc} width="600"  />
+
+- **Tags**: Generates a comma-separated list of relevant tags for your post.
+
+<img src={tagscc} width="600"/>
 
 - **Table of Contents**: When checked, a Table of Contents block will be automatically inserted at the beginning of your article based on the `<h2>` and `<h3>` headings.
 
@@ -229,7 +234,7 @@ Pixabay is another excellent source for free stock photos that can be integrated
 
 1. Go to **AIP > Add-ons** and enable the **Stock Images** addon (if not already enabled).
 
-<img src={stockimagesaddon} />
+<img src={stockimagesaddon} width="600"/>
 
 2. Go to **AIP > Dashboard > Integrations** and enter your Pixabay API key.
 

@@ -7,6 +7,7 @@ import seo from '/img/write/seo.png';
 import meta from '/img/write/meta.png';
 import focus from '/img/write/focus.png';
 import excerpt from '/img/write/excerpt.png';
+import tagscc from '/img/write/tags.png';
 import tocsettings from '/img/write/toc.png';
 
 # SEO
@@ -60,6 +61,15 @@ When checked, the AI will generate a custom post excerpt. This is separate from 
 <img src={excerpt} />
 
 -   **Custom Prompt**: Provide instructions for how the excerpt should be written.
+-   **Available Placeholders**: `{topic}`, `{content_summary}`
+
+### Tags
+
+Generates a comma-separated list of relevant tags for your post.
+
+<img src={tagscc} />
+
+-   **Custom Prompt**: Write instructions for generating the tags.
 -   **Available Placeholders**: `{topic}`, `{content_summary}`
 
 ## Structure
