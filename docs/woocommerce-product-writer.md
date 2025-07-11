@@ -67,6 +67,7 @@ When writing prompts for your products, you can use the following placeholders t
 | `{original_content}`    | The main product description.                        |
 | `{original_excerpt}`    | The product short description.                       |
 | `{original_meta_description}` | The current meta description.               |
+| `{original_focus_keyword}` | The product's current focus keyword from your SEO plugin. |
 | `{price}`               | The product's current price.                         |
 | `{regular_price}`       | The product's regular (non-sale) price.              |
 | `{sale_price}`          | The product's sale price (if on sale).               |

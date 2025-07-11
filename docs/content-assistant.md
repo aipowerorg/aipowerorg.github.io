@@ -57,7 +57,7 @@ This will open the **Content Assistant** modal, where you can configure the AI e
 
 <img src={cacontext} />
 
--   **Prompts**: Check the box for each field you want the AI to update (Title, Excerpt, Content, Tags, Meta Description, Focus Keyword). For each selected field, a tab will appear where you can write a custom prompt. Use placeholders like `{original_title}` and `{original_content}` to provide the AI with the post's existing data.
+-   **Prompts**: Check the box for each field you want the AI to update (Title, Excerpt, Content, Tags, Meta Description, Focus Keyword). For each selected field, a tab will appear where you can write a custom prompt. Use placeholders like `{original_title}`, `{original_content}`, and `{original_focus_keyword}` to provide the AI with the post's existing data.
 
 <img src={caprompts} />
 
