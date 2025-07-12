@@ -31,6 +31,7 @@ import replicateapi from '/img/write/replicate-api.png';
 import stockimagesapi from '/img/write/stock-images-api.png';
 import imageprompts from '/img/automate/image-prompts.png';
 import postsettings from '/img/automate/post-settings.png';
+import schedulesettings from '/img/automate/schedule.png';
 
 # Content Creation
 
@@ -55,11 +56,11 @@ The first step of the wizard is **Setup**, where you define your content source.
 ### List
 This mode allows you to enter a list of topics directly.
 
--   **Format**: Enter one topic per line. You can also include keywords, a category ID, an author username, and a post type slug, separated by `|`.
+-   **Format**: Enter one topic per line. You can also include keywords, a category ID, an author username, a post type slug, and a schedule date, separated by `|`.
 -   **Example**:
     ```
     How to bake a cake | frosting, flour | 15 | mary | post
-    About our services | web design | 12 | john | page
+    About our services | web design | 12 | john | page | 2025-12-25 14:30
     The future of AI in marketing
     ```
 
@@ -68,7 +69,7 @@ This mode allows you to enter a list of topics directly.
 ### CSV
 This mode lets you generate articles by importing topics from a CSV file.
 
--   **Format**: The columns in your CSV file must be in the order: `Topic`, `Keywords`, `Category ID`, `Author Username`, `Post Type Slug`.
+-   **Format**: The columns in your CSV file must be in the order: `Topic`, `Keywords`, `Category ID`, `Author Username`, `Post Type Slug`, `Schedule Date (YYYY-MM-DD HH:MM)`.
 -   **Usage**: Click "Choose File" to upload your CSV. The system will parse the file and prepare the topics for the task.
 
 <img src={cccsv} />
@@ -103,7 +104,7 @@ Connect a Google Sheet to manage a large content calendar. The task will generat
 
 <img src={ccsheets} />
 
--   **Format**: Your sheet must have columns in the order: `Topic`, `Keywords`, `Category ID`, `Author`, `Post Type`. A sixth column, `Status`, will be automatically updated by the plugin to "Processed" after an article is generated, preventing duplicates on future runs.
+-   **Format**: Your sheet must have columns in the order: `Topic`, `Keywords`, `Category ID`, `Author`, `Post Type`, `Schedule Date (YYYY-MM-DD HH:MM)`. A seventh column, `Status`, will be automatically updated by the plugin to "Processed" after an article is generated, preventing duplicates on future runs.
 -   **Authentication**: You will need to provide your Google Sheet ID and Service Account credentials.
 
 :::info How to Set Up Google Sheets
@@ -264,8 +265,14 @@ These settings control how the generated content is saved in your WordPress site
 - **Type**: Choose whether to save the content as a `Post`, `Page`, or other custom post type.
 - **Author**: Select the WordPress user who will be assigned as the author.
 - **Categories**: Assign one or more categories to the post.
-- **Status & Scheduling**:
-    -   Set the post status (Draft, Publish, Pending, Private).
-    -   If you select `Publish`, you can optionally set a future date and time to schedule the post.
+- **Status & Publishing Schedule**:
+    -   Set the post status (`Draft`, `Publish`, `Pending`, `Private`).
+    -   If you select `Publish`, you can choose a scheduling strategy:
+
+<img src={schedulesettings} />
+
+        -   **Publish Immediately**: The default behavior. Posts will be published as soon as they are generated.
+        -   **Smart Schedule**: Automatically stagger the publication of generated posts. Set a **Start Date/Time** and an **Interval** (e.g., publish one post every 2 hours). This is ideal for maintaining a consistent content flow.
+        -   **Use Dates from Input**: Use a specific date and time from your input source (List, CSV, or Google Sheets). This allows for precise scheduling of each individual article.
 
 Once you have configured all the steps, click **Create Task**. The system will add your topics to the queue and begin generating content according to your schedule.

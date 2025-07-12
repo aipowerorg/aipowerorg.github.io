@@ -70,12 +70,12 @@ Task-based generation is managed by the **Automate** module. This section provid
 
 The Bulk mode allows you to enter a list of topics directly.
 
--   **Format**: Enter one topic per line. You can also include keywords, a category ID, author username, and post type slug, separated by `|`.
+-   **Format**: Enter one topic per line. You can also include keywords, a category ID, author username, post type slug, and schedule date separated by `|`.
 -   **Example**:
 
     ```
     How to bake a cake | frosting, flour | 15 | mary | post
-    About our services | web design | 12 | john | page
+    About our services | web design | 12 | john | page | 2025-12-25 14:30
     The future of AI in marketing
     ```
 
@@ -87,7 +87,7 @@ This mode lets you generate articles by importing topics from a CSV file.
 
 <img src={csvupload} />
 
--   **Format**: The columns in your CSV file must be in the following order: `Topic`, `Keywords`, `Category ID`, `Author Username`, `Post Type Slug`.
+-   **Format**: The columns in your CSV file must be in the following order: `Topic`, `Keywords`, `Category ID`, `Author Username`, `Post Type Slug`, `Schedule Date (YYYY-MM-DD HH:MM)`.
 -   **Usage**: Click "Choose File" to upload your CSV. The system will parse the file and prepare the topics for the task.
 
 :::tip
@@ -130,7 +130,8 @@ Connect a Google Sheet to manage a large content calendar. The task will generat
     -   Column C: Category ID
     -   Column D: Author Username
     -   Column E: Post Type Slug
-    -   **Column F: Status (Optional)**. The plugin will write "Processed on [Date]" to this column after successfully generating an article. Rows with any value in the Status column will be skipped in future runs.
+    -   Column F: Schedule Date (YYYY-MM-DD HH:MM)
+    -   **Column G: Status (Optional)**. The plugin will write "Processed on [Date]" to this column after successfully generating an article. Rows with any value in the Status column will be skipped in future runs.
 
 <img src={sheetid} />
 
@@ -270,6 +271,7 @@ It's time to create a Google Sheet, grant write permissions to the service accou
 | C      | Category ID      | Optional. WordPress numeric category ID.  |
 | D      | Author Login     | Optional. WordPress username of the author. |
 | E      | Post Type Slug   | Optional. Slug for post type (e.g., `post`, `page`). |
-| F      | Status           | Optional. The plugin writes "Processed" here and skips rows with a value in this column. |
+| F      | Schedule Date    | Optional. `YYYY-MM-DD HH:MM` format.        |
+| G      | Status           | Optional. The plugin writes "Processed" here and skips rows with a value in this column. |
 
 > One topic per row is required.
