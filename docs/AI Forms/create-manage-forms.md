@@ -25,17 +25,19 @@ To start building a new form, click the **Create New Form** button in the top-ri
 
 The main list shows all your forms and provides several actions for each one:
 
--   **Edit**: Click the pencil icon to open an existing form in the Form Builder to modify its fields, layout, or prompts.
--   **Duplicate**: Click the page icon to create an exact copy of a form. This is useful for creating variations of a complex form without starting from scratch.
+- **Edit**: Click the pencil icon to open an existing form in the Form Builder to modify its fields, layout, or prompts.
+- **Duplicate**: Click the page icon to create an exact copy of a form. This is useful for creating variations of a complex form without starting from scratch.
 
 <img src={aiformsactions} />
 
--   **Export**: Click the download icon to save a single form's entire configuration as a JSON file. This file can be used as a backup or imported into another site.
--   **Delete**: Click the trash icon to permanently delete a form. This action cannot be undone.
--   **More Actions Menu**: For managing multiple forms at once, click the ellipsis icon (`...`).
+- **Export**: Click the download icon to save a single form's entire configuration as a JSON file. This file can be used as a backup or imported into another site.
+- **Delete**: Click the trash icon to permanently delete a form. This action cannot be undone.
+- **More Actions Menu**: For managing multiple forms at once, click the ellipsis icon (`...`).
 
 <img src={aiformsdelexp} />
 
     -   `Export All`: Downloads a single JSON file containing all your forms.
+    -   `Import`: Opens a file dialog to select a JSON file (exported from another site) to import. You can import single-form or multi-form export files. Imported forms will be added to your existing list.
     -   `Delete All`: Permanently deletes every form. **Use with caution.**
--   **Search and Filter**: Use the search box and provider dropdown to quickly find specific forms in a long list.
+
+- **Search and Filter**: Use the search box and provider dropdown to quickly find specific forms in a long list.
