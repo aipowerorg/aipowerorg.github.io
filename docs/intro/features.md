@@ -5,7 +5,7 @@ title: Features
 sidebar_position: 2
 ---
 
-This page provides an overview of the main features available in AIP.
+This page provides an overview of the main features available in AI Power.
 
 ## Chatbot
 
@@ -88,3 +88,14 @@ A centralized system for managing token-based access to AI features.
 -   **Token Management**: View and manually adjust the token balances of your users.
 -   **WooCommerce Integration**: Create and sell token packages as products. Tokens are automatically granted to users upon order completion.
 -   **Usage History**: View a user's token purchase and usage history.
+
+## REST API
+
+Access core AI features programmatically from external applications.
+
+-   **Authentication**: Secure access using a single, site-wide API key.
+-   **Endpoints**: Programmatically access key functions:
+    -   Generate text and chat with your bots.
+    -   Create images.
+    -   Generate text embeddings.
+    -   Add content to your knowledge base (Pinecone and Qdrant).
