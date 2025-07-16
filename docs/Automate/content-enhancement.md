@@ -58,6 +58,6 @@ Configure the AI and provide instructions for each field you selected to enhance
     - `{original_content}`
     - `{original_excerpt}`
     - `{original_meta_description}`
-    - For WooCommerce products, you can also use placeholders like `{price}`, `{regular_price}`, `{sku}`, `{attributes}`, `{stock_quantity}`,`{stock_status}`, `{weight}`, `{length}`, `{width}`, `{height}`.
+    - For WooCommerce products, you can also use placeholders like `{price}`, `{regular_price}`, `{sku}`, `{attributes}`, `{stock_quantity}`,`{stock_status}`, `{weight}`, `{length}`, `{width}`, `{height}`, `{purchase_note}`, `{product_categories}`.
 
 Click **Save Task**. The task will queue the matching posts and begin the enhancement process according to your schedule.

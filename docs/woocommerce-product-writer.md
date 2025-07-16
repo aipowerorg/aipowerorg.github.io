@@ -59,7 +59,7 @@ This will open the modal where you can configure the AI enhancements.
 
 ## WooCommerce Placeholders
 
-When writing prompts for your products, you can use the following placeholders to give the AI specific data to work with.
+When writing prompts for your products, you can use the following placeholders to give the AI with specific data to work with.
 
 | Placeholder             | Description                                          |
 |-------------------------|------------------------------------------------------|
@@ -82,6 +82,7 @@ When writing prompts for your products, you can use the following placeholders t
 | `{short_description}`   | The product's short description.                     |
 | `{purchase_note}`       | The note sent to customers after purchase.           |
 | `{total_sales}`         | The total number of times the product has been sold. |
+| `{product_categories}`  | A comma-separated list of the product's categories.  |
 
 **Example Prompt for a Short Description:**
 > Rewrite this short description for a product named `{original_title}` to be more exciting and focus on its key benefits. The product's key attributes are: `{attributes}`. The current price is `{price}`. Here is the original content to use for context: `{original_content}`.

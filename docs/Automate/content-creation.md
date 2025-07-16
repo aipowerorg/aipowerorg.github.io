@@ -87,7 +87,7 @@ This mode automatically creates articles from new items in one or more RSS feeds
 
 -   **Format**: Enter one RSS feed URL per line in the provided text area.
 -   **Filtering**: You can use the **Include Keywords** and **Exclude Keywords** fields to control which feed items are used to generate content.
--   **Prompting**: Use the `{description}` placeholder in your prompt to include the item's description from the RSS feed as context.
+-   **Prompting**: Use the `{description}` and `{source_url}` placeholders in your prompt to include the item's description and URL from the RSS feed as context.
 
 <img src={ccrss} />
 
