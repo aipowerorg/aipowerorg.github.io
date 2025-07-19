@@ -2,7 +2,7 @@
 id: ai-providers
 slug: /ai-providers
 title: AI Providers
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 import OpenAISetup from '/img/providers/openai.png';
