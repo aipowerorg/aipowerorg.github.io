@@ -46,19 +46,32 @@ This feature only works with OpenAI's Realtime models (`gpt-4o-realtime-preview`
     -   **Server VAD**: OpenAI's server detects when the user stops speaking based on silence.
     -   **Semantic VAD**: A more advanced detection that understands the context of the speech to determine when a turn is complete.
 -   **Response Speed**: Control how quickly the AI speaks, from `0.25` (slowest) to `1.5` (fastest).
+-   **Enable Direct Voice Mode**: This transforms the popup trigger button into the main controller for the voice session. It requires **Popup Enabled** (in the Appearance accordion) to be active.
 -   **Advanced Settings**: Configure technical details like audio formats and noise reduction. The defaults are recommended for most use cases.
 
 ### How It Works
 
-When enabled, a new voice button appears in the chat input area.
+The Realtime Voice Agent has two modes of operation, depending on whether "Direct Voice Mode" is enabled.
+
+#### Standard Mode
+
+In this mode, the voice session is initiated from within the chat window.
+
+1.  The user clicks the popup icon to open the chat window.
+2.  Inside the window, a new voice button appears in the input area.
+3.  The user clicks this internal voice button to start the session. The button will indicate it's "Connecting...".
+4.  Once connected, the button changes to a "Listening" state, and the conversation begins.
 
 <img src={realtimebutton} />
 
-1.  The user clicks the button to start the session. The button will indicate it's "Connecting...".
-2.  Once connected, the button changes to a "Listening" state. The user can start speaking.
-3.  Based on your **Turn Detection** setting, the AI will either wait for the user to click the button again or automatically detect when they've finished speaking.
-4.  The AI processes the speech and responds with voice. While the AI is speaking, the button changes to a "Speaking" state.
-5.  The conversation continues until the user clicks the button to end the session.
+#### Direct Voice Mode (Popup Only)
+
+For a truly voice-first experience, you can enable **Direct Voice Mode**. This is ideal for scenarios where you want to offer an immediate voice assistant without requiring the user to interact with the text chat first.
+
+1.  The user clicks the main popup icon on your website.
+2.  The voice session starts **immediately**. The chat window does not open.
+3.  The popup icon itself animates to show the status (Connecting, Listening, Speaking).
+4.  The user talks directly to the agent, and the conversation happens entirely through voice.
 
 ---
 
