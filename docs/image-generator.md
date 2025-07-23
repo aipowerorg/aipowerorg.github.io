@@ -1,7 +1,7 @@
 ---
 id: image-generator
 slug: /image-generator
-title: Image Generator
+title: Image / Video Generator
 sidebar_position: 9
 ---
 
@@ -14,10 +14,15 @@ import tokensettings from '/img/image-generator/token-settings.png';
 import tokenaddon from '/img/chat/token-addon.png';
 import customcss from '/img/image-generator/custom-css.png';
 import providerfilter from '/img/image-generator/provider-filter.png';
+import replicateaddon from '/img/chat/replicate-addon.png';
+import veo3 from '/img/image-generator/veo3.png';
+import replicatesafety from '/img/image-generator/replicate-safety.png';
 
-# Image Generator
+# Image / Video Generator
 
-The **Image Generator** module allows you to add a text-to-image tool directly to your website using a simple shortcode. Users can generate unique images from text prompts, and logged-in users can view their creation history.
+👉 **[View Live Demo](https://aipower.org/image-generator/)**
+
+The **Image Generator** module allows you to add a text-to-media tool directly to your website using a simple shortcode. Users can generate unique images and videos from text prompts, and logged-in users can view their creation history.
 
 To get started, go to **AIP > Images**. This screen contains a live preview of the frontend generator and the tools to configure its shortcode.
 
@@ -51,33 +56,60 @@ Paste the shortcode into any page, post, or shortcode-compatible widget.
 On the frontend, users can:
 1.  Enter a descriptive prompt.
 2.  Select an AI Provider and Model (if enabled).
-3.  Click "Generate" to create the image.
+3.  Click "Generate" to create the image or video.
 
 <img src={frontendui} width="600"/>
 
-The generated image will appear in the results area below the prompt.
+The generated media will appear in the results area below the prompt.
 
-## Image History
+:::info Video Generation is Asynchronous
+When a video model (like Google's Veo 3) is selected, the generation process is asynchronous and may take a few minutes. The UI will show a progress indicator while the video is being created.
+:::
 
-When you enable `history="true"` in the shortcode, logged-in users will see a "Your Images" section below the generator.
+## Image & Video History
 
-This section displays a grid of their previously generated images.
--   **Delete**: Users can click the trash icon on an image to permanently delete it from their history and the Media Library.
+When you enable `history="true"` in the shortcode, logged-in users will see a "Your Media" section below the generator.
+
+This section displays a grid of their previously generated images and videos.
+-   **Delete**: Users can click the trash icon on an item to permanently delete it from their history and the Media Library.
 
 <img src={history} width="600"/>
 
--   **Load More**: If there are more images than initially shown, a "Load More" button will appear.
+-   **Load More**: If there are more items than initially shown, a "Load More" button will appear.
 
-## Token Management
+## Providers
 
-Token Management is a free add-on. To use it, you must first enable it:
+You can generate media from several AI providers.
 
-1.  Go to **AIP > Add-ons**.
-2.  Activate the **Token Management** add-on.
+### OpenAI
+OpenAI provides popular image generation models like DALL-E 3 and GPT Image 1.
+
+### Google (Image & Video)
+Google's models offer high-quality image and video generation.
+- **Imagen 3**: Generates photorealistic images.
+- **Veo 3**: Generates high-definition video clips from a text prompt.
+
+<img src={veo3} width="600"/>
+
+### Replicate
+Replicate provides access to a wide variety of open-source models, including Stable Diffusion and more.
+
+:::info Replicate is a Free Addon
+To use Replicate models, you must first enable the **Replicate** addon from the **AIP > Add-ons** page.
+<img src={replicateaddon} width="600"/>
+:::
+
+## Settings
+
+Global settings for the Image Generator are managed from the **Settings** tab on the **AIP > Images** page.
+
+### Token Management
+
+Token Management is a free add-on. To use it, you must first enable it from **AIP > Add-ons**.
 
 <img src={tokenaddon} />
 
-To configure token settings for the Image Generator, go to the **Settings** tab.
+Once active, you can configure token limits for the Image Generator:
 
 <img src={tokensettings} />
 
@@ -85,36 +117,35 @@ To configure token settings for the Image Generator, go to the **Settings** tab.
     -   Leave this field **blank** for unlimited tokens.
     -   Enter `0` to completely disable the image generator for guests.
 2.  **Limit Type**: For logged-in users, choose one of two modes:
-    -   **General Limit**: A single limit that applies to all logged-in users, regardless of their role. Set the value in the **User Limit** field that appears.
-    -   **Role-Based Limits**: Set different token limits for different WordPress user roles (e.g., Subscriber, Contributor, Author). This allows you to give more access to specific user groups.
+    -   **General Limit**: A single limit that applies to all logged-in users.
+    -   **Role-Based Limits**: Set different token limits for different WordPress user roles.
+3.  **Reset Period**: Choose how often the token usage count resets to zero (`Daily`, `Weekly`, `Monthly`, `Never`).
+4.  **Token Limit Message**: The message displayed to a user when they have reached their token limit.
 
-<img src={tokensettings} />
+You can sell token packages with our WooCommerce integration. Learn more at [User Credits](/docs/user-credits/intro).
 
-3.  **Reset Period**: Choose how often the token usage count resets to zero.
-    -   **Daily**: Resets every day at midnight (based on your WordPress timezone setting).
-    -   **Weekly**: Resets at the beginning of the week (as defined in your WordPress settings).
-    -   **Monthly**: Resets on the first day of the month.
-    -   **Never**: The limit is a one-time total and does not reset.
-4.  **Token Limit Message**: The message displayed to a user when they have reached their token limit for the current period.
+### Replicate Settings
 
-You can charge your users for their use of your image generator.
+This section appears when the Replicate addon is active.
 
-Our integration with WooCommerce allows you to sell tokens, which users can purchase and utilize to access the image generator features on your site.
+- **Disable Safety Checker**: When checked, this disables Replicate's built-in safety checker.
 
-Learn more about it here: [User Credits](/docs/user-credits.md)
+<img src={replicatesafety} width="600"/>
 
-## Custom CSS
+This can help prevent false positives that might block legitimate image generation prompts. Only disable this if you have other content moderation measures in place.
 
-If you set `theme="custom"` in the shortcode, you can use this section to add your own CSS rules to fully control the generator's appearance.
+### Frontend Filtering
 
-<img src={customcss} />
-
-## Provider & Model Filtering
-
-Restrict which AI providers and models are available for users to select on the frontend shortcode. Leave the fields blank to allow all options.
+Restrict which AI providers and models are available on the frontend shortcode. Leave the fields blank to allow all options.
 
 -   **Allowed Providers**: A comma-separated list of provider names to show (e.g., `OpenAI, Google`).
 
 <img src={providerfilter} />
 
 -   **Allowed Models**: A comma-separated list of specific model IDs to show (e.g., `dall-e-3, imagen-3.0-generate-002`).
+
+### Custom CSS
+
+If you set `theme="custom"` in the shortcode, you can use this section to add your own CSS rules to fully control the generator's appearance.
+
+<img src={customcss} />
