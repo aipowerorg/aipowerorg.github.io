@@ -11,7 +11,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="AIP" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.dc46df47.css">
-<script src="/assets/js/runtime~main.f3abaffe.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.fbc2f6bb.js" defer="defer"></script>
 <script src="/assets/js/main.93f0fe60.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -29,7 +29,7 @@
 <li>Navigate to your chatbot&#x27;s settings in <strong>AIP &gt; Chat</strong>.</li>
 <li>Open the <strong>Voice Agent</strong> accordion and check the <strong>Enable Realtime Voice Agent</strong> box.</li>
 </ol>
-<img src="/assets/images/realtime-voice-settings-5bf323d261e9b37530f6777d0be49295.png">
+<img src="/assets/images/realtime-voice-settings-09630ef7473525e4714def9d1ccd17de.png">
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="configuration">Configuration<a href="#configuration" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration">​</a></h3>
 <ul>
 <li><strong>Realtime Model</strong>: Choose between <code>gpt-4o-realtime-preview</code> or the mini version.</li>
@@ -42,17 +42,27 @@
 </ul>
 </li>
 <li><strong>Response Speed</strong>: Control how quickly the AI speaks, from <code>0.25</code> (slowest) to <code>1.5</code> (fastest).</li>
+<li><strong>Enable Direct Voice Mode</strong>: This transforms the popup trigger button into the main controller for the voice session. It requires <strong>Popup Enabled</strong> (in the Appearance accordion) to be active.</li>
 <li><strong>Advanced Settings</strong>: Configure technical details like audio formats and noise reduction. The defaults are recommended for most use cases.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-it-works">How It Works<a href="#how-it-works" class="hash-link" aria-label="Direct link to How It Works" title="Direct link to How It Works">​</a></h3>
-<p>When enabled, a new voice button appears in the chat input area.</p>
-<img src="/assets/images/realtime-voice-button-7e7e0a01f07b564966b9486254895027.png">
+<p>The Realtime Voice Agent has two modes of operation, depending on whether &quot;Direct Voice Mode&quot; is enabled.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="standard-mode">Standard Mode<a href="#standard-mode" class="hash-link" aria-label="Direct link to Standard Mode" title="Direct link to Standard Mode">​</a></h4>
+<p>In this mode, the voice session is initiated from within the chat window.</p>
 <ol>
-<li>The user clicks the button to start the session. The button will indicate it&#x27;s &quot;Connecting...&quot;.</li>
-<li>Once connected, the button changes to a &quot;Listening&quot; state. The user can start speaking.</li>
-<li>Based on your <strong>Turn Detection</strong> setting, the AI will either wait for the user to click the button again or automatically detect when they&#x27;ve finished speaking.</li>
-<li>The AI processes the speech and responds with voice. While the AI is speaking, the button changes to a &quot;Speaking&quot; state.</li>
-<li>The conversation continues until the user clicks the button to end the session.</li>
+<li>The user clicks the popup icon to open the chat window.</li>
+<li>Inside the window, a new voice button appears in the input area.</li>
+<li>The user clicks this internal voice button to start the session. The button will indicate it&#x27;s &quot;Connecting...&quot;.</li>
+<li>Once connected, the button changes to a &quot;Listening&quot; state, and the conversation begins.</li>
+</ol>
+<img src="/assets/images/realtime-voice-button-7e7e0a01f07b564966b9486254895027.png">
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="direct-voice-mode-popup-only">Direct Voice Mode (Popup Only)<a href="#direct-voice-mode-popup-only" class="hash-link" aria-label="Direct link to Direct Voice Mode (Popup Only)" title="Direct link to Direct Voice Mode (Popup Only)">​</a></h4>
+<p>For a truly voice-first experience, you can enable <strong>Direct Voice Mode</strong>. This is ideal for scenarios where you want to offer an immediate voice assistant without requiring the user to interact with the text chat first.</p>
+<ol>
+<li>The user clicks the main popup icon on your website.</li>
+<li>The voice session starts <strong>immediately</strong>. The chat window does not open.</li>
+<li>The popup icon itself animates to show the status (Connecting, Listening, Speaking).</li>
+<li>The user talks directly to the agent, and the conversation happens entirely through voice.</li>
 </ol>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="classic-voice-features">Classic Voice Features<a href="#classic-voice-features" class="hash-link" aria-label="Direct link to Classic Voice Features" title="Direct link to Classic Voice Features">​</a></h2>
