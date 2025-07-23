@@ -82,6 +82,13 @@ These add-ons extend the functionality of the [Chatbot](/docs/chat) module.
         **Learn More**: [Chat > Appearance](/docs/Appearance#download)
         :::
 
+-   **Realtime Voice Agent**
+    -   Enable low-latency, speech-to-speech conversational experiences using OpenAI's Realtime API.
+    -   :::info
+        **Type**: Pro  
+        **Learn More**: [Chat > Voice Features](/docs/voice-features#realtime-voice-agent)
+        :::
+
 -   **Voice Playback (TTS)**
     -   Enable Text-to-Speech for chatbot responses using Google, OpenAI, or ElevenLabs voices.
     -   :::info
