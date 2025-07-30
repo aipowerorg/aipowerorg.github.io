@@ -11,8 +11,8 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="AIP" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.dc46df47.css">
-<script src="/assets/js/runtime~main.ac1d61fd.js" defer="defer"></script>
-<script src="/assets/js/main.66dac5ae.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.2e4560f4.js" defer="defer"></script>
+<script src="/assets/js/main.30995f49.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -22,7 +22,7 @@
 <p>The <strong>Context</strong> section is where you give your chatbot access to external information, turning it from a general-purpose AI into a specialized assistant that knows about your content.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="content-aware">Content Aware<a href="#content-aware" class="hash-link" aria-label="Direct link to Content Aware" title="Direct link to Content Aware">​</a></h2>
 <p>When this feature is enabled, the chatbot will use the current page&#x27;s content as part of its contextual understanding.</p>
-<img src="/assets/images/content-aware-9e96b7cf075718cfd68c6916de1d1ba3.png" width="600">
+<img src="/assets/images/content-aware-9e96b7cf075718cfd68c6916de1d1ba3.png">
 <p>If the page has an excerpt, that excerpt will be used directly as the bot’s context.</p>
 <p>If no excerpt is available, the plugin will automatically generate a short summary of the page content and feed that to the bot instead.</p>
 <p>This is ideal for creating page-specific chatbots.</p>
@@ -31,15 +31,15 @@
 <p>It allows you to connect your chatbot to a knowledge base you&#x27;ve created in the <a href="/docs/ai-training/intro">Train</a> module.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Configure your Vector Stores in the Train module</div><div class="admonitionContent_BuS1"><p>Before using this feature, you must first create and configure your Vector Stores in the Train module. The chatbot cannot access any knowledge base unless it’s been set up there.</p></div></div>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Pinecone and Qdrant require activation</div><div class="admonitionContent_BuS1"><p>Pinecone and Qdrant are available as free addons, but they are disabled by default.
-To use them, go to the Addons page and activate the Vector DB addon first.</p><img src="/assets/images/vector-db-addon-279cfff08ddd21cb5c2b025a6302dd5d.png" width="600"></div></div>
+To use them, go to the Addons page and activate the Vector DB addon first.</p><img src="/assets/images/vector-db-addon-279cfff08ddd21cb5c2b025a6302dd5d.png"></div></div>
 <ul>
 <li><strong>Enable Vector Store</strong>: This must be checked to use your knowledge base.</li>
 </ul>
-<img src="/assets/images/vector-enable-d91738141750452a213cad51889542b8.png" width="600">
+<img src="/assets/images/vector-enable-d91738141750452a213cad51889542b8.png">
 <ul>
 <li><strong>Vector Provider</strong>: Select the service where your knowledge base is stored (<strong>OpenAI</strong>, <strong>Pinecone</strong>, or <strong>Qdrant</strong>).</li>
 </ul>
-<img src="/assets/images/vector-providers-931adf5f93637c67d45adb1a4cee734e.png" width="600">
+<img src="/assets/images/vector-providers-931adf5f93637c67d45adb1a4cee734e.png">
 <ul>
 <li><strong>Store/Index/Collection</strong>:<!-- -->
 <ul>
@@ -50,10 +50,22 @@ To use them, go to the Addons page and activate the Vector DB addon first.</p><i
 </li>
 <li><strong>Embedding Provider &amp; Model</strong>: If using Pinecone or Qdrant, you must select the same embedding provider and model that you used when creating the knowledge base.</li>
 </ul>
-<img src="/assets/images/vector-settings-d855ffb3d911f2a5d6b2c889fcdfd7b6.png" width="600">
+<img src="/assets/images/vector-settings-d855ffb3d911f2a5d6b2c889fcdfd7b6.png">
 <ul>
 <li><strong>Limit</strong>: This sets the maximum number of relevant documents to fetch from the knowledge base to answer a user&#x27;s question.</li>
 </ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="add-content">Add Content<a href="#add-content" class="hash-link" aria-label="Direct link to Add Content" title="Direct link to Add Content">​</a></h2>
+<p>The easiest way to create a knowledge base for a specific chatbot is by using the <strong>Add Content</strong> button, located in the <strong>General</strong> accordion.</p>
+<img src="/assets/images/express-setup-9f0c9d67f4d9face5f0ee89560bb66f1.png">
+<p>This button launches a streamlined wizard that will:</p>
+<ol>
+<li>Analyze your site and suggest an appropriate vector database provider (e.g., OpenAI Vector Store).</li>
+<li>Allow you to select which content types (e.g., Posts, Pages) you want to index.</li>
+<li>Create a new, dedicated knowledge base for this chatbot.</li>
+<li>Index all selected content in the background.</li>
+<li>Automatically configure the <strong>Vector Store</strong> settings below to use the newly created knowledge base.</li>
+</ol>
+<p>This is the recommended one-click method for making a chatbot knowledgeable about your site&#x27;s content.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="file-upload">File Upload<a href="#file-upload" class="hash-link" aria-label="Direct link to File Upload" title="Direct link to File Upload">​</a></h2>
 <p>When File Upload is enabled, a paperclip icon appears in the chat input area, allowing users to upload a file—such as a PDF or TXT document. The content of the uploaded file is then used as context for the current conversation.</p>
 <p>This feature requires the Pro plan, the File Upload add-on to be active, and the Enable Vector Store option to be turned on for the chatbot.</p>
@@ -68,6 +80,6 @@ To use them, go to the Addons page and activate the Vector DB addon first.</p><i
 <img src="/assets/images/file-upload-demo-a2e1e55ae78d2eb578de975384aa5bb5.png">
 <ul>
 <li>For OpenAI, uploaded files are stored with an expiration date. By default, files expire after 7 days, but you can change this in the main dashboard → OpenAI Settings.</li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/aipowerorg/aipowerorg.github.io/edit/main/docs/Chat/context.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Appearance"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Appearance</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/image-features"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Image</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#content-aware" class="table-of-contents__link toc-highlight">Content Aware</a></li><li><a href="#vector-store" class="table-of-contents__link toc-highlight">Vector Store</a></li><li><a href="#file-upload" class="table-of-contents__link toc-highlight">File Upload</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://wordpress.org/support/plugin/gpt3-ai-content-generator/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Forum<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/aipowerorg/aipowerorg.github.io/" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AIP</div></div></div></footer></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/aipowerorg/aipowerorg.github.io/edit/main/docs/Chat/context.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Appearance"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Appearance</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/image-features"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Image</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#content-aware" class="table-of-contents__link toc-highlight">Content Aware</a></li><li><a href="#vector-store" class="table-of-contents__link toc-highlight">Vector Store</a></li><li><a href="#add-content" class="table-of-contents__link toc-highlight">Add Content</a></li><li><a href="#file-upload" class="table-of-contents__link toc-highlight">File Upload</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://wordpress.org/support/plugin/gpt3-ai-content-generator/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Forum<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/aipowerorg/aipowerorg.github.io/" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AIP</div></div></div></footer></div>
 </body>
 </html>
