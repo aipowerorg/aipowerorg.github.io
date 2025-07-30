@@ -14,6 +14,7 @@ import addcontentfile from '/img/train/add-content-file.png';
 import addcontentwp from '/img/train/add-content-wp.png';
 import embedding from '/img/train/embedding.png';
 import viewindex from '/img/train/view-index.png';
+import trainsettings from '/img/train/train-settings.png';
 
 # Knowledge Base / Training
 
@@ -36,18 +37,18 @@ Before creating a knowledge base, you must configure your vector database provid
 
 ## The Training Interface
 
-The training page has a simple two-column layout:
+The training page displays all of your existing knowledge bases as a grid of cards. From here, you can add new content or manage existing knowledge bases.
 
 <img src={trainui} />
 
--   **Left Column (Add Content):** This is where you choose your content source and target knowledge base.
--   **Right Column (Management):** This is where you view and manage the content of a selected knowledge base.
+-   **Add Content**: Opens a form where you can create a new knowledge base or add content to an existing one.
+-   **Sync**: Refreshes the list of knowledge bases from all your connected providers (OpenAI, Pinecone, Qdrant).
 
 ## Create a Knowledge Base
 
 A knowledge base is called a "Vector Store" for OpenAI, an "Index" for Pinecone, and a "Collection" for Qdrant.
 
-1.  In the left column, select the desired **Vector DB** provider (OpenAI, Pinecone, or Qdrant) from the dropdown.
+1.  Click **Add Content** button, select the desired **Vector DB** provider (OpenAI, Pinecone, or Qdrant) from the dropdown.
 2.  Click the **+** icon next to the "Target" dropdown.
 3.  An inline form will appear. Enter a descriptive name for your new knowledge base.
 
@@ -91,7 +92,7 @@ This is a Pro feature.
 4.  Check the boxes next to the posts/pages you want to index.
 5.  Click **Add Content**.
 
-### Embedding Model
+## Embedding Model
 
 When using Pinecone or Qdrant, you must select an **Embedding Model**. This model converts your text into vectors that the database can understand.
 
@@ -99,19 +100,52 @@ When using Pinecone or Qdrant, you must select an **Embedding Model**. This mode
 
 It is crucial to use the **same model** here as you will later in any Chatbot or AI Form that needs to search this knowledge base.
 
-## Manage Your Knowledge Base
+## Managing a Knowledge Base
 
-When you select a knowledge base from the "Target" dropdown, its details and management options will appear in the right-hand panel.
+When you click on a knowledge base card from the main grid, you are taken to its detail view.
 
--   **View Content**: For OpenAI, this panel lists all the files in your Vector Store. For Pinecone and Qdrant, it shows a log of recent indexing activity.
+-   **View Content**: This panel shows a log of all content that has been indexed into the knowledge base.
+-   **Search**: Click the `...` icon to open a search bar and test queries against your knowledge base.
+-   **Delete Knowledge Base**: Click the `...` icon to permanently delete the entire knowledge base. **This action cannot be undone.**
 
 <img src={viewindex} />
 
--   **Search**: Click the magnifying glass icon to open a search bar and test queries against your knowledge base.
--   **Delete Content**: For OpenAI, you can delete individual files from a Vector Store.
--   **Delete Knowledge Base**: Click the trash can icon to permanently delete the entire knowledge base. **This action cannot be undone.**
+The detail view shows records of all content that has been indexed into the knowledge base.
 
-## Use Your Knowledge Base
+| Column                | Description                                                                                                                                                                                                                                                                                                                        |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Time**              | The date and time the item was indexed.                                                                                                                                                                                                                                                                                            |
+| **File ID / Point ID**| The unique identifier for the content within the vector database.                                                                                                                                                                                                                                                                    |
+| **Status**            | The current status of the item (e.g., `indexed`, `failed`).                                                                                                                                                                                                                                                                        |
+| **Type**              | The source of the content: `Site Content`, `Text`, or `File Upload`. For Pinecone and Qdrant, items uploaded by users from the frontend chatbot will be marked with a person icon <span class="dashicons dashicons-admin-users"></span>, indicating they are stored in a unique, isolated namespace to maintain conversational context. |
+| **Message**           | A summary of the indexing operation.                                                                                                                                                                                                                                                                                               |
+| **Embedding**         | The provider and model used to create the vector embedding (for Pinecone and Qdrant).                                                                                                                                                                                                                                                |
+| **Source**            | The original source of the content, such as a post title or filename.                                                                                                                                                                                                                                                               |
+| **Actions**           | - **Re-index**: For `Site Content`, this deletes the old entry and indexes the latest version of the post. <br/> - **View**: Opens a modal to show the exact text snippet that was indexed. <br/> - **Delete**: Deletes the record from both the vector database and the local logs. |
+
+
+## Advanced Content Indexing Controls
+
+The **Settings** tab within the Train module allows you to fine-tune what content gets indexed. This is a Pro feature.
+
+<img src={trainsettings} />
+
+This feature provides granular control over how your content is processed for AI training. Instead of indexing all available data by default, you can:
+
+- **Selective Field Indexing**: Choose which custom fields to include or exclude from the AI training dataset for each content type.
+- **Taxonomy Management**: Enable or disable specific taxonomies (categories, tags, custom taxonomies) on a per-content-type basis.
+- **WooCommerce Product Data**: For product content types, select which product attributes and data fields should be included in the training corpus.
+- **Custom AI Context Labels**: Define custom labels for each field that provide better context to the AI about what the data represents.
+- **Content Type Configuration**: Set up different indexing rules for posts, pages, custom post types, and WooCommerce products.
+- **Basic Label Customization**: Modify how core content elements (title, excerpt, content, source URL) are labeled for AI context.
+
+This is particularly useful for sites with extensive custom fields where you want to train the AI only on relevant data.
+
+#### General Settings
+
+- **Hide User-Uploaded Files**: When enabled, Vector Stores created automatically by users via the chatbot file upload feature will be hidden from the main Knowledge Base card grid. This helps keep your main view clean and focused on manually curated knowledge bases.
+
+## Using Your Knowledge Base
 
 Once your knowledge base is populated, you can connect it to other AIP modules:
 -   **Chatbots**: In the [Chatbot editor](/docs/context), go to the **Context** section to connect your knowledge base.

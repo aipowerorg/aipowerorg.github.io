@@ -13,6 +13,7 @@ import fileuploadaddon from '/img/chat/file-upload-addon.png';
 import fileuploadenable from '/img/chat/file-upload-enable.png';
 import fileuploaddemo from '/img/chat/file-upload-demo.png';
 import vectordbaddon from '/img/chat/vector-db-addon.png';
+import expresssetup from '/img/chat/express-setup.png';
 
 # Context
 
@@ -22,7 +23,7 @@ The **Context** section is where you give your chatbot access to external inform
 
 When this feature is enabled, the chatbot will use the current page's content as part of its contextual understanding.
 
-<img src={contentaware} width="600"/>
+<img src={contentaware} />
 
 If the page has an excerpt, that excerpt will be used directly as the bot’s context.
 
@@ -44,16 +45,16 @@ Before using this feature, you must first create and configure your Vector Store
 Pinecone and Qdrant are available as free addons, but they are disabled by default.
 To use them, go to the Addons page and activate the Vector DB addon first.
 
-<img src={vectordbaddon} width="600"/>
+<img src={vectordbaddon} />
 :::
 
 - **Enable Vector Store**: This must be checked to use your knowledge base.
 
-<img src={vectorenable} width="600"/>
+<img src={vectorenable} />
 
 - **Vector Provider**: Select the service where your knowledge base is stored (**OpenAI**, **Pinecone**, or **Qdrant**).
 
-<img src={vectorproviders} width="600"/>
+<img src={vectorproviders} />
 
 - **Store/Index/Collection**:
     -   For **OpenAI**, you can select one or more Vector Stores to use.
@@ -61,9 +62,24 @@ To use them, go to the Addons page and activate the Vector DB addon first.
     -   For **Qdrant**, you must select a specific Collection.
 - **Embedding Provider & Model**: If using Pinecone or Qdrant, you must select the same embedding provider and model that you used when creating the knowledge base.
 
-<img src={vectorsettings} width="600"/>
+<img src={vectorsettings} />
 
 - **Limit**: This sets the maximum number of relevant documents to fetch from the knowledge base to answer a user's question.
+
+## Add Content
+
+The easiest way to create a knowledge base for a specific chatbot is by using the **Add Content** button, located in the **General** accordion.
+
+<img src={expresssetup} />
+
+This button launches a streamlined wizard that will:
+1.  Analyze your site and suggest an appropriate vector database provider (e.g., OpenAI Vector Store).
+2.  Allow you to select which content types (e.g., Posts, Pages) you want to index.
+3.  Create a new, dedicated knowledge base for this chatbot.
+4.  Index all selected content in the background.
+5.  Automatically configure the **Vector Store** settings below to use the newly created knowledge base.
+
+This is the recommended one-click method for making a chatbot knowledgeable about your site's content.
 
 ## File Upload
 
