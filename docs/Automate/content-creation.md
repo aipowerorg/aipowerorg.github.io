@@ -45,7 +45,7 @@ When you create a content writing task, you will be guided through a multi-step 
 2.  Give your task a descriptive **Name**.
 3.  From the **Category** dropdown, select **Create New Content**.
 4.  Choose the **Type** of content source you want to use (e.g., From List, From CSV, From RSS).
-5.  Set your desired **Frequency** and ensure the **Status** is **Active**.
+5.  Set your desired **Frequency** and ensure the **Status** is **Active**. You can choose **One-time** to run the task once and have it pause automatically upon completion.
 
 <img src={ccsetup} />
 
@@ -183,15 +183,22 @@ You can choose between generating new, unique images with an AI or searching for
 
 OpenAI offers high-quality image generation with models like DALL-E 3 and GPT-4o.
 
-- **Setup**: To use OpenAI, simply enter your API key in the main dashboard under **AIP > Dashboard > Providers > OpenAI**. The Content Writer will automatically use this key.
-- **Usage**: In the **Images** accordion, select **OpenAI** as the provider and choose your desired model (e.g., `dall-e-3`).
+- **Setup**: To use OpenAI, simply enter your API key in the main dashboard under **AIP > Dashboard > Providers > OpenAI**.
+- **Usage**: Select **OpenAI** as the provider and choose your desired model (e.g., `dall-e-3`).
 
 ### Google
 
-Google's models, like Imagen, offer another option for AI image generation.
+Google's models offer high-quality image generation.
 
 - **Setup**: To use Google, enter your API key in the main dashboard under **AIP > Dashboard > Providers > Google**.
-- **Usage**: Select **Google** as the provider in the **Images** accordion and choose a model (e.g., `imagen-3.0-generate-002`).
+- **Usage**: Select **Google** as the provider and choose a model (e.g., `imagen-3.0-generate-002`, `imagen-4.0-ultra-generate-preview-06-06`).
+
+### Azure
+
+Use your deployed DALL-E 2 and DALL-E 3 models from your Azure OpenAI service.
+
+- **Setup**: Configure your Azure API Key and Endpoint in the main dashboard under **AIP > Dashboard > Providers > Azure**.
+- **Usage**: Sync your deployments, then select **Azure** as the provider. Your available DALL-E deployments will appear in the **Model** dropdown.
 
 ### Replicate
 

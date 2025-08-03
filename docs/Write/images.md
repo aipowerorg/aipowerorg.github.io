@@ -41,7 +41,14 @@ OpenAI offers high-quality image generation with models like DALL-E 3 and GPT-4o
 Google's models, like Imagen, offer another option for AI image generation.
 
 - **Setup**: To use Google, enter your API key in the main dashboard under **AIP > Dashboard > Providers > Google**.
-- **Usage**: Select **Google** as the provider in the **Images** accordion and choose a model (e.g., `imagen-3.0-generate-002`).
+- **Usage**: Select **Google** as the provider in the **Images** accordion and choose a model (e.g., `imagen-3.0-generate-002`, `imagen-4.0-ultra-generate-preview-06-06`).
+
+### Azure
+
+Use your deployed DALL-E 2 and DALL-E 3 models from your Azure OpenAI service.
+
+- **Setup**: Configure your Azure API Key and Endpoint in the main dashboard under **AIP > Dashboard > Providers > Azure**.
+- **Usage**: Sync your deployments, then select **Azure** as the provider in the **Images** accordion. Your available DALL-E deployments will appear in the **Model** dropdown.
 
 ### Replicate
 

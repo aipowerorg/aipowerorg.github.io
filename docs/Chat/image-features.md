@@ -24,15 +24,15 @@ You can enable your chatbot to generate images directly in the chat window by re
 **Supported Models for Image Generation**
 
 - **OpenAI**: `gpt-image-1`, `dall-e-3`, `dall-e-2`
-- **Google**: `gemini-1.5-flash`, `imagen-3.0`
+- **Google**: `imagen-3.0`, `imagen-4.0`
+- **Azure**: DALL-E 2 and DALL-E 3 deployments
 - **Replicate**: All text-to-image models available on Replicate such as flux, sdxl, stable diffusion etc.
-
 :::
 
 ### How to Enable & Configure
 
 1.  In your chatbot's settings, open the **Images** accordion.
-2.  **Image Generation Model**: Select the AI model you want to use for creating images (e.g., `dall-e-3` or `imagen-3.0`).
+2.  **Image Generation Model**: Select the AI model you want to use for creating images (e.g., `dall-e-3` or `imagen-4.0-ultra-generate-preview-06-06`).
 
 <img src={imagegenerationsettings} width="600"/>
 

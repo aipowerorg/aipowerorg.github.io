@@ -20,9 +20,9 @@ The **Automate** module is a scheduling engine that lets you run various AI task
 
 When you go to **AIP > Automate**, you'll see two main sections: the **Task List** and the **Task Queue**.
 
-- **Add New Task**: Click this button to open a multi-step wizard where you can configure a new automated task.
-- **Task List**: This is where all your configured tasks live. You can edit, pause, or delete them from here.
-- **Task Queue**: This shows the individual items that are being processed by your tasks (e.g., each article to be written or each post to be indexed).
+-   **Add New Task**: Click this button to open a multi-step wizard where you can configure a new automated task.
+-   **Task List**: This is where all your configured tasks live. You can edit, pause, or delete them from here.
+-   **Task Queue**: This shows the individual items that are being processed by your tasks (e.g., each article to be written or each post to be indexed).
 
 ### The Task List
 
@@ -57,7 +57,8 @@ Creating a task involves a simple, multi-step wizard.
 1.  Click the **Add New Task** button.
 2.  Choose a **Category** for your task (e.g., Create New Content, Knowledge Base).
 3.  Choose a specific **Task Type** within that category.
-4.  Follow the steps in the wizard to configure your task's settings.
+4.  Set the **Frequency** for how often the task should run. You can choose a standard interval (e.g., Daily, Hourly) or select **One-time** to have the task run once and then automatically pause itself upon completion.
+5.  Follow the steps in the wizard to configure your task's settings.
 
 <img src={addnew} />
 

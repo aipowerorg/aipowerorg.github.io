@@ -86,10 +86,13 @@ OpenAI provides popular image generation models like DALL-E 3 and GPT Image 1.
 
 ### Google (Image & Video)
 Google's models offer high-quality image and video generation.
-- **Imagen 3**: Generates photorealistic images.
+- **Imagen 3 & Imagen 4.0**: Generates photorealistic images.
 - **Veo 3**: Generates high-definition video clips from a text prompt.
 
 <img src={veo3} width="600"/>
+
+### Azure
+Use your deployed DALL-E 2 and DALL-E 3 models from your Azure OpenAI service. Simply sync your deployments from the main **Dashboard > Providers > Azure** settings.
 
 ### Replicate
 Replicate provides access to a wide variety of open-source models, including Stable Diffusion and more.
