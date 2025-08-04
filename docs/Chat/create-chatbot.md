@@ -16,12 +16,15 @@ import shortcodeinsert from '/img/chat/shortcode-insert.png';
 import popupenable from '/img/chat/popup-enable.png';
 import popupsettings from '/img/chat/popup-settings.png';
 import popupurl from '/img/chat/popup-url.png';
+import embedaddon from '/img/chat/embed-addon.png';
+import embedsettings from '/img/chat/embed-settings.png';
 
 # Create & Manage Chatbots
 
-You can add chatbots to your site in two ways:
+You can add chatbots to your site in three ways:
 - **As a shortcode**: Embed the chat window directly into the content of a page, post, or widget.
 - **As a popup**: Display a chat icon that opens a chat window when clicked. This can be enabled on specific pages or across your entire site.
+- **As an embed**: Add the chatbot to any external website using a simple HTML snippet.
 
 This guide will walk you through the basics of creating, editing, and managing your chatbots.
 
@@ -60,11 +63,11 @@ All of your chatbots, including the default one, are accessible from the main se
 
 ## Deploying Your Chatbot
 
-There are two primary ways to deploy your chatbot on your website: as a popup or embedded directly into a page's content using a shortcode.
+There are three primary ways to deploy your chatbot: as a popup, embedded with a shortcode, or embedded on an external site.
 
 ### Shortcode Mode
 
-The shortcode allows you to embed the chat window directly into the content of any post, page, or widget.
+The shortcode allows you to embed the chat window directly into the content of any post, page, or widget on your WordPress site.
 
 #### How to Get the Shortcode
 
@@ -83,7 +86,7 @@ Paste the copied shortcode (e.g., `[aipkit_chatbot id=9453]`) directly into the 
 
 ### Popup Mode
 
-A popup chatbot appears as a small, clickable icon in a corner of the screen. When a user clicks the icon, the chat window opens.
+A popup chatbot appears as a small, clickable icon in a corner of the screen on your WordPress site. When a user clicks the icon, the chat window opens.
 
 To enable popup mode:
 
@@ -105,6 +108,27 @@ To enable popup mode:
 -   **Popup Icon**: Customize the appearance of the popup trigger button. You can choose from one of three default icons or provide a URL to your own custom image.
 
 <img src={popupurl} width="600" />
+
+### Embed Anywhere (External Sites)
+
+This feature allows you to embed your chatbot on any other website, even if it's not running on WordPress.
+
+:::info This is a Pro Feature
+To use this feature, you need a Pro plan and the **Embed Anywhere** addon must be enabled from the **AIP > Add-ons** page.
+<img src={embedaddon} />
+:::
+
+#### How to Enable & Configure
+
+1.  In your chatbot's settings, find and expand the **Embed** accordion.
+2.  **Allowed Domains**: For security, you must list the domains where you plan to embed the chatbot. Enter one domain per line (e.g., `https://my-other-website.com`). Requests from any other domain will be blocked.
+
+<img src={embedsettings} />
+
+3.  **Copy Embed Code**: Click the **Copy Code** button to copy the HTML snippet to your clipboard.
+4.  **Paste on External Site**: Paste the copied snippet into the HTML of your external website, just before the closing `</body>` tag.
+
+The chatbot will now appear on that external site, with the same appearance and behavior you configured in WordPress.
 
 ## The Chatbot Editor
 

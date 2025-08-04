@@ -82,6 +82,11 @@ When using an OpenAI model, enabling the Web Search tool <span class="dashicons 
 
 <img src={websearch} width="600" />
 
+:::info Supported OpenAI Models
+Most recent OpenAI models support the Web Search. However, **gpt-4.1-nano** is currently not compatible with web search.
+
+:::
+
 -   **Search Context Size**: Controls how much information the AI considers from its search results. It has three levels: Low, Medium (default), and High.
 -   **User Location**: Helps the AI provide more relevant local results.
     -   **None**: The AI does not consider the user's location.
@@ -99,6 +104,18 @@ When using an OpenAI model, enabling the Web Search tool <span class="dashicons 
 When using a compatible Google model, enabling web search adds grounding capabilities.
 
 <img src={groundingmode} width="600" />
+
+:::info Supported Google Models
+The following Google Gemini models support **Search Grounding** in the chatbot:
+
+- Gemini 2.5 Pro
+- Gemini 2.5 Flash
+- Gemini 2.0 Flash
+- Gemini 1.5 Pro
+- Gemini 1.5 Flash
+
+Only **Gemini 1.5 Flash** supports **Dynamic Retrieval** mode.
+:::
 
 The following settings will appear:
 
