@@ -111,7 +111,12 @@ To enable popup mode:
 
 ### Embed Anywhere (External Sites)
 
+
 This feature allows you to embed your chatbot on any other website, even if it's not running on WordPress.
+
+:::tip Watch the Video Tutorial
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Im4GTxuNutE" title="How to Embed Your Bot on an External Site" frameborder="0" allowfullscreen></iframe>
+:::
 
 :::info This is a Pro Feature
 To use this feature, you need a Pro plan and the **Embed Anywhere** addon must be enabled from the **AIP > Add-ons** page.
