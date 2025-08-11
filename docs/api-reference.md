@@ -2,7 +2,7 @@
 id: api-reference
 slug: /api-reference
 title: API Reference
-sidebar_position: 14
+sidebar_position: 15
 ---
 
 import publicapi from '/img/rest/rest.png';
