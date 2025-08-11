@@ -17,6 +17,7 @@ Build and deploy AI chatbots on your website.
 -   **Knowledge Base**: Integrates with vector databases (OpenAI Vector Store, Pinecone, Qdrant) to answer questions based on your custom data.
 -   **Voice Options**: Enable voice input (Speech-to-Text) and voice playback (Text-to-Speech) using services like ElevenLabs, Google, and OpenAI.
 -   **Triggers**: Create automated rules to control the chatbot's behavior based on user actions or specific conditions.
+-   **Embed Anywhere**: Deploy your chatbots on any external, non-WordPress website using a simple HTML snippet.
 -   **Token Management**: Control usage by setting token limits for different user roles.
 -   **WooCommerce Integration**: Sell token packages as products in your store.
 
