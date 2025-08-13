@@ -63,7 +63,10 @@ This will open the **Content Assistant** modal, where you can configure the AI e
 
 -   Click **Start** to begin the process. The modal will display a log of the progress for each post.
 
-:::tip WooCommerce Placeholders
+:::tip Available Placeholders
+You can use the following placeholders in your prompts:
+`{original_title}`, `{original_content}`, `{original_excerpt}`, `{original_meta_description}`, `{original_focus_keyword}`, `{original_tags}`, `{categories}`.
+
 When enhancing Products, you can use additional placeholders like `{price}`, `{sku}`, and `{attributes}`. See the [WooCommerce Product Writer](/docs/woocommerce-product-writer) documentation for a full list.
 :::
 
