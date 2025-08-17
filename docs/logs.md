@@ -11,6 +11,7 @@ import logfilters from '/img/logs/log-filters.png';
 import logactions from '/img/logs/log-actions.png';
 import logsettings from '/img/logs/log-settings.png';
 import logprune from '/img/logs/log-prune.png';
+import vectorscore from '/img/chat/vector-score.png';
 
 # Logs
 
@@ -51,7 +52,11 @@ Clicking on any conversation in the list on the left will load its full transcri
 This view includes:
 -   A complete, timestamped record of the conversation.
 -   Metadata such as the user's IP address (anonymized if enabled), the AI provider and model used, and total tokens consumed for each AI response.
+-   The raw API request payload sent to the AI, which is useful for debugging.
 -   Any feedback (like/dislike) that the user provided on a chatbot message.
+-   For interactions that used a knowledge base, a **Vector Search Scores** section will appear under each bot message showing the relevance scores of the documents retrieved. You can click on a score to see more details about the matched content.
+
+<img src={vectorscore} width="600"/>
 
 ### Bulk Actions
 

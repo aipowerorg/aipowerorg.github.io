@@ -28,7 +28,7 @@ To use a knowledge base for content generation, enable it in the **Vectors** acc
     -   For **Pinecone**, select a specific Index.
     -   For **Qdrant**, select a specific Collection.
 
-4.  **Embedding Provider & Model**: If you are using Pinecone or Qdrant, you must select the same embedding provider and model that you used when you created the knowledge base in the **Train** module. This is not required for OpenAI.
+4.  **Embedding Provider & Model**: If you are using Pinecone or Qdrant, you must select the same embedding provider and model that you used when you created the knowledge base in the **Train** module. The available providers are **OpenAI**, **Google**, and **Azure**. This is not required for OpenAI.
 
 <img src={contextsettings} />
 

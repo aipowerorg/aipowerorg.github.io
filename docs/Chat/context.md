@@ -14,6 +14,7 @@ import fileuploadenable from '/img/chat/file-upload-enable.png';
 import fileuploaddemo from '/img/chat/file-upload-demo.png';
 import vectordbaddon from '/img/chat/vector-db-addon.png';
 import expresssetup from '/img/chat/express-setup.png';
+import vectorscore from '/img/chat/vector-score.png';
 
 # Context
 
@@ -60,11 +61,14 @@ To use them, go to the Addons page and activate the Vector DB addon first.
     -   For **OpenAI**, you can select one or more Vector Stores to use.
     -   For **Pinecone**, you must select a specific Index.
     -   For **Qdrant**, you must select a specific Collection.
-- **Embedding Provider & Model**: If using Pinecone or Qdrant, you must select the same embedding provider and model that you used when creating the knowledge base.
+- **Embedding Provider & Model**: If using Pinecone or Qdrant, you must select the same embedding provider and model that you used when creating the knowledge base. The available providers are **OpenAI**, **Google**, and **Azure**.
 
 <img src={vectorsettings} />
 
 - **Limit**: This sets the maximum number of relevant documents to fetch from the knowledge base to answer a user's question.
+- **Score Threshold**: This slider (from 0% to 100%) sets a minimum relevance score for the search results. Only documents that meet this threshold will be provided to the AI as context, helping to filter out less relevant information and improve response accuracy.
+
+<img src={vectorscore} width="600"/>
 
 ## Add Content
 

@@ -15,6 +15,7 @@ import addcontentwp from '/img/train/add-content-wp.png';
 import embedding from '/img/train/embedding.png';
 import viewindex from '/img/train/view-index.png';
 import trainsettings from '/img/train/train-settings.png';
+import generalsettings from '/img/train/general-settings.png';
 
 # Knowledge Base / Training
 
@@ -42,7 +43,7 @@ The training page displays all of your existing knowledge bases as a grid of car
 <img src={trainui} />
 
 -   **Add Content**: Opens a form where you can create a new knowledge base or add content to an existing one.
--   **Sync**: Refreshes the list of knowledge bases from all your connected providers (OpenAI, Pinecone, Qdrant).
+-   **Sync**: Refreshes the list of knowledge bases from all your connected providers (OpenAI, Pinecone, and Qdrant).
 
 ## Create a Knowledge Base
 
@@ -94,7 +95,7 @@ This is a Pro feature.
 
 ## Embedding Model
 
-When using Pinecone or Qdrant, you must select an **Embedding Model**. This model converts your text into vectors that the database can understand.
+When using Pinecone or Qdrant, you must select an **Embedding Model**. This model converts your text into vectors that the database can understand. The available providers are **OpenAI**, **Google**, and **Azure**.
 
 <img src={embedding} />
 
@@ -124,26 +125,33 @@ The detail view shows records of all content that has been indexed into the know
 | **Actions**           | - **Re-index**: For `Site Content`, this deletes the old entry and indexes the latest version of the post. <br/> - **View**: Opens a modal to show the exact text snippet that was indexed. <br/> - **Delete**: Deletes the record from both the vector database and the local logs. |
 
 
-## Advanced Content Indexing Controls
+## Settings
 
-The **Settings** tab within the Train module allows you to fine-tune what content gets indexed. This is a Pro feature.
+The **Settings** tab within the Train module allows you to fine-tune what content gets indexed.
 
-<img src={trainsettings} />
+### Content Indexing Controls
 
-This feature provides granular control over how your content is processed for AI training. Instead of indexing all available data by default, you can:
+This Pro feature provides granular control over how your content is processed for AI training. Instead of indexing all available data by default, you can:
 
 - **Selective Field Indexing**: Choose which custom fields to include or exclude from the AI training dataset for each content type.
 - **Taxonomy Management**: Enable or disable specific taxonomies (categories, tags, custom taxonomies) on a per-content-type basis.
 - **WooCommerce Product Data**: For product content types, select which product attributes and data fields should be included in the training corpus.
+
+<img src={trainsettings} />
+
 - **Custom AI Context Labels**: Define custom labels for each field that provide better context to the AI about what the data represents.
 - **Content Type Configuration**: Set up different indexing rules for posts, pages, custom post types, and WooCommerce products.
 - **Basic Label Customization**: Modify how core content elements (title, excerpt, content, source URL) are labeled for AI context.
 
 This is particularly useful for sites with extensive custom fields where you want to train the AI only on relevant data.
 
-#### General Settings
+### General Settings
 
 - **Hide User-Uploaded Files**: When enabled, Vector Stores created automatically by users via the chatbot file upload feature will be hidden from the main Knowledge Base card grid. This helps keep your main view clean and focused on manually curated knowledge bases.
+
+<img src={generalsettings} />
+
+- **Show Index Button on Post/Product List**: This toggle allows you to show or hide the "Index" button that appears in the admin bar on post and product list screens.
 
 ## Using Your Knowledge Base
 

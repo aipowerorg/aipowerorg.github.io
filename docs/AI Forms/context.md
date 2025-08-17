@@ -43,9 +43,11 @@ The configuration is done in the **Vector Configuration** accordion within the f
     -   For **Pinecone**, you must select a specific Index.
     -   For **Qdrant**, you must select a specific Collection.
 
-4.  **Embedding Provider & Model**: This is required only for **Pinecone** and **Qdrant**. You must select the exact same embedding provider and model that you used when you created the knowledge base. This ensures compatibility.
+4.  **Embedding Provider & Model**: This is required only for **Pinecone** and **Qdrant**. You must select the exact same embedding provider and model that you used when you created the knowledge base. The available providers are **OpenAI**, **Google**, and **Azure**.
 
 5.  **Results Limit**: This sets the maximum number of relevant documents the AI will fetch from your knowledge base to use as context for generating its response.
+
+6.  **Score Threshold**: This slider (from 0% to 100%) sets a minimum relevance score for the search results. Only documents that meet this threshold will be provided to the AI as context, helping to filter out less relevant information and improve response accuracy.
 
 Once saved, the form will automatically use this knowledge base for all future generations.
 

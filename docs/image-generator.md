@@ -137,15 +137,11 @@ This section appears when the Replicate addon is active.
 
 This can help prevent false positives that might block legitimate image generation prompts. Only disable this if you have other content moderation measures in place.
 
-### Frontend Filtering
+### Provider & Model Filtering
 
-Restrict which AI providers and models are available on the frontend shortcode. Leave the fields blank to allow all options.
-
--   **Allowed Providers**: A comma-separated list of provider names to show (e.g., `OpenAI, Google`).
+Restrict which AI providers and models are available on the frontend shortcode. Use the interactive selector to choose specific models from each provider. Leave everything unselected to allow all available models.
 
 <img src={providerfilter} />
-
--   **Allowed Models**: A comma-separated list of specific model IDs to show (e.g., `dall-e-3, imagen-3.0-generate-002`).
 
 ### Custom CSS
 

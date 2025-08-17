@@ -49,6 +49,6 @@ You must first configure your vector store providers in **AIP > Dashboard** and 
 <img src={vectors} />
 
 - **Vector Store**: Choose the specific Vector Store, Index, or Collection you created in the Train module.
-- **Embedding**: If using Pinecone or Qdrant, you must select the same embedding provider and model that you used when creating the knowledge base. This ensures the data is compatible.
+- **Embedding**: If using Pinecone or Qdrant, you must select the same embedding provider and model that you used when creating the knowledge base. The available providers are **OpenAI**, **Google**, and **Azure**.
 
 Click **Save Task**. The task is now active and will begin queuing content based on your settings.
