@@ -133,46 +133,6 @@ To use this feature, you need a Pro plan and the **Embed Anywhere** addon must b
 3.  **Copy Embed Code**: Click the **Copy Code** button to copy the HTML snippet to your clipboard.
 4.  **Paste on External Site**: Paste the copied snippet into the HTML of your external website, just before the closing `</body>` tag.
 
-#### Live Demo
-
-Try our chatbot right here:
-
-import React, { useEffect } from 'react';
-
-export const ChatbotEmbed = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.innerHTML = `
-      (function() { 
-        var d = document; 
-        var c = d.createElement("div"); 
-        c.id = "aipkit-chatbot-container-20759"; 
-        var s = d.createElement("script"); 
-        s.src = "https://aipower.org/wp-content/plugins/gpt3-ai-content-generator-premium/dist/js/embed-bootstrap.bundle.js"; 
-        s.setAttribute("data-bot-id", "20759"); 
-        s.setAttribute("data-wp-site", "https://aipower.org"); 
-        s.async = true; 
-        var t = d.currentScript || d.getElementsByTagName("script")[0]; 
-        t.parentNode.insertBefore(c, t); 
-        t.parentNode.insertBefore(s, t); 
-      })();
-    `;
-    document.body.appendChild(script);
-    
-    return () => {
-      // Cleanup
-      const container = document.getElementById('aipkit-chatbot-container-20759');
-      if (container) {
-        container.remove();
-      }
-    };
-  }, []);
-
-  return <div id="aipkit-chatbot-container-20759"></div>;
-};
-
-<ChatbotEmbed />
-
 The chatbot will now appear on that external site, with the same appearance and behavior you configured in WordPress.
 
 ## The Chatbot Editor
