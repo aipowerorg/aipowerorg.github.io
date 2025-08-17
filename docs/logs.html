@@ -11,8 +11,8 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="AIP" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.dc46df47.css">
-<script src="/assets/js/runtime~main.9e2dfd9e.js" defer="defer"></script>
-<script src="/assets/js/main.0aee4cb2.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b6fe4628.js" defer="defer"></script>
+<script src="/assets/js/main.eeeb1363.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -48,8 +48,11 @@
 <ul>
 <li>A complete, timestamped record of the conversation.</li>
 <li>Metadata such as the user&#x27;s IP address (anonymized if enabled), the AI provider and model used, and total tokens consumed for each AI response.</li>
+<li>The raw API request payload sent to the AI, which is useful for debugging.</li>
 <li>Any feedback (like/dislike) that the user provided on a chatbot message.</li>
+<li>For interactions that used a knowledge base, a <strong>Vector Search Scores</strong> section will appear under each bot message showing the relevance scores of the documents retrieved. You can click on a score to see more details about the matched content.</li>
 </ul>
+<img src="/assets/images/vector-score-375fab646af228c13ce283e19767e7a2.png" width="600">
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bulk-actions">Bulk Actions<a href="#bulk-actions" class="hash-link" aria-label="Direct link to Bulk Actions" title="Direct link to Bulk Actions">​</a></h3>
 <p>The ellipsis icon (<code>...</code>) in the header of the conversation list opens the Bulk Actions menu, which applies to the currently filtered set of logs.</p>
 <img src="/assets/images/log-actions-d955bae855b821812be856d02546678a.png">

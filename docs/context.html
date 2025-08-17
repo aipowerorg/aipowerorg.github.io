@@ -11,8 +11,8 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="AIP" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.dc46df47.css">
-<script src="/assets/js/runtime~main.9e2dfd9e.js" defer="defer"></script>
-<script src="/assets/js/main.0aee4cb2.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b6fe4628.js" defer="defer"></script>
+<script src="/assets/js/main.eeeb1363.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -35,11 +35,11 @@ To use them, go to the Addons page and activate the Vector DB addon first.</p><i
 <ul>
 <li><strong>Enable Vector Store</strong>: This must be checked to use your knowledge base.</li>
 </ul>
-<img src="/assets/images/vector-enable-d91738141750452a213cad51889542b8.png">
+<img src="/assets/images/vector-enable-f65376c605cfd2b62fdda9160436482a.png">
 <ul>
 <li><strong>Vector Provider</strong>: Select the service where your knowledge base is stored (<strong>OpenAI</strong>, <strong>Pinecone</strong>, or <strong>Qdrant</strong>).</li>
 </ul>
-<img src="/assets/images/vector-providers-931adf5f93637c67d45adb1a4cee734e.png">
+<img src="/assets/images/vector-providers-0827551466b77fe1a2c416bfc96ee29e.png">
 <ul>
 <li><strong>Store/Index/Collection</strong>:<!-- -->
 <ul>
@@ -48,12 +48,14 @@ To use them, go to the Addons page and activate the Vector DB addon first.</p><i
 <li>For <strong>Qdrant</strong>, you must select a specific Collection.</li>
 </ul>
 </li>
-<li><strong>Embedding Provider &amp; Model</strong>: If using Pinecone or Qdrant, you must select the same embedding provider and model that you used when creating the knowledge base.</li>
+<li><strong>Embedding Provider &amp; Model</strong>: If using Pinecone or Qdrant, you must select the same embedding provider and model that you used when creating the knowledge base. The available providers are <strong>OpenAI</strong>, <strong>Google</strong>, and <strong>Azure</strong>.</li>
 </ul>
-<img src="/assets/images/vector-settings-d855ffb3d911f2a5d6b2c889fcdfd7b6.png">
+<img src="/assets/images/vector-settings-c05eb798c24193cb18ae434ecbcef6d1.png">
 <ul>
 <li><strong>Limit</strong>: This sets the maximum number of relevant documents to fetch from the knowledge base to answer a user&#x27;s question.</li>
+<li><strong>Score Threshold</strong>: This slider (from 0% to 100%) sets a minimum relevance score for the search results. Only documents that meet this threshold will be provided to the AI as context, helping to filter out less relevant information and improve response accuracy.</li>
 </ul>
+<img src="/assets/images/vector-score-375fab646af228c13ce283e19767e7a2.png" width="600">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="add-content">Add Content<a href="#add-content" class="hash-link" aria-label="Direct link to Add Content" title="Direct link to Add Content">​</a></h2>
 <p>The easiest way to create a knowledge base for a specific chatbot is by using the <strong>Add Content</strong> button, located in the <strong>General</strong> accordion.</p>
 <img src="/assets/images/express-setup-9f0c9d67f4d9face5f0ee89560bb66f1.png">
