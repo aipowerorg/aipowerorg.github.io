@@ -36,7 +36,7 @@ Paid plan users get access to a dedicated email channel for priority support wit
 
 -   **Automated Content Enhancement**: Schedule a recurring task to automatically improve your existing posts or WooCommerce products. The AI can rewrite titles, update excerpts, and enhance content based on your custom prompts. Learn more at [Content Enhancement](/docs/content-enhancement).
 
--   **Advanced Content Indexing**: Gain fine-grained control over the data used to train your knowledge base. Select specific custom fields and taxonomies to include or exclude from the indexing process for each content type. Learn more at [Knowledge Base / Training](/docs/ai-training/intro#advanced-content-indexing-controls).
+-   **Advanced Content Indexing**: Gain fine-grained control over the data used to train your knowledge base. Select specific custom fields and taxonomies to include or exclude from the indexing process for each content type. Learn more at [Knowledge Base / Training](/docs/ai-training/intro#content-indexing-controls).
 
 ## Administration & Compliance
 
