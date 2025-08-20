@@ -258,6 +258,58 @@ curl -X POST https://your-website.com/wp-json/aipkit/v1/chat/9453/message \
 
 ---
 
+### List Chat Logs
+
+Retrieves a paginated list of conversation logs, with options for filtering. The full conversation, including all messages, is included in the `messages` property of each log object.
+
+-   **Endpoint**: `GET /wp-json/aipkit/v1/logs`
+-   **Method**: `GET`
+
+#### Parameters
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `page` | integer | No | The page number for pagination. Default: `1`. |
+| `per_page`| integer | No | The number of conversation logs to return per page. Default: `20`, Max: `100`. |
+| `bot_id`| integer | No | Filter logs for a specific chatbot ID. |
+| `user_search`| string | No | Search for logs by a user's display name, username, or email. |
+| `message_search`| string | No | Search for logs where the conversation contains specific text. |
+
+#### Headers
+The response will include pagination headers:
+- `X-WP-Total`: The total number of logs found.
+- `X-WP-TotalPages`: The total number of pages available.
+
+#### Example Request
+
+```bash
+curl -X GET "https://your-website.com/wp-json/aipkit/v1/logs?per_page=1&bot_id=123" \
+-H "Authorization: Bearer YOUR_API_KEY"
+```
+
+#### Example Response
+
+```json
+[
+    {
+        "id": "1",
+        "bot_id": "123",
+        "user_id": "1",
+        "session_id": null,
+        "conversation_uuid": "e8a3c-b3a1-4f9e-...",
+        "is_guest": "0",
+        "module": "chat",
+        "messages": "[...]",
+        "message_count": "4",
+        "last_message_ts": "1724081015",
+        "bot_name": "Customer Support Bot",
+        "user_display_name": "admin"
+    }
+]
+```
+
+---
+
 ### Upsert to Vector Store
 
 Add content to a Pinecone or Qdrant knowledge base. This endpoint will automatically create embeddings for your content and upsert the resulting vectors into your specified index or collection.
@@ -310,3 +362,5 @@ curl -X POST https://your-website.com/wp-json/aipkit/v1/vector-stores/upsert \
     "upserted_count": 2,
     "status": "success"
 }
+```
+```
