@@ -9,11 +9,11 @@ import contextsettings from '/img/write/context-settings.png';
 
 # Context
 
-Context (Vector Store) feature allows the AI to access specific information from your website when generating content. This is a good way to create articles that are aware of your products, services, or other specialized topics you have trained the AI on.
+The Context (Vector Store) feature allows the AI to access specific information from your website when generating content. This is a good way to create articles that are aware of your products, services, or other specialized topics you have trained the AI on.
 
 ## Configuration
 
-To use a knowledge base for content generation, enable it in the **Vectors** accordion.
+To use a knowledge base for content generation, enable it in the **Context** accordion.
 
 1.  **Enable Vector Store**: Check this box to activate the feature for the current writing task.
 
@@ -28,8 +28,9 @@ To use a knowledge base for content generation, enable it in the **Vectors** acc
     -   For **Pinecone**, select a specific Index.
     -   For **Qdrant**, select a specific Collection.
 
-4.  **Embedding Provider & Model**: If you are using Pinecone or Qdrant, you must select the same embedding provider and model that you used when you created the knowledge base in the **Train** module. The available providers are **OpenAI**, **Google**, and **Azure**. This is not required for OpenAI.
+4.  **Embedding Provider & Model**: If you are using Pinecone or Qdrant, you must select the same embedding provider and model that you used when you created the knowledge base in the **Train** module. The available providers are **OpenAI**, **Google**, and **Azure**.
 
 <img src={contextsettings} />
 
 5.  **Results Limit**: This sets the maximum number of relevant documents the AI will fetch from your knowledge base to use as context.
+6.  **Score Threshold**: This slider (from 0% to 100%) sets a minimum relevance score for the search results. Only documents that meet this threshold will be provided to the AI as context, helping to filter out less relevant information.

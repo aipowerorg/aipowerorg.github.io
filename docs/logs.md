@@ -51,10 +51,12 @@ Clicking on any conversation in the list on the left will load its full transcri
 
 This view includes:
 -   A complete, timestamped record of the conversation.
--   Metadata such as the user's IP address (anonymized if enabled), the AI provider and model used, and total tokens consumed for each AI response.
+-   Metadata such as the user's IP address and a **one-click block button** to instantly add the IP to your banned list.
+-   The AI provider, model, and total tokens consumed for each AI response.
 -   The raw API request payload sent to the AI, which is useful for debugging.
 -   Any feedback (like/dislike) that the user provided on a chatbot message.
 -   For interactions that used a knowledge base, a **Vector Search Scores** section will appear under each bot message showing the relevance scores of the documents retrieved. You can click on a score to see more details about the matched content.
+-   **Content Writer & Assistant Logs**: These logs provide a detailed breakdown of each step in the generation process, including the prompts and token usage for the title, content, excerpt, meta description, and other generated fields.
 
 <img src={vectorscore} width="600"/>
 

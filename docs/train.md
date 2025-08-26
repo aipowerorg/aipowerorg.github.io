@@ -16,6 +16,7 @@ import embedding from '/img/train/embedding.png';
 import viewindex from '/img/train/view-index.png';
 import trainsettings from '/img/train/train-settings.png';
 import generalsettings from '/img/train/general-settings.png';
+import chunksettings from '/img/train/chunk-settings.png';
 
 # Knowledge Base / Training
 
@@ -49,7 +50,7 @@ The training page displays all of your existing knowledge bases as a grid of car
 
 A knowledge base is called a "Vector Store" for OpenAI, an "Index" for Pinecone, and a "Collection" for Qdrant.
 
-1.  Click **Add Content** button, select the desired **Vector DB** provider (OpenAI, Pinecone, or Qdrant) from the dropdown.
+1.  Click the **Add Content** button, select the desired **Vector DB** provider (OpenAI, Pinecone, or Qdrant) from the dropdown.
 2.  Click the **+** icon next to the "Target" dropdown.
 3.  An inline form will appear. Enter a descriptive name for your new knowledge base.
 
@@ -64,34 +65,35 @@ Once you have a knowledge base created and selected, you can add content to it u
 
 ### Using Text
 
-1.  Select "Text" from the **Source** dropdown.
+1.  Select the "Text" source card.
 2.  Paste your content into the textarea.
 
 <img src={addcontenttext} />
 
-3.  Click **Add Content**.
+3.  Click **Add**.
 
 ### Using File Upload
 
 This is a Pro feature.
 
-1.  Select "Files" from the **Source** dropdown.
-2.  Click "Choose File" and select a `.txt` or `.pdf` file. The plugin will automatically extract the text.
+1.  Select the "Files" source card.
+2.  Drag and drop your files into the upload area or click to select them. You can upload multiple files at once.
+3.  Supported file types: **PDF, DOCX, TXT, HTML**.
 
 <img src={addcontentfile} />
 
-3.  Click **Add Content**.
+4.  Click **Add Content**. The plugin will automatically extract the text and index it.
 
 ### Using Site Content
 
-1.  Select "Site Content" from the **Source** dropdown.
-2.  Use the filters to select one or more Post Types and a Status.
-3.  Click **Load Content**.
+1.  Select the "Site Content" source card.
+2.  Choose a mode:
+    - **All by Post Type**: This is the default. Simply check the boxes for the post types you want to index (e.g., Posts, Pages). The number of available items for each type is shown.
+    - **Pick Specific**: This allows you to search for and select individual posts, pages, or products from a paginated list.
 
 <img src={addcontentwp} />
 
-4.  Check the boxes next to the posts/pages you want to index.
-5.  Click **Add Content**.
+3.  Click **Add Content**.
 
 ## Embedding Model
 
@@ -127,7 +129,10 @@ The detail view shows records of all content that has been indexed into the know
 
 ## Settings
 
-The **Settings** tab within the Train module allows you to fine-tune what content gets indexed.
+- **Hide User-Uploaded Files**: When enabled, Vector Stores created automatically by users via the chatbot file upload feature will be hidden from the main Knowledge Base card grid.
+- **Show Index Button on Post/Product List**: This toggle allows you to show or hide the "Index" button that appears in the admin bar on post and product list screens.
+
+<img src={generalsettings} />
 
 ### Content Indexing Controls
 
@@ -145,17 +150,12 @@ This Pro feature provides granular control over how your content is processed fo
 
 This is particularly useful for sites with extensive custom fields where you want to train the AI only on relevant data.
 
-### General Settings
+### Document Chunking
 
-- **Hide User-Uploaded Files**: When enabled, Vector Stores created automatically by users via the chatbot file upload feature will be hidden from the main Knowledge Base card grid. This helps keep your main view clean and focused on manually curated knowledge bases.
+For Pinecone and Qdrant, you can control how large documents are split into smaller "chunks" before being indexed. This is critical for improving the accuracy of search results.
 
-<img src={generalsettings} />
+- **Chunk Size**: The maximum number of tokens (roughly, words) each chunk of text should contain. A smaller size provides more specific results but may miss broader context.
 
-- **Show Index Button on Post/Product List**: This toggle allows you to show or hide the "Index" button that appears in the admin bar on post and product list screens.
+<img src={chunksettings} />
 
-## Using Your Knowledge Base
-
-Once your knowledge base is populated, you can connect it to other AIP modules:
--   **Chatbots**: In the [Chatbot editor](/docs/context), go to the **Context** section to connect your knowledge base.
--   **AI Forms**: In the [AI Form builder](/docs/ai-forms/context), go to the **Context** section to connect your knowledge base.
--   **Content Writer**: In the [Write module](/docs/Write/context), use the **Context** section to generate articles based on your knowledge base.
+- **Chunk Overlap**: The number of tokens to include from the end of the preceding chunk at the beginning of the next one. This helps maintain context between chunks.
