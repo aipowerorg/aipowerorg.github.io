@@ -20,6 +20,9 @@ import azureapi from '/img/providers/azure.png';
 import deepseekaddon from '/img/providers/deepseek-addon.png';
 import deepseek from '/img/providers/deepseek.png';
 
+import ollamaaddon from '/img/providers/ollama-addon.png';
+import ollama from '/img/providers/ollama.png';
+
 import parameters from '/img/providers/parameters.png';
 
 # Overview
@@ -27,7 +30,7 @@ import parameters from '/img/providers/parameters.png';
 `AIP > Dashboard` is the central area for managing your connections to different AI services and setting the default behavior for all of AIP's modules.
 
 :::info AIP uses a Bring Your Own API Key model
-To use the plugin, you must have a valid API key from your preferred AI provider (e.g., OpenAI, Google, Azure).  
+To use the plugin, you must have a valid API key from your preferred AI provider (e.g., OpenAI, Google, Azure).
 **Purchasing the plugin does not include any API credits.**
 
 :::
@@ -142,6 +145,69 @@ Unlike other providers, DeepSeek is not available by default. You must enable it
 
 - **Sync Models**: Click the **Sync** button to fetch the available models.
 - **Select a Default Model**: Choose a default model, such as `deepseek-chat`.
+
+## Ollama (Local AI)
+
+Ollama allows you to run powerful, open-source large language models locally on your own computer. This is a Pro feature that offers maximum privacy and control over your AI operations.
+
+:::info This is a Pro Feature
+To use Ollama, you need a Pro plan and the **Ollama Integration** addon must be enabled from the **AIP > Add-ons** page.
+<img src={ollamaaddon} />
+:::
+
+### Step 1: Install Ollama
+
+First, you need to download and run the Ollama application on the computer you want to use as the AI server. This could be your local machine or a dedicated server.
+
+-   Go to the official download page: [ollama.com/download](https://ollama.com/download)
+-   Download the installer for your operating system.
+
+#### On macOS
+
+1.  Download the `Ollama-macOS.zip` file.
+2.  Unzip the file and move the **Ollama** application to your `Applications` folder.
+3.  Run the Ollama application. An icon will appear in your menu bar, indicating that the server is running.
+
+#### On Windows
+
+1.  Download and run the `OllamaSetup.exe` installer.
+2.  Follow the on-screen instructions to complete the installation.
+3.  Ollama will run automatically in the background. An icon will appear in your system tray.
+
+#### On Linux
+
+1.  Open your terminal.
+2.  Run the official installation script with the following command:
+    ```bash
+    curl -fsSL https://ollama.com/install.sh | sh
+    ```
+3.  The script will set up Ollama as a `systemd` service, which will start automatically.
+
+### Step 2: Download an AI Model
+
+With the Ollama application running, you need to download (or "pull") a model. You can find a list of available models in the [Ollama Library](https://ollama.com/library).
+
+1.  Open your terminal (on macOS/Linux) or Command Prompt (on Windows).
+2.  Run the `ollama pull` command followed by the model name. For example, to download Llama 3:
+    ```bash
+    ollama pull llama3
+    ```
+    This will download the model to your computer. You can pull as many models as you like.
+
+### Step 3: Configure AIP Plugin
+
+Now, connect your WordPress site to your running Ollama instance.
+
+- **Enable the Addon**: Go to **AIP > Add-ons** and activate the **Ollama Integration** addon.
+- **Select the Provider**: Go to **AIP > Dashboard**. From the **Engine** dropdown, choose **Ollama**.
+- **Enter Base URL**: Enter the URL where your Ollama server is running. If you are running it on the same computer as your local WordPress development site, the default URL is `http://localhost:11434`.
+
+<img src={ollama} />
+
+- **Sync Models**: Click the **Sync** button. AIP will connect to your Ollama server and fetch the list of models you have pulled.
+- **Select a Default Model**: Choose one of your local models as the default.
+
+Your site is now configured to use your local Ollama models!
 
 ## Global AI Parameters
 

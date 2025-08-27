@@ -10,6 +10,80 @@ The Pro version of AIP provides a set of additional features. This page outlines
 
 :::info Important
 
+Purchasing our plugin does not include any API credits. You must have a valid API key from your chosen AI provider with sufficient credits to use the plugin's features.
+
+:::
+
+## Free vs Pro Features Comparison
+
+| Feature Category | Feature | Free | Pro |
+|-----------------|---------|------|-----|
+| **Core Functionality** | | | |
+| | Basic AI Chatbot | ✅ | ✅ |
+| | Content Writer (Write Module) | ✅ | ✅ |
+| | Image Generator | ✅ | ✅ |
+| | AI Forms | ✅ | ✅ |
+| | Knowledge Base/Training | ✅ | ✅ |
+| | User Credits/Token Management | ✅ | ✅ |
+| | REST API Access | ✅ | ✅ |
+| **AI Providers** | | | |
+| | OpenAI, Google, Azure Integration | ✅ | ✅ |
+| | DeepSeek Integration | ✅ | ✅ |
+| | Replicate Integration | ✅ | ✅ |
+| | Ollama (Local AI) Integration | ❌ | ✅ |
+| **Chatbot Features** | | | |
+| | Basic Chat Functionality | ✅ | ✅ |
+| | Context-Aware Responses | ✅ | ✅ |
+| | Voice Input (Speech-to-Text) | ✅ | ✅ |
+| | Voice Playback (Text-to-Speech) | ✅ | ✅ |
+| | Conversation Starters | ✅ | ✅ |
+| | File Upload for Context (PDF, TXT) | ❌ | ✅ |
+| | Chatbot Triggers & Automation | ❌ | ✅ |
+| | Realtime Voice Agent | ❌ | ✅ |
+| | PDF Download of Transcripts | ❌ | ✅ |
+| | Embed Anywhere (External Sites) | ❌ | ✅ |
+| **Content Creation** | | | |
+| | Content Assistant | ✅ | ✅ |
+| | WooCommerce Product Writer | ✅ | ✅ |
+| | Stock Images Integration | ✅ | ✅ |
+| | Basic Automation Tasks | ✅ | ✅ |
+| | Advanced Automation Sources (RSS, URLs, Google Sheets) | ❌ | ✅ |
+| | Automated Content Enhancement | ❌ | ✅ |
+| | Advanced Content Indexing Controls | ❌ | ✅ |
+| **Search & Discovery** | | | |
+| | Semantic Search | ✅ | ✅ |
+| **Database & Storage** | | | |
+| | OpenAI Vector Store | ✅ | ✅ |
+| | Pinecone Integration | ✅ | ✅ |
+| | Qdrant Integration | ✅ | ✅ |
+| **Security & Privacy** | | | |
+| | IP Anonymization | ✅ | ✅ |
+| | OpenAI Moderation | ❌ | ✅ |
+| | Consent Compliance | ❌ | ✅ |
+| **Administration** | | | |
+| | Basic Logs | ✅ | ✅ |
+| | Auto-Delete Logs (Pruning) | ❌ | ✅ |
+| **Support** | | | |
+| | Community Support | ✅ | ✅ |
+| | Priority Email Support | ❌ | ✅ |
+
+:::tip Key Pro Benefits
+- **Enhanced Privacy**: Run AI models locally with Ollama integration
+- **Advanced Automation**: Create complex workflows with triggers and enhanced content automation
+- **Extended Reach**: Deploy chatbots on external websites
+- **Premium Features**: File uploads, PDF downloads, realtime voice agents
+- **Priority Support**: Dedicated email channel for faster issue resolution
+:::ition: 3
+title: Why Upgrade to Pro?
+slug: /why-upgrade
+---
+
+# Why Upgrade to Pro?
+
+The Pro version of AIP provides a set of additional features. This page outlines the key functionalities available in the Pro plan.
+
+:::info Important
+
 Purchasing our plugin does not include any API credits. You must have a valid API key from your chosen AI provider with sufficient credits to use the plugin’s features.
 
 :::
@@ -18,7 +92,9 @@ Purchasing our plugin does not include any API credits. You must have a valid AP
 
 Paid plan users get access to a dedicated email channel for priority support with their questions and technical issues.
 
-## Advanced Chatbot Features
+## Advanced Integrations & Features
+
+-   **Ollama Integration**: Run AI models locally on your own hardware. Connect to any model served by Ollama for enhanced privacy, cost control, and offline capabilities. Learn more at [AI Providers](/docs/ai-providers#ollama-local-ai).
 
 -   **Triggers**: Build complex, automated workflows for your chatbot using an event-based system. Create rules that perform actions (like sending a specific reply or calling a webhook) when certain events occur and conditions are met. Learn more at [Triggers](/docs/triggers).
 

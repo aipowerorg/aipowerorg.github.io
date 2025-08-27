@@ -11,7 +11,7 @@ This page provides an overview of the main features available in AI Power.
 
 Build and deploy AI chatbots on your website.
 
--   **AI Providers**: Connect to multiple AI providers, including OpenAI, Google, and Azure.
+-   **AI Providers**: Connect to multiple AI providers, including OpenAI, Google, Azure, and **Ollama (Local AI)**.
 -   **Context-Aware**: The chatbot can use the content of the current page to answer questions.
 -   **File & Image Upload**: Users can upload files (PDF, TXT) and images for context during a conversation.
 -   **Knowledge Base**: Integrates with vector databases (OpenAI Vector Store, Pinecone, Qdrant) to answer questions based on your custom data.

@@ -5,7 +5,7 @@ title: Add-ons
 sidebar_position: 3
 ---
 
-import addonspage from '/img/chat/replicate-addon.png';
+import addonspage from '/img/addons/addons-ui.png';
 
 # Add-ons
 
@@ -29,11 +29,18 @@ You can activate or deactivate any add-on from a single screen.
 
 These add-ons provide core integrations with third-party services.
 
+-   **Ollama Integration**
+    -   Run large language models locally on your own hardware for enhanced privacy and cost control.
+    -   :::info
+        **Type**: Pro
+        **Learn More**: [AI Providers > Ollama](/docs/ai-providers#ollama-local-ai)
+        :::
+
 -   **DeepSeek Integration**
     -   Enable DeepSeek models for text generation in various modules.
     -   :::info
         **Type**: Free  
-        **Learn More**: [AI Providers](/docs/ai-providers#deepseek)
+        **Learn More**: [AI Providers > DeepSeek](/docs/ai-providers#deepseek)
         :::
 
 -   **Replicate Integration**
