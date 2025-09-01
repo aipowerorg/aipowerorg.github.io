@@ -19,7 +19,7 @@ import cablockeditor from '/img/content-assistant/ca-block-editor.png';
 
 # Content Assistant
 
-The Content Assistant provides a suite of tools to improve existing content directly within your WordPress admin area. You can bulk-enhance posts, generate new titles and excerpts from the posts list, and process text directly within the post editor.
+The Content Assistant provides a suite of tools to improve existing content directly within your WordPress admin area. You can bulk update posts, generate new titles and excerpts from the posts list, and process text directly within the post editor.
 
 ## Activation
 
@@ -37,23 +37,23 @@ Once activated, three new features become available across your Posts, Pages, an
 This feature allows you to update multiple posts at once using a configuration tool.
 
 1.  Go to your **Posts**, **Pages**, or **Products** list.
-2.  Select the checkboxes next to the items you want to enhance.
+2.  Select the checkboxes next to the items you want to update.
 
 <img src={cabulkbutton} />
 
 3.  Click the **Content Assistant** button that appears at the top of the list.
 
-This will open the **Content Assistant** modal, where you can configure the AI enhancements.
+This will open the **Content Assistant** modal, where you can configure the AI updates.
 
--   **Templates**: Save and load your entire enhancement configuration as a template for quick reuse.
+-   **Templates**: Save and load your entire configuration as a template for quick reuse.
 
 <img src={catemplate} />
 
--   **AI**: Choose the AI Provider and Model for the enhancement tasks. You can also adjust the Temperature and Max Tokens for the generation.
+-   **AI**: Choose the AI Provider and Model for the tasks. You can also adjust the Temperature and Max Tokens for the generation.
 
 <img src={caai} />
 
--   **Context**: Enable a Vector Store to provide your knowledge base as context to the AI, ensuring enhancements are aligned with your custom data.
+-   **Context**: Enable a Vector Store to provide your knowledge base as context to the AI, ensuring updates are aligned with your custom data.
 
 <img src={cacontext} />
 
@@ -70,13 +70,13 @@ You can use the following placeholders in your prompts:
 When enhancing Products, you can use additional placeholders like `{price}`, `{sku}`, and `{attributes}`. See the [WooCommerce Product Writer](/docs/woocommerce-product-writer) documentation for a full list.
 :::
 
-## Quick Enhancements
+## Quick Assistant Actions
 
-For single-post improvements, you can use the "Enhance" link directly from the post list.
+For single-post improvements, you can use the "✍️ Assistant" link directly from the post list.
 
 1.  Go to your **Posts**, **Pages**, or **Products** list.
 2.  Hover over a post to reveal the action links.
-3.  Click on **✍️ Enhance**. A dropdown menu will appear.
+3.  Click on **✍️ Assistant**. A dropdown menu will appear.
 
 <img src={caenhance} width="600" />
 
