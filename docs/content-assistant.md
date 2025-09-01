@@ -78,7 +78,7 @@ For single-post improvements, you can use the "✍️ Assistant" link directly f
 2.  Hover over a post to reveal the action links.
 3.  Click on **✍️ Assistant**. A dropdown menu will appear.
 
-<img src={caenhance} width="600" />
+<img src={caenhance} />
 
 4.  Select an action, such as **Generate Title**, **Generate Excerpt**, **Generate Tags** or **Generate Meta Desc**.
 
