@@ -1,7 +1,7 @@
 ---
-id: content-enhancement
-slug: /content-enhancement
-title: Content Enhancement
+id: content-update
+slug: /content-update
+title: Content Update
 sidebar_position: 3
 ---
 
@@ -10,11 +10,11 @@ import setupce from '/img/automate/setupce.png';
 import enablevector from '/img/automate/enable-vector.png';
 import aiprompts from '/img/automate/ai-prompts.png';
 
-# Content Enhancement
+# Content Update
 
 This task allows you to automatically improve existing content on your site. You can set it to run on a schedule to rewrite titles, excerpts, or even the full content of posts that meet specific criteria. This is a Pro feature.
 
-## Creating a Content Enhancement Task
+## Creating a Content Update Task
 
 1.  Navigate to **AIP > Automate** and click **Add New Task**.
 2.  Give your task a **Name** (e.g., "Refresh Old Blog Posts").
@@ -27,16 +27,16 @@ This task allows you to automatically improve existing content on your site. You
 
 ## Content Selection
 
-Define which posts you want the task to enhance.
+Define which posts you want the task to update.
 
 - **Post Types**: Select the post types to target (e.g., Posts, Pages).
 - **Categories & Authors**: Optionally narrow down the selection by post category or author.
 
 <img src={setupce} />
 
-- **Post Statuses**: Choose which post statuses to enhance (e.g., only `Published` posts).
-- **Fields to Enhance**: Check the box for each field you want the AI to update (e.g., `Title`, `Excerpt`, `Content`, `Meta Description`).
-- **Queue all existing content**: Check this to run the enhancement on all existing posts that match your criteria one time. Scheduled runs after this will only process newly modified content.
+- **Post Statuses**: Choose which post statuses to update (e.g., only `Published` posts).
+- **Fields to Update**: Check the box for each field you want the AI to update (e.g., `Title`, `Excerpt`, `Content`, `Meta Description`).
+- **Queue all existing content**: Check this to run the update on all existing posts that match your criteria one time. Scheduled runs after this will only process newly modified content.
 
 ## Context
 
@@ -46,13 +46,13 @@ Connect a vector store to provide the AI with additional context. This is useful
 
 ## AI & Prompts
 
-Configure the AI and provide instructions for each field you selected to enhance.
+Configure the AI and provide instructions for each field you selected to update.
 
 - **AI Settings**: Choose your AI provider, model, and set the temperature and max tokens.
 
 <img src={aiprompts} width="600"/>
 
-- **Prompts**: A separate prompt box will appear for each field you chose to enhance (Title, Excerpt, etc.).
+- **Prompts**: A separate prompt box will appear for each field you chose to update (Title, Excerpt, etc.).
 - **Placeholders**: Use placeholders in your prompts to provide the AI with the original content.
     - `{original_title}`
     - `{original_content}`
@@ -62,4 +62,4 @@ Configure the AI and provide instructions for each field you selected to enhance
     - `{categories}`
     - For WooCommerce products, you can also use placeholders like `{price}`, `{regular_price}`, `{sku}`, `{attributes}`, `{stock_quantity}`,`{stock_status}`, `{weight}`, `{length}`, `{width}`, `{height}`, `{purchase_note}`, `{product_categories}`.
 
-Click **Save Task**. The task will queue the matching posts and begin the enhancement process according to your schedule.
+Click **Save Task**. The task will queue the matching posts and begin the update process according to your schedule.

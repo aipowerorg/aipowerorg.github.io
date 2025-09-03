@@ -48,7 +48,7 @@ Purchasing our plugin does not include any API credits. You must have a valid AP
 | | Stock Images Integration | ✅ | ✅ |
 | | Basic Automation Tasks | ✅ | ✅ |
 | | Advanced Automation Sources (RSS, URLs, Google Sheets) | ❌ | ✅ |
-| | Automated Content Enhancement | ❌ | ✅ |
+| | Automated Content Update | ❌ | ✅ |
 | | Advanced Content Indexing Controls | ❌ | ✅ |
 | **Search & Discovery** | | | |
 | | Semantic Search | ✅ | ✅ |
@@ -110,7 +110,7 @@ Paid plan users get access to a dedicated email channel for priority support wit
 
 -   **Advanced Automation Sources**: Create content automatically from a wider range of sources in the **Automate** module, including RSS feeds, a list of URLs, and Google Sheets. Learn more at [Content Creation](/docs/content-creation).
 
--   **Automated Content Enhancement**: Schedule a recurring task to automatically improve your existing posts or WooCommerce products. The AI can rewrite titles, update excerpts, and enhance content based on your custom prompts. Learn more at [Content Enhancement](/docs/content-enhancement).
+-   **Automated Content Update**: Schedule a recurring task to automatically improve your existing posts or WooCommerce products. The AI can rewrite titles, update excerpts, and update content based on your custom prompts. Learn more at [Content Update](/docs/content-update).
 
 -   **Advanced Content Indexing**: Gain fine-grained control over the data used to train your knowledge base. Select specific custom fields and taxonomies to include or exclude from the indexing process for each content type. Learn more at [Knowledge Base / Training](/docs/ai-training/intro#content-indexing-controls).
 
