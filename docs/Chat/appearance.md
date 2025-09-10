@@ -48,6 +48,44 @@ You can reset all custom theme settings by clicking the **Reset** button at the 
 
 - **Footer**: A small line of text displayed at the very bottom of the chat window (e.g., "Powered by AI").
 
+## Popup
+
+Configure the floating trigger button and popup behavior. These settings are available when Popup mode is enabled.
+
+- Position: Choose where the trigger appears (Bottom Right, Bottom Left, Top Right, Top Left).
+- Popup Delay (sec): Automatically opens the popup after the specified delay (0 disables auto-open).
+
+**Trigger Icon**
+
+- Icon Style: Circle, Square, or None (uses your original image without background).
+- Icon Type: Default
+- Icons: Choose Chat Bubble, Plus, or Question Mark.
+- Custom URL: Provide a direct URL to your image (e.g., PNG/SVG). Recommended size ~32×32.
+- Colors: The icon background and icon color adapt to your theme (and custom theme variables).
+
+**Popup Hint (Text Above Icon)**
+
+Displays a small, theme-adaptive pill above the trigger to encourage interaction.
+
+- Enable Popup Hint: Turns the hint on/off.
+- Hint Text: Short, plain text message. If left empty, a default message is used (“Need help? Ask me!”).
+- Show Mode:
+    - On delay (once): Shows once after the delay, then hides.
+    - Until chat opened: Stays visible until the user opens the popup (or the popup auto-opens).
+    - Until dismissed: Stays visible until the user clicks the × (dismiss).
+    - Always: Reappears after close; useful for persistent prompting.
+- Delay (sec): Time to wait before showing the hint. Use 0 to show immediately.
+- Auto-hide (sec): Time until the hint hides itself. Use 0 to keep it visible until opened/dismissed.
+- Dismissible: Adds a small × button to dismiss the hint.
+- Frequency:
+    - Once per visitor: Shows once across visits (persists in the browser).
+    - Once per session: Resets on each new browser session.
+    - Always: Ignores past views and shows per the Show Mode.
+- Device Visibility: Show on Desktop and/or Show on Mobile.
+- Label Version: Increment this to re-show the hint for everyone after changing the message.
+
+The hint adapts to your theme (including custom theme).
+
 ## Fullscreen
 
 Adds a button to the chat header allowing users to expand the chat to fill the screen.

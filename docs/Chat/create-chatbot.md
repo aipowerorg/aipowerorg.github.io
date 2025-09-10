@@ -15,7 +15,6 @@ import shortcodepill from '/img/chat/shortcode-pill.png';
 import shortcodeinsert from '/img/chat/shortcode-insert.png';
 import popupenable from '/img/chat/popup-enable.png';
 import popupsettings from '/img/chat/popup-settings.png';
-import popupurl from '/img/chat/popup-url.png';
 import embedaddon from '/img/chat/embed-addon.png';
 import embedsettings from '/img/chat/embed-settings.png';
 
@@ -90,42 +89,40 @@ A popup chatbot appears as a small, clickable icon in a corner of the screen on 
 
 To enable popup mode:
 
-1.  In your chatbot's settings, go to the **Appearance** section.
-2.  Check the **Popup** box.
+1.  In your chatbot’s settings, open the **Style** tab.
+2.  Check the Popup toggle.
 
 <img src={popupenable} />
 
-3.  New settings for the popup will appear in the **Popup** accordion.
+3. Click the Configure button to open the popup settings.
 
 #### Popup Settings
 
 -   **Popup Position**: Choose which corner of the screen the popup icon and window will appear in (e.g., Bottom Right).
 -   **Popup Delay (sec)**: Set a delay in seconds before the chat window automatically opens for the first time for a visitor. Set to `0` to disable auto-opening.
 
-<img src={popupsettings} width="600" />
+<img src={popupsettings} />
 
 -   **Site-wide**: If enabled, this chatbot popup will appear on every page of your website. **Only one chatbot can be set to site-wide at a time.**
 -   **Popup Icon**: Customize the appearance of the popup trigger button. You can choose from one of three default icons or provide a URL to your own custom image.
-
-<img src={popupurl} width="600" />
+-   **Popup Hint**: Optionally show a short hint above the icon. Configure text, when it shows (on delay, until open, etc.), auto-hide timing, and desktop/mobile visibility.
 
 ### Embed Anywhere (External Sites)
 
-
 This feature allows you to embed your chatbot on any other website, even if it's not running on WordPress.
 
-:::tip Watch the Video Tutorial
+:::tip
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Im4GTxuNutE" title="How to Embed Your Bot on an External Site" frameborder="0" allowfullscreen></iframe>
 :::
 
-:::info This is a Pro Feature
+:::info
 To use this feature, you need a Pro plan and the **Embed Anywhere** addon must be enabled from the **AIP > Add-ons** page.
 <img src={embedaddon} />
 :::
 
 #### How to Enable & Configure
 
-1.  In your chatbot's settings, find and expand the **Embed** accordion.
+1.  In the chatbot editor, open the Embed tab.
 2.  **Allowed Domains**: For security, you must list the domains where you plan to embed the chatbot. Enter one domain per line (e.g., `https://my-other-website.com`). Requests from any other domain will be blocked.
 
 <img src={embedsettings} />
@@ -137,21 +134,25 @@ The chatbot will now appear on that external site, with the same appearance and 
 
 ## The Chatbot Editor
 
-The editor is split into two main columns:
+The editor has two main columns:
 
-*   **Left Column (Settings)**: This is where you configure everything about your chatbot. The settings are organized into collapsible sections called accordions (e.g., General, Appearance, Context).
+*   **Left Column (Settings)**: Settings are organized under a segmented header:
+
+- **AI**: Engine & Model, Instructions, Context/Vector Store, Images, Audio (voice), Token limits, and more. Many options open as modals via Configure buttons.
+- **Style**: UI options like theme, conversation starters, fullscreen, feedback, sidebar, and Popup (with a Configure button for popup details).
+- **Optional tabs**: Embed, Triggers.
 
 <img src={chatbotsettings} />
 
-*   **Right Column (Preview)**: This area shows a live preview of your chatbot. As you change settings and click the **Save** button, the preview will update to reflect your changes.
+*   **Right Column (Preview)**: Live preview updates after you click Save.
 
 ## Saving, Deleting, and Resetting
 
 At the bottom of the settings area for each chatbot, you will find three action buttons:
 
-*   **Save**: Saves your current configuration for the chatbot.
-*   **Delete**: Permanently deletes the chatbot. This action cannot be undone. You will be asked for confirmation. The "Default Bot" cannot be deleted.
+*   **Save**: Use the Save button at the top right of the settings header.
+*   **Delete**: Open the Tools dropdown (next to the bot selector). Delete removes the bot (Default Bot cannot be deleted).
 
 <img src={savedeletereset} />
 
-*   **Reset**: Reverts all settings for the selected chatbot back to their original default values. This is useful if you want to start over with a clean configuration.
+*   **Reset**: Open the Tools dropdown (next to the bot selector). Reset restores all settings to defaults.

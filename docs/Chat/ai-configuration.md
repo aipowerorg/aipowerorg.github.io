@@ -9,6 +9,7 @@ import aiconfig from '/img/chat/ai-config.png';
 import enginemodel from '/img/chat/engine-model.png';
 import instructions from '/img/chat/instructions.png';
 import parameters from '/img/chat/parameters.png';
+import parameters0 from '/img/chat/parameters0.png';
 import stateful from '/img/chat/stateful.png';
 import websearch from '/img/chat/web-search.png';
 import websearchdetails from '/img/chat/web-search-details.png';
@@ -16,10 +17,14 @@ import websearchdemo from '/img/chat/web-search-demo.png';
 import groundingmode from '/img/chat/grounding-mode.png';
 import dynamicretrival from '/img/chat/dynamic-retrival.png';
 import stream from '/img/chat/stream.png';
+import conversationconfigurebutton from '/img/chat/configure.png';
+import maxmessages from '/img/chat/max-messages.png';
+import reasoning from '/img/chat/reasoning.png';
 
 # AI Configuration
 
-The **General** section controls the "brain" of your chatbot—the AI model it uses, its core personality, and its fundamental parameters.
+The **Engine & Model** section controls the "brain" of your chatbot—the AI model it uses, its core personality, and its fundamental parameters.
+
 <img src={aiconfig} width="600" />
 
 ## Engine and Model
@@ -40,27 +45,35 @@ This field defines your chatbot's personality and purpose. It's a set of instruc
 **Example:**
 > You are a friendly and helpful customer support agent for a company named "AIP." Your goal is to answer questions about our products and help users troubleshoot common issues. Be polite and concise in your responses.
 
-You can use the placeholder `[date]` to automatically insert the current date into the prompt each time a conversation starts.
+You can use placeholders to automatically insert dynamic values into the prompt when a conversation starts. For example:
 
-## Stream Mode
-
-When enabled, the chatbot's response appears word-by-word, similar to how ChatGPT types. 
-
-<img src={stream} width="600" />
-
-This provides a faster perceived response time for the user. When disabled, the chatbot will "think" and then deliver the entire message at once.
+- [date] will insert the current date.
+- [username] will insert the current WordPress username.
 
 ## AI Parameters
 
 Click the <span class="dashicons dashicons-admin-generic"></span> icon next to the model selection to reveal the advanced AI parameters. These settings fine-tune how the AI generates its responses.
 
-<img src={parameters} width="600" />
+<img src={parameters0} />
+
+<img src={parameters} />
 
 -   **Temperature**: Controls the creativity of the AI. A higher value (e.g., `1.2`) results in more creative and varied responses. A lower value (e.g., `0.5`) makes the responses more focused and predictable. The default is `1.0`.
 -   **Max Tokens**: Sets the maximum length of the AI's response. A higher number allows for longer content but can increase API costs.
--   **Max Messages**: The number of previous messages from the current conversation to include as context for the AI. A higher number provides more context but uses more tokens.
 
-## Stateful Conversation
+## Conversations
+
+### Stream Mode
+
+When enabled, the chatbot's response appears word-by-word, similar to how ChatGPT types. 
+
+<img src={conversationconfigurebutton} />
+
+<img src={stream}  />
+
+This provides a faster perceived response time for the user. When disabled, the chatbot will "think" and then deliver the entire message at once.
+
+### Stateful Conversation
 
 This feature uses OpenAI's stateful conversation capabilities and it is only available when using OpenAI as the provider.
 
@@ -68,31 +81,51 @@ Instead of sending the entire chat history with each message, it only sends the 
 
 This reduces token usage and enables continuous conversations that can exceed normal token limits.
 
-<img src={stateful} width="600" />
+<img src={stateful} />
  
 The "Store Conversation" setting must be enabled in the main **AIP > Dashboard > OpenAI** settings.
+
+### Max Messages
+
+This setting limits how many previous messages are included in the context sent to the AI with each user message. A higher number provides more context but uses more tokens. The default is `15`.
+
+<img src={maxmessages} />
+
+### Reasoning
+
+When enabled, the AI is prompted to "think step-by-step" before answering. This can improve accuracy for complex questions.
+
+Only available with OpenAI's O and gpt-5 series models.
+
+<img src={reasoning} />
 
 ## Web Search
 
 This feature allows the chatbot to access external information to answer questions about recent events or topics outside its training data. The specific settings change depending on whether you are using an OpenAI or Google model.
 
+Web Search can be toggled and configured per provider from the AI tab.
+
 ### OpenAI Web Search
 
-When using an OpenAI model, enabling the Web Search tool <span class="dashicons dashicons-admin-site-alt3"></span> reveals two additional settings in the General tab:
+Where to find it:
 
-<img src={websearch} width="600" />
+AI tab → Features → Web Search (OpenAI) → toggle on, then click Configure.
 
-:::info Supported OpenAI Models
+<img src={websearch} />
+
+:::info
 Most recent OpenAI models support the Web Search. However, **gpt-4.1-nano** is currently not compatible with web search.
 
 :::
+
+When using an OpenAI model, enabling the Web Search tool reveals two additional settings:
 
 -   **Search Context Size**: Controls how much information the AI considers from its search results. It has three levels: Low, Medium (default), and High.
 -   **User Location**: Helps the AI provide more relevant local results.
     -   **None**: The AI does not consider the user's location.
     -   **Approximate**: When selected, you can provide location details to narrow down search results.
 
-<img src={websearchdetails} width="600" />
+<img src={websearchdetails} />
 
         -   **Country (ISO Code)**: A two-letter country code (e.g., `US` for United States).
         -   **City**: The name of a city (e.g., `London`).
@@ -103,7 +136,7 @@ Most recent OpenAI models support the Web Search. However, **gpt-4.1-nano** is c
 
 When using a compatible Google model, enabling web search adds grounding capabilities.
 
-<img src={groundingmode} width="600" />
+<img src={groundingmode} />
 
 :::info Supported Google Models
 The following Google Gemini models support **Search Grounding** in the chatbot:
@@ -123,7 +156,7 @@ The following settings will appear:
     -   **Model Decides (Default)**: The AI determines when to use search as a tool to answer a query.
     -   **Dynamic Retrieval (Gemini 1.5 Flash only)**: The model dynamically grounds its response in search results based on a relevance score.
 
-<img src={dynamicretrival} width="600" />
+<img src={dynamicretrival}  />
 
 -   **Dynamic Retrieval Threshold**: This slider (from `0.0` to `1.0`) appears when "Dynamic Retrieval" is selected. It sets the relevance threshold for including search results. A higher value requires a stronger match between the user's query and the search results.
 
