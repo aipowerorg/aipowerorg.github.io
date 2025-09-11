@@ -72,7 +72,7 @@ These add-ons extend the functionality of the [Chatbot](/docs/chat) module.
     -   Display predefined prompts to help guide users into starting a conversation with your chatbots.
     -   :::info
         **Type**: Free  
-        **Learn More**: [Chat > Appearance](/docs/Appearance#starters)
+        **Learn More**: [Chat > Appearance](/docs/Appearance#conversation-starters)
         :::
 
 -   **File Upload**
