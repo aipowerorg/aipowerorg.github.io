@@ -7,10 +7,12 @@ sidebar_position: 5
 
 import replicateaddon from '/img/chat/replicate-addon.png';
 import imagegenerationsettings from '/img/chat/image-generation-settings.png';
+import imagegenerationsettings2 from '/img/chat/image-generation-settings2.png';
 import imagegendemo from '/img/chat/image-gen-demo.png';
 import imageupload from '/img/chat/img-upload-enable.png';
 import imageuploaddemo from '/img/chat/img-upload-demo.png';
 import imageuploaddemoresult from '/img/chat/img-upload-demo-result.png';
+import imageupload2 from '/img/chat/img-upload-enable2.png';
 
 # Image Features
 
@@ -31,10 +33,12 @@ You can enable your chatbot to generate images directly in the chat window by re
 
 ### How to Enable & Configure
 
-1.  In your chatbot's settings, open the **Images** accordion.
-2.  **Image Generation Model**: Select the AI model you want to use for creating images (e.g., `dall-e-3` or `imagen-4.0-ultra-generate-preview-06-06`).
+1.  Open your chatbot’s Image settings (Configure).
+2.  Select the AI model you want to use for creating images (e.g., `dall-e-3` or `imagen-4.0-ultra-generate-preview-06-06`).
 
-<img src={imagegenerationsettings} width="600"/>
+<img src={imagegenerationsettings2} />
+
+<img src={imagegenerationsettings} />
 
 3.  **Image Generation Triggers**: Define one or more text commands that will trigger the image generator. These commands must start with a `/`. Separate multiple triggers with a comma. **Example:** `/image, /generate, /create`
 
@@ -65,10 +69,12 @@ You can allow users to upload images and ask questions about them. This feature 
 
 ### How to Enable
 
-1.  In your chatbot's settings, open the **General** accordion.
-2.  Next to the model selector, click the image icon to enable this feature for the chatbot.
+1.  Open your chatbot’s Image settings (Configure).
+2.  Enable “Image Analysis”.
 
 <img src={imageupload} />
+
+<img src={imageupload2} />
 
 3.  When enabled, image icon will appear in the chat input field.
 
