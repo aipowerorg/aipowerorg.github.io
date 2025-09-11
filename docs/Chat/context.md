@@ -15,34 +15,23 @@ import fileuploaddemo from '/img/chat/file-upload-demo.png';
 import vectordbaddon from '/img/chat/vector-db-addon.png';
 import expresssetup from '/img/chat/express-setup.png';
 import vectorscore from '/img/chat/vector-score.png';
+import contextenable from '/img/chat/context-enable.png';
 
 # Context
 
 The **Context** section is where you give your chatbot access to external information, turning it from a general-purpose AI into a specialized assistant that knows about your content.
 
-## Content Aware
-
-When this feature is enabled, the chatbot will use the current page's content as part of its contextual understanding.
-
-<img src={contentaware} />
-
-If the page has an excerpt, that excerpt will be used directly as the bot’s context.
-
-If no excerpt is available, the plugin will automatically generate a short summary of the page content and feed that to the bot instead.
-
-This is ideal for creating page-specific chatbots.
-
-For example, placing a Content Aware chatbot on a product page allows users to ask things like: "What’s included in the box?" — and get answers directly based on that product’s content.
+<img src={contextenable} />
 
 ## Vector Store
 
 It allows you to connect your chatbot to a knowledge base you've created in the [Train](/docs/train.md) module.
 
-:::info Configure your Vector Stores in the Train module
+:::info 
 Before using this feature, you must first create and configure your Vector Stores in the Train module. The chatbot cannot access any knowledge base unless it’s been set up there.
 :::
 
-:::info Pinecone and Qdrant require activation
+:::info
 Pinecone and Qdrant are available as free addons, but they are disabled by default.
 To use them, go to the Addons page and activate the Vector DB addon first.
 
@@ -72,7 +61,7 @@ To use them, go to the Addons page and activate the Vector DB addon first.
 
 ## Add Content
 
-The easiest way to create a knowledge base for a specific chatbot is by using the **Add Content** button, located in the **General** accordion.
+The easiest way to create a knowledge base for a specific chatbot is by using the **Add Content** button, located in the **AI** tab.
 
 <img src={expresssetup} />
 
@@ -105,3 +94,17 @@ Behavior depends on the selected vector provider:
 <img src={fileuploaddemo} />
 
 - For OpenAI, uploaded files are stored with an expiration date. By default, files expire after 7 days, but you can change this in the main dashboard → OpenAI Settings.
+
+## Content Aware
+
+When this feature is enabled, the chatbot will use the current page's content as part of its contextual understanding.
+
+<img src={contentaware} />
+
+If the page has an excerpt, that excerpt will be used directly as the bot’s context.
+
+If no excerpt is available, the plugin will automatically generate a short summary of the page content and feed that to the bot instead.
+
+This is ideal for creating page-specific chatbots.
+
+For example, placing a Content Aware chatbot on a product page allows users to ask things like: "What’s included in the box?" — and get answers directly based on that product’s content.
