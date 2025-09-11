@@ -7,6 +7,7 @@ sidebar_position: 6
 
 import realtimeaddon from '/img/chat/realtime-voice-addon.png';
 import realtimesettings from '/img/chat/realtime-voice-settings.png';
+import realtimesettings0 from '/img/chat/realtime-voice-settings0.png';
 import realtimebutton from '/img/chat/realtime-voice-button.png';
 import voiceinputenable from '/img/chat/voice-input-enable.png';
 import voiceplaybackaddon from '/img/chat/voice-playback-addon.png';
@@ -32,8 +33,10 @@ This feature only works with OpenAI's Realtime models (`gpt-4o-realtime-preview`
 
 ### How to Enable
 
-1.  Navigate to your chatbot's settings in **AIP > Chat**.
-2.  Open the **Voice Agent** accordion and check the **Enable Realtime Voice Agent** box.
+1.  Open your chatbot’s Audio settings (Configure).
+2.  Turn on “Enable Realtime Voice Agent.”
+
+<img src={realtimesettings0} />
 
 <img src={realtimesettings} />
 
@@ -90,8 +93,10 @@ This feature uses **OpenAI's Whisper model** for transcription. Ensure your Open
 #### How to Enable
 
 1.  Navigate to your chatbot's settings in **AIP > Chat**.
-2.  Open the **General** accordion.
-3.  Click the microphone icon next to the model selector to enable voice input for the chatbot.
+2.  Open your chatbot’s Audio settings (Configure).
+3.  Turn on “Enable Speech to Text” and select the model (default: whisper‑1).
+
+<img src={realtimesettings0} />
 
 <img src={voiceinputenable} />
 
@@ -114,13 +119,15 @@ This feature adds a "play" button to each of the chatbot's responses, allowing u
 <img src={voiceplaybackaddon} width="600"/>
 
 2.  Return to your chatbot's settings in **AIP > Chat**.
-3.  Open the **Voice Playback** accordion and check the **Enable Voice Playback** box.
+3.  Open your chatbot’s Audio settings (Configure) and enable “Text to Speech.”
 
 #### Configuration
 
 - **TTS Provider**: Choose the service to generate the audio. Options include Google, OpenAI, and ElevenLabs.
 
-<img src={ttsenable} width="600"/>
+<img src={realtimesettings0} />
+
+<img src={ttsenable} />
 
 - **Voice**: Select a specific voice.
     - For **Google** and **ElevenLabs**, you can click the **Sync** button to fetch the voices available in your account.
