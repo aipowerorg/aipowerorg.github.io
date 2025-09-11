@@ -7,6 +7,7 @@ sidebar_position: 8
 
 import tokenaddon from '/img/chat/token-addon.png';
 import tokensettings from '/img/chat/token-settings.png';
+import tokensettings0 from '/img/chat/token-settings0.png';
 
 # Token Management
 
@@ -22,7 +23,9 @@ Token Management is a free add-on. To use it, you must first enable it:
 
 ### Configuration
 
-Once the add-on is active, a **Token Management** accordion will appear in your chatbot's settings.
+Once the add-on is active, a **Limits** and configure buttom will appear in your chatbot's settings.
+
+<img src={tokensettings0} />
 
 1.  **Guest Limit**: Set a token limit for users who are not logged in.
     -   Leave this field **blank** for unlimited tokens.
